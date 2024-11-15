@@ -27,6 +27,7 @@ postFooterContent = '''
     });
   </script>
 '''
+favicon = "/favicon.png"
 
 [[params.socials]]
 name = "关于"
