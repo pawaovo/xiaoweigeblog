@@ -1,0 +1,41 @@
+baseURL = 'https://geedea.pro/'
+languageCode = 'zh-cn'
+title = '極客死亡計劃'
+theme = "yinyang"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 2
+
+[params]
+headTitle = "極客死亡計劃"
+mainSections = ["posts"]
+postFooterContent = '''
+<div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline.geedea.pro',
+    });
+  </script>
+'''
+
+[[params.socials]]
+name = "关于"
+link = "/about"
+
+[[params.socials]]
+name = "RSS"
+link = "/posts/index.xml"
+
+[services]
+  [services.rss]
+    limit = 10

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=52690&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.129.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="http://localhost:52690/posts/2024%E5%B9%B4-%E6%88%91%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%B7%A5%E5%85%B7%E5%B8%AE%E5%8A%A9%E6%88%91%E9%98%85%E8%AF%BB/" />
+  <link rel="canonical" href="http://localhost:52690/posts/2024%E5%B9%B4-%E6%88%91%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%B7%A5%E5%85%B7%E5%B8%AE%E5%8A%A9%E6%88%91%E9%98%85%E8%AF%BB/" /><link rel="alternate" type="application/atom+xml" href="http://localhost:52690/index.xml" title="極客死亡計劃">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "http:\/\/localhost:52690\/"
+      },
+      "articleSection" : "posts",
+      "name" : "2024年，我使用什么工具帮助我阅读",
+      "headline" : "2024年，我使用什么工具帮助我阅读",
+      "description" : "目前我使用效率工具的逻辑是，如果有数量一定的个人数据需要管理，我就会使用 Notion 的数据库，尤其是这些数据有一定相似性的时候。\n自己阅读过或想要阅读的图书就属于这类数据。将一本书视为一条记录，每条记录包含多个数据项，若干记录就组成了一个数据表。以 Notion 为工具，可以这样建造出自己的个人图书馆。\n用 Notion 建立个人图书馆 在这个 Notion 数据库中，每条记录由以下属性组成：\n状态（Status）：尚未开始、中断阅读、正在阅读、放弃阅读…… 名字（Name） 作者（Author） 分类（Category） 标签（Tags） ISBN：图书的唯一标识 语言（Language） 来源（Source）：实体书、借阅、电子书…… 封面（Cover） 开始阅读日期（Started） 完成阅读日期（Finished） 持续时间（Duration）：由前两个属性计算得出 …… 未加粗体部分的属性可能显得有些冗余，但是在必要的时候可以发挥用处。例如可以通过统计各个语言、来源在数据库中的占比，制作出图表直观地看到自己在一段时间里读了多少英文书、占比是多少，哪一段时间里读的电子书比较多……\n好吧，好像确实用处不大。\n不过，Notion 最好用的部分并不是存储数据，而是各类视图、操作按钮和公式函数等，能用来处理数据的工具。\n阅读进度的追踪闭环 借助 Notion 的「按钮属性」，我们可以将一些较为繁琐的数据管理操作一键化。比如在我的 Notion 图书馆中的「选一本书读」这个视图中，我设置了「开始阅读」这个按钮，按下之后，Notion 会执行两个操作。\n将这条记录的「状态」设置为 In Progress 将这条记录的「开始阅读时间」设置为现在 相应地，在「正在读」这个视图中，也有一个「读完了」按钮，按下他之后会一键执行以下操作。\n将这条记录的「状态」设置为 Finished 将这条记录的「完成阅读时间」设置为现在 利用 Notion 的甘特图（时间轴）视图，可以直观地看到自己近期读过的书，以及各自花费的时间。通过筛选，左侧的列表还能显示出今年读过的所有书籍，方便复盘。\n其中，用于表示甘特图中每个项目持续时间的属性是 Duration，它实际上是一个 Notion 函数，源码如下：\nif ( empty(Finished), dateRange(Started, today()), dateRange(Started, Finished) ) 这是一个很简单的逻辑：如果「完成阅读时间」为空，则将「开始阅读时间」作为起始时间，将今天的日期作为结束时间；否则将「完成阅读时间」作为结束时间。\n读书笔记管理 在以前，我一直使用 Obsidian 的 Dataview 插件制作书架视图，然后用手动更改 metadata 的方式进行管理。\n每一本书都有一个主要的笔记文件（和上文提到的「记录」的概念一样，但你可以理解为 Notion 管理数据库，但是 Obsidian 更擅长管理磁盘里的文件），这个笔记文件可能还链接着其他的卡片笔记。当时的我仍在尝试各种笔记方法，没有意识到这样反而让阅读的流程变得繁琐了。",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2024",
+      "datePublished": "2024-09-13 00:00:00 \u002b0000 UTC",
+      "dateModified" : "2024-09-13 00:00:00 \u002b0000 UTC",
+      "url" : "http:\/\/localhost:52690\/posts\/2024%E5%B9%B4-%E6%88%91%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%B7%A5%E5%85%B7%E5%B8%AE%E5%8A%A9%E6%88%91%E9%98%85%E8%AF%BB\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>2024年，我使用什么工具帮助我阅读</title>
+  <meta property="og:title" content="2024年，我使用什么工具帮助我阅读" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="目前我使用效率工具的逻辑是，如果有数量一定的个人数据需要管理，我就会使用 Notion 的数据库，尤其是这些数据有一定相似性的时候。
+自己阅读过或想要阅读的图书就属于这类数据。将一本书视为一条记录，每条记录包含多个数据项，若干记录就组成了一个数据表。以 Notion 为工具，可以这样建造出自己的个人图书馆。
+用 Notion 建立个人图书馆 在这个 Notion 数据库中，每条记录由以下属性组成：
+状态（Status）：尚未开始、中断阅读、正在阅读、放弃阅读…… 名字（Name） 作者（Author） 分类（Category） 标签（Tags） ISBN：图书的唯一标识 语言（Language） 来源（Source）：实体书、借阅、电子书…… 封面（Cover） 开始阅读日期（Started） 完成阅读日期（Finished） 持续时间（Duration）：由前两个属性计算得出 …… 未加粗体部分的属性可能显得有些冗余，但是在必要的时候可以发挥用处。例如可以通过统计各个语言、来源在数据库中的占比，制作出图表直观地看到自己在一段时间里读了多少英文书、占比是多少，哪一段时间里读的电子书比较多……
+好吧，好像确实用处不大。
+不过，Notion 最好用的部分并不是存储数据，而是各类视图、操作按钮和公式函数等，能用来处理数据的工具。
+阅读进度的追踪闭环 借助 Notion 的「按钮属性」，我们可以将一些较为繁琐的数据管理操作一键化。比如在我的 Notion 图书馆中的「选一本书读」这个视图中，我设置了「开始阅读」这个按钮，按下之后，Notion 会执行两个操作。
+将这条记录的「状态」设置为 In Progress 将这条记录的「开始阅读时间」设置为现在 相应地，在「正在读」这个视图中，也有一个「读完了」按钮，按下他之后会一键执行以下操作。
+将这条记录的「状态」设置为 Finished 将这条记录的「完成阅读时间」设置为现在 利用 Notion 的甘特图（时间轴）视图，可以直观地看到自己近期读过的书，以及各自花费的时间。通过筛选，左侧的列表还能显示出今年读过的所有书籍，方便复盘。
+其中，用于表示甘特图中每个项目持续时间的属性是 Duration，它实际上是一个 Notion 函数，源码如下：
+if ( empty(Finished), dateRange(Started, today()), dateRange(Started, Finished) ) 这是一个很简单的逻辑：如果「完成阅读时间」为空，则将「开始阅读时间」作为起始时间，将今天的日期作为结束时间；否则将「完成阅读时间」作为结束时间。
+读书笔记管理 在以前，我一直使用 Obsidian 的 Dataview 插件制作书架视图，然后用手动更改 metadata 的方式进行管理。
+每一本书都有一个主要的笔记文件（和上文提到的「记录」的概念一样，但你可以理解为 Notion 管理数据库，但是 Obsidian 更擅长管理磁盘里的文件），这个笔记文件可能还链接着其他的卡片笔记。当时的我仍在尝试各种笔记方法，没有意识到这样反而让阅读的流程变得繁琐了。" />
+  <meta name="description" content="目前我使用效率工具的逻辑是，如果有数量一定的个人数据需要管理，我就会使用 Notion 的数据库，尤其是这些数据有一定相似性的时候。
+自己阅读过或想要阅读的图书就属于这类数据。将一本书视为一条记录，每条记录包含多个数据项，若干记录就组成了一个数据表。以 Notion 为工具，可以这样建造出自己的个人图书馆。
+用 Notion 建立个人图书馆 在这个 Notion 数据库中，每条记录由以下属性组成：
+状态（Status）：尚未开始、中断阅读、正在阅读、放弃阅读…… 名字（Name） 作者（Author） 分类（Category） 标签（Tags） ISBN：图书的唯一标识 语言（Language） 来源（Source）：实体书、借阅、电子书…… 封面（Cover） 开始阅读日期（Started） 完成阅读日期（Finished） 持续时间（Duration）：由前两个属性计算得出 …… 未加粗体部分的属性可能显得有些冗余，但是在必要的时候可以发挥用处。例如可以通过统计各个语言、来源在数据库中的占比，制作出图表直观地看到自己在一段时间里读了多少英文书、占比是多少，哪一段时间里读的电子书比较多……
+好吧，好像确实用处不大。
+不过，Notion 最好用的部分并不是存储数据，而是各类视图、操作按钮和公式函数等，能用来处理数据的工具。
+阅读进度的追踪闭环 借助 Notion 的「按钮属性」，我们可以将一些较为繁琐的数据管理操作一键化。比如在我的 Notion 图书馆中的「选一本书读」这个视图中，我设置了「开始阅读」这个按钮，按下之后，Notion 会执行两个操作。
+将这条记录的「状态」设置为 In Progress 将这条记录的「开始阅读时间」设置为现在 相应地，在「正在读」这个视图中，也有一个「读完了」按钮，按下他之后会一键执行以下操作。
+将这条记录的「状态」设置为 Finished 将这条记录的「完成阅读时间」设置为现在 利用 Notion 的甘特图（时间轴）视图，可以直观地看到自己近期读过的书，以及各自花费的时间。通过筛选，左侧的列表还能显示出今年读过的所有书籍，方便复盘。
+其中，用于表示甘特图中每个项目持续时间的属性是 Duration，它实际上是一个 Notion 函数，源码如下：
+if ( empty(Finished), dateRange(Started, today()), dateRange(Started, Finished) ) 这是一个很简单的逻辑：如果「完成阅读时间」为空，则将「开始阅读时间」作为起始时间，将今天的日期作为结束时间；否则将「完成阅读时间」作为结束时间。
+读书笔记管理 在以前，我一直使用 Obsidian 的 Dataview 插件制作书架视图，然后用手动更改 metadata 的方式进行管理。
+每一本书都有一个主要的笔记文件（和上文提到的「记录」的概念一样，但你可以理解为 Notion 管理数据库，但是 Obsidian 更擅长管理磁盘里的文件），这个笔记文件可能还链接着其他的卡片笔记。当时的我仍在尝试各种笔记方法，没有意识到这样反而让阅读的流程变得繁琐了。" />
+  <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="" />
+  
+
+  
+    <style>@import 'https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Serif+SC:wght@200..900&display=swap';body{font-family:noto serif sc,serif;-webkit-font-smoothing:antialiased;margin:0 20px}article{max-width:800px;margin-left:auto;margin-right:auto}a{color:#000;text-decoration:none}a:hover{font-weight:600;text-decoration:underline}.post-ads{margin:50px 0}.markdown-body{font-size:18px;max-width:100%}.markdown-body a{text-decoration:underline;text-decoration-color:#000}.markdown-body blockquote{margin:0;padding:0 1em;color:#57606a;border-left:.25em solid #d0d7de}.markdown-body pre{padding:16px;overflow:auto;border-radius:10px}.markdown-body code{padding:.2em .4em;font-size:85%;background-color:#f6f8fa;border-radius:6px}.markdown-body pre>code{padding:0;font-size:100%;background-color:inherit;border:0}.Chinese .markdown-body{line-height:200%}.site-date-catalog{font-size:2rem}.header-title{font-size:2rem;font-weight:700;margin-top:32px;font-family:lxgw wenkai tc,cursive;text-align:center}.header-title a{text-decoration:none}.header-subtitle{color:#666}.header-items{margin:10px 0;display:flex;justify-content:center;align-items:center;width:100%}.header-item{margin:0 5px}.header-line{width:100%;border-width:2px;border-color:#482936;border-style:solid none none none}.lang-switch{font-weight:600}#posts-list{min-height:600px}#posts-list ul{list-style-type:none;padding-inline-start:1em}.posts-line{font-size:1.2rem;margin:12px 0}.posts-categories{font-size:.8rem;margin:auto;text-align:center}.posts-category{padding:3px 0;border:#000 2px solid;border-radius:5px}.site-footer{margin-top:50px}.site-footer-item{margin-right:12px}.post-header{margin-bottom:50px}.post-title{font-size:2rem;font-weight:600}.post-tags{display:inline;font-weight:600;padding:2px 5px;margin-right:6px;border:#000 2px solid;border-radius:5px}.post-date{font-weight:800;font-style:italic}.post-author{float:right;font-weight:600}.page-content{min-height:60%}.post-content{margin-bottom:50px}.post-content p{hyphens:auto;line-height:1.8;text-justify:ideographic;margin-bottom:1em}.post-content img{max-width:100%;display:block;margin-right:auto;margin-top:6px}.post-content .post-gallery{display:flex;flex-wrap:wrap;gap:6px}.post-content .post-gallery img{margin-right:auto;margin-top:auto;width:calc(50% - 3px)}.related-content{border-width:3px;border-style:solid;border-color:#000;padding:0 10px;margin-bottom:50px;margin-top:100px}.related-content li{margin:5px 0}.taxonomy-term{font-size:3rem}.gallery-img{text-align:center}.gallery-img span{text-align:center}.gallery-img-desc{font-size:.8em;font-weight:800}#disqus_thread{position:relative}#disqus_thread:after{content:"";display:block;height:55px;width:100%;position:absolute;bottom:0;background:#fff}@media screen and (max-width:600px){.header-title,.header-subtitle,.header-items{}.posts-line{font-size:16px}.markdown-body{font-size:16px}.post-title{font-size:2rem}.post-content p{letter-spacing:.05em}.post-content .post-gallery img{width:100%}}@media screen and (max-width:48em){.posts-category{display:none}}</style>
+  
+  
+    <style>.container,.container-fluid{margin-right:auto;margin-left:auto}.container-fluid{padding-right:2rem;padding-left:2rem}.row{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:initial;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-.5rem;margin-left:-.5rem}.row.reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.col.reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.col-xs,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-offset-0,.col-xs-offset-1,.col-xs-offset-10,.col-xs-offset-11,.col-xs-offset-12,.col-xs-offset-2,.col-xs-offset-3,.col-xs-offset-4,.col-xs-offset-5,.col-xs-offset-6,.col-xs-offset-7,.col-xs-offset-8,.col-xs-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-xs{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-xs-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-xs-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-xs-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-xs-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-xs-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-xs-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-xs-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-xs-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-xs-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-xs-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-xs-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-xs-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-xs-offset-0{margin-left:0}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-11{margin-left:91.66666667%}.start-xs{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-xs{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-xs{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-xs{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-xs{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-xs{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-xs{-ms-flex-pack:distribute;justify-content:space-around}.between-xs{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-xs{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-xs{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}@media only screen and (min-width:48em){.container{width:49rem}.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-offset-0,.col-sm-offset-1,.col-sm-offset-10,.col-sm-offset-11,.col-sm-offset-12,.col-sm-offset-2,.col-sm-offset-3,.col-sm-offset-4,.col-sm-offset-5,.col-sm-offset-6,.col-sm-offset-7,.col-sm-offset-8,.col-sm-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-sm{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-sm-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-sm-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-sm-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-sm-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-sm-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-sm-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-sm-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-sm-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-sm-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-sm-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-sm-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-sm-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-sm-offset-0{margin-left:0}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-11{margin-left:91.66666667%}.start-sm{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-sm{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-sm{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-sm{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-sm{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-sm{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-sm{-ms-flex-pack:distribute;justify-content:space-around}.between-sm{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-sm{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-sm{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:64em){.container{width:65rem}.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-offset-0,.col-md-offset-1,.col-md-offset-10,.col-md-offset-11,.col-md-offset-12,.col-md-offset-2,.col-md-offset-3,.col-md-offset-4,.col-md-offset-5,.col-md-offset-6,.col-md-offset-7,.col-md-offset-8,.col-md-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-md{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-md-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-md-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-md-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-md-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-md-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-md-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-md-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-md-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-md-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-md-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-md-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-md-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-md-offset-0{margin-left:0}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-11{margin-left:91.66666667%}.start-md{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-md{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-md{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-md{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-md{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-md{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-md{-ms-flex-pack:distribute;justify-content:space-around}.between-md{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-md{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-md{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:75em){.container{width:76rem}.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-offset-0,.col-lg-offset-1,.col-lg-offset-10,.col-lg-offset-11,.col-lg-offset-12,.col-lg-offset-2,.col-lg-offset-3,.col-lg-offset-4,.col-lg-offset-5,.col-lg-offset-6,.col-lg-offset-7,.col-lg-offset-8,.col-lg-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-lg{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-lg-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-lg-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-lg-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-lg-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-lg-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-lg-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-lg-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-lg-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-lg-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-lg-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-lg-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-lg-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-lg-offset-0{margin-left:0}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-11{margin-left:91.66666667%}.start-lg{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-lg{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-lg{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-lg{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-lg{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-lg{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-lg{-ms-flex-pack:distribute;justify-content:space-around}.between-lg{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-lg{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-lg{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}</style>
+  
+
+  
+
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="極客死亡計劃">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
+  
+  
+
+  
+  
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+</head>
+
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="header-title">
+    <a href="/"
+      >極客死亡計劃</a
+    >
+  </div>
+  <div class="header-subtitle"></div>
+</header>
+<div class="header-items">
+  
+  <div class="header-item">
+    <a href="/about" target="_blank">关于</a>
+  </div>
+  
+  <div class="header-item">
+    <a href="/posts/index.xml" target="_blank">RSS</a>
+  </div>
+  
+</div>
+<div class="row">
+   
+</div>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">2024年，我使用什么工具帮助我阅读</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2024-09-13 00:00:00 UTC">
+                13 Sep 2024
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <p>目前我使用效率工具的逻辑是，如果有数量一定的个人数据需要管理，我就会使用 Notion 的数据库，尤其是这些数据有一定相似性的时候。</p>
+<p>自己阅读过或想要阅读的图书就属于这类数据。将一本书视为一条记录，每条记录包含多个数据项，若干记录就组成了一个数据表。以 Notion 为工具，可以这样建造出自己的个人图书馆。</p>
+<p><img src="https://image.guhub.cn/blog/2024/notion-library.jpg" alt=""></p>
+<h2 id="用-notion-建立个人图书馆">用 Notion 建立个人图书馆</h2>
+<p>在这个 Notion 数据库中，每条记录由以下属性组成：</p>
+<ul>
+<li><strong>状态</strong>（Status）：尚未开始、中断阅读、正在阅读、放弃阅读……</li>
+<li><strong>名字</strong>（Name）</li>
+<li>作者（Author）</li>
+<li>分类（Category）</li>
+<li>标签（Tags）</li>
+<li>ISBN：图书的唯一标识</li>
+<li>语言（Language）</li>
+<li>来源（Source）：实体书、借阅、电子书……</li>
+<li>封面（Cover）</li>
+<li><strong>开始阅读日期</strong>（Started）</li>
+<li><strong>完成阅读日期</strong>（Finished）</li>
+<li><strong>持续时间</strong>（Duration）：由前两个属性计算得出</li>
+<li>……</li>
+</ul>
+<p>未加粗体部分的属性可能显得有些冗余，但是在必要的时候可以发挥用处。例如可以通过统计各个语言、来源在数据库中的占比，制作出图表直观地看到自己在一段时间里读了多少英文书、占比是多少，哪一段时间里读的电子书比较多……</p>
+<p>好吧，好像确实用处不大。</p>
+<p>不过，Notion 最好用的部分并不是存储数据，而是各类视图、操作按钮和公式函数等，能用来处理数据的工具。</p>
+<h2 id="阅读进度的追踪闭环">阅读进度的追踪闭环</h2>
+<p>借助 Notion 的「按钮属性」，我们可以将一些较为繁琐的数据管理操作一键化。比如在我的 Notion 图书馆中的「选一本书读」这个视图中，我设置了「开始阅读」这个按钮，按下之后，Notion 会执行两个操作。</p>
+<ol>
+<li>将这条记录的「状态」设置为 In Progress</li>
+<li>将这条记录的「开始阅读时间」设置为现在</li>
+</ol>
+<p><img src="https://image.guhub.cn/blog/2024/notion-library-pick-a-book.jpg" alt=""></p>
+<p>相应地，在「正在读」这个视图中，也有一个「读完了」按钮，按下他之后会一键执行以下操作。</p>
+<ol>
+<li>将这条记录的「状态」设置为 Finished</li>
+<li>将这条记录的「完成阅读时间」设置为现在</li>
+</ol>
+<p><img src="https://image.guhub.cn/blog/2024/notion-library-done-reading.png" alt=""></p>
+<p>利用 Notion 的甘特图（时间轴）视图，可以直观地看到自己近期读过的书，以及各自花费的时间。通过筛选，左侧的列表还能显示出今年读过的所有书籍，方便复盘。</p>
+<p><img src="https://image.guhub.cn/blog/2024/notion-library-calendar.jpg" alt=""></p>
+<p>其中，用于表示甘特图中每个项目持续时间的属性是 Duration，它实际上是一个 Notion 函数，源码如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (
+</span></span><span style="display:flex;"><span>	empty(Finished), 
+</span></span><span style="display:flex;"><span>	dateRange(Started, today()), 
+</span></span><span style="display:flex;"><span>	dateRange(Started, Finished) 
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>这是一个很简单的逻辑：如果「完成阅读时间」为空，则将「开始阅读时间」作为起始时间，将今天的日期作为结束时间；否则将「完成阅读时间」作为结束时间。</p>
+<h2 id="读书笔记管理">读书笔记管理</h2>
+<p>在以前，我一直使用 Obsidian 的 Dataview 插件制作书架视图，然后用手动更改 metadata 的方式进行管理。</p>
+<p><img src="https://image.guhub.cn/blog/2024/old-obsidian-vault.jpg" alt=""></p>
+<p>每一本书都有一个主要的笔记文件（和上文提到的「记录」的概念一样，但你可以理解为 Notion 管理数据库，但是 Obsidian 更擅长管理磁盘里的文件），这个笔记文件可能还链接着其他的卡片笔记。当时的我仍在尝试各种笔记方法，没有意识到这样反而让阅读的流程变得繁琐了。</p>
+<p>现在这个 Obsidian 笔记库已经有了很大的变化，极客死亡计划上的所有文章都是用它编写的。由于 Obsidian 更擅长处理文件的特性，我已经把几乎所有 Markdown 文章的编写都交给了它。</p>
+<p>在 Notion 的图书数据库中，我将以前的读书笔记原样迁移了上去。</p>
+<p><img src="https://image.guhub.cn/blog/2024/notion-book-note.jpg" alt=""></p>
+<p>这样的笔记算是有好处的，我写了不少自己的理解，未来的我如果看到这些话就能知道这是一本什么样的书。我还写了好多卡片笔记——不过问题就在这里，当我看到那些标题的时候，我一点也不想点进去看。</p>
+<p>笔记不回顾就没有价值。</p>
+<p>我目前使用 flomo 来管理所有类型的图书笔记。使用 flomo 记录的过程非常丝滑，用户可以设置打开 app 就自动弹出输入框，如果是 iOS，还可以设置快捷指令。这比 Obsidian 从 iCloud 下载数据，然后再花好几十秒加载仓库要快多了。编辑体验也要比 Notion 好不少。</p>
+<p><img src="https://image.guhub.cn/blog/2024/flomo-reading-tags.jpg" alt=""></p>
+<p>最棒的是它有自带的每日回顾功能，可以自己设置回顾范围和数量，能提醒自己每天回顾笔记。</p>
+<p>让 App 帮自己决定回顾内容的好处是，自己不需要纠结当天需要回顾哪些内容，不需要看着一个一个的标题陷入选择困难。这就像 YouTube 和抖音，前者需要自己看着封面和标题做选择，后者只需要一条一条往下滑就好了。</p>
+<p>如果由额外的精力，还可以用 flomo 的相关笔记功能，针对回顾的笔记中自己感兴趣的一条，查看与之相关的其他笔记。</p>
+<p>至于 Notion 这边，每一条记录里会写上这本书对应的 flomo 标签，方便我找到这本书的笔记。同时，也会简单写上两句对这本书内容的概况和自己的一些评价。</p>
+<p><img src="https://image.guhub.cn/blog/2024/notion-new-book-note-example.jpg" alt=""></p>
+<p>有时候，也会简单列出几条自己觉得有启发性的要点以供参考。</p>
+<h2 id="一些反思和困顿">一些反思和困顿</h2>
+<p>我的笔记体系和我的博客一样，经常推翻重来或者经历大改，但唯一一直保留下来的，就是阅读和写作这两个对我来说最重要的需求。</p>
+<p>对我来说，目前我的管理方法还有些混乱，尤其是读书笔记经历了 Obsidian+ 导图 + 大纲式笔记 + 卡片笔记这个阶段，再转到用 Notion 和 flomo 两个工具分开管理读书本身和笔记，笔记的内容还是挺乱的。</p>
+<p>或许我有些过于关注工具的使用了，至少读书这件事情本身我是没有落下的。至于现在的系统要不要改、怎么改，或许还需要一些时间的沉淀和思考，或者，我得找本书来读读。</p>
+<p>另外，如果你感兴趣，可以通过 <a href="https://eltrac.notion.site/d8be16d4974d435dabb0ad77923f00b3?v=8fa9861a863347a7baaef713b8be2c31">这个链接</a> 访问我的 Notion 图书馆。</p>
+
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline.geedea.pro',
+    });
+  </script>
+
+            </div>
+          </div>
+
+          
+
+
+
+          
+          
+          <div style="height: 50px;"></div>
+          
+        
+
+        <div class="site-footer">
+  <p style="text-align: center;">You've reached the end.</p>
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  
+
+<script>
+  
+  
+    
+    
+  
+</script>
+
+  
+
+</body>
+
+</html>
