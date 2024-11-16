@@ -25,6 +25,7 @@ postFooterContent = '''
     init({
       el: '#waline',
       serverURL: 'https://waline.geedea.pro',
+      dark: 'auto',
     });
   </script>
 '''
