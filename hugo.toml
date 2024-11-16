@@ -2,6 +2,7 @@ baseURL = 'https://geedea.pro/'
 languageCode = 'zh-cn'
 title = '極客死亡計劃'
 theme = "yinyang"
+summaryLength = 70
 
 [markup]
   [markup.goldmark]
@@ -32,14 +33,17 @@ favicon = "/favicon.png"
 [[params.socials]]
 name = "关于"
 link = "/about"
+target = "_self"
 
 [[params.socials]]
 name = "链接"
 link = "/links"
+target = "_self"
 
 [[params.socials]]
 name = "RSS"
 link = "/posts/index.xml"
+target = "_blank"
 
 [services]
   [services.rss]
