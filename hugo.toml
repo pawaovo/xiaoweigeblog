@@ -26,6 +26,7 @@ postFooterContent = '''
       el: '#waline',
       serverURL: 'https://waline.geedea.pro',
       dark: 'auto',
+      pageview: true,
     });
   </script>
 '''
