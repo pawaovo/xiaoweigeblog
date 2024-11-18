@@ -21,7 +21,7 @@ mainSections = ["posts"]
 postFooterContent = '''
 <div id="waline"></div>
   <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    import { init } from '/js/waline.js';
 
     init({
       el: '#waline',

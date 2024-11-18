@@ -8,15 +8,9 @@ toc: false
 draft: false
 ---
 
-你正在阅读 [稻草人周刊](/categories/稻草人周刊/) 的第 3 期，我会在这里分享最近的有意思的事情、思考、阅读和体会，总之是一些篇幅较短还不足以成文，但的确让自己有所收获的内容。
+{{< callout "你正在阅读 [稻草人周刊](/categories/稻草人周刊/) 的第 3 期，我会在这里分享最近的有意思的事情、思考、阅读和体会。" "💡" >}}
 
 <!--more-->
-
-每期稻草人周刊大概会分为三个内容：
-
-- 🏃 - 最近在做的一些事情
-- 🤔 - 最近读的书，和一些零碎的想法
-- 📒 - 有意思的文章、播客、视频的摘录
 
 ## 🏃
 
@@ -28,7 +22,7 @@ draft: false
 
 实际使用下来发现主题做得还是挺糙的，不过「糙」也就给我留下了很多发挥的空间。花了一个小时左右修了修，于是博客变成了现在这个样子：
 
-![截图纪念一下，说不定过一两月就又变样了](https://image.guhub.cn/picgo/202411172142643.png)
+{{< figure src="https://image.guhub.cn/picgo/202411172142643.png" title="截图纪念一下，说不定过一两月就又变样了" >}}
 
 配色是从苹果官网上扣的。我在页面顶部加了一层淡淡的渐变作为点缀，本意是为了模拟「死兆」的感觉，不过还是不想显得太吓人，所以比较收敛。
 
@@ -108,6 +102,4 @@ draft: false
 
 [A physicist and his cat 'reveal' the equation of cat motion](https://phys.org/news/2024-10-physicist-cat-reveal-equation-motion.html)
 
-猫猫动力方程式 uwu
-
-![image-20241117231145582](https://image.guhub.cn/picgo/202411172311708.png)
+{{< figure src="https://image.guhub.cn/picgo/202411172311708.png" title="猫猫动力方程式 uwu" >}}
