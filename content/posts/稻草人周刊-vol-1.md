@@ -1,18 +1,13 @@
 ---
 categories: 稻草人周刊
 date: 2024-11-04
-description: 稻草人周刊 Vol.1
 draft: false
 featuredImage: null
-title: 人、智慧、行为
+title: 稻草人周刊 Vol.1
 toc: false
 ---
 
-
-
-
-
-你正在阅读 [稻草人周刊](https://www.geedea.pro/series/%E7%A8%BB%E8%8D%89%E4%BA%BA%E5%91%A8%E5%88%8A/) 的第 1 期，我会在这里分享最近的有意思的事情、思考、阅读和体会，总之是一些篇幅较短还不足以成文，但的确让自己有所收获的内容。
+你正在阅读 [稻草人周刊](/categories/稻草人周刊/) 的第 1 期，我会在这里分享最近的有意思的事情、思考、阅读和体会，总之是一些篇幅较短还不足以成文，但的确让自己有所收获的内容。
 
 每期稻草人周刊大概会分为三个内容：
 
