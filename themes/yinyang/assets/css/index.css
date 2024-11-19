@@ -20,7 +20,7 @@
 .dark {
   --background-color: #1D2021;
   --block-background-color: #181A1B;
-  --border-color: #d0d7de;
+  --border-color: rgba(255,255,255,0.2);
   --text-color: #D2CEC9;
   --secondary-text-color: #A1998D;
   --link-color: #277BD9
@@ -30,7 +30,7 @@
   :root {
     --background-color: #1D2021;
     --block-background-color: #181A1B;
-    --border-color: #d0d7de;
+    --border-color: rgba(255,255,255,0.2);
     --text-color: #D2CEC9;
     --secondary-text-color: #A1998D;
     --link-color: #277BD9
@@ -477,4 +477,35 @@ a:hover {
 
 .callout .callout-content p {
   margin: 0;
+}
+
+/* quote shortcode */
+
+.quote-card {
+  --card-bg: rgba(255,255,255,0.25);
+  --card-bg-lighter: rgba(255,255,255,0.1);
+  --card-noise: rgba(255,255,255,0.04);
+
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  margin: 5rem 3rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;
+  transform: rotate(3deg);
+  background-color: rgba(255,255,255,0.35);
+
+  background: linear-gradient(var(--card-bg-lighter), var(--card-bg-lighter)),
+    repeating-radial-gradient(var(--card-bg) 0 0.0001%, var(--card-noise) 0 0.0002%) 50% 0 / 2500px 2500px,
+    repeating-conic-gradient(var(--card-bg) 0 0.0001%, var(--card-noise) 0 0.0002%) 60% 60% / 2500px 2500px;
+  background-blend-mode: normal, difference;
+}
+
+@media screen and (max-width: 768px) {
+  .quote-card {
+    font-size: 1.2rem;
+    margin: 3rem 1rem;
+  }
 }
