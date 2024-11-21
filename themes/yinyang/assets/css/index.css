@@ -12,7 +12,9 @@
   --em-text-color: #0271A4;
 
   --mono-font-family: "Courier New", Courier, "Menlo", "Monaco", Consolas, "Liberation Mono", "Lucida Console", monospace;
-  --serif-font-family: -apple-system-serif, "Noto Serif SC", "Source Han Serif", "STSong", "Hiragino Mincho Pro", "SimSun", serif;
+  --serif-font-family: STZhongsong, STSong, "Noto Serif CJK", "Noto Serif SC", PMingLiu,
+  SimSun, "WenQuanYi Bitmap Song", "Times New Roman", Times, serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .dark {
