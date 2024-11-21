@@ -12,7 +12,7 @@
   --em-text-color: #0271A4;
 
   --mono-font-family: "Courier New", Courier, "Menlo", "Monaco", Consolas, "Liberation Mono", "Lucida Console", monospace;
-  --serif-font-family: "Noto Serif SC", "Source Han Serif", serif;
+  --serif-font-family: "Noto Serif SC", "Source Han Serif", "STSong", "Hiragino Mincho Pro", "SimSun", serif;
 }
 
 .dark {
