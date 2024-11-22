@@ -5,8 +5,6 @@ description: 我需要一场距离足够遥远的逃亡
 draft: false
 ---
 
-{{< meting server="netease" id="1441049014" type="song" />}}
-
 {{< quotecard >}}
 “月球，我想去月球。”
 
