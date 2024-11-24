@@ -23,12 +23,18 @@ postFooterContent = '''
   <script type="module">
     import { init } from '/js/waline.js';
 
-    init({
+    const options = {
       el: '#waline',
       serverURL: 'https://waline.geedea.pro',
       dark: 'auto',
       pageview: true,
-    });
+    };
+
+    if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
+      options.pageview = false;
+    }
+
+    init(options);
   </script>
 '''
 favicon = "/favicon.png"

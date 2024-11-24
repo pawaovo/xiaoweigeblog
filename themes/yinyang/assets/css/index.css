@@ -42,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
   background-color: var(--background-color);
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 body::before {
