@@ -1,20 +1,20 @@
 {
     "version": 2,
     "functions": {
-      "api/headers.js": {
-        "runtime": "nodejs@23.3.0",
-        "includeFiles": "api/headers.js"
-      }
+        "api/headers.js": {
+            "runtime": "nodejs@18.17.0",
+            "includeFiles": "api/headers.js"
+        }
     },
     "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          {
-            "key": "X-Headers-Source",
-            "value": "headers.js"
-          }
-        ]
-      }
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Headers-Source",
+                    "value": "headers.js"
+                }
+            ]
+        }
     ]
-  }
+}
