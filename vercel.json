@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "functions": {
+      "api/headers.js": {
+        "runtime": "nodejs14.x",
+        "includeFiles": "api/headers.js"
+      }
+    },
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "X-Headers-Source",
+            "value": "headers.js"
+          }
+        ]
+      }
+    ]
+  }
