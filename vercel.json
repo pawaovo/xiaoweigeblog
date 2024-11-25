@@ -2,7 +2,6 @@
     "version": 2,
     "functions": {
         "api/headers.js": {
-            "runtime": "nodejs@18.17.0",
             "includeFiles": "api/headers.js"
         }
     },
