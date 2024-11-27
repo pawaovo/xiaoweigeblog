@@ -4,6 +4,7 @@ title = '極客死亡計劃'
 theme = "yinyang"
 summaryLength = 70
 timeZone = "Asia/Shanghai"
+hasCJKLanguage = true
 
 [markup]
   [markup.goldmark]

@@ -1,4 +1,12 @@
 <div class="site-footer">
+  
+  {{$scratch := newScratch}}
+  {{ range (where .Site.Pages "Kind" "page" )}}
+      {{$scratch.Add "total" .WordCount}}
+  {{ end }}
+<div class="site-footer-item">🪦 {{$scratch.Get "total" }} 字在这里<span style="display:inline-block; transform:rotate(7deg) translateY(0.15rem); filter: blur(1px)">死去</span></div>
+
+
   <p style="text-align: center;">You've reached the end.</p>
   <!-- {{ range .Site.Params.socials }}
   <div class="site-footer-item">
