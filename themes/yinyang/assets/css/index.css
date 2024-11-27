@@ -502,3 +502,63 @@ a:hover {
     margin: 3rem 1rem;
   }
 }
+
+/* blog links */
+
+div.blog-links {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+a.blog-link {
+  position: relative;
+  background-color: var(--block-background-color);
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  padding-right: 4rem;
+  border-radius: 1rem;
+  width: calc(50% - 2rem);
+  box-sizing: border-box;
+  overflow: hidden
+}
+
+@media screen and (max-width: 768px) {
+  a.blog-link {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
+}
+
+a.blog-link h4,
+a.blog-link p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+a.blog-link p {
+  line-height: 1.5;
+}
+
+a.blog-link .blog-link-content {
+  z-index: 10;
+}
+
+a.blog-link-image {
+  z-index: 0;
+}
+
+a.blog-link img {
+  --size: 5rem;
+  display: block;
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  z-index: 0;
+}
