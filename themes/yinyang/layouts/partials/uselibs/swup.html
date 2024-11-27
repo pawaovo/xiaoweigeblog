@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/swup@4"></script>
+<script type="module">
+    import { init } from '/js/waline.js'
+    const swup = new Swup();
+
+    swup.hooks.on('page:view', (visit) => {
+        if (!location.href.includes('/posts')) return;
+        
+        const options = {
+            el: '#waline',
+            serverURL: 'https://waline.geedea.pro',
+            dark: 'auto',
+            pageview: true,
+        };
+
+        if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
+            options.pageview = false;
+        }
+
+        init(options);
+    });
+</script>

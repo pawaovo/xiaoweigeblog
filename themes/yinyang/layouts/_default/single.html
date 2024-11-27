@@ -3,87 +3,98 @@
 {{ partial "head.html" . }}
 
 <body>
-  <article class="post {{ .Site.Language.LanguageName }}" id="article">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="site-header">
-          {{ partial "header.html" . }}
-        </div>
-        <header class="post-header">
-          <h1 class="post-title">
-            {{ .Title }}
-            {{ with .Params.subtitle }}
-              <small class="post-subtitle">{{ . }}</small>
-            {{ end }}
-          </h1>
-          
-          
-          {{ if in .Site.Params.mainSections .Type }}
-          <div class="row post-desc">
-            <div class="col-xs-6">
-              {{ if .Date }}
-              <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
-                {{ .Date.Format "02 Jan 2006" }}
-              </time>
+  <main id="swup" class="transition-fade">
+    <article class="post {{ .Site.Language.LanguageName }}" id="article">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="site-header">
+            {{ partial "header.html" . }}
+          </div>
+          <header class="post-header">
+            <h1 class="post-title">
+              {{ .Title }}
+              {{ with .Params.subtitle }}
+                <small class="post-subtitle">{{ . }}</small>
               {{ end }}
-              <span> / </span>
-              <span>
-                <span class="waline-pageview-count">…</span>
-                Views
-              </span>
+            </h1>
+            
+            
+            {{ if in .Site.Params.mainSections .Type }}
+            <div class="row post-desc">
+              <div class="col-xs-6">
+                {{ if .Date }}
+                <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
+                  {{ .Date.Format "02 Jan 2006" }}
+                </time>
+                {{ end }}
+                <span> / </span>
+                <span>
+                  <span class="waline-pageview-count">…</span>
+                  Views
+                </span>
+              </div>
+              <div class="col-xs-6">
+                {{ if .Site.Author.name }}
+                <div class="post-author">
+                  <a target="_blank" href="{{ .Site.Author.homepage }}">@{{ .Site.Author.name }}</a>
+                </div>
+                {{ end }}
+              </div>
             </div>
-            <div class="col-xs-6">
-              {{ if .Site.Author.name }}
-              <div class="post-author">
-                <a target="_blank" href="{{ .Site.Author.homepage }}">@{{ .Site.Author.name }}</a>
+            {{ end }}
+          </header>
+  
+          <div class="post-content markdown-body">
+            {{ .Site.Params.postHeaderContent | safeHTML }}
+            {{ .Content }}
+          </div>
+  
+          <div class="row middle-xs">
+            <div class="col-xs-12">
+              {{ range .Params.tags }}
+              <div class="post-tags">
+                <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">
+                  {{ . }}
+                </a>
               </div>
               {{ end }}
             </div>
           </div>
-          {{ end }}
-        </header>
-
-        <div class="post-content markdown-body">
-          {{ .Site.Params.postHeaderContent | safeHTML }}
-          {{ .Content }}
-        </div>
-
-        <div class="row middle-xs">
-          <div class="col-xs-12">
-            {{ range .Params.tags }}
-            <div class="post-tags">
-              <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">
-                {{ . }}
-              </a>
+          {{ if in .Site.Params.mainSections .Type }}
+            <div class="row">
+              <div class="col-xs-12">
+                {{ .Site.Params.postFooterContent | safeHTML }}
+              </div>
             </div>
-            {{ end }}
-          </div>
-        </div>
-        {{ if in .Site.Params.mainSections .Type }}
-          <div class="row">
-            <div class="col-xs-12">
-              {{ .Site.Params.postFooterContent | safeHTML }}
+
+            <!-- waline -->
+            <div style="height: 50px;"></div>
+            <div class="post-comments">
+              <div id="waline"></div>
+              <script type="module">
+                import { init } from '/js/waline.js'
+
+                const options = {
+                    el: '#waline',
+                    serverURL: 'https://waline.geedea.pro',
+                    dark: 'auto',
+                    pageview: true,
+                };
+
+                if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
+                    options.pageview = false;
+                }
+
+                init(options);
+              </script>
             </div>
-          </div>
-
-          {{ partial "related.html" . }}
-
-          {{ if .Site.Params.postAds }}
-          <div class="post-ads">{{ .Site.Params.postAds | safeHTML }}</div>
           {{ end }}
-          <!-- split -->
-          <div style="height: 50px;"></div>
-          {{ if .Site.Params.disqus }}
-          <div class="post-comments">
-            {{ partial "disqus.html" . }}
-          </div>
-          {{ end }}
-        {{ end }}
-
-        {{ partial "footer.html" . }}
+  
+          {{ partial "footer.html" . }}
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </main>
 
   {{ partial "scripts.html" . }}
   {{ if .Site.Params.extraBody }}
