@@ -8,10 +8,6 @@ title: 2024 年，我的 RSS 解决方案
 toc: true
 ---
 
-
-
-
-
 ## 以前的工具和系统
 
 之前一直用 Inoreader，但是 iOS 应用无法在国区应用商店安装，我也懒得切换地区，所以之前一直同时使用 Inoreader + Cubox 两个 App 作为阅读工具——在有空的时候，现在网页端筛选一遍想读的文章，然后收藏链接到 Cubox，之后无论在什么地方，都可以很方便地用 Cubox 阅读这些文章。
@@ -54,9 +50,7 @@ toc: true
 
 安装步骤就略去了，如果你感兴趣，可以读读 Spencer Woo 写的《[找不到满意的 RSS 服务？你可以自己搭建一个](https://sspai.com/post/57498)》。
 
-最后的大概是这样的界面：
-
-![image.png](https://image.guhub.cn/picgo/20241107171557.png)
+{{<img src="https://image.guhub.cn/picgo/20241107171557.png" title="Tiny Tiny RSS 的界面" >}}
 
 自建的服务也有不少痛点。虽然不清楚原因，但 Tiny Tiny RSS 跑起来遇到了各种不大不小的 bug，比如我每次进入网页都要重新登陆一遍，而且登录之后还不能直接跳转到仪表盘，尽管的确已经登陆了但还卡在登陆界面，需要自己输入 url 才能跳转到页面。不过这也还好，因为我最需要的只是 Tiny Tiny RSS 提供的 Fever API。
 
@@ -74,9 +68,9 @@ Fever API 是付费 RSS 阅读器 Fever 提供的一种 API 格式，有不少�
 
 最后，我选择在 Windows 上使用 Fluent Reader 作为阅读器，在 iPhone 和 iPad 上使用 Unread。
 
-![image.png](https://image.guhub.cn/picgo/20241107172518.png)
+{{<img src="https://image.guhub.cn/picgo/20241107172518.png" title="Fluent Reader 的界面" >}}
 
-![95d042abd10307ed195c636de4bbd3c.jpg](https://image.guhub.cn/picgo/95d042abd10307ed195c636de4bbd3c.jpg)
+{{<img src="https://image.guhub.cn/picgo/95d042abd10307ed195c636de4bbd3c.jpg" title="iPad 上 Unread 的界面" >}}
 
 这样就完美解决了，市面上大多数 RSS 阅读器对我来说难以做到跨平台的痛点。
 

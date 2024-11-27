@@ -22,7 +22,7 @@ draft: false
 
 实际使用下来发现主题做得还是挺糙的，不过「糙」也就给我留下了很多发挥的空间。花了一个小时左右修了修，于是博客变成了现在这个样子：
 
-{{< figure src="https://image.guhub.cn/picgo/202411172142643.png" title="截图纪念一下，说不定过一两月就又变样了" >}}
+{{< img src="https://image.guhub.cn/picgo/202411172142643.png" title="截图纪念一下，说不定过一两月就又变样了" >}}
 
 配色是从苹果官网上扣的。我在页面顶部加了一层淡淡的渐变作为点缀，本意是为了模拟「死兆」的感觉，不过还是不想显得太吓人，所以比较收敛。
 
@@ -102,4 +102,4 @@ draft: false
 
 [A physicist and his cat 'reveal' the equation of cat motion](https://phys.org/news/2024-10-physicist-cat-reveal-equation-motion.html)
 
-{{< figure src="https://image.guhub.cn/picgo/202411172311708.png" title="猫猫动力方程式 uwu" >}}
+{{< img src="https://image.guhub.cn/picgo/202411172311708.png" title="猫猫动力方程式 uwu" >}}
