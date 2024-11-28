@@ -36,7 +36,7 @@
                                       {{ if .Params.description }}
                                         <p>{{.Params.description }}</p>
                                       {{ else }}
-                                        {{ .Summary }}
+                                        <p>{{ .Summary }}</p>
                                       {{ end }}
                                       {{ $isFirstPost = false }}
                                     {{ end }}
