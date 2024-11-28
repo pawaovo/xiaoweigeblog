@@ -583,11 +583,13 @@ a.blog-link img {
 
 /* transition animation */
 
-html.is-changing .transition-fade {
-  transition: opacity 0.25s;
+html.is-changing .transition-fade article {
+  transition: opacity, transform 0.25s;
+  transform: translateY(0);
   opacity: 1;
 }
 
-html.is-animating .transition-fade {
+html.is-animating .transition-fade article {
+  transform: translateY(2rem);
   opacity: 0;
 }
