@@ -20,17 +20,17 @@ headTitle = "極客死亡計劃"
 mainSections = ["posts"]
 favicon = "/favicon.png"
 
-[[params.socials]]
+[[params.nav]]
 name = "关于"
 link = "/about"
 target = "_self"
 
-[[params.socials]]
+[[params.nav]]
 name = "链接"
 link = "/links"
 target = "_self"
 
-[[params.socials]]
+[[params.nav]]
 name = "RSS"
 link = "/posts/index.xml"
 target = "_blank"
