@@ -16,6 +16,14 @@ rel="stylesheet"
 href="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css"
 />
 
+<!-- theme css -->
+{{ with resources.Get "css/index.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+{{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+
 <!-- Extra -->
 {{ range .Site.Params.extraCSSFiles -}}
 <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
