@@ -1,6 +1,7 @@
 /* global */
 
 :root {
+  /* colors */
   --background-color: #F5F5F7;
   --block-background-color: #E9E8ED;
   --border-color: #d0d7de;
@@ -11,10 +12,14 @@
   --strong-text-color: #B6506A;
   --em-text-color: #0271A4;
 
+  /* fonts */
   --mono-font-family: "Courier New", Courier, "Menlo", "Monaco", Consolas, "Liberation Mono", "Lucida Console", monospace;
   --serif-font-family: STZhongsong, STSong, "Noto Serif CJK", "Noto Serif SC", PMingLiu,
   SimSun, "WenQuanYi Bitmap Song", "Times New Roman", Times, serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* waline */
+  --waline-font-size: 20px;
 }
 
 .dark {
@@ -561,13 +566,11 @@ a.blog-link img {
 
 /* transition animation */
 
-/* Define a transition duration during page visits */
 html.is-changing .transition-fade {
   transition: opacity 0.25s;
   opacity: 1;
 }
 
-/* Define the styles for the unloaded pages */
 html.is-animating .transition-fade {
   opacity: 0;
 }
