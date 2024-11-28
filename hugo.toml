@@ -22,12 +22,12 @@ favicon = "/favicon.png"
 
 [[params.nav]]
 name = "关于"
-link = "/about"
+link = "/about/"
 target = "_self"
 
 [[params.nav]]
 name = "链接"
-link = "/links"
+link = "/links/"
 target = "_self"
 
 [[params.nav]]

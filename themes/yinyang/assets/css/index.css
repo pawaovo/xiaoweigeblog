@@ -155,18 +155,33 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--text-color);
   width: fit-content;
-  padding: 0.25rem 0.75rem;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .header-item a {
+  display: inline-block;
   color: var(--background-color);
+  padding: 0.25rem 0.5rem;
+  background-color: var(--text-color);
 }
 
-.header-item {
-  margin: 0 5px;
+.header-item:first-child a {
+  padding-left: 0.75rem
+}
+
+.header-item:last-child a {
+  padding-right: 0.75rem
+}
+
+.header-item.active a {
+  color: var(--text-color);
+  background-color: var(--block-background-color);
+}
+
+.header-item a:hover {
+  text-decoration: none;
 }
 
 .header-line {

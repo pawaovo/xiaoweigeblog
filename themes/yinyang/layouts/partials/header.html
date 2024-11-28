@@ -10,7 +10,7 @@
 <!-- Navigation -->
 <nav class="header-items">
   {{ range .Site.Params.nav }}
-  <div class="header-item">
+  <div class="header-item {{ if eq .link $.Page.RelPermalink }}active{{ end }}">
     <a href="{{ .link }}" target="{{ .target }}">{{ .name }}</a>
   </div>
   {{ end }}
