@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 {{ partial "head.html" . }}
-
 <body>
   <main id="swup" class="transition-fade">
     <article class="post {{ .Site.Language.LanguageName }}" id="article">
@@ -11,7 +10,6 @@
           <div class="site-header">
             {{ partial "header.html" . }}
           </div>
-
           <!-- Post Header -->
           <header class="post-header">
             {{ if in .Site.Params.mainSections .Type }}
@@ -31,21 +29,20 @@
                 </time>
                 {{ end }}
                 <span> / </span>
-                <span>
-                  <span class="waline-pageview-count">…</span>
-                  Views
-                </span>
+                <span><span class="waline-pageview-count">…</span> Views</span>
               </div>
             </div>
             {{ end }}
           </header>
-  
-          <div class="post-content markdown-body">
+
+          <!-- Post Content -->
+          <div id="post-content" class="post-content markdown-body">
             {{ .Site.Params.postHeaderContent | safeHTML }}
             {{ .Content }}
           </div>
-  
-          <div class="row middle-xs">
+
+          <!-- Post Tags -->
+          <!-- <div class="row middle-xs">
             <div class="col-xs-12">
               {{ range .Params.tags }}
               <div class="post-tags">
@@ -55,14 +52,10 @@
               </div>
               {{ end }}
             </div>
-          </div>
-          {{ if in .Site.Params.mainSections .Type }}
-            <div class="row">
-              <div class="col-xs-12">
-                {{ .Site.Params.postFooterContent | safeHTML }}
-              </div>
-            </div>
+          </div> -->
 
+          <!-- Post Comments -->
+          {{ if in .Site.Params.mainSections .Type }}
             <!-- waline -->
             <div style="height: 50px;"></div>
             <div class="post-comments">
@@ -74,22 +67,19 @@
             </div>
           {{ end }}
 
-          <!-- use fancybox -->
-          <script>
-              Fancybox.bind("[data-fancybox]");
-          </script>
-  
+          <!-- Footer -->
           {{ partial "footer.html" . }}
         </div>
       </div>
     </article>
+    <!-- use fancybox -->
+    <!-- the reason it is replace here it that the fancybox.js is loaded after the swup.js -->
+    <script>Fancybox.bind("[data-fancybox]");</script>
   </main>
 
   {{ partial "scripts.html" . }}
   {{ if .Site.Params.extraBody }}
   {{ .Site.Params.extraBody | safeHTML }}
   {{ end }}
-
 </body>
-
 </html>
