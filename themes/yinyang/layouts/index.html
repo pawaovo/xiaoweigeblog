@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
-{{ partial "head.html" . }}
-
-<body>
-  <main id="swup" class="transition-fade">
+{{ partial "snippets/document-start.html" . }}
     <article class="posts">
       <div class="row">
         <div class="col-xs-12">
@@ -61,13 +56,7 @@
               <hr>
             {{ end }}
           </div>
-  
-          {{ partial "footer.html" . }}
         </div>
       </div>
     </article>
-  </main>
-  {{ partial "scripts.html" . }}
-</body>
-
-</html>
+{{ partial "snippets/document-end.html" . }}

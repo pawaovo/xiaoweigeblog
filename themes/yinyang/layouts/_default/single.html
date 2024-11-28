@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
-{{ partial "head.html" . }}
-<body>
-  <main id="swup" class="transition-fade">
+{{ partial "snippets/document-start.html" . }}
     <article class="post {{ .Site.Language.LanguageName }}" id="article">
       <div class="row">
         <div class="col-xs-12">
@@ -66,20 +62,10 @@
               </script>
             </div>
           {{ end }}
-
-          <!-- Footer -->
-          {{ partial "footer.html" . }}
         </div>
       </div>
     </article>
     <!-- use fancybox -->
     <!-- the reason it is replace here it that the fancybox.js is loaded after the swup.js -->
     <script>Fancybox.bind("[data-fancybox]");</script>
-  </main>
-
-  {{ partial "scripts.html" . }}
-  {{ if .Site.Params.extraBody }}
-  {{ .Site.Params.extraBody | safeHTML }}
-  {{ end }}
-</body>
-</html>
+{{ partial "snippets/document-end.html" . }}

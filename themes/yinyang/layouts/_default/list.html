@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ partial "head.html" . }}
-
-<body>
-  <main id="swup" class="transition-fade">
+{{ partial "snippets/document-start.html" . }}
     <article class="posts">
       <div class="row">
         <div class="col-xs-12">
           {{ partial "header.html" . }}
-  
           <h1 class="taxonomy-term">{{.Data.Term}}</h1>
           <div id="posts-list">
               {{ range .Pages }}
@@ -29,14 +23,7 @@
               </div>
               {{ end }}
           </div>
-  
-          {{ partial "footer.html" . }}
         </div>
       </div>
     </article>
-  </main>
-
-  {{ partial "scripts.html" . }}
-</body>
-
-</html>
+{{ partial "snippets/document-end.html" . }}
