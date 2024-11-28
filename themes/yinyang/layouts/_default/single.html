@@ -7,19 +7,22 @@
     <article class="post {{ .Site.Language.LanguageName }}" id="article">
       <div class="row">
         <div class="col-xs-12">
+          <!-- Site Header -->
           <div class="site-header">
             {{ partial "header.html" . }}
           </div>
+
+          <!-- Post Header -->
           <header class="post-header">
+            {{ if in .Site.Params.mainSections .Type }}
+            <!-- Title and Subtitle -->
             <h1 class="post-title">
               {{ .Title }}
               {{ with .Params.subtitle }}
                 <small class="post-subtitle">{{ . }}</small>
               {{ end }}
             </h1>
-            
-            
-            {{ if in .Site.Params.mainSections .Type }}
+            <!-- Post Meta -->          
             <div class="row post-desc">
               <div class="col-xs-6">
                 {{ if .Date }}
@@ -32,13 +35,6 @@
                   <span class="waline-pageview-count">…</span>
                   Views
                 </span>
-              </div>
-              <div class="col-xs-6">
-                {{ if .Site.Author.name }}
-                <div class="post-author">
-                  <a target="_blank" href="{{ .Site.Author.homepage }}">@{{ .Site.Author.name }}</a>
-                </div>
-                {{ end }}
               </div>
             </div>
             {{ end }}
@@ -73,19 +69,7 @@
               <div id="waline"></div>
               <script type="module">
                 import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-                const options = {
-                    el: '#waline',
-                    serverURL: 'https://waline.geedea.pro',
-                    dark: 'auto',
-                    pageview: true,
-                };
-
-                if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
-                    options.pageview = false;
-                }
-
-                init(options);
+                {{ partial "snippets/waline-init.html" . | safeJS }} 
               </script>
             </div>
           {{ end }}
