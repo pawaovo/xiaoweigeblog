@@ -1,0 +1,22 @@
+<!-- prefetches -->
+{{- if .Site.Params.staticPrefix -}}
+<link rel="dns-prefetch" href="{{ .Site.Params.staticPrefix }}" />
+{{- end -}}
+
+<!-- waline -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+/>
+
+<!-- FancyBox -->
+<script src="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+<link
+rel="stylesheet"
+href="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css"
+/>
+
+<!-- Extra -->
+{{ range .Site.Params.extraCSSFiles -}}
+<link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
+{{- end }}
