@@ -1,29 +1,25 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="posts">
-      <div class="row">
-        <div class="col-xs-12">
-          {{ partial "header.html" . }}
-          <h1 class="taxonomy-term">{{.Data.Term}}</h1>
-          <div id="posts-list">
-              {{ range .Pages }}
-              <div class="row posts-line">
-                <div class="posts-date col-xs-2">
-                  <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "06/01/02"}}</time>
-                </div>
-                <div class="posts-title col-xs-10">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <a href="{{ .RelPermalink }}">
-                        {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
-                        {{ end }}
-                      </a>
-                    </div>
-                  </div>
+      {{ partial "header.html" . }}
+      <h1 class="taxonomy-term">{{.Data.Term}}</h1>
+      <div id="posts-list">
+          {{ range .Pages }}
+          <div class="row posts-line">
+            <div class="posts-date col-xs-2">
+              <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "06/01/02"}}</time>
+            </div>
+            <div class="posts-title col-xs-10">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="{{ .RelPermalink }}">
+                    {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
+                    {{ end }}
+                  </a>
                 </div>
               </div>
-              {{ end }}
+            </div>
           </div>
-        </div>
+          {{ end }}
       </div>
     </article>
 {{ partial "snippets/document-end.html" . }}

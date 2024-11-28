@@ -1,69 +1,67 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="post {{ .Site.Language.LanguageName }}" id="article">
-      <div class="row">
-        <div class="col-xs-12">
-          <!-- Site Header -->
-          <div class="site-header">
-            {{ partial "header.html" . }}
-          </div>
-          <!-- Post Header -->
-          <header class="post-header">
-            {{ if in .Site.Params.mainSections .Type }}
-            <!-- Title and Subtitle -->
-            <h1 class="post-title">
-              {{ .Title }}
-              {{ with .Params.subtitle }}
-                <small class="post-subtitle">{{ . }}</small>
-              {{ end }}
-            </h1>
-            <!-- Post Meta -->          
-            <div class="row post-desc">
-              <div class="col-xs-6">
-                {{ if .Date }}
-                <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
-                  {{ .Date.Format "02 Jan 2006" }}
-                </time>
-                {{ end }}
-                <span> / </span>
-                <span><span class="waline-pageview-count">…</span> Views</span>
-              </div>
-            </div>
+
+      <!-- Site Header -->
+      <div class="site-header">
+        {{ partial "header.html" . }}
+      </div>
+      <!-- Post Header -->
+      <header class="post-header">
+        {{ if in .Site.Params.mainSections .Type }}
+        <!-- Title and Subtitle -->
+        <h1 class="post-title">
+          {{ .Title }}
+          {{ with .Params.subtitle }}
+            <small class="post-subtitle">{{ . }}</small>
+          {{ end }}
+        </h1>
+        <!-- Post Meta -->          
+        <div class="row post-desc">
+          <div class="col-xs-6">
+            {{ if .Date }}
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
+              {{ .Date.Format "02 Jan 2006" }}
+            </time>
             {{ end }}
-          </header>
-
-          <!-- Post Content -->
-          <div id="post-content" class="post-content markdown-body">
-            {{ .Site.Params.postHeaderContent | safeHTML }}
-            {{ .Content }}
+            <span> / </span>
+            <span><span class="waline-pageview-count">…</span> Views</span>
           </div>
+        </div>
+        {{ end }}
+      </header>
 
-          <!-- Post Tags -->
-          <!-- <div class="row middle-xs">
-            <div class="col-xs-12">
-              {{ range .Params.tags }}
-              <div class="post-tags">
-                <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">
-                  {{ . }}
-                </a>
-              </div>
-              {{ end }}
-            </div>
-          </div> -->
+      <!-- Post Content -->
+      <div id="post-content" class="post-content markdown-body">
+        {{ .Site.Params.postHeaderContent | safeHTML }}
+        {{ .Content }}
+      </div>
 
-          <!-- Post Comments -->
-          {{ if in .Site.Params.mainSections .Type }}
-            <!-- waline -->
-            <div style="height: 50px;"></div>
-            <div class="post-comments">
-              <div id="waline"></div>
-              <script type="module">
-                import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-                {{ partial "snippets/waline-init.html" . | safeJS }} 
-              </script>
-            </div>
+      <!-- Post Tags -->
+      <!-- <div class="row middle-xs">
+        <div class="col-xs-12">
+          {{ range .Params.tags }}
+          <div class="post-tags">
+            <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">
+              {{ . }}
+            </a>
+          </div>
           {{ end }}
         </div>
-      </div>
+      </div> -->
+
+      <!-- Post Comments -->
+      {{ if in .Site.Params.mainSections .Type }}
+        <!-- waline -->
+        <div style="height: 50px;"></div>
+        <div class="post-comments">
+          <div id="waline"></div>
+          <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+            {{ partial "snippets/waline-init.html" . | safeJS }} 
+          </script>
+        </div>
+      {{ end }}
+
     </article>
     <!-- use fancybox -->
     <!-- the reason it is replace here it that the fancybox.js is loaded after the swup.js -->
