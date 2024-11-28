@@ -20,6 +20,8 @@
 
   /* waline */
   --waline-font-size: 20px;
+  --waline-border-color: var(--border-color);
+  --waline-bg-color: var(--background-color);
 }
 
 .dark {
