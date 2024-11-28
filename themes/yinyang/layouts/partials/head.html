@@ -48,9 +48,12 @@
   {{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
-  {{ with resources.Get "css/waline.css" | minify }}
-    <style>{{ .Content | safeCSS }}</style>
-  {{ end }}
+  
+  <!-- waline -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
 
   <!-- FancyBox -->
   <script src="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
