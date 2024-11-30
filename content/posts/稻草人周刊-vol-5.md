@@ -1,9 +1,9 @@
 ---
 title: 稻草人周刊 Vol.5
-subtitle: 
+subtitle:
 date: 2024-12-02 08:55:00
 categories: 稻草人周刊
-description: 
+description:
 toc: false
 draft: true
 ---
@@ -21,6 +21,7 @@ draft: true
 3. 在页面底部添加了网站的总字数统计
 4. [链接](/links)页面有了更好看的样式
 5. 彻底修复了打开文件名有中文（非 ASCII 字符）的页面时，前端报出 500 错误的问题
+6. 使用 Google Fonts 统一网页字体
 
 以上使用了第三方库的功能，包括网站的评论区所使用的 waline，都是通过 [unpkg](https://unpkg.com/) CDN 引用的。如果你所在的地区或网络环境无法正常访问 unpkg，导致以上功能无法正常使用，请告诉我，以便我进行修复和优化。你可以在[关于](/about)页面找到我的邮箱。
 
@@ -49,6 +50,3 @@ draft: true
 > Every unfinished project takes up mental space. It’s like having dozens of browser tabs open — each one uses a little bit of your mental RAM, leaving you with less capacity for new ideas and focused work. This mental clutter can be a significant drain on your creativity and productivity.
 >
 > 每一个未完成的项目都会占用心智空间。就好像打开了很多个浏览器标签页，每一个都使用一点你的心智内存，留给新想法和专注工作的空间就变少了。这种心智的负担，很有可能会极大地消耗你的创造力和生产力。
-
-
-
