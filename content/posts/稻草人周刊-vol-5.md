@@ -1,7 +1,7 @@
 ---
 title: 稻草人周刊 Vol.5
 subtitle: 
-date: 2024-12-2 08:55:00
+date: 2024-12-02 08:55:00
 categories: 稻草人周刊
 description: 
 toc: false
