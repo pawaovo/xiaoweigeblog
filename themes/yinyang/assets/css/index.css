@@ -14,9 +14,7 @@
 
   /* fonts */
   --mono-font-family: "Courier New", Courier, "Menlo", "Monaco", Consolas, "Liberation Mono", "Lucida Console", monospace;
-  --serif-font-family: STZhongsong, STSong, "Noto Serif CJK", "Noto Serif SC", PMingLiu,
-  SimSun, "WenQuanYi Bitmap Song", "Times New Roman", Times, serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --serif-font-family:  "Noto Serif SC", serif;
 
   /* waline */
   --waline-font-size: 20px;
@@ -524,8 +522,8 @@ a:hover {
 /* blog links */
 
 div.blog-links {
-  display: flex; 
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 

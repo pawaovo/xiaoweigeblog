@@ -1,7 +1,15 @@
-<!-- prefetches -->
-{{- if .Site.Params.staticPrefix -}}
-<link rel="dns-prefetch" href="{{ .Site.Params.staticPrefix }}" />
-{{- end -}}
+<!-- theme css -->
+{{ with resources.Get "css/index.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+{{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
 
 <!-- waline -->
 <link
@@ -15,14 +23,6 @@ href="https://unpkg.com/@waline/client@v3/dist/waline.css"
 rel="stylesheet"
 href="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css"
 />
-
-<!-- theme css -->
-{{ with resources.Get "css/index.css" | minify }}
-<style>{{ .Content | safeCSS }}</style>
-{{ end }}
-{{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
-<style>{{ .Content | safeCSS }}</style>
-{{ end }}
 
 <!-- Extra -->
 {{ range .Site.Params.extraCSSFiles -}}
