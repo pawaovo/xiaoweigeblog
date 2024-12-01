@@ -1,0 +1,15 @@
+{{- /* 设置 Content-Type 为 JSON */ -}}
+{{- $entries := slice -}}
+{{- range .Site.RegularPages -}}
+  {{- $wordCount := .WordCount -}}
+  {{- $date := .Date.Format "2006-01-02" -}}
+  {{- $entry := dict "date" $date "value" $wordCount -}}
+  {{- $entries = $entries | append $entry -}}
+{{- end -}}
+{{- $.Scratch.Add "results" $entries -}}
+[
+  {{- range $i, $entry := $.Scratch.Get "results" -}}
+    {{- if $i }},{{ end -}}
+    {{- $entry | jsonify -}}
+  {{- end -}}
+]

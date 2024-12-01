@@ -39,3 +39,11 @@ target = "_blank"
   [services.rss]
     limit = 10
 
+[outputs]
+    home = ["HTML", "calheatmap"]
+
+[outputFormats]
+[outputFormats.calheatmap]
+    mediaType = "application/json"
+    baseName = "cal-heatmap"
+    isPlainText = true
