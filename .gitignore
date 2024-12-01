@@ -7,3 +7,4 @@ content/posts/_template.md
 /assets
 # ignore archetypes since no archetype is used
 /archetypes
+.DS_Store
