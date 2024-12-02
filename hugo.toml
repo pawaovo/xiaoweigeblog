@@ -40,7 +40,7 @@ target = "_blank"
     limit = 10
 
 [outputs]
-    home = ["HTML", "calheatmap"]
+    home = ["HTML", "calheatmap", "RSS"]
 
 [outputFormats]
 [outputFormats.calheatmap]
