@@ -3,12 +3,15 @@ const options = {
     serverURL: 'https://waline.geedea.pro',
     dark: 'auto',
     pageview: true,
-    search: false,
-    path: window.location.pathname.replace(/\/$/,'')
+    search: false
 };
 
 if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
     options.pageview = false;
+}
+
+if (!window.location.pathname.endsWith('/')) {
+    options.path = window.location.pathname + '/'
 }
 
 init(options);
