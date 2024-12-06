@@ -4,6 +4,7 @@ const options = {
     dark: 'auto',
     pageview: true,
     search: false,
+    path: window.location.pathname.replace(/\/$/,'')
 };
 
 if (location.href.includes('localhost') || location.href.includes('127.0.0.1')) {
