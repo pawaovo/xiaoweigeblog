@@ -5,6 +5,7 @@ description: 四处搜罗信息的这几天我感到前所未有的专注，我�
 date: 2024-12-10 20:24:00
 draft: false
 categories: 留学探索
+aliases: ['/posts/继续探索瑞典高校/']
 ---
 
 之前发给 Uppsala 大学的咨询邮件很快收到了回复：
