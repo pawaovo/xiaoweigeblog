@@ -482,6 +482,8 @@ a:hover {
 
   display: flex;
   gap: .75rem;
+
+  margin: 0.5rem 0;
 }
 
 .callout .callout-content p {
