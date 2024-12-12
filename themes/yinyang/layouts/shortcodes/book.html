@@ -5,9 +5,12 @@
         </a>
     </div>
     <div class="book-description">
-        <h3 class="book-title">{{ .Get "title" }}</h3>
-        <div>
+        <div class="book-description-header">
+            <h3 class="book-title">{{ .Get "title" }}</h3>
             <p>分数：{{ .Get "rating" }}</p>
+        </div>
+        <div>
+
             {{ .Inner | markdownify }}
         </div>
     </div>

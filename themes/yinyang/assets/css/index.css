@@ -587,6 +587,7 @@ a.blog-link img {
     display: flex;
     gap: 2rem;
     line-height: 1.5;
+    margin: 2rem 0
 }
 
 .book-showcase .book-cover {
@@ -594,8 +595,13 @@ a.blog-link img {
     flex-shrink: 0;
 }
 
-.book-showcase .book-title {
-    margin-top: 0
+.book-description-header .book-title {
+    margin: 0
+}
+
+.book-description-header p {
+    font-size: 1rem;
+    margin: 0.1rem
 }
 
 /* transition animation */
