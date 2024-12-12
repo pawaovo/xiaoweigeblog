@@ -3,9 +3,9 @@
       {{ partial "header.html" . }}
       <div id="posts-list">
         {{ $currentYear := now.Format "2006" }}  <!-- 获取当前年份 -->
-        
+
         {{ $isFirstPost := true }} <!-- 用于标记首页的第一篇文章 -->
-        
+
         {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section class="posts-year-section">
             <h1 class="site-date-catalog posts-year-title">{{ .Key }}</h1>
@@ -23,7 +23,7 @@
                         <div class="posts-title col-xs-9 col-sm-10">
                           <div class="row">
                             <div class="col-xs-11 col-sm-10">
-                              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                              <a class="posts-title-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
                               <div class="posts-excerpt">
                                 {{ if $isFirstPost }}
                                   {{ if .Params.description }}
