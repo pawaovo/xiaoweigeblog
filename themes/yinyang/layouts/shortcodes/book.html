@@ -1,0 +1,14 @@
+<div class="book-showcase">
+    <div class="book-cover">
+        <a href="{{ .Get "cover" }}" data-fancybox>
+            <img src="{{ .Get "cover" }}"  />
+        </a>
+    </div>
+    <div class="book-description">
+        <h3 class="book-title">{{ .Get "title" }}</h3>
+        <div>
+            <p>分数：{{ .Get "rating" }}</p>
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</div>

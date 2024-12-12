@@ -581,6 +581,23 @@ a.blog-link img {
   z-index: 0;
 }
 
+/* book showcase shortcode */
+
+.book-showcase {
+    display: flex;
+    gap: 2rem;
+    line-height: 1.5;
+}
+
+.book-showcase .book-cover {
+    width: 25%;
+    flex-shrink: 0;
+}
+
+.book-showcase .book-title {
+    margin-top: 0
+}
+
 /* transition animation */
 
 html.is-changing .transition-fade article {
