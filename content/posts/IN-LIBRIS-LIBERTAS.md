@@ -297,7 +297,7 @@ categories: 年终总结
 
 {{< /book >}}
 
-{{< book title="娱乐至死" rating="⭐️⭐️⭐️"
+{{< book title="素食者" rating="⭐️⭐️⭐️"
 	cover="https://image.guhub.cn/uPic/2024/12/image-20241212222247468.png" >}}
 
 今年诺贝尔文学奖得主韩江的代表作。
