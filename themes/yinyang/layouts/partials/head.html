@@ -8,12 +8,9 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  <!-- SEO & Basic Meta Tags-->
-  {{ partial "head/seo" . }}
   {{ partial "head/siteinfo" . }}
-
-  <!-- Stylesheets -->
   {{ partial "head/css" . }}
+  {{ partial "head/headscript" . }}
 
   <!-- Extra head -->
   {{ .Site.Params.extraHead | safeHTML }}

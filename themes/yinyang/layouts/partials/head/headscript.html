@@ -27,3 +27,14 @@
       "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }} ]
   }
 </script>
+
+<!-- Umami -->
+<script>
+  if (window.location.hostname !== 'localhost') {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = 'https://cloud.umami.is/script.js';
+    script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
+    document.head.appendChild(script);
+  }
+</script>
