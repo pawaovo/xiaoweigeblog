@@ -604,6 +604,29 @@ a.blog-link img {
     margin: 0.1rem
 }
 
+/* inline-image shortcode */
+
+.inline-image {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.inline-image > figure {
+  display: inline-block;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.inline-image > figure img {
+  height: 20rem;
+  object-fit: cover;
+  display: block;
+}
+
+
 /* transition animation */
 
 html.is-changing .transition-fade article {
