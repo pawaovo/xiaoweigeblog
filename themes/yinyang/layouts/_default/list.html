@@ -11,7 +11,7 @@
             <div class="posts-title col-xs-10">
               <div class="row">
                 <div class="col-xs-12">
-                  <a href="{{ .RelPermalink }}">
+                  <a href="{{ .RelPermalink }}" data-umami-event="Click Post Link from Category Page">
                     {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
                     {{ end }}
                   </a>
