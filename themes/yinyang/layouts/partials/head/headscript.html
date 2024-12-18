@@ -30,24 +30,12 @@
 
 <!-- Umami -->
 <script>
-if (window.location.hostname !== 'localhost') {
-  // track traffic
-  const script = document.createElement('script');
-  script.defer = true;
-  script.src = 'https://cloud.umami.is/script.js';
-  script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
-  document.head.appendChild(script);
-
-  // track waline comment events
-  const observer = new MutationObserver(() => {
-    const walineButton = document.querySelector("#waline > div > div.wl-comment > div > div.wl-footer > div.wl-info > button.primary.wl-btn");
-    if (walineButton) {
-      walineButton.addEventListener('click', () => umami.track('Comment'));
-      observer.disconnect();  // Stop observing once the button is found
-    }
-  });
-
-  // Observe changes in the document body
-  observer.observe(document.body, { childList: true, subtree: true });
-}
+  if (window.location.hostname !== 'localhost') {
+    // track traffic
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = 'https://cloud.umami.is/script.js';
+    script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
+    document.head.appendChild(script);
+  }
 </script>

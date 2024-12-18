@@ -15,3 +15,6 @@ if (!window.location.pathname.endsWith('/')) {
 }
 
 init(options);
+
+const walineButton = document.querySelector("#waline > div > div.wl-comment > div > div.wl-footer > div.wl-info > button.primary.wl-btn");
+walineButton.addEventListener("click", () => umami.track("Comment"))
