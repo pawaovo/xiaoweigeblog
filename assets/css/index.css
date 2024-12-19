@@ -48,21 +48,14 @@ body {
   font-family: var(--serif-font-family);
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
-  background-color: var(--background-color);
   color: var(--text-color);
-  position: relative
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-  height: 5rem;
-  background-image: linear-gradient(to bottom, var(--block-background-color), transparent)
+  position: relative;
+  /* background */
+  background-image: linear-gradient(to bottom, var(--block-background-color), transparent), url('your-background-image-url');
+  background-size: 100% 5rem;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
 }
 
 article {
