@@ -30,10 +30,14 @@ loadWalineComment();
 var lazyLoadInstance = new LazyLoad();
 lazyLoadInstance.update();
 
+/* === Fancybox === */
+Fancybox.bind("[data-fancybox]");
+
 /* === swup === */
 const swup = new Swup();
 swup.hooks.on('page:view', () => {
   loadWalineComment();
   lazyLoadInstance.update();
+  Fancybox.bind("[data-fancybox]");
 });
 </script>
