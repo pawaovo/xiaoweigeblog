@@ -702,6 +702,11 @@ a.blog-link img {
 	position: relative;
 }
 
+#toc .toc-list .toc-list {
+    max-height: 25rem;
+	overflow-y: auto
+}
+
 #toc .toc-list.is-collapsed {
 	max-height: 0
 }
