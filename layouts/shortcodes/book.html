@@ -1,7 +1,7 @@
 <div class="book-showcase">
     <div class="book-cover">
         <a href="{{ .Get "cover" }}" data-fancybox>
-            <img src="{{ .Get "cover" }}"  />
+            <img class="lazy" data-src="{{ .Get "cover" }}"  />
         </a>
     </div>
     <div class="book-description">
