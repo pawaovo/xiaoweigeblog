@@ -6,7 +6,7 @@
     </div>
     <div class="book-description">
         <div class="book-description-header">
-            <h3 class="book-title">{{ .Get "title" }}</h3>
+            <h3 class="book-title" id="book-{{ .Get "title" }}">{{ .Get "title" }}</h3>
             <p>分数：{{ .Get "rating" }}</p>
         </div>
         <div>
