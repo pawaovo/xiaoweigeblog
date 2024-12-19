@@ -621,6 +621,38 @@ a.blog-link img {
   display: block;
 }
 
+/* sidenote shortcode */
+
+@media screen and (max-width: 1199px) {
+    .sidenote {
+        background: var(--block-background-color);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+    }
+    .sidenote-title {
+        font-size: 1rem;
+        text-align: right;
+        font-style: italic
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sidenote {
+        position: absolute;
+        left: calc(50% + var(--page-width) / 2);
+        margin-left: 2rem;
+        max-width: 20rem
+    }
+}
+
+.sidenote-title {
+    margin: 0
+}
+
+.sidenote-content {
+    font-size: 1rem
+}
+
 /* toc */
 
 #toc-container {
