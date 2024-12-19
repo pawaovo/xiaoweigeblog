@@ -1,11 +1,24 @@
-<!-- Umami -->
+<!-- Global JavaScript Variables -->
 <script>
-  if (window.location.hostname !== 'localhost') {
-    // track traffic
-    const script = document.createElement('script');
-    script.defer = true;
-    script.src = 'https://cloud.umami.is/script.js';
-    script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
-    document.head.appendChild(script);
-  }
+  var waline_options = {
+    // basic configuration
+    el: '#waline',
+    serverURL: 'https://waline.geedea.pro',
+    dark: 'auto',
+    search: false,
+    // if localhost then disable pageview count
+    pageview: (location.href.includes('localhost')) ? false : true
+  };
+</script>
+
+<script>
+/* === umami tracking === */
+if (window.location.hostname !== 'localhost') {
+  // track traffic
+  const script = document.createElement('script');
+  script.defer = true;
+  script.src = 'https://cloud.umami.is/script.js';
+  script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
+  document.head.appendChild(script);
+}
 </script>

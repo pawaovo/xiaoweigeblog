@@ -15,7 +15,7 @@
             <small class="post-subtitle">{{ . }}</small>
           {{ end }}
         </h1>
-        <!-- Post Meta -->          
+        <!-- Post Meta -->
         <div class="row post-desc">
           <div class="col-xs-6">
             {{ if .Date }}
@@ -55,10 +55,6 @@
         <div style="height: 50px;"></div>
         <div class="post-comments">
           <div id="waline"></div>
-          <script type="module">
-            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-            {{ partial "snippets/waline-init.html" . | safeJS }} 
-          </script>
         </div>
       {{ end }}
 

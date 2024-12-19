@@ -1,10 +1,31 @@
-<!-- Swup -->
+<!-- third-party libraries -->
 <script src="https://unpkg.com/swup@4"></script>
+<script src="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
 <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-    const swup = new Swup();
+import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
-    swup.hooks.on('page:view', (visit) => {
-        {{ partial "snippets/waline-init.html" . | safeJS }}
-    });
+/* === waline === */
+
+function loadWalineComment() {
+  // terminate if no waline container is found
+  const container = document.getElementById("waline");
+  if (!container) return;
+
+  // initialize waline
+  const path_suffix = window.location.pathname.endsWith('/') ? '' : '/';
+  waline_options.path = window.location.pathname + path_suffix;
+  try {
+    init(waline_options);
+  } catch (error) { console.log(error) }
+
+  // track waline button events
+  const walineButton = document.querySelector("#waline > div > div.wl-comment > div > div.wl-footer > div.wl-info > button.primary.wl-btn");
+  walineButton.addEventListener("click", () => umami.track("Comment"));
+}
+
+loadWalineComment();
+
+/* === swup === */
+const swup = new Swup();
+swup.hooks.on('page:view', loadWalineComment);
 </script>
