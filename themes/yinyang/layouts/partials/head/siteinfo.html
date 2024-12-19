@@ -33,3 +33,34 @@
 
 <!-- Twtter Card -->
 {{ if .Site.Params.TwitterCards }}{{ template "_internal/twitter_cards.html" . }}{{ end }}
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Site.BaseURL }}"
+        },
+        "articleSection" : "{{ .Section }}",
+        "name" : "{{ .Title }}",
+        "headline" : "{{ .Title }}",
+        {{ if .IsHome -}}
+        "description" : "{{ .Site.Params.description | plainify }}",
+        {{- else -}}
+        "description" : "{{ default .Summary .Description | plainify }}",
+        {{- end }}
+        "inLanguage" : "zh-CN",
+        "author" : "{{ .Site.Author.name }}",
+        "creator" : "{{ .Site.Author.name }}",
+        "publisher": "{{ .Site.Author.name }}",
+        "accountablePerson" : "{{ .Site.Author.name }}",
+        "copyrightHolder" : "{{ .Site.Author.name }}",
+        "copyrightYear" : "{{ .Date.Format "2006" }}",
+        "datePublished": "{{ .Date }}",
+        "dateModified" : "{{ .Date }}",
+        "url" : "{{ .Permalink }}",
+        "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }} ]
+    }
+</script>
