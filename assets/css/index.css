@@ -625,9 +625,10 @@ a.blog-link img {
 
 @media screen and (max-width: 1199px) {
     .sidenote {
-        background: var(--block-background-color);
-        padding: 1rem 1.5rem;
+        border: 1px solid var(--block-background-color);
+        padding: .75rem 1rem;
         border-radius: 0.5rem;
+        line-height: 1.5;
     }
     .sidenote-title {
         font-size: 1rem;
@@ -646,7 +647,7 @@ a.blog-link img {
 }
 
 .sidenote-title {
-    margin: 0
+    margin: 0.5rem 0
 }
 
 .sidenote-content {
