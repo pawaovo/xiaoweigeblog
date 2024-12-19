@@ -4,6 +4,7 @@ subtitle: 2024 读书总结
 date: 2024-12-12 23:33:00
 draft: false
 categories: 年终总结
+toc: true
 ---
 
 收到了 [Broca](https://brocalife.com) 寄来的书，在赠书的包裹里，还附上了一张明信片，上面写着拉丁格言——IN LIBRIS LIBERTAS，意思是「书中自由」。

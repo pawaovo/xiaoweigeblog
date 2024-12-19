@@ -5,6 +5,7 @@ description: 在几个月的拉扯之后，我终于抛弃了 Notion，这个完
 draft: false
 date: 2024-12-11 22:50:00
 categories: 生产力报告
+toc: true
 ---
 
 {{< callout "标题取自「晕动症」—— Motion Sickness" "🧑‍🏫" >}}
