@@ -11,18 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
 
-<!-- waline -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/@waline/client@v3/dist/waline.css"
-/>
-
-<!-- FancyBox -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css"
-/>
-
 <!-- Extra -->
 {{ range .Site.Params.extraCSSFiles -}}
 <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
