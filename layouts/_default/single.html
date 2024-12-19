@@ -32,7 +32,9 @@
 
       <!-- Post Content -->
       <div id="post-content" class="post-content markdown-body">
+        {{ if .Params.toc }}
         <div id="toc-container"><div id="toc"></div></div>
+        {{ end }}
         {{ .Site.Params.postHeaderContent | safeHTML }}
         {{ .Content }}
       </div>
