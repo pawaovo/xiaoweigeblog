@@ -21,7 +21,6 @@ favicon = "/favicon.png"
 
 extraCSSFiles = [
     'https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css',
-    'https://unpkg.com/tocbot@4.32.2/dist/tocbot.css',
     'https://unpkg.com/@waline/client@v3/dist/waline.css'
 ]
 externalJSFIles = [

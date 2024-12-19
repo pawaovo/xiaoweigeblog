@@ -629,12 +629,63 @@ a.blog-link img {
     right: calc(50% + var(--page-width) / 2);
     left: auto;
     height: 100%;
-    top: 10rem;
+    top: 12rem;
 }
 
 #toc {
+    /* position */
     position: sticky;
-    top: 3rem
+    top: 3rem;
+    /* styling */
+    font-size: 1rem;
+    padding: 0 2rem;
+}
+
+#toc ul, #toc ol {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 1rem;
+}
+
+#toc li {
+    list-style: none;
+}
+
+#toc li > a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#toc li > a::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: .3rem;
+    background-color: var(--block-background-color);
+    border-radius: .2rem;
+}
+
+#toc li a:hover,
+#toc li.is-active-li > a {
+    color: var(--text-color);
+}
+
+#toc li.is-active-li > a::before {
+    background-color: var(--secondary-text-color);
+}
+
+#toc .toc-list {
+	overflow: hidden;
+	position: relative;
+	transition: .3s;
+}
+
+#toc .toc-list.is-collapsed {
+	max-height: 0
 }
 
 /* transition swup */
