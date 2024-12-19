@@ -33,11 +33,26 @@ lazyLoadInstance.update();
 /* === Fancybox === */
 Fancybox.bind("[data-fancybox]");
 
+/* === tocbot === */
+function loadToc() {
+  tocbot.init({
+    tocSelector: '#toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '#post-content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h2, h3',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+  });
+}
+loadToc();
+
 /* === swup === */
 const swup = new Swup();
 swup.hooks.on('page:view', () => {
   loadWalineComment();
   lazyLoadInstance.update();
   Fancybox.bind("[data-fancybox]");
+  loadToc();
 });
 </script>

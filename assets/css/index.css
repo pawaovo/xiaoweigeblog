@@ -20,6 +20,8 @@
   --waline-font-size: 20px;
   --waline-border-color: var(--border-color);
   --waline-bg-color: var(--background-color);
+
+  --page-width: 700px;
 }
 
 .dark {
@@ -48,6 +50,7 @@ body {
   margin: 0 20px;
   background-color: var(--background-color);
   color: var(--text-color);
+  position: relative
 }
 
 body::before {
@@ -63,9 +66,8 @@ body::before {
 }
 
 article {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  width: var(--page-width);
+  margin: 0 auto
 }
 
 a {
@@ -624,6 +626,22 @@ a.blog-link img {
   height: 20rem;
   object-fit: cover;
   display: block;
+}
+
+/* toc */
+
+#toc-container {
+    position: absolute;
+    bottom: 0;
+    right: calc(50% + var(--page-width) / 2);
+    left: auto;
+    height: 100%;
+    top: 10rem;
+}
+
+#toc {
+    position: sticky;
+    top: 3rem
 }
 
 /* transition swup */
