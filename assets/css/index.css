@@ -414,22 +414,6 @@ a:hover {
   font-weight: 800;
 }
 
-/* disqus */
-
-#disqus_thread {
-  position: relative;
-}
-
-#disqus_thread:after {
-  content: "";
-  display: block;
-  height: 55px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background: var(--background-color);
-}
-
 @media screen and (max-width: 600px) {
   .posts-line {
     font-size: 16px;
