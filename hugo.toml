@@ -36,6 +36,11 @@ link = "/about/"
 target = "_self"
 
 [[params.nav]]
+name = "分类"
+link = "/categories/"
+target = "_self"
+
+[[params.nav]]
 name = "链接"
 link = "/links/"
 target = "_self"
