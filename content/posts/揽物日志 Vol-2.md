@@ -3,14 +3,11 @@ categories: 揽物日志
 date: 2024-08-26
 description: 在集齐 Apple 全家桶的路上走了弯路？
 draft: false
-featuredImage: https://image.guhub.cn//blog/2024/new-stuffs-vol-2.jpg
 title: 揽物日志 Vol.2
 toc: true
+tags:
+  - 每日写作计划 α
 ---
-
-
-
-
 
 这是我坚持每日写作的第 8 天。
 

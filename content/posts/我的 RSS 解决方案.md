@@ -3,9 +3,10 @@ categories: 生产力报告
 date: 2024-11-07
 description: 小小 RSS，竟然这么棘手？
 draft: false
-featuredImage: null
 title: 2024 年，我的 RSS 解决方案
 toc: true
+tags:
+  - Geek
 ---
 
 ## 以前的工具和系统

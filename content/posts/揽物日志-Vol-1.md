@@ -3,16 +3,9 @@ categories: 揽物日志
 date: 2024-08-01
 description: 我有特别的桌面整理技巧
 draft: false
-featuredImage: https://image.guhub.cn/blog/2024/new-stuffs-vol-1.jpg
-featuredVideo: null
-lastmod: null
 title: 揽物日志 Vol.1
 toc: true
 ---
-
-
-
-
 
 由于学校 2023 级研究生扩招，我这个本科生也不幸地入住了「四改六」的六人间，好在经历了一年的憋屈之后，我终于能搬进一间正常的、上床下桌的四人间了。
 

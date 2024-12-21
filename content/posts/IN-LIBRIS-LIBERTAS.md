@@ -4,6 +4,8 @@ subtitle: 2024 读书总结
 date: 2024-12-12 23:33:00
 draft: false
 categories: 年终总结
+tags:
+  - 读书
 toc: true
 ---
 

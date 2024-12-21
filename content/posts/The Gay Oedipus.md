@@ -4,6 +4,8 @@ description: 只是有些仇父而已
 draft: false
 title: The Gay Oedipus
 toc: true
+tags:
+  - 原生家庭
 ---
 
 
