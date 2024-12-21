@@ -419,6 +419,12 @@ section.taxonomy {
     width: calc(50% - var(--gap))
 }
 
+.taxonomy-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
 .taxonomy-tags-item {
     display: inline-flex;
     align-items: center;
