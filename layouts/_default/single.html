@@ -40,17 +40,11 @@
       </div>
 
       <!-- Post Tags -->
-      <!-- <div class="row middle-xs">
-        <div class="col-xs-12">
-          {{ range .Params.tags }}
-          <div class="post-tags">
-            <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">
-              {{ . }}
-            </a>
-          </div>
-          {{ end }}
-        </div>
-      </div> -->
+      <div class="post-tags">
+        {{ range .Params.tags }}
+        <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      </div>
 
       <!-- Post Comments -->
       {{ if in .Site.Params.mainSections .Type }}
