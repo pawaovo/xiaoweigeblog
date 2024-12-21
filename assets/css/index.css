@@ -41,7 +41,7 @@
     --border-color: rgba(255,255,255,0.2);
     --text-color: #D2CEC9;
     --secondary-text-color: #A1998D;
-    --link-color: #277BD9
+    --link-color: #277BD9;
   }
 }
 
@@ -72,10 +72,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.post-ads {
-  margin: 50px 0;
 }
 
 .markdown-body {
@@ -435,12 +431,6 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .header-title,
-  .header-subtitle,
-  .header-items {
-    /* text-align: center; */
-  }
-
   .posts-line {
     font-size: 16px;
   }
