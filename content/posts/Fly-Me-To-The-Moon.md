@@ -4,6 +4,8 @@ date: 2024-11-19 23:55:00
 description: 我需要一场距离足够遥远的逃亡
 categories: 掏心
 draft: false
+tags: 
+  - 教育
 ---
 
 {{< quotecard >}}
