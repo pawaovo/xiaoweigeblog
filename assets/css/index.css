@@ -74,6 +74,10 @@ a:hover {
   text-decoration: underline;
 }
 
+ul {
+  list-style-type: square;
+}
+
 .markdown-body {
   font-size: var(--content-font-size);
   max-width: 100%;
@@ -220,7 +224,6 @@ a:hover {
   border: var(--border-color) 2px solid;
   border-radius: 5px;
   background-color: var(--background-color);
-  /* margin-bottom: 3px; */
 }
 
 .posts-date {
@@ -326,10 +329,6 @@ a:hover {
   border: 0.1rem dashed var(--border-color);
 }
 
-.post-content ul {
-  list-style-type: square;
-}
-
 .post-content img {
   max-width: 100%;
   display: block;
@@ -372,9 +371,9 @@ a:hover {
   margin: 5px 0;
 }
 
-/* taxonomy */
+/* termlist */
 
-.taxonomy-term {
+.termlist-title {
   font-size: 2rem;
   text-align: center;
   display: flex;
@@ -388,19 +387,58 @@ a:hover {
   margin: 2rem auto
 }
 
-.taxonomy-term::before,
-.taxonomy-term::after {
+.termlist-title::before,
+.termlist-title::after {
   margin: 0.5rem;
   color: var(--secondary-text-color);
   font-size: 0.75em
 }
 
-.taxonomy-term::before {
+.termlist-title::before {
   content: "《";
 }
 
-.taxonomy-term::after {
+.termlist-title::after {
   content: "》";
+}
+
+/* category page */
+
+section.taxonomy {
+    margin: 2rem 0;
+}
+
+.taxonomy-categories {
+    --gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.taxonomy-categories-item {
+    width: calc(50% - var(--gap))
+}
+
+.taxonomy-tags-item {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+
+    padding: .25rem .75rem;
+    background-color: var(--block-background-color);
+    transition: color, background .3s;
+    border-radius: .3rem;
+}
+
+.taxonomy-tags-item:hover {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--block-background-color);
+}
+
+.taxonomy-tags-item .tag-count {
+    font-size: .8rem;
+    color: var(--secondary-text-color);
 }
 
 /* gallery */

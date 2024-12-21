@@ -42,7 +42,7 @@
       <!-- Post Tags -->
       <div class="post-tags">
         {{ range .Params.tags }}
-        <a href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
+        <a class="taxonomy-tags-item" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
         {{ end }}
       </div>
 

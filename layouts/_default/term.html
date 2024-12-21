@@ -1,7 +1,7 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="posts">
       {{ partial "header.html" . }}
-      <h1 class="taxonomy-term">{{.Data.Term}}</h1>
+      <h1 class="termlist-title">{{.Data.Term}}</h1>
       <div id="posts-list">
           {{ range .Pages }}
           <div class="row posts-line">

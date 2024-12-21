@@ -1,0 +1,30 @@
+{{ partial "snippets/document-start.html" . }}
+<article class="taxonomy">
+  {{ partial "header.html" . }}
+
+  <!-- Display Tags -->
+  <section class="taxonomy taxonomy-tags">
+    {{ range .Site.Taxonomies.tags.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="taxonomy-tags-item">
+        <span class="tag-name">#{{ .Page.LinkTitle }}</span>
+        <span class="tag-count">{{ .Count }}</span>
+    </a>
+    {{ end }}
+  </section>
+
+  <!-- Display Categories -->
+  <section class="taxonomy taxonomy-categories">
+    {{ range .Site.Taxonomies.categories.Alphabetical }}
+        <div class="taxonomy-categories-item">
+            <h3><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></h3>
+            <ul class="category-articles">
+            {{ range first 3 .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+            </ul>
+            <a href="{{ .Page.RelPermalink }}">阅读所有 {{ .Count }} 篇文章</a>
+        </div>
+    {{ end }}
+  </section>
+</article>
+{{ partial "snippets/document-end.html" . }}
