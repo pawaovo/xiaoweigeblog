@@ -104,6 +104,10 @@ a:hover {
   border-radius: 6px;
 }
 
+.markdown-body img {
+    max-width: 100%
+}
+
 /* reset code */
 
 .markdown-body pre > code {
