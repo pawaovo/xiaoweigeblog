@@ -408,17 +408,6 @@ section.taxonomy {
     margin: 2rem 0;
 }
 
-.taxonomy-categories {
-    --gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
-}
-
-.taxonomy-categories-item {
-    width: calc(50% - var(--gap))
-}
-
 .taxonomy-tags {
     display: flex;
     flex-wrap: wrap;
