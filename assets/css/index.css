@@ -148,8 +148,17 @@ ul {
   color: var(--secondary-text-color);
 }
 
-.header-items {
-  margin: 1rem auto;
+/* Navigation */
+
+#navigation-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem
+}
+
+.navigation {
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,27 +167,27 @@ ul {
   overflow: hidden;
 }
 
-.header-item a {
+.navigation-item a {
   display: inline-block;
   color: var(--background-color);
   padding: 0.25rem 0.5rem;
   background-color: var(--text-color);
 }
 
-.header-item:first-child a {
+.navigation-item:first-child a {
   padding-left: 0.75rem
 }
 
-.header-item:last-child a {
+.navigation-item:last-child a {
   padding-right: 0.75rem
 }
 
-.header-item.active a {
+.navigation-item.active a {
   color: var(--text-color);
   background-color: var(--block-background-color);
 }
 
-.header-item a:hover {
+.navigation-item a:hover {
   text-decoration: none;
 }
 

@@ -45,11 +45,6 @@ name = "链接"
 link = "/links/"
 target = "_self"
 
-[[params.nav]]
-name = "RSS"
-link = "/posts/index.xml"
-target = "_blank"
-
 [services]
   [services.rss]
     limit = 10
