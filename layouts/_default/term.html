@@ -2,6 +2,12 @@
     <article class="posts">
       {{ partial "header.html" . }}
       <h1 class="termlist-title">{{.Data.Term}}</h1>
+      <p class="termlist-subscribe">
+          <a href="/categories/{{.Data.Term | urlize}}/index.xml" target="_blank" title="RSS">
+              <img src="/rss.svg" style="width:.9rem;height:.9rem" />
+              单独订阅这个系列
+          </a>
+      </p>
       <div id="posts-list">
           {{ range .Pages }}
           <div class="row posts-line">

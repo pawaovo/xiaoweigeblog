@@ -393,12 +393,13 @@ ul {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   width: fit-content;
-  margin: 2rem auto
+  margin: 2rem auto;
+  margin-bottom: 0;
 }
 
 .termlist-title::before,
 .termlist-title::after {
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   color: var(--secondary-text-color);
   font-size: 0.75em
 }
@@ -409,6 +410,19 @@ ul {
 
 .termlist-title::after {
   content: "》";
+}
+
+.termlist-subscribe {
+    text-align: center;
+    font-size: .9rem
+}
+
+.termlist-subscribe a {
+    color: var(--secondary-text-color)
+}
+
+.termlist-subscribe a:hover {
+    text-decoration: none
 }
 
 /* category page */
