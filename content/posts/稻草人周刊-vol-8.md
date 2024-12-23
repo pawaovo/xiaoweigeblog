@@ -1,10 +1,10 @@
 ---
 title: 稻草人周刊 Vol.8
-subtitle: 
-description: 
-date: 2024-12-23 09:55:00
+subtitle: 新的格局
+description: 新博客、新栏目、二元对立、错误的密码、传播媒介
+date: 2024-12-23 08:39:00
 categories: 稻草人周刊
-draft: true
+draft: false
 
 ---
 
