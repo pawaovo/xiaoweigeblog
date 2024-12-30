@@ -1,6 +1,6 @@
 ---
 title: 稻草人周刊 Vol.9
-subtitle: 一个人应该会做什么
+subtitle: 无法计量的价值
 description: 亚克力挂件、断舍离、贸易让人们的生活更好、一个人应该会做什么
 date: 2024-12-30 08:27:00
 categories: 稻草人周刊
