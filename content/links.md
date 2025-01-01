@@ -5,14 +5,15 @@ title: 链接
 ---
 
 <div class="blog-links">
-	{{< bloglink link="https://www.velasx.com/" title="Velas电波站" description="喜欢 Zeee 的文字风格" image="https://image.guhub.cn/picgo/velas-icon" >}}
-		{{< bloglink link="https://brocalife.com/" title="白洛嘉" description="认识了大概五年的网友" image="https://image.guhub.cn/picgo/broca-icon" >}}
-	{{< bloglink link="https://onojyun.com/" title="莫比乌斯" description="引发思考的文字" image="https://image.guhub.cn/picgo/ono-icon" >}}
-	{{< bloglink link="https://blog.bxaw.name/" title="白熊阿丸的小屋" description="真实的文字" image="https://cravatar.cn/avatar/21531185e8296f70da566b68d3fc9785" >}}
-	{{< bloglink link="https://rolen.wiki/" title="Rolen" description="经受打磨的文字" image="https://rolen.wiki/wp-content/uploads/2024/09/cropped-rolen-logo-black-2-180x180.png" >}}
-	{{< bloglink link="https://career.dyron503.top/" title="dyron503's" description="有关电子游戏的文字" >}}
-	{{< bloglink link="https://yipai.me" title="一派胡言" description="禁止纵容的文字" >}}
-	{{< bloglink link="https://blog.licaoz.com/" title="LCZBlog" description="和我同一个中学的学弟" image="https://image.guhub.cn/picgo/licaoz-icon" >}}
+	{{< bloglink link="https://www.velasx.com/" title="Velas电波站" image="https://image.guhub.cn/picgo/velas-icon" >}}
+	{{< bloglink link="https://brocalife.com/" title="白洛嘉" image="https://image.guhub.cn/picgo/broca-icon" >}}
+	{{< bloglink link="https://onojyun.com/" title="莫比乌斯" image="https://image.guhub.cn/picgo/ono-icon" >}}
+	{{< bloglink link="https://blog.bxaw.name/" title="白熊阿丸的小屋" image="https://cravatar.cn/avatar/21531185e8296f70da566b68d3fc9785" >}}
+	{{< bloglink link="https://rolen.wiki/" title="Rolen" image="https://rolen.wiki/wp-content/uploads/2024/09/cropped-rolen-logo-black-2-180x180.png" >}}
+	{{< bloglink link="https://career.dyron503.top/" title="dyron503's" >}}
+	{{< bloglink link="https://yipai.me" title="一派胡言" >}}
+	{{< bloglink link="https://www.ntiy.com" title="非理勿试" >}}
+	{{< bloglink link="https://blog.licaoz.com/" title="LCZBlog" image="https://image.guhub.cn/picgo/licaoz-icon" >}}
 	{{< bloglink link="https://blog.skk.moe/" title="Sukka's Blog" image="https://cdn.skk.moe/avatar/96x96.png" >}}
 	{{< bloglink link="https://www.yunyoujun.cn/" title="云游君的小站" image="https://www.yunyoujun.cn/images/avatar.jpg" >}}
 </div>
