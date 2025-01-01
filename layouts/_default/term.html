@@ -4,7 +4,7 @@
       <h1 class="termlist-title">{{.Data.Term}}</h1>
       <p class="termlist-subscribe">
           <a href="/categories/{{.Data.Term | urlize}}/index.xml" target="_blank" title="RSS">
-              {{ partial "snippets/rss-icon" . }}
+              <span style="display:inline-block;transform:scale(0.75)">{{ partial "snippets/rss-icon" . }}</span>
               单独订阅这个系列
           </a>
       </p>
