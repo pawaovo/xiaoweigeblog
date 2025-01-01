@@ -151,10 +151,12 @@ ul {
 /* Navigation */
 
 #navigation-bar {
+    --gap: .75rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .75rem
+    gap: var(--gap);
+    padding-left: calc(1rem + var(--gap))
 }
 
 .navigation {
