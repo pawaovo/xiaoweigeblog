@@ -7,6 +7,10 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      extras:
+        mark:
+          enable: true
   highlight:
     guessSyntax: true
     noClasses: true
