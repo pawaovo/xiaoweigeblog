@@ -4,6 +4,8 @@ subtitle: 宿舍咖啡指南
 draft: true
 date: 2024-12-26 23:20:00
 categories: 揽物日志
+tags:
+  - 生活
 ---
 
 太长不看，先上图吧。
