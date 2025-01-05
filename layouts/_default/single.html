@@ -23,8 +23,12 @@
               {{ .Date.Format "02 Jan 2006" }}
             </time>
             {{ end }}
-            <span> / </span>
-            <span><span class="waline-pageview-count">…</span> Views</span>
+            {{ if .Params.categories }}
+              <span> / </span>
+              <span>
+                <a href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
+              </span>
+            {{ end }}
           </div>
         </div>
         {{ end }}
