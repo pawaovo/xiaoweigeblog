@@ -22,12 +22,15 @@ function loadToc() {
 }
 loadToc();
 
+/* === littlefoot === */
+littlefoot.littlefoot(littlefootOptions)
+
 /* === swup === */
 const swup = new Swup();
 swup.hooks.on('page:view', () => {
-  loadWalineComment();
   lazyLoadInstance.update();
   Fancybox.bind("[data-fancybox]");
   loadToc();
+  littlefoot.littlefoot(littlefootOptions)
 });
 </script>
