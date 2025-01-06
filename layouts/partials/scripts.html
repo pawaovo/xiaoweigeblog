@@ -3,29 +3,6 @@
 <script src="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"></script>
 {{- end }}
 <script type="module">
-import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-/* === waline === */
-
-function loadWalineComment() {
-  // terminate if no waline container is found
-  const container = document.getElementById("waline");
-  if (!container) return;
-
-  // initialize waline
-  const path_suffix = window.location.pathname.endsWith('/') ? '' : '/';
-  waline_options.path = window.location.pathname + path_suffix;
-  try {
-    init(waline_options);
-  } catch (error) { console.log(error) }
-
-  // track waline button events
-  const walineButton = document.querySelector("#waline > div > div.wl-comment > div > div.wl-footer > div.wl-info > button.primary.wl-btn");
-  walineButton.addEventListener("click", () => umami.track("Comment"));
-}
-
-loadWalineComment();
-
 /* === lazyload === */
 var lazyLoadInstance = new LazyLoad();
 lazyLoadInstance.update();
