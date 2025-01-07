@@ -1,10 +1,25 @@
-<div class="site-footer">
+<footer id="footer">
+    <section id="footer-copyright">
+        <p class="copyright">&copy; 2022-{{ now | dateFormat "2006" }} <a href="https://www.guhub.cn/" target="_blank">Eltrac</a></p>
+        <p class="license">Licensed by <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+    </section>
+    <section id="footer-links">
+        <ul class="navigation">
+            <li><a href="https://www.guhub.cn/">Home</a></li>
+            <li><a href="https://www.ultrali.me">Ultralime</a></li>
+        </ul>
+        {{$scratch := newScratch}}
+        {{ range (where .Site.Pages "Kind" "page" )}}
+            {{$scratch.Add "total" .WordCount}}
+        {{ end }}
+        <p class="word-count">🪦 {{$scratch.Get "total" }} 字在这里<span style="display:inline-block; transform:rotate(7deg) translateY(0.15rem); filter: blur(1px)">死去</span></p>
+    </section>
+</footer>
+
+<!-- <div class="site-footer"> -->
   <!-- 全站字数统计-->
-  {{$scratch := newScratch}}
-  {{ range (where .Site.Pages "Kind" "page" )}}
-      {{$scratch.Add "total" .WordCount}}
-  {{ end }}
-  <div class="site-footer-item">🪦 {{$scratch.Get "total" }} 字在这里<span style="display:inline-block; transform:rotate(7deg) translateY(0.15rem); filter: blur(1px)">死去</span></div>
-  
+
+  <!-- <div class="site-footer-item">🪦 {{$scratch.Get "total" }} 字在这里<span style="display:inline-block; transform:rotate(7deg) translateY(0.15rem); filter: blur(1px)">死去</span></div>
+
   <p style="text-align: center;">You've reached the end.</p>
-</div>
+</div> -->
