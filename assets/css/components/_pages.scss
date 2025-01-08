@@ -72,8 +72,10 @@
 /* post series */
 
 #posts-header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
 
     #post-series {
         #post-series-list {
@@ -115,8 +117,11 @@
     #posts-recommendation {
         #posts-recommendation-links {
             display: flex;
-            flex-direction: column;
-            gap: .5rem
+            flex-direction: row;
+            gap: .5rem;
+            @media screen and (min-width: 768px) {
+                flex-direction: column;
+            }
         }
     }
 }
