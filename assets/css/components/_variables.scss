@@ -15,11 +15,6 @@
   --serif-font-family:  "Noto Serif SC", serif;
   --content-font-size: 20px;
 
-  /* waline */
-  --waline-font-size: 20px;
-  --waline-border-color: var(--border-color);
-  --waline-bg-color: var(--background-color);
-
   --page-width: 700px;
 }
 
@@ -41,4 +36,13 @@
     --secondary-text-color: #A1998D;
     --link-color: #277BD9;
   }
+}
+
+@mixin bordered {
+    border-radius: .5rem;
+    border: 1px solid var(--border-color);
+}
+
+@mixin shadowed {
+
 }

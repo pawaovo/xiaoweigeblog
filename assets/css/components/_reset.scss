@@ -30,3 +30,30 @@ a:hover {
 ul {
   list-style-type: square;
 }
+
+button {
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--serif-font-family);
+    cursor: pointer
+}
+
+.button {
+    display: block;
+    background-color: var(--block-background-color);
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    @include bordered;
+
+    &a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

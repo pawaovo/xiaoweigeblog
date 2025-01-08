@@ -69,6 +69,60 @@
   color: var(--secondary-text-color)
 }
 
+/* post series */
+
+#posts-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    #post-series {
+        #post-series-list {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem;
+            .post-series-item {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                transition: .3s;
+                cursor: pointer;
+
+                @include bordered;
+
+                .post-series-cover {
+                    img {
+                        display: block;
+                        width: 8rem;
+                    }
+                }
+                .post-series-text {
+                    background-color: var(--block-background-color);
+                    h3 {
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+                    transform: translateY(-.5rem)
+                }
+            }
+        }
+    }
+
+    #posts-recommendation {
+        #posts-recommendation-links {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem
+        }
+    }
+}
+
+
+
 /* post */
 
 .post-header {
