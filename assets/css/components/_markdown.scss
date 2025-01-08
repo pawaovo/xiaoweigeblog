@@ -1,0 +1,90 @@
+// Variables (can be moved to a separate variables file if needed)
+$font-size: var(--content-font-size);
+$link-color: var(--link-color);
+$secondary-text-color: var(--secondary-text-color);
+$border-color: var(--border-color);
+$block-background-color: var(--block-background-color);
+
+// Mixin for block styles
+@mixin block-style($margin, $padding, $color: null, $border-left: null) {
+  margin: $margin;
+  padding: $padding;
+  @if $color {
+    color: $color;
+  }
+  @if $border-left {
+    border-left: $border-left;
+  }
+}
+
+// Main styles
+.markdown-body {
+  font-size: $font-size;
+  max-width: 100%;
+
+  // Nested styles for child elements
+  a {
+    text-decoration: underline;
+    color: $link-color;
+  }
+
+  blockquote {
+    @include block-style(0, 0 1em, $secondary-text-color, 0.25em solid $border-color);
+  }
+
+  pre {
+    padding: 16px;
+    overflow: auto;
+    border-radius: 10px;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    background-color: $block-background-color;
+    border-radius: 6px;
+  }
+
+  pre > code {
+    padding: 0;
+    font-size: 100%;
+    background-color: inherit;
+    border: 0;
+  }
+
+  p {
+    hyphens: auto;
+    text-justify: ideographic;
+    margin-bottom: 1em;
+  }
+
+  strong {
+    color: var(--strong-text-color)
+  }
+
+  em {
+    color: var(--em-text-color)
+  }
+
+  hr {
+    margin: 2.5rem auto;
+    border: 0.1rem dashed var(--border-color);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-top: 6px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figure figcaption h4 {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    font-weight: 400;
+  }
+}

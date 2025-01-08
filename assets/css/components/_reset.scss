@@ -1,0 +1,32 @@
+body {
+  font-family: var(--serif-font-family);
+  -webkit-font-smoothing: antialiased;
+  margin: 0 20px;
+  color: var(--text-color);
+  position: relative;
+  /* background */
+  background-image: linear-gradient(to bottom, var(--block-background-color), transparent);
+  background-size: 100% 5rem;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+}
+
+article {
+  max-width: var(--page-width);
+  margin: 0 auto
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-underline-offset: 0.25rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: square;
+}

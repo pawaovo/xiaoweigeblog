@@ -1,8 +1,8 @@
 <!-- theme css -->
-{{ with resources.Get "css/index.css" | minify }}
+{{ with resources.Get "css/flexbox.css" | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
-{{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
+{{ with resources.Get "css/index.scss" | css.Sass | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
 

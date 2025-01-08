@@ -8,7 +8,7 @@
 
         {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section class="posts-year-section">
-            <h1 class="site-date-catalog posts-year-title">{{ .Key }}</h1>
+            <h1 class="posts-year-title">{{ .Key }}</h1>
 
               {{ range .Pages.GroupByDate "01" }}
                 <h2>{{ .Key }} 月</h2>
