@@ -1,0 +1,42 @@
+
+/* post */
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.post-subtitle {
+  display: block;
+  color: var(--secondary-text-color);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.post-tags a {
+  display: inline-block;
+  color: var(--secondary-text-color);
+  font-size: var(--content-font-size);
+}
+
+.post-date {
+  color: var(--secondary-text-color)
+}
+
+.post-author {
+  float: right;
+  font-weight: 600;
+}
+
+.page-content {
+  min-height: 60%;
+}
+
+.post-content {
+  margin-bottom: 50px;
+  line-height: 2
+}

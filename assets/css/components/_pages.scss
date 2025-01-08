@@ -1,69 +1,71 @@
 /* posts list */
 
 #posts-list {
-  min-height: 600px;
+    min-height: 600px;
+
+    & > section:nth-child(1) > ul:nth-child(3) > li.first-post > div > div.posts-title.col-xs-9.col-sm-10 > div {
+      align-items: flex-start;
+    }
+
+    .posts-year-section {
+      --section-height: 9rem;
+      min-height: var(--section-height);
+      position: relative;
+      margin: 2rem 0;
+
+      .posts-year-title {
+        font-size: 2rem;
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        color: var(--text-color);
+        opacity: 0.25;
+        font-size: calc(var(--section-height) / 2);
+        margin: 0;
+        line-height: 1;
+        z-index: -1;
+      }
+
+      ul {
+          list-style-type: none;
+          padding-inline-start: 0;
+          padding: 0;
+
+          .posts-line {
+            font-size: 1.2rem;
+            margin: 12px 0;
+
+            &.featured-post a.posts-title-link {
+              font-weight: 800;
+              display: block;
+            }
+
+            .posts-date {
+              font-family: var(--mono-font-family);
+              color: var(--secondary-text-color)
+            }
+
+            .posts-categories {
+              font-size: 0.8rem;
+              text-align: center;
+            }
+
+            .posts-category {
+              padding: 3px 0;
+              border: var(--border-color) 2px solid;
+              border-radius: 5px;
+              background-color: var(--background-color);
+            }
+          }
+      }
+    }
+
+    hr {
+      border: 1px solid var(--border-color);
+      margin: 3rem 0;
+    }
 }
 
-#posts-list ul {
-  list-style-type: none;
-  padding-inline-start: 1em;
-}
-
-.featured-post a.posts-title-link {
-  font-weight: 800;
-  display: block;
-}
-
-.posts-line {
-  font-size: 1.2rem;
-  margin: 12px 0;
-}
-
-#posts-list > section:nth-child(1) > ul:nth-child(3) > li.first-post > div > div.posts-title.col-xs-9.col-sm-10 > div {
-  align-items: flex-start;
-}
-
-.posts-categories {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.posts-category {
-  padding: 3px 0;
-  border: var(--border-color) 2px solid;
-  border-radius: 5px;
-  background-color: var(--background-color);
-}
-
-.posts-date {
-  font-family: var(--mono-font-family);
-  color: var(--secondary-text-color)
-}
-
-.posts-year-section {
-  --section-height: 9rem;
-  min-height: var(--section-height);
-  position: relative;
-  margin: 2rem 0;
-}
-
-.posts-year-title {
-  font-size: 2rem;
-  font-weight: 900;
-  position: absolute;
-  right: 0;
-  color: var(--text-color);
-  opacity: 0.25;
-  font-size: calc(var(--section-height) / 2);
-  margin: 0;
-  line-height: 1;
-  z-index: -1;
-}
-
-#posts-list hr {
-  border: 1px solid var(--border-color);
-  margin: 3rem 0;
-}
 
 .posts-subtitle {
   color: var(--secondary-text-color)
@@ -131,93 +133,49 @@
     }
 }
 
-
-
-/* post */
-
-.post-header {
-  margin-bottom: 2rem;
-}
-
-.post-title {
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.post-subtitle {
-  display: block;
-  color: var(--secondary-text-color);
-  font-style: italic;
-  font-size: 1.2rem;
-}
-
-.post-tags a {
-  display: inline-block;
-  color: var(--secondary-text-color);
-  font-size: var(--content-font-size);
-}
-
-.post-date {
-  color: var(--secondary-text-color)
-}
-
-.post-author {
-  float: right;
-  font-weight: 600;
-}
-
-.page-content {
-  min-height: 60%;
-}
-
-.post-content {
-  margin-bottom: 50px;
-  line-height: 2
-}
-
 /* termlist */
 
-.termlist-title {
-  font-size: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.termlist-page {
+    .termlist-title {
+      font-size: 2rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  background-color: var(--block-background-color);
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  width: fit-content;
-  margin: 2rem auto;
-  margin-bottom: 0;
-}
+      background-color: var(--block-background-color);
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      width: fit-content;
+      margin: 2rem auto;
+      margin-bottom: 0;
 
-.termlist-title::before,
-.termlist-title::after {
-  margin: 0.5rem 0;
-  color: var(--secondary-text-color);
-  font-size: 0.75em
-}
+      &::before,
+      &::after {
+        margin: 0.5rem 0;
+        color: var(--secondary-text-color);
+        font-size: 0.75em
+      }
 
-.termlist-title::before {
-  content: "《";
-}
+      &::before {
+        content: "《";
+      }
 
-.termlist-title::after {
-  content: "》";
-}
+      &::after {
+        content: "》";
+      }
+    }
 
-.termlist-subscribe {
-    text-align: center;
-    font-size: .9rem
-}
-
-.termlist-subscribe a {
-    color: var(--secondary-text-color)
-}
-
-.termlist-subscribe a:hover {
-    text-decoration: none
+    .termlist-subscribe {
+        text-align: center;
+        font-size: .9rem;
+        a {
+            color: var(--secondary-text-color);
+            &:hover {
+                text-decoration: none
+            }
+        }
+    }
 }
 
 /* category page */
@@ -229,29 +187,29 @@ section.taxonomy {
 .taxonomy-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem
-}
+    gap: .5rem;
 
-.taxonomy-tags-item {
-    display: inline-flex;
-    align-items: center;
-    gap: .3rem;
+    .taxonomy-tags-item {
+        display: inline-flex;
+        align-items: center;
+        gap: .3rem;
 
-    padding: .25rem .75rem;
-    background-color: var(--block-background-color);
-    transition: color, background .3s;
-    border-radius: .3rem;
-}
+        padding: .25rem .75rem;
+        background-color: var(--block-background-color);
+        transition: color, background .3s;
+        border-radius: .3rem;
 
-.taxonomy-tags-item:hover {
-    text-decoration: none;
-    background-color: var(--text-color);
-    color: var(--block-background-color);
-}
+        &:hover {
+            text-decoration: none;
+            background-color: var(--text-color);
+            color: var(--block-background-color);
+        }
 
-.taxonomy-tags-item .tag-count {
-    font-size: .8rem;
-    color: var(--secondary-text-color);
+        .tag-count {
+            font-size: .8rem;
+            color: var(--secondary-text-color);
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
