@@ -10,16 +10,16 @@
     </section>
     <section id="footer-links">
         <ul class="footer-navigation">
-            <li><a href="https://www.guhub.cn/">Home</a></li>
-            <li><a href="https://www.ultrali.me">Ultralime</a></li>
+            {{ range .Site.Params.footerLinks.textLinks }}
+            <li><a href="{{ .link }}">{{ .name }}</a></li>
+            {{ end }}
         </ul>
         <ul class="footer-navigation">
-            <li><a href="https://www.travellings.cn/go.html" target="_blank">
-                <img src="https://www.travellings.cn/assets/favicon.png">
+            {{ range .Site.Params.footerLinks.iconLinks }}
+            <li><a href="{{ .link }}" title="{{ .name }}" target="_blank">
+                <img src="{{ .icon }}" />
             </a></li>
-            <li><a href="https://blogscn.fun/" title="BLOGS·CN" target="_blank">
-                <img src="https://photo.xiangming.site/img/blogscn_icon.png">
-            </a></li>
+            {{ end }}
         </ul>
     </section>
 </footer>

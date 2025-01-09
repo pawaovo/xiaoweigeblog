@@ -54,6 +54,22 @@ params:
       link: /categories/稻草人周刊/
       cover: https://image.guhub.cn/uPic/2025/01/%E7%A8%BB%E8%8D%89%E4%BA%BA%E5%91%A8%E5%88%8A.jpeg
       description: 个人化的信息整合，每周一更新
+  footerLinks:
+    textLinks:
+      - name: Home
+        link: https://www.guhub.cn/
+      - name: Ultralime
+        link: https://www.ultrali.me
+    iconLinks:
+      - name: GitHub
+        link: https://github.com/BigCoke233/geek-death-project
+        icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
+      - name: BLOGS·CN
+        link: https://blogscn.fun/
+        icon: https://photo.xiangming.site/img/blogscn_icon.png
+      - name: Travelling
+        link: https://www.travellings.cn/go.html
+        icon: https://www.travellings.cn/assets/favicon.png
 services:
   rss:
     limit: 10
