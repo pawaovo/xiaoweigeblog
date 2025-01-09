@@ -135,45 +135,43 @@
 
 /* termlist */
 
-article {
-    .termlist-title {
-      font-size: 2rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.termlist-title {
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      background-color: var(--block-background-color);
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      width: fit-content;
-      margin: 2rem auto;
-      margin-bottom: 0;
+    background-color: var(--block-background-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: fit-content;
+    margin: 2rem auto;
+    margin-bottom: 0;
 
-      &::before,
-      &::after {
-        margin: 0.5rem 0;
-        color: var(--secondary-text-color);
-        font-size: 0.75em
-      }
-
-      &::before {
-        content: "《";
-      }
-
-      &::after {
-        content: "》";
-      }
+    &::before,
+    &::after {
+    margin: 0.5rem 0;
+    color: var(--secondary-text-color);
+    font-size: 0.75em
     }
 
-    .termlist-subscribe {
-        text-align: center;
-        font-size: .9rem;
-        a {
-            color: var(--secondary-text-color);
-            &:hover {
-                text-decoration: none
-            }
+    &::before {
+    content: "《";
+    }
+
+    &::after {
+    content: "》";
+    }
+}
+
+.termlist-subscribe {
+    text-align: center;
+    font-size: .9rem;
+    a {
+        color: var(--secondary-text-color);
+        &:hover {
+            text-decoration: none
         }
     }
 }
