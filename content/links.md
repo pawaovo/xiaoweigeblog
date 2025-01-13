@@ -13,6 +13,7 @@ title: 链接
 	{{< bloglink link="https://career.dyron503.top/" title="dyron503's" >}}
 	{{< bloglink link="https://yipai.me" title="一派胡言" >}}
 	{{< bloglink link="https://www.ntiy.com" title="非理勿试" >}}
+	{{< bloglink link="https://cyrus19.cc" title="CC的数字花园" >}}
 	{{< bloglink link="https://blog.licaoz.com/" title="LCZBlog" image="https://image.guhub.cn/picgo/licaoz-icon" >}}
 	{{< bloglink link="https://blog.skk.moe/" title="Sukka's Blog" image="https://cdn.skk.moe/avatar/96x96.png" >}}
 	{{< bloglink link="https://www.yunyoujun.cn/" title="云游君的小站" image="https://www.yunyoujun.cn/images/avatar.jpg" >}}
