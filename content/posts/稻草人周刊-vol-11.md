@@ -63,7 +63,7 @@ draft: false
 
 相关阅读：[对时间管理的一些思考 - Rolen's Blog](https://rolen.wiki/some-thoughts-about-time-management/)
 
-{{< book title="天才在左，疯子在右" cover="https://image.guhub.cn/uPic/2025/01/image-20250109195708710.png" rating="🙄" >}}
+{{< img src="https://image.guhub.cn/uPic/2025/01/image-20250109195708710.png" >}}
 
 中午一过我的状态就不好，兴许是吃了饭晕碳，或者是早上的一杯咖啡引发了咖啡因崩溃[^3]。要是放任不管，一下午的宝贵时间都会被我浪费。此前我一直觉得下午的时间很宝贵，因为从 2:00~6:00 有整整四个小时的时间。以往我总是睡到十点才起，早上的时间对我来说不算什么。
 
