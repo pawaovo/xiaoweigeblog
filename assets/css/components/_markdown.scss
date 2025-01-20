@@ -4,6 +4,8 @@ $link-color: var(--link-color);
 $secondary-text-color: var(--secondary-text-color);
 $border-color: var(--border-color);
 $block-background-color: var(--block-background-color);
+$strong-text-color: #A94A4A;
+$em-text-color: #889E73;
 
 // Mixin for block styles
 @mixin block-style($margin, $padding, $color: null, $border-left: null) {
@@ -29,7 +31,9 @@ $block-background-color: var(--block-background-color);
   }
 
   blockquote {
-    @include block-style(0, 0 1em, $secondary-text-color, 0.25em solid $border-color);
+    @include block-style(0, 0 1em, $secondary-text-color, 0.2em solid $border-color);
+    margin-left: -1.4rem;
+    padding-right: 0;
   }
 
   pre {
@@ -59,11 +63,11 @@ $block-background-color: var(--block-background-color);
   }
 
   strong {
-    color: var(--strong-text-color)
+    color: $strong-text-color;
   }
 
   em {
-    color: var(--em-text-color)
+    color: $em-text-color;
   }
 
   hr {
@@ -86,5 +90,14 @@ $block-background-color: var(--block-background-color);
     font-size: 0.9rem;
     color: var(--secondary-text-color);
     font-weight: 400;
+  }
+
+  ul {
+    list-style-type: square;
+    padding-inline-start: 1.5rem;
+  }
+
+  mark {
+      background-color: rgba(255, 235, 0, .5)
   }
 }
