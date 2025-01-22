@@ -2,9 +2,14 @@
 categories: 稻草人周刊
 date: 2024-11-04
 draft: false
-featuredImage: null
 title: 稻草人周刊 Vol.1
 toc: false
+tags:
+  - 神秘学
+  - 认知
+  - 人际交往
+  - 游戏开发
+  - 语言
 ---
 
 你正在阅读 [稻草人周刊](/categories/稻草人周刊/) 的第 1 期，我会在这里分享最近的有意思的事情、思考、阅读和体会，总之是一些篇幅较短还不足以成文，但的确让自己有所收获的内容。
