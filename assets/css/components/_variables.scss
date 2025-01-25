@@ -26,6 +26,10 @@
   --link-color: #277BD9
 }
 
+html[lang="en-US"] {
+    --serif-font-family: "Playfair Display", serif;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1D2021;

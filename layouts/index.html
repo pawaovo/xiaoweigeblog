@@ -1,6 +1,8 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="posts">
       {{ partial "header.html" . }}
+
+      {{ if eq .Site.Language.Lang "zh" }}
       <header id="posts-header">
           <div id="post-series">
               <h1>专栏</h1>
@@ -49,6 +51,7 @@
               </div>
           </div>
       </header>
+      {{ end }}
 
       <div id="posts-list">
         {{ $currentYear := now.Format "2006" }}  <!-- 获取当前年份 -->

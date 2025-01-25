@@ -14,6 +14,10 @@
         </div>
         {{ end }}
       </nav>
-      <a href="https://rss.beauty/rss?url=https%3A%2F%2Fwww.geedea.pro%2Fposts%2Findex.xml" target="_blank" title="RSS">{{ partial "snippets/rss-icon" . }}</a>
+      {{ if eq .Site.Language.Lang "en" }}
+      <a href="/zh/" class="no-swup" title="切换至中文">{{ partial "snippets/globe-icon" . }}</a>
+      {{ else if eq .Site.Language.Lang "zh" }}
+      <a href="/en/" class="no-swup" title="Switch to English">{{ partial "snippets/globe-icon" . }}</a>
+      {{ end }}
   </div>
 </header>
