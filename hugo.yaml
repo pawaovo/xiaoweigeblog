@@ -15,13 +15,13 @@ languages:
       headTitle: 極客死亡計劃
       nav:
       - name: 关于
-        link: /about/
+        link: /zh/about/
         target: _self
       - name: 分类
-        link: /categories/
+        link: /zh/categories/
         target: _self
       - name: 链接
-        link: /links/
+        link: /zh/links/
         target: _self
       series:
         - name: 人类恶疾
