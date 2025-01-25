@@ -6,7 +6,8 @@ defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
 languages:
   zh:
-    contentDir: content/zh
+    contentDir: content
+    defaultContentLanguageInSubdir: false
     disabled: false
     languageCode: zh-CN
     languageDirection: ltr
@@ -15,13 +16,13 @@ languages:
       headTitle: 極客死亡計劃
       nav:
       - name: 关于
-        link: /zh/about/
+        link: /about/
         target: _self
       - name: 分类
-        link: /zh/categories/
+        link: /categories/
         target: _self
       - name: 链接
-        link: /zh/links/
+        link: /links/
         target: _self
       series:
         - name: 人类恶疾
@@ -73,6 +74,7 @@ markup:
     noClasses: true
     style: bw
     tabWidth: 2
+
 params:
   mainSections:
     - posts
@@ -116,3 +118,4 @@ outputFormats:
     mediaType: application/json
     baseName: cal-heatmap
     isPlainText: true
+    permalinkable: true
