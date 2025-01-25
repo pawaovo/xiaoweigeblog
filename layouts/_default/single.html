@@ -56,7 +56,13 @@
         <div style="height: 50px;"></div>
         <div class="post-comments">
             <div class="giscus">
-                <p style="text-align:center">如果评论未加载，请尝试刷新页面</p>
+                <p style="text-align:center">
+                    {{ if eq .Site.Language.Lang "en" }}
+                    if comment is not loaded, please try refreshing
+                    {{ else if eq .Site.Language.Lang "zh" }}
+                    如果评论未加载，请尝试刷新页面
+                    {{ end }}
+                </p>
             </div>
             <script src="https://giscus.app/client.js"
                 data-repo="BigCoke233/geek-death-project"
@@ -69,7 +75,11 @@
                 data-emit-metadata="0"
                 data-input-position="top"
                 data-theme="preferred_color_scheme"
+                {{ if eq .Site.Language.Lang "en" }}
+                data-lang="en"
+                {{ else if eq .Site.Language.Lang "zh" }}
                 data-lang="zh-CN"
+                {{ end }}
                 crossorigin="anonymous"
                 async>
             </script>
