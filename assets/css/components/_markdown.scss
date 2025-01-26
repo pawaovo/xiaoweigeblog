@@ -100,4 +100,22 @@ $em-text-color: #889E73;
   mark {
       background-color: rgba(255, 235, 0, .5)
   }
+
+  table {
+      border: 1px solid $border-color;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      th {
+          background-color: $block-background-color
+      }
+      td {
+          padding: .1rem .75rem
+      }
+      tr {
+          & > td:nth-child(even) {
+              background-color: var(--bright-background-color)
+          }
+      }
+  }
 }

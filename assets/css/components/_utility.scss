@@ -27,3 +27,22 @@ figure {
         }
     }
 }
+
+.outbox {
+    display: flex;
+    justify-content: center;
+
+    // Default width
+    width: var(--page-width);
+
+    // Properly interpolate calc() in media queries
+    @media screen and (min-width: 768px) {
+        width: calc(var(--page-width) + 5rem * 2);
+        margin: 0 -5rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc(var(--page-width) + 10rem * 2);
+        margin: 0 -10rem;
+    }
+}
