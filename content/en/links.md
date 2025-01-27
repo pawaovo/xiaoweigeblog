@@ -9,4 +9,5 @@ Here's a list of websites that I frequently visit. There's [another list](/links
     {{< bloglink link="https://news.ycombinator.com" title="Hacker News" description="this, of course." image="https://news.ycombinator.com/y18.svg" >}}
     {{< bloglink link="https://anhvn.com" title="anhvn" description="anh has some truly cool designs!" >}}
     {{< bloglink link="https://toby.fangamer.com" title="TobyFox Newsletter" description="My favorite game developer!" >}}
+  	{{< bloglink link="https://neal.fun" title="Neal Fun" description="Fun web games that makes you think" >}}
 </div>
