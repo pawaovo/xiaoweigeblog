@@ -1,7 +1,12 @@
 ---
 title: How I Simplify My Reading Workflow 
+tags:
+  - workflow
+  - Apple
+  - reading
 date: 2025-01-30 23:31:00
 draft: false
+toc: false
 ---
 
 I subscribe to quite a number of RSS feeds and newsletters. Every day I get a lot of fresh new articles sent to my inbox. Plus, I enjoy browsing the web and save intersting articles while wandering around. It's a real hassle to manage all the content from different sources.
