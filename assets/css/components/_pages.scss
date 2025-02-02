@@ -260,18 +260,20 @@ section.taxonomy {
     }
 
     .posts-month-archive {
-        summary {
-            list-style: none;
-
-            .posts-month-title {
-                font-size: 1.1rem;
-                border-bottom: 1px dashed var(--border-color);
-                display: inline-block;
-                width: 100%;
-                padding: 0.5rem 0.25rem;
-                margin: 0;
-                @include section-title;
-            }
+        details, summary {
+            appearance: none;
+            list-style-type: none;
+            -webkit-appearance: none;
+            &::marker { display: none }
+        }
+        .posts-month-title {
+            font-size: 1.1rem;
+            border-bottom: 1px dashed var(--border-color);
+            display: inline-block;
+            width: 100%;
+            padding: 0.5rem 0.25rem;
+            margin: 0;
+            @include section-title;
         }
     }
 }
