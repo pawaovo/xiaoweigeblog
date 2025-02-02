@@ -53,12 +53,13 @@
       </header>
       {{ end }}
 
-      <div id="posts-list">
+      <div id="posts-list" class="posts-list">
         {{ $currentYear := now.Format "2006" }}  <!-- 获取当前年份 -->
 
         {{ $isFirstPost := true }} <!-- 用于标记首页的第一篇文章 -->
 
-        {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
+        {{ $currentYear := now.Format "2006" }}
+        {{ range (where (where site.RegularPages "Type" "in" site.Params.mainSections) "Date.Year" "eq" (int $currentYear)).GroupByDate "2006" -}}
           <section class="posts-year-section">
             <h1 class="posts-year-title">{{ .Key }}</h1>
 
@@ -107,7 +108,11 @@
               {{ end }}
 
           </section>
-          <hr>
+        {{ end }}
+        {{ if eq .Site.Language.Lang "en" }}
+        <a href="/en/posts/" class="font-mono" id="previous-post-link">PREVIOUS POSTS</a>
+        {{ else if eq .Site.Language.Lang "zh" }}
+        <a href="/posts/" id="previous-post-link">往年的文章</a>
         {{ end }}
       </div>
     </article>

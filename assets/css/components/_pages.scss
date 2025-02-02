@@ -1,6 +1,6 @@
 /* posts list */
 
-#posts-list {
+.posts-list {
     min-height: 600px;
 
     & > section:nth-child(1) > ul:nth-child(3) > li.first-post > div > div.posts-title.col-xs-9.col-sm-10 > div {
@@ -235,4 +235,55 @@ section.taxonomy {
   .posts-category {
     display: none;
   }
+}
+
+/* posts archive */
+
+#posts-archive {
+    @mixin section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        small {
+            color: var(--secondary-text-color);
+            font-size: .8rem;
+        }
+    }
+
+    .posts-year-archive {
+        .posts-year-title {
+            border-bottom: 2px solid var(--border-color);
+            padding: .5rem 0;
+            font-size: 1.5rem;
+            @include section-title;
+        }
+    }
+
+    .posts-month-archive {
+        summary {
+            list-style: none;
+
+            .posts-month-title {
+                font-size: 1.1rem;
+                border-bottom: 1px dashed var(--border-color);
+                display: inline-block;
+                width: 100%;
+                padding: 0.5rem 0.25rem;
+                margin: 0;
+                @include section-title;
+            }
+        }
+    }
+}
+
+#previous-post-link {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+
+    &::before, &::after {
+        content: "-";
+        margin: 0 0.5rem;
+        text-decoration: none;
+    }
 }
