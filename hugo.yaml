@@ -81,7 +81,6 @@ params:
   favicon: /favicon.png
   extraCSSFiles:
     - https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css
-    - https://unpkg.com/@waline/client@v3/dist/waline.css
     - https://unpkg.com/littlefoot/dist/littlefoot.css
     - https://unpkg.com/cal-heatmap/dist/cal-heatmap.css
   externalJSFIles:
