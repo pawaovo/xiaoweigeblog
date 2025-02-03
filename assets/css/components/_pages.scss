@@ -276,6 +276,14 @@ section.taxonomy {
             @include section-title;
         }
     }
+
+    #cal-heatmap-container {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-end;
+        margin: 1rem 0;
+    }
 }
 
 #previous-post-link {

@@ -1,4 +1,5 @@
-<!-- Global JavaScript Variables -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
 <script>
 /* === littlefoot options ===  */
 var littlefootOptions = {
@@ -13,5 +14,41 @@ if (window.location.hostname !== 'localhost') {
   script.src = 'https://cloud.umami.is/script.js';
   script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
   document.head.appendChild(script);
+}
+
+/* === cal-heatmap Initializing Method */
+
+function initCalHeatmap() {
+  // Initialize CalHeatmap
+  const cal = new CalHeatmap();
+
+  // Calculate the date 6 months ago
+  const startDate = new Date();
+  startDate.setMonth(startDate.getMonth() - 12);
+
+  // Render the heatmap
+  cal.paint({
+    domain: {
+      type: 'month',
+    },
+    subDomain: { type: 'day' },
+    scale: {
+        color: {
+          range: ['#eee', 'black'],
+          type: 'linear',
+          domain: [0, 6000],
+        },
+      },
+    date: {
+      timezone: 'Asia/Shanghai',
+      start: startDate,
+    },
+    data: {
+      source: '/cal-heatmap.json', // 指定数据源
+      x: d => new Date(d.date), // 提取日期字段并转换为 Date 对象
+      y: d => d.value, // 提取数值字段
+      defaultValue: 0, // 缺失数据的默认值
+    },
+  });
 }
 </script>

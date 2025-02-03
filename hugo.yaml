@@ -83,6 +83,7 @@ params:
     - https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css
     - https://unpkg.com/@waline/client@v3/dist/waline.css
     - https://unpkg.com/littlefoot/dist/littlefoot.css
+    - https://unpkg.com/cal-heatmap/dist/cal-heatmap.css
   externalJSFIles:
     - https://unpkg.com/swup@4
     - https://unpkg.com/tocbot@4.32.2/dist/tocbot.min.js

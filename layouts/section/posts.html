@@ -3,6 +3,13 @@
       {{ partial "header.html" . }}
       <div id="posts-archive" class="posts-list">
 
+        <!-- Post Word-count Heatmap -->
+        <div id="cal-heatmap-container">
+            <div id="cal-heatmap"></div>
+        </div>
+        <script>initCalHeatmap();</script>
+
+        <!-- Post Archive List -->
         {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section class="posts-year-archive">
             <h1 class="posts-year-title">
