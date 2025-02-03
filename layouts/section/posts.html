@@ -9,6 +9,8 @@
         </div>
         <script>initCalHeatmap();</script>
 
+        {{ partial "components/pagefind.html" . }}
+
         <!-- Post Archive List -->
         {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section class="posts-year-archive">

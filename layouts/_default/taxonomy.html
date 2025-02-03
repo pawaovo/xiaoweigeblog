@@ -2,6 +2,8 @@
 <article class="taxonomy">
   {{ partial "header.html" . }}
 
+  {{ partial "components/pagefind.html" . }}
+
   <!-- Display Tags -->
   <section class="taxonomy taxonomy-tags">
     {{ range .Site.Taxonomies.tags.Alphabetical }}
