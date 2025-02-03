@@ -17,10 +17,11 @@ toc: true
 
 ## 🏃 这周做了什么？
 
-1. 两个小时用 Vue 搓了一个简单的单页应用，叫做 [readly](https://github.com/BigCoke233/readly)，可以用来测试不同语言、不同语境、不同字体下的阅读速度，单位是 WPM（Word per Miniute）。
-2. 博客的首页作了修改，现在只展示当年发布的文章，之前的文章会收起来放在[这个页面](/posts/)
-3. 博客从 GitHub Pages 又迁移到了 Cloudflare Pages
-4. Ultralime 上发布了新的小说《[不合时宜的到访](https://www.ultrali.me/posts/20250127-death-outside-the-bathroom-door/)》，是一个有关死亡的小故事
+1. 我建立了一个 Telegram 群组，名为「418·亡者茶话会」，用作本博客的讨论群，[点此加入](https://t.me/teaparty418/)
+2. 两个小时用 Vue 搓了一个简单的单页应用，叫做 [readly](https://github.com/BigCoke233/readly)，可以用来测试不同语言、不同语境、不同字体下的阅读速度，单位是 WPM（Word per Miniute）。
+3. 博客的首页作了修改，现在只展示当年发布的文章，之前的文章会收起来放在[这个页面](/posts/)
+4. 博客从 GitHub Pages 又迁移到了 Cloudflare Pages
+5. Ultralime 上发布了新的小说《[不合时宜的到访](https://www.ultrali.me/posts/20250127-death-outside-the-bathroom-door/)》，是一个有关死亡的小故事
 
 ## 📚 这周读了什么？
 
