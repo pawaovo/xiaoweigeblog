@@ -4,6 +4,8 @@ title: 关于
 date: 2024-11-27
 ---
 
+{{< callout "欢迎加入本站的 Telegram 群组 [418·亡者茶话会](https://t.me/teaparty418)！" "🧙" >}}
+
 **极客死亡计划**（Geek Death Project）是由 Eltrac 维护的独立博客，致力于编写有价值的文章，向内进行深入思考，向外输出洞见和想法。
 
 ## 博客导读
@@ -12,7 +14,6 @@ date: 2024-11-27
 2. 博客内容涉及不少领域，但除了计算机外，并非专业，==如有错误恳请指出==
 3. 博客==几乎日更==，可以通过 [RSS](/posts/index.xml) 订阅，也可以到[分类](/categories/)页面查找感兴趣的内容，然后进入详情页面找到单独订阅某个系列或者标签的链接
 4. ==网站开源==，你可以在[这里](/categories/)看到所有文章的 Markdown 源代码，也可以在仓库的 [Discussion](https://github.com/BigCoke233/geek-death-project/discussions) 页面看到自 2025 年 1 月 5 日起的所有评论
-
 
 ## 这是/不是什么样的网站
 
@@ -38,11 +39,11 @@ date: 2024-11-27
 
 ### 这个博客是怎么创建的
 
-使用 Hugo 和 GitHub Actions 生成静态网站，托管在 GitHub Pages 上，外观是用 [yinyang](https://github.com/joway/hugo-theme-yinyang) 主题修改的。
+使用 Hugo 生成静态网站，托管在 Cloudflare Pages 上，外观是用 [yinyang](https://github.com/joway/hugo-theme-yinyang) 主题修改的。
 
 博客[开源](https://github.com/BigCoke233/geek-death-project)，代码通过 MIT 协议授权，博客内容通过 [Creative Commons - BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议授权。
 
-我在本地使用 Typora 编写文章，完成后推送到 GitHub Pages 上构建并部署。
+我在本地使用 Typora 编写文章，完成后推送到 GitHub 上构建并部署。
 
 评论系统曾经使用 Waline，而后转到 Giscus，和 GitHub 仓库一起管理。以前的评论数据有保留，如果你无法使用 Giscus 评论，请告知，或者使用下文提到的邮件联系我。
 
@@ -58,7 +59,13 @@ date: 2024-11-27
 
 ## 联系我
 
-社交媒体仅限于现实生活中的朋友，如需联系请发邮件 [hi@guhub.cn](mailto:hi@guhub.cn)，或者 [eltrac233@gmail.com](mailto:eltrac233@gmail.com)
+你也可以通过下面这个表单直接联系到我（如果无法显示请刷新页面）
+
+<script data-letterbirduser="eltrac" src="https://letterbird.co/embed/v1.js"></script>
+
+如果以上功能不可用，请通过电子邮件联系 [hi@guhub.cn](mailto:hi@guhub.cn)，或者 [eltrac233@gmail.com](mailto:eltrac233@gmail.com)
+
+---
 
 ## 其他
 
