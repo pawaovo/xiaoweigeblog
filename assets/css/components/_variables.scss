@@ -16,31 +16,36 @@
   --content-font-size: 20px;
 
   --page-width: 700px;
-}
 
-.dark {
-  --background-color: #1D2021;
-  --block-background-color: #181A1B;
-  --border-color: rgba(255,255,255,0.2);
-  --text-color: #D2CEC9;
-  --secondary-text-color: #A1998D;
-  --link-color: #277BD9;
-  --bright-background-color: #666;
+  /* pagefind custom css */
+  --pagefind-ui-primary: var(--text-color);
+  --pagefind-ui-text: var(--text-color);
+  --pagefind-ui-background: var(--background-color);
+  --pagefind-ui-border: var(--border-color);
+  --pagefind-ui-tag: var(--border-color);
 }
 
 html[lang="en-US"] {
     --serif-font-family: "Playfair Display", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+@mixin variablesInDarkMode {
     --background-color: #1D2021;
     --block-background-color: #181A1B;
     --border-color: rgba(255,255,255,0.2);
     --text-color: #D2CEC9;
     --secondary-text-color: #A1998D;
     --link-color: #277BD9;
-    --bright-background-color: #333;
+    --bright-background-color: #666;
+}
+
+.dark {
+  @include variablesInDarkMode;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include variablesInDarkMode;
   }
 }
 
