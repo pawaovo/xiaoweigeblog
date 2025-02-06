@@ -2,20 +2,10 @@
     <section id="footer-copyright">
         <p class="copyright">&copy; 2022-{{ now | dateFormat "2006" }} <a href="https://www.guhub.cn/" target="_blank">Eltrac</a></p>
         <p class="license">Licensed by <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
-        {{$scratch := newScratch}}
-        {{ range (where .Site.Pages "Kind" "page" )}}
-            {{$scratch.Add "total" .WordCount}}
-        {{ end }}
-        <p class="word-count">🪦 {{$scratch.Get "total" }} words are <span style="display:inline-block; transform:rotate(7deg) translateY(0.15rem); filter: blur(1px)">dead</span></p>
     </section>
     <section id="footer-links">
         <ul class="footer-navigation">
-            {{ range .Site.Params.footerLinks.textLinks }}
-            <li><a href="{{ .link }}">{{ .name }}</a></li>
-            {{ end }}
-        </ul>
-        <ul class="footer-navigation">
-            {{ range .Site.Params.footerLinks.iconLinks }}
+            {{ range .Site.Params.footerLinks }}
             <li><a href="{{ .link }}" title="{{ .name }}" target="_blank">
                 <img src="{{ .icon }}" />
             </a></li>
@@ -29,7 +19,11 @@
                     {{ partial "snippets/rss-icon" . }}
                 </a>
             </li>
-
         </ul>
+        {{$scratch := newScratch}}
+        {{ range (where .Site.Pages "Kind" "page" )}}
+            {{$scratch.Add "total" .WordCount}}
+        {{ end }}
+        <p class="word-count">🪦 {{$scratch.Get "total" }} words in total</p>
     </section>
 </footer>
