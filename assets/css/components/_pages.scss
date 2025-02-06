@@ -289,3 +289,18 @@ section.taxonomy {
         text-decoration: none;
     }
 }
+
+ol.breadcrumb {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0;
+    font-family: var(--mono-font-family);
+
+    li {
+        &:not(:last-child)::after {
+            content: "/";
+            color: var(--secondary-text-color);
+            margin: 0 0.5rem;
+        }
+    }
+}

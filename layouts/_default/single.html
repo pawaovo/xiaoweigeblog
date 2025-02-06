@@ -1,10 +1,10 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="post {{ .Site.Language.LanguageName }}" id="article">
-
-      <!-- Site Header -->
-      <div class="site-header">
-        {{ partial "header.html" . }}
-      </div>
+        {{ if eq .Type "posts" }}
+            {{ partial "components/breadcrumbs.html" . }}
+        {{ else }}
+            {{ partial "header.html" . }}
+        {{ end }}
       <!-- Post Header -->
       <header class="post-header">
         {{ if in .Site.Params.mainSections .Type }}

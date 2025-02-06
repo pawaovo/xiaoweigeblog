@@ -1,0 +1,15 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    {{ $currentPage := . }}
+
+    {{ with $currentPage.Ancestors }}
+      {{ range .Reverse }}
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+
+    {{ if ne $currentPage.Type "posts" }}
+      <li class="breadcrumb-item active" aria-current="page">{{ $currentPage.Title }}</li>
+    {{ end }}
+  </ol>
+</nav>

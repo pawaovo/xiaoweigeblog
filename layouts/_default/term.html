@@ -1,13 +1,7 @@
 {{ partial "snippets/document-start.html" . }}
     <article class="posts termlist-page">
-      {{ partial "header.html" . }}
-      <h1 class="termlist-title">{{.Data.Term}}</h1>
-      <p class="termlist-subscribe">
-          <a href="https://rss.beauty/rss?url=https%3A%2F%2Fwww.geedea.pro%2Fcategories%2F{{.Data.Term | urlize}}%2Findex.xml" target="_blank" title="RSS">
-              <span style="display:inline-block;transform:scale(0.75)">{{ partial "snippets/rss-icon" . }}</span>
-              单独订阅这个系列
-          </a>
-      </p>
+      {{ partial "components/breadcrumbs.html" . }}
+
       <div id="term-list" class="posts-list">
           <ul>
           {{ range .Pages }}
@@ -31,5 +25,12 @@
           {{ end }}
           </ul>
       </div>
+
+      <p class="termlist-subscribe">
+          <a href="https://rss.beauty/rss?url=https%3A%2F%2Fwww.geedea.pro%2Fcategories%2F{{.Data.Term | urlize}}%2Findex.xml" target="_blank" title="RSS">
+              <span style="display:inline-block;transform:scale(0.75)">{{ partial "snippets/rss-icon" . }}</span>
+              单独订阅这个系列
+          </a>
+      </p>
     </article>
 {{ partial "snippets/document-end.html" . }}
