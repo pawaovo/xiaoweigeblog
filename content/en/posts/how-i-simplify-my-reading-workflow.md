@@ -1,9 +1,5 @@
 ---
 title: How I Simplify My Reading Workflow 
-tags:
-  - workflow
-  - Apple
-  - reading
 date: 2025-01-30 23:31:00
 draft: false
 toc: false

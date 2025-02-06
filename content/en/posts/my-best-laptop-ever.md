@@ -1,7 +1,5 @@
 ---
 title: My Best Laptop Ever
-tags:
-  - Apple
 date: 2025-01-25 12:57:00
 draft: false
 toc: true
