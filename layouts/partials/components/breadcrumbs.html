@@ -8,7 +8,7 @@
       {{ end }}
     {{ end }}
 
-    {{ if ne $currentPage.Type "posts" }}
+    {{ if or (ne $currentPage.Type "posts") (eq $currentPage.Kind "section") }}
       <li class="breadcrumb-item active" aria-current="page">{{ $currentPage.Title }}</li>
     {{ end }}
   </ol>
