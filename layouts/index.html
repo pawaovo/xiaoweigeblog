@@ -2,57 +2,6 @@
     <article class="posts">
       {{ partial "header.html" . }}
 
-      {{ if eq .Site.Language.Lang "zh" }}
-      <header id="posts-header">
-          <div id="post-series">
-              <h1>专栏</h1>
-              <div id="post-series-list">
-                  {{ range .Site.Params.series }}
-                    <a class="post-series-item"
-                        href="{{ .link }}"
-                        title="{{ .description }}"
-                        data-umami-event="Click series link from index"
-                    >
-                        <div class="post-series-cover">
-                            <img src="{{ .cover }}" />
-                        </div>
-                        <div class="post-series-text">
-                            <h3>{{ .name }}</h3>
-                        </div>
-                    </a>
-                  {{ end }}
-              </div>
-          </div>
-          <div id="posts-recommendation">
-              <h1>欢迎</h1>
-              <script>
-                const posts = [
-                  {{ range site.RegularPages }}
-                  "{{ .RelPermalink }}",
-                  {{ end }}
-                ];
-
-                function getRandomPost() {
-                  const randomPostLink = document.getElementById("random-post-link")
-                  const randomIndex = Math.floor(Math.random() * posts.length);
-                  randomPostLink.href = posts[randomIndex];
-                }
-                getRandomPost()
-              </script>
-              <div id="posts-recommendation-links">
-                  <a class="button" id="random-post-link"
-                      href=""
-                      onclick="getRandomPost()"
-                  >🎲 随机文章</a>
-                  <a class="button" href="https://www.travellings.cn/go.html"
-                      target="_blank">🚇 开往</a>
-                  <a class="button" href="https://www.guhub.cn/"
-                      target="_blank">🏠 我的主页</a>
-              </div>
-          </div>
-      </header>
-      {{ end }}
-
       <div id="posts-list" class="posts-list">
         {{ $currentYear := now.Format "2006" }}  <!-- 获取当前年份 -->
 
@@ -116,4 +65,5 @@
         {{ end }}
       </div>
     </article>
+{{ partial "footer.html" . }}
 {{ partial "snippets/document-end.html" . }}
