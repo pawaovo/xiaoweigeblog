@@ -2,6 +2,10 @@
     <article class="posts termlist-page">
       {{ partial "components/breadcrumbs.html" . }}
 
+      {{ with .Params.description }}
+        <p class="taxonomy-description markdown-body">{{ . | markdownify }}</p>
+      {{ end }}
+
       <div id="term-list" class="posts-list">
           <ul>
           {{ range .Pages }}
