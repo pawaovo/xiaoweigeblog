@@ -1,0 +1,9 @@
+lang: zh-CN
+archivePage:
+  postCountMonthly: '{{ . }} 篇文章'
+  postCountAnnual: '共计 {{ . }} 篇文章'
+postPage:
+  commentNotLoaded: 如果评论未加载，请尝试刷新页面
+footer:
+  wordCount: '🪦 {{ . }} 字在这里死去'
+  licenseStatement: '以 {{ . }} 协议授权'

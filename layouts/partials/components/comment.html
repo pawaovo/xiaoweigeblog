@@ -2,11 +2,7 @@
   <div class="post-comments">
       <div class="giscus">
           <p style="text-align:center">
-              {{ if eq .Site.Language.Lang "en" }}
-              if comment is not loaded, please try refreshing
-              {{ else if eq .Site.Language.Lang "zh" }}
-              如果评论未加载，请尝试刷新页面
-              {{ end }}
+              {{ T "postPage.commentNotLoaded" }}
           </p>
       </div>
       {{ if eq .Site.Language.Lang "zh" }}
@@ -23,11 +19,7 @@
           data-emit-metadata="0"
           data-input-position="top"
           data-theme="preferred_color_scheme"
-          {{ if eq .Site.Language.Lang "en" }}
-          data-lang="en"
-          {{ else if eq .Site.Language.Lang "zh" }}
-          data-lang="zh-CN"
-          {{ end }}
+          data-lang="{{ T "lang" }}"
           crossorigin="anonymous"
           async>
       </script>

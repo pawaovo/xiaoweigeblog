@@ -1,7 +1,7 @@
 <footer id="footer">
     <section id="footer-copyright">
         <p class="copyright">&copy; 2022-{{ now | dateFormat "2006" }} <a href="https://www.guhub.cn/" target="_blank">Eltrac</a></p>
-        <p class="license">Licensed by <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p class="license">{{ T "footer.licenseStatement" (printf "<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\">CC BY-SA 4.0</a>") | safeHTML }}</p>
     </section>
     <section id="footer-links">
         <ul class="footer-navigation">
@@ -24,6 +24,6 @@
         {{ range (where .Site.Pages "Kind" "page" )}}
             {{$scratch.Add "total" .WordCount}}
         {{ end }}
-        <p class="word-count">🪦 {{$scratch.Get "total" }} words in total</p>
+        <p class="word-count">{{ T "footer.wordCount" ($scratch.Get "total") }}</p>
     </section>
 </footer>

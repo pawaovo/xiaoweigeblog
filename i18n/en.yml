@@ -1,0 +1,9 @@
+lang: en
+archivePage:
+  postCountMonthly: '{{ . }} POSTS'
+  postCountAnnual: '{{ . }} TOTAL POSTS'
+postPage:
+  commentNotLoaded: if comment is not loaded, please try refreshing
+footer:
+  wordCount: '🪦 {{ . }} words are buried here'
+  licenseStatement: 'Licensed under {{ . }}'

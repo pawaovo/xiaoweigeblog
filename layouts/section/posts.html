@@ -11,7 +11,7 @@
           <section class="posts-year-archive">
             <h1 class="posts-year-title">
                 {{ .Key }}
-                <small class="font-mono">{{ len .Pages }} TOTAL POSTS</small>
+                <small class="font-mono">{{ T "archivePage.postCountAnnual" (len .Pages) }}</small>
             </h1>
 
               {{ range .Pages.GroupByDate "January" }}
@@ -19,7 +19,7 @@
                   <summary>
                       <h2 class="posts-month-title">
                           {{ .Key }}
-                          <small class="font-mono">{{ len .Pages }}  POSTS</small>
+                          <small class="font-mono">{{ T "archivePage.postCountMonthly" (len .Pages) }}</small>
                       </h2>
                   </summary>
                   <ul>
