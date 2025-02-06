@@ -212,6 +212,10 @@ section.taxonomy {
     }
 }
 
+.taxonomy-description hr {
+    margin: 0.5rem 0;
+}
+
 @media screen and (max-width: 600px) {
   .posts-line {
     font-size: 16px;
