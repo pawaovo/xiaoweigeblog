@@ -1,0 +1,12 @@
+{{ with .Params.banner }}
+<div class="post-banner">
+    <img src="{{ . }}">
+</div>
+<style>
+.post-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+</style>
+{{ end }}
