@@ -29,22 +29,18 @@ littlefoot.littlefoot(littlefootOptions)
 function loadGiscus() {
   const giscusContainer = document.querySelector('.giscus'); // Make sure this matches your Giscus container class
   if (giscusContainer) {
-      // Remove old Giscus iframe
-      giscusContainer.innerHTML = '';
-
-      // Create and append a new script
       const script = document.createElement('script');
       script.src = 'https://giscus.app/client.js';
-      script.setAttribute('data-repo', 'your/repo');
-      script.setAttribute('data-repo-id', 'your-repo-id');
-      script.setAttribute('data-category', 'General');
-      script.setAttribute('data-category-id', 'your-category-id');
-      script.setAttribute('data-mapping', 'pathname');
-      script.setAttribute('data-strict', '0');
-      script.setAttribute('data-reactions-enabled', '1');
-      script.setAttribute('data-emit-metadata', '0');
-      script.setAttribute('data-input-position', 'bottom');
-      script.setAttribute('data-theme', 'light');
+      script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
+      script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
+      script.setAttribute('data-category', '{{ .Site.Params.giscus.category }}');
+      script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
+      script.setAttribute('data-mapping', '{{ .Site.Params.giscus.mapping }}');
+      script.setAttribute('data-strict', '{{ .Site.Params.giscus.strict }}');
+      script.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.reactionsEnabled }}');
+      script.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.emitMetadata }}');
+      script.setAttribute('data-input-position', '{{ .Site.Params.giscus.inputPosition }}');
+      script.setAttribute('data-theme', '{{ .Site.Params.giscus.theme }}');
       script.setAttribute('data-lang', '{{ T "lang" }}');
       script.crossOrigin = 'anonymous';
       script.async = true;

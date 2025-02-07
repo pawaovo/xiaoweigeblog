@@ -101,6 +101,17 @@ params:
     - name: Travelling
       link: https://www.travellings.cn/go.html
       icon: https://www.travellings.cn/assets/favicon.png
+  giscus:
+    repo: BigCoke233/geek-death-project
+    repoId: R_kgDONPoyVw
+    category: General
+    categoryId: DIC_kwDONPoyV84Clumc
+    mapping: title
+    strict: 1
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: top
+    theme: preferred_color_scheme
 services:
   rss:
     limit: 10
