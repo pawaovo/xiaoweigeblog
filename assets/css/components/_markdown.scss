@@ -32,8 +32,12 @@ $em-text-color: #889E73;
 
   blockquote {
     @include block-style(0, 0 1em, $secondary-text-color, 0.2em solid $border-color);
-    margin-left: -1.4rem;
     padding-right: 0;
+    &:not(blockquote > blockquote) {
+        @media screen and (min-width: 768px) {
+            margin-left: -1.4rem;
+        }
+    }
   }
 
   pre {
