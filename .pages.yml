@@ -1,0 +1,37 @@
+media:
+  input: static/media
+  output: /media
+content:
+  name: ppsts
+  label: Posts
+  type: collection 
+  path: content/posts
+  fields: 
+    - name: title
+      label: Title
+      description: 文章标题
+      required: true
+    - name: subtitle
+      label: Subtitle
+      description: 文章副标题
+      required: false
+    - name: description 
+      label: 描述
+      required: false
+    - name: date
+      required: true
+      type: date
+    - name: tags
+      required: false
+      list: true
+    - name: category
+    - name: draft
+      type: boolean
+      required: true
+      default: true
+      description: 是否为草稿
+    - name: toc
+      type: boolean
+      description: 是否显示目录
+      default: true
+    - 
