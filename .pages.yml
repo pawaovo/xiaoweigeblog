@@ -11,12 +11,12 @@ content:
         label: Title
         description: 文章标题
         required: true
-        type: text
+        type: string
       - name: subtitle
         label: Subtitle
         description: 文章副标题
         required: false
-        type: text
+        type: string
       - name: description 
         label: 描述
         required: false
@@ -27,9 +27,9 @@ content:
       - name: tags
         required: false
         list: true
-        type: text
+        type: string
       - name: category
-        type: text
+        type: string
       - name: draft
         type: boolean
         required: true
@@ -39,3 +39,6 @@ content:
         type: boolean
         description: 是否显示目录
         default: true
+      - name: body
+        label: Body
+        type: rich-text
