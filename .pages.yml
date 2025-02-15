@@ -1,0 +1,44 @@
+media:
+  input: static/media
+  output: /media
+content:
+  - name: posts
+    label: Posts
+    type: collection 
+    path: content/posts
+    fields: 
+      - name: title
+        label: Title
+        description: 文章标题
+        required: true
+        type: string
+      - name: subtitle
+        label: Subtitle
+        description: 文章副标题
+        required: false
+        type: string
+      - name: description 
+        label: 描述
+        required: false
+        type: text
+      - name: date
+        required: true
+        type: date
+      - name: tags
+        required: false
+        list: true
+        type: string
+      - name: category
+        type: string
+      - name: draft
+        type: boolean
+        required: true
+        default: true
+        description: 是否为草稿
+      - name: toc
+        type: boolean
+        description: 是否显示目录
+        default: true
+      - name: body
+        label: Body
+        type: rich-text
