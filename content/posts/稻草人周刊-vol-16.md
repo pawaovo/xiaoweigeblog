@@ -142,7 +142,7 @@ enums = {
 要遍历 `table` 也非常方便。
 
 ```lua
-for k, v in tbl do
+for k, v in ipairs(tbl) do
   -- ...
 end
 ```
