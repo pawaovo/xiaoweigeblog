@@ -11,9 +11,21 @@ toc: true
 
 {{< callout "你正在阅读 稻草人周刊，一个读者的自述，每周一更新。" "🔖" >}}
 
+## 🎵 本周音乐
+
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/undercurrent/724267459"></iframe>
+
+偶然发现的爵士乐，意外地喜欢，而且是我听的第一张爵士乐专辑吧。
+
 ## 🏃 这周做了什么？
 
-新的小说《[电梯里的无头天使](https://www.ultrali.me/posts/20250215-headless-angel/)》已经在 Ultralime 上发布。
+新的小说《[电梯里的无头天使](https://www.ultrali.me/posts/20250215-headless-angel/)》已经在 Ultralime 上发布，在之后，我还写了一篇文章《[好梦，我的恶魔](/posts/好梦-我的恶魔/)》来谈这次写作的感受。
+
+此外，Heart Hunter 正在龟速开发中。没想到做一个肉鸽游戏要写的东西居然这么多，而且天天修各种 Bug 导致我甚至没来得及把做好的贴图放上去。
+
+{{< img src="https://image.guhub.cn/uPic/2025/02/IMG_0290.PNG" class="center small" title="这是一个苹果，但画完之后我才发现，它长得有点像个番茄" >}}
+
+{{< img src="https://image.guhub.cn/uPic/2025/02/image-20250223101436594.png" >}}
 
 ## 📚 这周读了什么？
 
@@ -27,7 +39,7 @@ toc: true
 
 读起来其实相当过瘾，但读完还是会觉得故事冗长，明明是短中篇小说的分量，却加入了各种不相干的描写和情节，令人印象深刻的桥段也不多，最后的立意也有些突兀，尽管小说的确有试图映射一些社会现实。这在我看来算是扣分点，但可能是这个作者的风格吧。
 
-还有就是日式推理小说的通病——故事里总有一个和警察对着干的侦探，刻意塑造成智商超群的形象，最后都靠他推理出真相。虽然这篇小说里的主角不是侦探，但其实也是相当类似的定位，比较耐人寻味的是这侦探其实是个小偷，破案之前还偷偷吞了涉案财物，还算有点意思。还想吐槽的是，日本小说里怎么都要扯男女爱情？故事里没有感情线，恋爱也与情节无关，但男性角色与女性角色相遇时似乎很喜欢拿性吸引力来做文章。
+还有就是日式推理小说的通病——故事里总有一个和警察对着干的侦探，刻意塑造成智商超群的形象，最后都靠他推理出真相。虽然这篇小说里的主角不是侦探，但其实也是相当类似的定位，比较耐人寻味的是这侦探其实是个小偷，破案之前还偷偷吞了涉案财物，还算有点意思。还想吐槽的是，日本小说里怎么都要扯男女爱情？故事里没有感情线，恋爱也与情节无关，但男性角色与女性角色相遇时似乎很喜欢拿性吸引力和爱而不得来做文章。
 
 虽说冗长，但是，从另一个方面来讲，这部故事写得很饱满。如果你喜欢本格推理，兴许可以一读。
 
@@ -43,13 +55,61 @@ toc: true
 
 Dylan Ayrey 在[一篇文章](https://trufflesecurity.com/blog/removing-jeff-bezos-from-my-bed)中表示他在自己的床里找到了一个后门——他发现自己花 2000 美金购买的 Eight Sleep Pod（一个提供温度控制和睡眠监测等功能的智能床垫），居然允许工程师随时通过远程 SSH 访问并在用于控制床垫的 Linux 电脑上执行代码。
 
-这个床是接入互联网的，也就是说，能够访问并控制自己床的不止有 Eight Sleep 的程序员和工程师，还有不怀好意的骇客。他们能看到自己什么时候睡觉、床上有几个人睡觉、哪天晚上没人回来睡觉，还能调节床垫的温度、开关震动模式、关闭闹钟等等。更厚颜无耻的是，Eight Sleep 的创始人之一 Matteo Franceschetti，居然光明正大地在 Twitter（我不会用 X 这个名字的）上「分享」自己收集的用户睡眠数据。
+这个床是接入互联网的，也就是说，能够访问并控制自己床的不止有 Eight Sleep 的程序员和工程师，还有不怀好意的骇客。他们能看到自己什么时候睡觉、床上有几个人睡觉、哪天晚上没人回来睡觉，还能调节床垫的温度、开关震动模式、关闭闹钟等等。更厚颜无耻的是，Eight Sleep 的创始人之一 Matteo Franceschetti，居然光明正大地在社交媒体上「分享」自己收集的用户睡眠数据。
 
-作者 Dylan 的做法是，买了一个 150 美金的浴缸温度调节器（Aquarium Chiller），接入自己的床垫，和自己的狗狗安稳地睡了一觉。
+作者 Dylan 的做法是，买了一个 150 美金的鱼缸温度调节器（Aquarium Chiller），接入自己的床垫，和自己的狗狗安稳地睡了一觉。
 
 一个产品挂了「智能」和「互联网」的牌子，就能把放肆侵犯用户隐私的产品，以超出十倍的价格卖给消费者。支付这些溢价买来的智能，真的有必要吗？
 
+### App 暴政
+
+在《[The tryanny of apps](https://www.theguardian.com/money/2025/feb/22/the-tyranny-of-apps-those-without-smartphones-are-unfairly-penalised-say-campaigners)》这篇文章里，有这样的观点：
+
+>  “The people who probably need the discounts most are the people who can’t afford or don’t have a smartphone.”
+
+有不少商家会鼓励顾客下载 App，下载之后可以获得折扣甚至是免单优惠，然而那些没有手机、无法下载 App 的人才是最需要优惠的。不过，我认为这并不讽刺，因为科技公司并非慈善机构，通过折扣引诱用户下载 App 的背后原因也只是为了谋取更多的利益。
+
+这篇文章主要指出，如今没有智能手机、不用任何 App 的生活似乎变得越来越难了（中国有不能拒收人民币的法律规定[^1]，从文中看来，英国似乎没有）。
+
+我非常讨厌手机里充满了各种 App。我会不定期地删除不常用的 App，虽然他们不会占用太多空间，但就是很碍眼。App 本应该是作为工具解放人的，但现在已经变成绑架和暴政了。这也是我更喜欢付费 App 的原因之一吧，好的付费产品不需要绑架我也能牟利，我也能获得自己想要的东西。关键在于，有的 App 根本不能算作产品，只能算作营销手段。
+
+### 万物分类指南
+
+读完《断舍离》，印象最深的其实是作者提出的「三分法」，将家中某种区域的物件分为三大类、三中类再三小类。不过，由于这本书的主要面向群体其实是家庭主妇，三分法的应用场景有些局限。
+
+本周在 Hacker News 上读到一个更极客的分类方法，叫做 [Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/)。这套分类系统非常简单（甚至原始），也很强大，而且几乎万能，你可以用它来做文件管理、家庭管理，甚至是管理小型企业；[Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/) 这个网站本身就是用这套系统来分类页面的。更酷的是，你的每个文件夹或物品，都会拥有一个独一无二的编号。
+
+![A diagram showing the structure of a Johnny.Decimal number. The number is 15.52 and it explains how the '1' is an area, which groups related categories in sets of 10. The '15' is the category, in this case 'travel'. And '52' is just an ID; they start at 01. The title of this, our 52nd travel thing, is 'Trip to NYC'.](https://image.guhub.cn/uPic/2025/02/11.01A-Diagram_1552_NYC--dtop-1_resize-light-cx-1000x609.png)
+
+比起随心所欲地创建文件夹，提前选定一个编号会让文件更容易管理。由于大部分操作系统和软件不一定支持手动排序，但一定支持数字的升序或降序排序，数字也能让文件夹位置保持不变，更容易形成肌肉记忆。
+
+小数点前的两位数表示「分类」，第一位数表示「领域」（类似 PARA 笔记法中的 Area）——如果 1 表示「家庭」领域，13 就可以表示「家庭财务」。小数点之后就是物品的编号，从 01 开始，表示该分类下的第几个物品。
+
+这套系统我在用 Obsidian 记笔记的时候也会用，但比较随心所欲，这个网站写了各种指导，能帮助你创建一个有条理的分类和管理系统。据网站描述，Johnny·Decimal 的目的是创建一个「能让你更有自信、更少焦虑地找到你要找的东西」的系统。
+
+如果你没有一个很好的文件管理或者物品管理方法，到这个网站上阅读一些指导文章。其实 [Introduction](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/) 就已经把方法写得很明白了，此外，也可以读一下 [System Expansion](https://johnnydecimal.com/10-19-concepts/13-system-expansion/)（系统拓展）和 [Philosophy](https://johnnydecimal.com/10-19-concepts/11-core/11.04-philosophy/)（设计哲学）这两部分。
+
 ## 💡 新知复盘
+
+### 马尼拉文件夹
+
+读小说的时候碰到了一个奇怪的名词「马尼拉文件夹」，我好奇一个普通的文件夹为什么会有这样的名字，而且，在我熟悉的后室（The Backrooms）作品中，也有一个叫做「马尼拉房间」的地方。我很好奇「马尼拉」到底是什么。
+
+马尼拉文件夹（manila folder）[^2]是指用「马尼拉麻焦」的树叶为原材料制成的文件夹，而「马尼拉」是菲律宾首都的名字。尽管后来的马尼拉文件夹不再使用马尼拉麻焦的纤维制作，但名字仍然保留了下来。
+
+在后室作品中，马尼拉房间是流浪者[^3]在 Level 0（后室的第一层）唯一能够碰面的地方，也是这一层里唯一一处线性空间，因其特性，故事中的探险者总署（M.E.G.）在此存放了许多包含关键信息的文件，来帮助初入后室的人类。大概是因为放有许多用马尼拉文件夹存放的文件，所以这个房间被称作「马尼拉房间」。
+
+这样简单的词源研究真的很有意思，你能看到一个地名是如何变成一个植物的名字，再变成一种物品的名字，再变成某个怪谈小说里的另一个地名的。
+
+### Overflow Clip
+
+CSS 中的 `overflow` 属性被用来处理子元素的溢出，最常用的是 `overflow: hidden` 和 `overflow: scroll`，前者用于隐藏溢出，后者用于为溢出元素增加一个滚动条；还有 `overflow: auto`，浏览器会通过溢出元素的大小来判断需不需要加上一个滚动条。
+
+`overflow-x` 和 `overflow-y` 用来设定单一坐标轴上的溢出处理方式，但实际上，将 `overflow-x` 设置为 `hidden`，也会同时将 `overflow-y` 设置为 `auto`。如果只想要裁减某一边的溢出，使用 `hidden` 不一定能达到预期效果。
+
+这个时候就可以使用 `overflow: clip`，它只会裁减某一坐标轴上的溢出，而不会影响到另一边。
+
+更多有关 `overflow: clip` 的内容，可以阅读 [Overflow Clip - Ahmad Shadeed](https://ishadeed.com/article/overflow-clip/)
 
 ## 🗣️ 碎碎念
 
@@ -59,5 +119,12 @@ Dylan Ayrey 在[一篇文章](https://trufflesecurity.com/blog/removing-jeff-bez
 - 敲了这么久的代码还是不习惯用单元测试和断点 debug，一直在各种地方 `print()`，感觉这才是最符合直觉的做法。
 - 喝了 Colin Plus 的「TOH 西达摩 班莎 日晒」，草莓糖风味很突出，余韵也很长，甜了一下午。
 - 本周肾上腺素飙升时刻：玩《饥荒》用蜘蛛人探远古，出来的时候正好赶上暴动，精神值也清零，被影猴和影怪咬了好几下，一直追到洞穴门口，残血极限爬回地上。（跟在后面的白蜘蛛小弟什么都不干的啊喂！）
+- 发现读文章写笔记只是为了写在周刊上，那为什么不一边读一边写周刊呢？于是这周我就这么做了。现在笔记软件只在学一些新东西和上课的时候打开。
+- 读《城市与狗》，第一节的最后有三四页完全没分段，写的都是不清楚说话人的句子。背景是军队学校的几个男学生半夜摸黑出门找东西解决生理需求，这种混乱的写法确实让读者很好地代入了混乱的场面。*只不过把母鸡抓来干，留下种之后还烧了吃的情节让人两眼一黑，更别说这些人还在讨论自己玩过哪个班的胖子、谁玩过母狗、自己被别人玩的时候发生了什么*。
+- 迷上桌游了，当只玩过 Uno 和狼人的我准备去找点新奇的桌游来玩的时候，才发现国内的桌游少得可怜，很火的双人非对称桌游《**藻影追猎**》也已经在摩点上售罄了，[BGG](https://boardgamegeek.com) 上的热门桌游我一个也买不起。（当桌游设计师的想法还没燃起来就灭掉了）
 
 ## 🐈
+
+[^1]: 《**中华人民共和国人民币管理条例**》**第三条：**中华人民共和国的法定货币是人民币。以人民币支付中华人民共和国境内的一切公共的和私人的债务，任何单位和个人不得拒收。
+[^2]: 来源：[Wikipedia](https://en.wikipedia.org/wiki/Manila_folder)
+[^3]: 坠入后室的人类被称作「流浪者」
