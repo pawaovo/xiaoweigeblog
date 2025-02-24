@@ -1,23 +1,29 @@
 ---
 title: 稻草人周刊 Vol.17
-subtitle: 
-description: 
+subtitle: 夏天什么时候来？
+description: 暗流、无头天使、玻璃之锤、互联网暴政、万物分类指南、马尼拉、除非世界向我道歉
 tags:
-date: 2025-02-17 14:59:09
+  - 游戏开发
+  - 语言学
+  - 词源学
+  - Web
+  - 读书
+  - 音乐
+date: 2025-02-24 10:49:05
 categories: 稻草人周刊
-draft: true
+draft: false
 toc: true
 ---
 
 {{< callout "你正在阅读 稻草人周刊，一个读者的自述，每周一更新。" "🔖" >}}
 
-## 🎵 本周音乐
+## 🎧 这周在听什么？
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/undercurrent/724267459"></iframe>
 
-偶然发现的爵士乐，意外地喜欢，而且是我听的第一张爵士乐专辑吧。
+偶然发现的爵士乐，意外地喜欢，而且是我听的第一张爵士乐专辑。很喜欢这种宁静又欢快的曲风，读书和玩乐的时候都很适合听。
 
-## 🏃 这周做了什么？
+## 🧑‍💻 这周做了什么？
 
 新的小说《[电梯里的无头天使](https://www.ultrali.me/posts/20250215-headless-angel/)》已经在 Ultralime 上发布，在之后，我还写了一篇文章《[好梦，我的恶魔](/posts/好梦-我的恶魔/)》来谈这次写作的感受。
 
@@ -43,13 +49,17 @@ toc: true
 
 虽说冗长，但是，从另一个方面来讲，这部故事写得很饱满。如果你喜欢本格推理，兴许可以一读。
 
-## 🔍 有趣的话题
+## 🧠 这周思考了什么？
 
 ### 好的小说
 
 > 如果一本小说被剧透之后就会影响阅读体验，那这本小说除了情节一无所有
 
 这句话出自播客《[185-《白鲸》为什么是美国文学的巅峰？ - 独树不成林](https://podcasts.apple.com/cn/podcast/%E7%8B%AC%E6%A0%91%E4%B8%8D%E6%88%90%E6%9E%97/id1711052890?i=1000694145355)》。 
+
+~~听完这句话，我在周刊里剧透小说更有动力了！~~ 确实，除了一些故事性极强的小说，一部作品的文学性并不会因为提前了解了剧情就变弱，有的东西，必须要亲自感受作者的笔触才能体会。
+
+不过，不代表只有故事性的小说就是应该摒弃的，毕竟有的时候，读小说只是为了娱乐而已。
 
 ### 拒绝万物联网
 
@@ -77,23 +87,23 @@ Dylan Ayrey 在[一篇文章](https://trufflesecurity.com/blog/removing-jeff-bez
 
 读完《断舍离》，印象最深的其实是作者提出的「三分法」，将家中某种区域的物件分为三大类、三中类再三小类。不过，由于这本书的主要面向群体其实是家庭主妇，三分法的应用场景有些局限。
 
-本周在 Hacker News 上读到一个更极客的分类方法，叫做 [Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/)。这套分类系统非常简单（甚至原始），也很强大，而且几乎万能，你可以用它来做文件管理、家庭管理，甚至是管理小型企业；[Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/) 这个网站本身就是用这套系统来分类页面的。更酷的是，你的每个文件夹或物品，都会拥有一个独一无二的编号。
+本周在 Hacker News 上读到一个更极客的分类方法，叫做 [Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/)，简称 JD。这套分类系统非常简单（甚至原始），也很强大，而且几乎万能，你可以用它来做文件管理、家庭管理，甚至是管理小型企业；这个网站本身就是用这套系统来分类页面的。更酷的是，你的每个文件夹或物品，都会拥有一个独一无二的编号。
 
-![A diagram showing the structure of a Johnny.Decimal number. The number is 15.52 and it explains how the '1' is an area, which groups related categories in sets of 10. The '15' is the category, in this case 'travel'. And '52' is just an ID; they start at 01. The title of this, our 52nd travel thing, is 'Trip to NYC'.](https://image.guhub.cn/uPic/2025/02/11.01A-Diagram_1552_NYC--dtop-1_resize-light-cx-1000x609.png)
+{{< img src="https://image.guhub.cn/uPic/2025/02/11.01A-Diagram_1552_NYC--dtop-1_resize-light-cx-1000x609.png" >}}
 
 比起随心所欲地创建文件夹，提前选定一个编号会让文件更容易管理。由于大部分操作系统和软件不一定支持手动排序，但一定支持数字的升序或降序排序，数字也能让文件夹位置保持不变，更容易形成肌肉记忆。
 
 小数点前的两位数表示「分类」，第一位数表示「领域」（类似 PARA 笔记法中的 Area）——如果 1 表示「家庭」领域，13 就可以表示「家庭财务」。小数点之后就是物品的编号，从 01 开始，表示该分类下的第几个物品。
 
-这套系统我在用 Obsidian 记笔记的时候也会用，但比较随心所欲，这个网站写了各种指导，能帮助你创建一个有条理的分类和管理系统。据网站描述，Johnny·Decimal 的目的是创建一个「能让你更有自信、更少焦虑地找到你要找的东西」的系统。
+这套系统我在用 Obsidian 记笔记的时候也会用，但比较随心所欲，这个网站写了各种指导，能帮助你创建一个有条理的分类和管理系统。据网站描述，JD 的定位是一个「能让你更有自信、更少焦虑地找到你要找的东西」的系统。
 
-如果你没有一个很好的文件管理或者物品管理方法，到这个网站上阅读一些指导文章。其实 [Introduction](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/) 就已经把方法写得很明白了，此外，也可以读一下 [System Expansion](https://johnnydecimal.com/10-19-concepts/13-system-expansion/)（系统拓展）和 [Philosophy](https://johnnydecimal.com/10-19-concepts/11-core/11.04-philosophy/)（设计哲学）这两部分。
+如果你没有一个很好的文件管理或者物品管理方法，到这个网站上阅读一些指导文章。其实 [Introduction](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/) 一页就已经把方法写得很明白了，此外，也可以读一下 [System Expansion](https://johnnydecimal.com/10-19-concepts/13-system-expansion/)（系统拓展）和 [Philosophy](https://johnnydecimal.com/10-19-concepts/11-core/11.04-philosophy/)（设计哲学）这两部分。
 
-## 💡 新知复盘
+## 💡 这周学到了什么？
 
-### 马尼拉文件夹
+### 📁 马尼拉文件夹
 
-读小说的时候碰到了一个奇怪的名词「马尼拉文件夹」，我好奇一个普通的文件夹为什么会有这样的名字，而且，在我熟悉的后室（The Backrooms）作品中，也有一个叫做「马尼拉房间」的地方。我很好奇「马尼拉」到底是什么。
+读小说的时候碰到了一个奇怪的名词——「马尼拉文件夹」。我好奇一个普通的文件夹为什么会有这样的名字，而且，在我熟悉的后室（The Backrooms）作品中，也有一个叫做「马尼拉房间」的地方。我很好奇「马尼拉」到底是什么。
 
 马尼拉文件夹（manila folder）[^2]是指用「马尼拉麻焦」的树叶为原材料制成的文件夹，而「马尼拉」是菲律宾首都的名字。尽管后来的马尼拉文件夹不再使用马尼拉麻焦的纤维制作，但名字仍然保留了下来。
 
@@ -101,7 +111,7 @@ Dylan Ayrey 在[一篇文章](https://trufflesecurity.com/blog/removing-jeff-bez
 
 这样简单的词源研究真的很有意思，你能看到一个地名是如何变成一个植物的名字，再变成一种物品的名字，再变成某个怪谈小说里的另一个地名的。
 
-### Overflow Clip
+### ✂️ Overflow Clip
 
 CSS 中的 `overflow` 属性被用来处理子元素的溢出，最常用的是 `overflow: hidden` 和 `overflow: scroll`，前者用于隐藏溢出，后者用于为溢出元素增加一个滚动条；还有 `overflow: auto`，浏览器会通过溢出元素的大小来判断需不需要加上一个滚动条。
 
@@ -111,15 +121,17 @@ CSS 中的 `overflow` 属性被用来处理子元素的溢出，最常用的是 
 
 更多有关 `overflow: clip` 的内容，可以阅读 [Overflow Clip - Ahmad Shadeed](https://ishadeed.com/article/overflow-clip/)
 
+---
+
 ## 🗣️ 碎碎念
 
-- 逛书店的时候买了两本书，买了《夏日幽灵》，是因为作者乙一，买了《虚掷的夏日》，是因为书腰上写了一句「我把自己关在家里，决定不再出门，除非世界向我道歉」。等我走出书店，才发现这两本书的名字上都有「夏日」。最近确实也比较想念夏天，不知道是不是潜意识的选择。
+- 逛书店的时候买了两本书，买了《夏日幽灵》，是因为作者乙一，买了《虚掷的夏日》，是因为书腰上写了一句「*我把自己关在家里，决定不再出门，除非世界向我道歉*」。等我走出书店，才发现这两本书的名字上都有「夏日」。==最近确实也比较想念夏天==，不知道是不是潜意识的选择。
 - 其实还买了第三本书，是宝可梦帕底亚图鉴，宝可梦 ZA 你快点出啊！！！
 - 听播客的时候偶然得知怪谈和各种奇幻作品里的常客海怪「利维坦」出自《圣经》约伯记，于是翻阅起之前[白熊](https://bxaw.name)送的《圣经》。翻了好久没有找到，才发现 Leviathan 在这个版本的翻译中被译为「鳄鱼」。
 - 敲了这么久的代码还是不习惯用单元测试和断点 debug，一直在各种地方 `print()`，感觉这才是最符合直觉的做法。
 - 喝了 Colin Plus 的「TOH 西达摩 班莎 日晒」，草莓糖风味很突出，余韵也很长，甜了一下午。
 - 本周肾上腺素飙升时刻：玩《饥荒》用蜘蛛人探远古，出来的时候正好赶上暴动，精神值也清零，被影猴和影怪咬了好几下，一直追到洞穴门口，残血极限爬回地上。（跟在后面的白蜘蛛小弟什么都不干的啊喂！）
-- 发现读文章写笔记只是为了写在周刊上，那为什么不一边读一边写周刊呢？于是这周我就这么做了。现在笔记软件只在学一些新东西和上课的时候打开。
+- 发现读文章写笔记只是为了写在周刊上，那为什么不==一边读一边写周刊==呢？于是这周我就这么做了。现在笔记软件只在学一些新东西和上课的时候打开。
 - 读《城市与狗》，第一节的最后有三四页完全没分段，写的都是不清楚说话人的句子。背景是军队学校的几个男学生半夜摸黑出门找东西解决生理需求，这种混乱的写法确实让读者很好地代入了混乱的场面。*只不过把母鸡抓来干，留下种之后还烧了吃的情节让人两眼一黑，更别说这些人还在讨论自己玩过哪个班的胖子、谁玩过母狗、自己被别人玩的时候发生了什么*。
 - 迷上桌游了，当只玩过 Uno 和狼人的我准备去找点新奇的桌游来玩的时候，才发现国内的桌游少得可怜，很火的双人非对称桌游《**藻影追猎**》也已经在摩点上售罄了，[BGG](https://boardgamegeek.com) 上的热门桌游我一个也买不起。（当桌游设计师的想法还没燃起来就灭掉了）
 
