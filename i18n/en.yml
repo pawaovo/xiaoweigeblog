@@ -5,6 +5,7 @@ archivePage:
 postPage:
   commentNotLoaded: if comment is not loaded, please try refreshing
   staticCommentsSectionHeader: These are static comments that are stored in frontmatter of this page. They used to be in different comment platforms, but now they are integrated into the page's content.
+  originallyPostedOn: 'originally posted on {{ . }}'
 footer:
   wordCount: '🪦 {{ . }} words are buried here'
   licenseStatement: 'Licensed under {{ . }}'

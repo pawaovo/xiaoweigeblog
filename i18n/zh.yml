@@ -5,6 +5,7 @@ archivePage:
 postPage:
   commentNotLoaded: 如果评论未加载，请尝试刷新页面
   staticCommentsSectionHeader: 这些是曾经发布在不同评论平台上的评论，现在它们已经作为静态内容集成到页面中。
+  originallyPostedOn: '原本发表于 {{ . }}'
 footer:
   wordCount: '🪦 {{ . }} 字在这里死去'
   licenseStatement: '以 {{ . }} 协议授权'
