@@ -25,6 +25,32 @@ toc: true
 
 ## 🧠 这周思考了什么？
 
+### Firefox 放弃了用户隐私
+
+就在这周，Mozilla 开发的开源浏览器 Firefox 修改了他们的使用条例（Terms of Use），表示「当你在 Firefox 中上传和输入信息时，你就授权 Mozilla 使用你的信息」，原文如下：
+
+> When you upload or input information through Firefox, you hereby grant us a nonexclusive royalty-free, worldwide license to use that information to help you navigate, experience, and interact with online content as you indicate with your use.
+
+在 Hacker News 上出现了一条标题为「Mozilla owns "information you input through Firefox"」的帖子之后，Mozilla 很快修改了措辞。
+
+> You give Mozilla the rights necessary to operate Firefox. This includes processing your data as we describe in the [Firefox Privacy Notice](https://www.mozilla.org/privacy/firefox/). It also includes a nonexclusive, royalty-free, worldwide license for the purpose of doing as you request with the content you input in Firefox. This does not give Mozilla any ownership in that content.
+
+新版本的声明强调 Mozilla 不拥有（not give ... any ownership）你的信息，把信息（information）改成了内容（content），把「你授权」（you hereby grant us）改成了「这包含」（this includes），但仍然厚颜无耻地写着「royalty-free, worldwide license」。
+
+人们又发现，Mozilla 删除了「永不出售用户数据的承诺」。
+
+{{< img src="https://image.guhub.cn/uPic/2025/03/Gk1HpvFWMAAS9Sg.jpeg" >}}
+
+2 月 26 日，Mozilla 发布了一篇[博客文章](https://blog.mozilla.org/en/products/firefox/firefox-news/firefox-terms-of-use/)解释使用条例的更新，我又发现了很有趣的一点——我在[这个 YouTube 视频](https://www.youtube.com/watch?v=W1kE3qA8FcA)里看到的这篇文章，和我现在访问同一个网址看到的文章内容，似乎不太一样。Mozilla 似乎偷偷地修改了博客内容。在视频里展示的内容中，Mozilla 承认向合作伙伴共享用户数据的行为，但现在似乎被删掉了。
+
+Firefox 一直是一个注重用户隐私的开源浏览器，然而现在不是了。他们现在保护的是「重要的东西」而非「隐私」。看看他们的广告词就知道了。
+
+{{< img src="https://image.guhub.cn/uPic/2025/03/image-20250301200444634.png" >}}
+
+如果你正在使用 Firefox 并且很在乎用户隐私，你应该考虑更换浏览器。如果你不愿意做出太多改变，可以尝试编译自己的 Firefox 浏览器。Firefox 是开源的，使用自己编译的版本而不是下载 Mozilla 提供的版本，不会受到 Mozilla 使用条例的限制。
+
+尽管 Google 和 Apple 这样的公司也不一定真的把用户数据保护得多好，但他们至少不会蠢到干出这种事情。这算是 Chrome 和 Safari 用户的胜利。
+
 ### 思考系统如何运作
 
 读 The New Atlantis 上的文章《[We Live Like Royalty and Don’t Know It](https://www.thenewatlantis.com/publications/we-live-like-royalty-and-dont-know-it)》，一开始觉得作者过来人的语气有点讨厌，但认真读下去之后发现文章内容和阅历并没有关系。作者指出，不只是年轻人不思考「汗滴禾下土」，现代人几乎很少思考粮食、电、安全、干净的水从哪来这些问题了。
@@ -48,6 +74,8 @@ toc: true
 Paul Graham 也在《黑客与画家》中写道，黑客（优秀程序员）的工作不如销售员那样容易被量化，因此，在大公司中，黑客没法像小规模的创业公司那样做出大胆、优秀且有趣的软件，因为系统没法衡量他们的优秀，也不鼓励他们变得优秀。
 
 全世界都在痴迷于数字的时候，有多少人愿意停下来倾听人的声音呢？
+
+
 
 ## 💡 这周学到了什么？
 
