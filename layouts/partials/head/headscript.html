@@ -52,6 +52,32 @@ function initCalHeatmap() {
   });
 }
 
+/* === giscus === */
+function loadGiscus() {
+  const giscusContainer = document.querySelector('.giscus'); // Make sure this matches your Giscus container class
+  const giscusScript = document.getElementById('giscus-script');
+  if (giscusContainer && !giscusScript) {
+      const script = document.createElement('script');
+      script.id = "giscus-script";
+      script.src = 'https://giscus.app/client.js';
+      script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
+      script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
+      script.setAttribute('data-category', '{{ .Site.Params.giscus.category }}');
+      script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
+      script.setAttribute('data-mapping', '{{ .Site.Params.giscus.mapping }}');
+      script.setAttribute('data-strict', '{{ .Site.Params.giscus.strict }}');
+      script.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.reactionsEnabled }}');
+      script.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.emitMetadata }}');
+      script.setAttribute('data-input-position', '{{ .Site.Params.giscus.inputPosition }}');
+      script.setAttribute('data-theme', '{{ .Site.Params.giscus.theme }}');
+      script.setAttribute('data-lang', '{{ T "lang" }}');
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+
+      document.body.appendChild(script);
+  }
+}
+
 /* == Pagefind === */
 function initPagefind() {
   new PagefindUI({ element: "#search", showSubResults: true });
