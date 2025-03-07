@@ -106,7 +106,7 @@ params:
     repoId: R_kgDONPoyVw
     category: General
     categoryId: DIC_kwDONPoyV84Clumc
-    mapping: title
+    mapping: og:title
     strict: 1
     reactionsEnabled: 0
     emitMetadata: 0
