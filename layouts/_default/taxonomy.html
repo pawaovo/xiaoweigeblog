@@ -4,6 +4,7 @@
 
   {{ partial "components/pagefind.html" . }}
 
+
   <!-- Display Tags -->
   <section class="taxonomy taxonomy-tags">
     {{ range .Site.Taxonomies.tags.Alphabetical }}
@@ -13,6 +14,10 @@
     </a>
     {{ end }}
   </section>
+
+    <hr />
+    {{ partial "components/welcome" . }}
+    <hr />
 
   <!-- Display Categories -->
   <section class="taxonomy taxonomy-categories row">
