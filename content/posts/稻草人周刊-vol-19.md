@@ -16,7 +16,7 @@ toc: true
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/mayhem/1792666546"></iframe>
 
-终于等到 MAYHEM 发布！
+终于等到 MAYHEM 发布！发布之后一直在循环《Zombieboy》和《How Bad Do U Want Me》这两首歌。
 
 ## 🧑‍💻 这周做了什么？
 
