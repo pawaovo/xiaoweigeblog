@@ -24,18 +24,4 @@ loadToc();
 
 /* === littlefoot === */
 littlefoot.littlefoot(littlefootOptions)
-
-/* === swup === */
-const swup = new Swup({
-  linkSelector: 'a[href]:not(.no-swup)'
-});
-swup.hooks.on('page:view', () => {
-  lazyLoadInstance.update();
-  Fancybox.bind("[data-fancybox]");
-  loadToc();
-  littlefoot.littlefoot(littlefootOptions);
-  initCalHeatmap();
-  initPagefind();
-  loadGiscus();
-});
 </script>
