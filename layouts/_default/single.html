@@ -59,5 +59,16 @@
 
       {{ partial "components/comment.html" . }}
 
+      <script src="/js/tocbot.min.js"></script>
+      <script>
+      tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: '#post-content',
+        headingSelector: 'h2, h3:not(blockquote > h3)',
+        hasInnerContainers: true,
+        scrollSmoothOffset: -30
+      });
+      </script>
+
     </article>
 {{ partial "snippets/document-end.html" . }}

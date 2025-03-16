@@ -10,18 +10,6 @@ lazyLoadInstance.update();
 /* === Fancybox === */
 Fancybox.bind("[data-fancybox]");
 
-/* === tocbot === */
-function loadToc() {
-  tocbot.init({
-    tocSelector: '#toc',
-    contentSelector: '#post-content',
-    headingSelector: 'h2, h3:not(blockquote > h3)',
-    hasInnerContainers: true,
-    scrollSmoothOffset: -30
-  });
-}
-loadToc();
-
 /* === littlefoot === */
 littlefoot.littlefoot(littlefootOptions)
 </script>
