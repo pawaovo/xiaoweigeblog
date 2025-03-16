@@ -1,12 +1,18 @@
 {{ partial "snippets/document-start.html" . }}
-    <article class="post {{ .Site.Language.LanguageName }}" id="article">
+    <article
+        class="post {{ .Site.Language.LanguageName }}"
+        id="article"
+    >
         {{ if eq .Type "posts" }}
             {{ partial "components/breadcrumbs.html" . }}
         {{ else }}
             {{ partial "header.html" . }}
         {{ end }}
       <!-- Post Header -->
-      <header class="post-header">
+      <header
+        style="view-transition-name: post-{{ .File.UniqueID }}"
+        class="post-header"
+      >
         {{ if in .Site.Params.mainSections .Type }}
         {{ partial "components/banner.html" . }}
         <!-- Title and Subtitle -->
