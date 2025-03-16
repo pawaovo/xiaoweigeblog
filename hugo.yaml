@@ -80,8 +80,6 @@ params:
     - posts
   favicon: /favicon.png
   extraCSSFiles:
-    - https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css
-    - https://unpkg.com/cal-heatmap/dist/cal-heatmap.css
     - /pagefind/pagefind-ui.css
   externalJSFIles:
     - https://unpkg.com/tocbot@4.32.2/dist/tocbot.min.js
