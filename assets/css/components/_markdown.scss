@@ -93,7 +93,16 @@ $em-text-color: #889E73;
 
   ul {
     list-style-type: square;
-    padding-inline-start: 1.5rem;
+  }
+
+  ul, ol {
+      padding-inline-start: 1.75rem;
+      li {
+          padding-left: 1rem;
+      }
+      ::marker {
+        color: var(--secondary-text-color);
+      }
   }
 
   mark {
