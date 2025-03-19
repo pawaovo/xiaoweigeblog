@@ -7,12 +7,12 @@
 
   <!-- Display Tags -->
   <section class="taxonomy taxonomy-tags">
-    {{ range .Site.Taxonomies.tags.Alphabetical }}
-    <a href="{{ .Page.RelPermalink }}" class="taxonomy-tags-item">
-        <span class="tag-name">#{{ .Page.LinkTitle }}</span>
-        <span class="tag-count">{{ .Count }}</span>
-    </a>
-    {{ end }}
+      {{ range sort .Site.Taxonomies.tags "Count" "desc" }}
+      <a href="{{ .Page.RelPermalink }}" class="taxonomy-tags-item">
+          <span class="tag-name">#{{ .Page.LinkTitle }}</span>
+          <span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{ end }}
   </section>
 
     <hr />
