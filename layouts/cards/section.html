@@ -1,0 +1,28 @@
+{{ partial "snippets/document-start.html" . }}
+    <article class="card-list">
+      {{ partial "header.html" . }}
+      <div id="cards-section">
+        {{ partial "components/pagefind.html" . }}
+        {{- range .Pages }}
+        <div class="card markdown-body">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
+                </h3>
+                {{- if .Params.tags }}
+                    <p class="card-tags">
+                        {{- range .Params.tags }}
+                            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
+                        {{- end }}
+                    </p>
+                {{- end }}
+            </div>
+
+            <div class="card-content">
+                {{ .Summary }}
+            </div>
+        </div>
+        {{- end }}
+      </div>
+    </article>
+{{ partial "snippets/document-end.html" . }}

@@ -200,3 +200,41 @@ a.blog-link img {
 .sidenote-content {
     font-size: 1rem
 }
+
+/* card */
+
+.card {
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 2px;
+    padding: 1rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 1rem 0;
+
+    position: relative;
+    .card-corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(-45deg, #f8f8f8 50%, #ddd 50%);
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}
+
+.card-tags {
+    margin: 0;
+    font-size: 1rem;
+    a {
+        text-decoration: none
+    }
+}
+
+.card-title {
+    margin: 0;
+}
+
+.card-content {
+    font-size: 1.05rem;
+}

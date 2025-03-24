@@ -1,0 +1,26 @@
+{{ partial "snippets/document-start.html" . }}
+    <article
+        class="card-page {{ .Site.Language.LanguageName }}"
+        id="article"
+    >
+        {{ partial "components/breadcrumbs.html" . }}
+        <div id="post-content" class="post-content markdown-body">
+            <div class="card">
+                <a href="{{ .Permalink }}" class="card-corner"></a> <!-- 右上角折角 -->
+                <div class="card-header">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    {{- if .Params.tags }}
+                        <p class="card-tags">
+                            {{- range .Params.tags }}
+                                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
+                            {{- end }}
+                        </p>
+                    {{- end }}
+                </div>
+                <div class="card-content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </article>
+{{ partial "snippets/document-end.html" . }}

@@ -21,6 +21,9 @@ languages:
       - name: 分类
         link: /categories/
         target: _self
+      - name: 卡片
+        link: /cards/
+        target: _self
       - name: 链接
         link: /links/
         target: _self
