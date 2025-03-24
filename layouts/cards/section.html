@@ -4,13 +4,13 @@
       <div id="cards-section">
         {{ partial "components/pagefind.html" . }}
         {{- range .Pages }}
-        <div class="card markdown-body">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
                 </h3>
                 {{- if .Params.tags }}
-                    <p class="card-tags">
+                    <p class="card-tags markdown-body">
                         {{- range .Params.tags }}
                             <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
                         {{- end }}
@@ -18,7 +18,7 @@
                 {{- end }}
             </div>
 
-            <div class="card-content">
+            <div class="card-content markdown-body">
                 {{ .Summary }}
             </div>
         </div>
