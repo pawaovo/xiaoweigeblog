@@ -53,3 +53,16 @@
         }
     }
 }
+
+.card-page {
+    .referenced-articles {
+        h2 {
+            font-size: 1.2rem;
+            color: var(--secondary-text-color);
+            margin: 0;
+        }
+        ul {
+            margin: 0
+        }
+    }
+}

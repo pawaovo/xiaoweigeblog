@@ -8,6 +8,8 @@ tags:
   - 设计
   - 时间管理
   - 生物学
+related_cards:
+  - anthropomorphic
 date: 2025-03-24 13:23:21
 categories: 稻草人周刊
 banner: https://image.guhub.cn/uPic/2025/03/blurry-flower-field.jpeg
