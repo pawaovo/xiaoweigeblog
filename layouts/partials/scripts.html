@@ -9,7 +9,7 @@ lazyLoadInstance.update();
 
 /* === Fancybox === */
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".markdown-body img:not(figure img)").forEach(img => {
+    document.querySelectorAll(".markdown-body img:not(figure img, .no-fancybox)").forEach(img => {
         if (img.closest("figure")) return; // 跳过已经在 <figure> 内的 <img>
 
         let src = img.getAttribute("src");

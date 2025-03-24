@@ -1,7 +1,7 @@
 <a href="{{.Get "link" }}" class="blog-link" target="_blank">
     {{ if and (isset .Params "image") .Params.image }}
     <div class="blog-link-image">
-        <img src="{{ .Params.image }}" alt="{{ .Params.title }}" />
+        <img src="{{ .Params.image }}" class="no-fancybox" alt="{{ .Params.title }}" />
     </div>
     {{ end }}
     <div class="blog-link-content">
