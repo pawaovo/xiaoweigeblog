@@ -9,15 +9,19 @@
 
             {{- $rating := .Params.rating -}}
             {{- $fullStars := math.Floor $rating -}}
-            <div class="rating">
-                <span>评分：</span>
+            <div class="book-meta">
                 {{- range seq $fullStars }}
-                <span class="star">★</span>
+                <span class="star">⭐</span>
                 {{- end -}}
+                <span> / </span>
+                <span class="author">{{ .Params.author }}</span>
             </div>
 
             <div class="book-content">
                 {{ .Content }}
+            </div>
+            <div class="book-footer">
+                <p>于 {{ .Date.Format "2006-01-02" }} 读完</p>
             </div>
         </div>
         {{ partial "components/comment.html" . }}

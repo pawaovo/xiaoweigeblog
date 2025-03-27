@@ -53,8 +53,13 @@
         }
     }
 
-    .rating {
+    .book-meta {
         font-size: 0.9rem;
+        color: var(--secondary-text-color);
+    }
+
+    .book-footer {
+        font-size: 1rem;
         color: var(--secondary-text-color);
     }
 }
