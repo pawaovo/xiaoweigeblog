@@ -17,7 +17,7 @@ https://www.geedea.pro/index.xml
 仅订阅文章更新（包括周刊）
 https://www.geedea.pro/posts/index.xml
 仅订阅周刊更新
-https://www.geedea.pro/posts/weekly/index.xml
+https://www.geedea.pro/categories/稻草人周刊/index.xml
 ```
 
 ```
