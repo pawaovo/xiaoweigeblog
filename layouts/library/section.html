@@ -2,13 +2,20 @@
     {{ partial "header.html" . }}
     <article id="library">
       <div id="library-content">
-        {{- range .Pages }}
-        <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
-            <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                <img src="{{ .Params.cover }}" />
-            </a>
-        </div>
-        {{- end }}
+        {{ range .Pages.GroupByDate "2006" }}  <!-- 按年份分组 -->
+          <h2>{{ .Key }}</h2>  <!-- 显示年份 -->
+          <div class="book-group">
+            {{ range .Pages }}
+              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
+                  <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                      <img src="{{ .Params.cover }}!thumbnail"
+                          class="lazy" data-src="{{ .Params.cover }}" />
+                  </a>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+        <p>关于 2024 年的更多书目，请阅读《<a href="/posts/in-libris-libertas/#%E4%BB%8A%E5%B9%B4%E7%9A%84%E4%B9%A6%E5%8D%95">IN LIBRIS LIBERTAS</a>》</p>
       </div>
     </article>
 {{ end }}
