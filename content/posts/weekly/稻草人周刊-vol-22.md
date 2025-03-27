@@ -12,3 +12,4 @@ draft: true
 toc: true
 ---
 
+{{< bookcard "红与黑" >}}
