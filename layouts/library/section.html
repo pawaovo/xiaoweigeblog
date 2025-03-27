@@ -3,7 +3,7 @@
     <article id="library">
       <div id="library-content">
         {{- range .Pages }}
-        <div class="book">
+        <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
             <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
                 <img src="{{ .Params.cover }}" />
             </a>

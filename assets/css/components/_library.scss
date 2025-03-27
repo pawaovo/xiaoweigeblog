@@ -1,12 +1,39 @@
 #library {
     #library-content {
+        --gap: 1rem;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: var(--gap);
         margin: 1rem 0;
+        flex-wrap: wrap;
 
         .book {
-            width: 25%;
+            width: calc(100% / 6 - var(--gap));
+            position: relative;
+            &.badbook {
+                opacity: 0.5;
+                z-index: 0;
+                &::before {
+                    position: absolute;
+                    z-index: 1;
+                    content: "";
+                    top: 25%;
+                    left: 25%;
+                    height: 50%;
+                    width: 50%;
+
+                    background-image: url('/img/thumbs-down.png');
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            &.goodbook {
+                .book-cover {
+                    border-color: gold;
+                    box-shadow: 0 0.1rem 0.75rem goldenrod;
+                }
+            }
         }
     }
 }
