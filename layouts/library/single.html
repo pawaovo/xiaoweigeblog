@@ -1,0 +1,25 @@
+{{ define "main" }}
+    <article id="book-page">
+        {{ partial "components/breadcrumbs.html" . }}
+        <div class="markdown-body book-body">
+            <div class="book-cover">
+                <img src="{{ .Params.cover }}" />
+            </div>
+            <h3 class="book-title">{{ .Title }}</h3>
+
+            {{- $rating := .Params.rating -}}
+            {{- $fullStars := math.Floor $rating -}}
+            <div class="rating">
+                <span>评分：</span>
+                {{- range seq $fullStars }}
+                <span class="star">★</span>
+                {{- end -}}
+            </div>
+
+            <div class="book-content">
+                {{ .Content }}
+            </div>
+        </div>
+        {{ partial "components/comment.html" . }}
+    </article>
+{{ end }}

@@ -1,34 +1,32 @@
-{{ if in .Site.Params.mainSections .Type }}
-  <div class="post-comments">
-      {{ with .Params.comments }}
-      <div class="static-comments">
-          <p class="static-comments-heading">{{ T "postPage.staticCommentsSectionHeader" }}</p>
-          {{ range . }}
-              <div class="static-comments-item">
-                  <div class="static-comments-item-header">
-                    <span class="comment-author">{{ .name }}</span>
-                    <span class="comment-date font-mono">{{ .date }}</span>
-                  </div>
-                  <div class="static-comments-item-content">
-                      {{ .content | safeHTML }}
-                  </div>
-                  <div class="static-comments-item-footer">
-                      {{ with .source }}
-                      <p class="font-mono">{{ T "postPage.originallyPostedOn" . }}</p>
-                      {{ end }}
-                  </div>
-              </div>
-          {{ end }}
-      </div>
-      {{ end }}
-      <div class="giscus">
-          <p style="text-align:center">
-              {{ T "postPage.commentNotLoaded" }}
-          </p>
-      </div>
-      {{ if eq .Site.Language.Lang "zh" }}
-      <p style="text-align:center">你也可以加入本站的 <a href="https://t.me/teaparty418" target="_blank">Telegram 群组</a>参与讨论</p>
-      {{ end }}
-      <script>loadGiscus()</script>
-  </div>
-{{ end }}
+<div class="post-comments">
+    {{ with .Params.comments }}
+    <div class="static-comments">
+        <p class="static-comments-heading">{{ T "postPage.staticCommentsSectionHeader" }}</p>
+        {{ range . }}
+            <div class="static-comments-item">
+                <div class="static-comments-item-header">
+                <span class="comment-author">{{ .name }}</span>
+                <span class="comment-date font-mono">{{ .date }}</span>
+                </div>
+                <div class="static-comments-item-content">
+                    {{ .content | safeHTML }}
+                </div>
+                <div class="static-comments-item-footer">
+                    {{ with .source }}
+                    <p class="font-mono">{{ T "postPage.originallyPostedOn" . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+    {{ end }}
+    <div class="giscus">
+        <p style="text-align:center">
+            {{ T "postPage.commentNotLoaded" }}
+        </p>
+    </div>
+    {{ if eq .Site.Language.Lang "zh" }}
+    <p style="text-align:center">你也可以加入本站的 <a href="https://t.me/teaparty418" target="_blank">Telegram 群组</a>参与讨论</p>
+    {{ end }}
+    <script>loadGiscus()</script>
+</div>

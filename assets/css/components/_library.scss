@@ -1,0 +1,62 @@
+#library {
+    #library-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        .book {
+            width: 25%;
+        }
+    }
+}
+
+.book-body {
+    line-height: 2;
+
+    hr {
+        clear: both
+    }
+
+    .book-title {
+        margin: 0.1rem 0;
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+    }
+
+    .rating {
+        font-size: 0.9rem;
+        color: var(--secondary-text-color);
+    }
+}
+
+.book-cover {
+    display: block;
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    #library & {
+        border: 0.2rem solid #fff;
+        box-shadow: 0 0.1rem 0.75rem rgba(0,0,0,0.2);
+
+        transition: transform 0.3s ease;
+        transform: rotate(3deg);
+        &:hover {
+            transform: rotate(0) translateY(-0.5rem) scale(1.1)
+        }
+    }
+
+    #book-page &, #post-content & {
+        margin: 0;
+        @media screen and (min-width: 768px) {
+            display: inxwline-block;
+            float: left;
+            width: 12rem;
+            margin: 0 2rem 1.2rem 0;
+        }
+    }
+}

@@ -57,7 +57,9 @@
         {{ end }}
       </div>
 
-      {{ partial "components/comment.html" . }}
+      {{ if in .Site.Params.mainSections .Type }}
+        {{ partial "components/comment.html" . }}
+      {{ end }}
 
       <script src="/js/tocbot.min.js"></script>
       <script>

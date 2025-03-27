@@ -1,0 +1,14 @@
+{{ define "main" }}
+    {{ partial "header.html" . }}
+    <article id="library">
+      <div id="library-content">
+        {{- range .Pages }}
+        <div class="book">
+            <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                <img src="{{ .Params.cover }}" />
+            </a>
+        </div>
+        {{- end }}
+      </div>
+    </article>
+{{ end }}
