@@ -2,6 +2,8 @@
 created: 2024-11-27T22:27
 title: 关于
 date: 2024-11-27
+related_cards:
+  - links
 ---
 
 {{< callout "欢迎加入本站的 Telegram 群组 [418·亡者茶话会](https://t.me/teaparty418)！" "🧙" >}}
