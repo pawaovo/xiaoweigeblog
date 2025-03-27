@@ -1,4 +1,5 @@
-{{- $book := .Site.GetPage (printf "library/%s" (.Get 0)) -}}
+{{- $books := where .Site.Pages "Section" "library" -}}
+{{- $book := index (where $books "File.BaseFileName" (.Get 0)) 0 -}}
 
 {{- if $book }}
     <div class="markdown-body book-body">
