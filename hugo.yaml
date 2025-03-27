@@ -15,17 +15,17 @@ languages:
     params:
       headTitle: 極客死亡計劃
       nav:
-      - name: 关于
-        link: /about/
-        target: _self
-      - name: 分类
-        link: /categories/
-        target: _self
       - name: 卡片
         link: /cards/
         target: _self
       - name: 书籍
         link: /library/
+        target: _self
+      - name: 分类
+        link: /categories/
+        target: _self
+      - name: 关于
+        link: /about/
         target: _self
       series:
         - name: 人类恶疾
