@@ -1,4 +1,4 @@
-{{ partial "snippets/document-start.html" . }}
+{{ define "main" }}
     <article
         class="card-page {{ .Site.Language.LanguageName }}"
         id="article"
@@ -47,4 +47,4 @@
             {{ end }}
         </div>
     </article>
-{{ partial "snippets/document-end.html" . }}
+{{ end }}

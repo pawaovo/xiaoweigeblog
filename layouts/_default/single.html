@@ -1,4 +1,4 @@
-{{ partial "snippets/document-start.html" . }}
+{{ define "main" }}
     <article
         class="post {{ .Site.Language.LanguageName }}"
         id="article"
@@ -71,4 +71,4 @@
       </script>
 
     </article>
-{{ partial "snippets/document-end.html" . }}
+{{ end }}
