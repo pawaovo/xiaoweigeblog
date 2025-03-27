@@ -24,8 +24,8 @@ languages:
       - name: 卡片
         link: /cards/
         target: _self
-      - name: 链接
-        link: /links/
+      - name: 书籍
+        link: /library/
         target: _self
       series:
         - name: 人类恶疾
