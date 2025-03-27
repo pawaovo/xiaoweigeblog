@@ -15,6 +15,8 @@ categories: 稻草人周刊
 banner: https://image.guhub.cn/uPic/2025/03/blurry-flower-field.jpeg
 draft: false
 toc: true
+aliases:
+  - /posts/稻草人周刊-vol-21/
 ---
 
 你正在阅读[稻草人周刊](/categories/稻草人周刊)，我们是不是很久没有过这样朴素的开头了？

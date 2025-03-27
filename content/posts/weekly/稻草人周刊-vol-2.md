@@ -5,6 +5,8 @@ draft: false
 featuredImage: null
 title: 稻草人周刊 Vol.2
 toc: true
+aliases:
+  - /posts/稻草人周刊-vol-2/
 ---
 
 你正在阅读 [稻草人周刊](/categories/稻草人周刊/) 的第 2 期，我会在这里分享最近的有意思的事情、思考、阅读和体会，总之是一些篇幅较短还不足以成文，但的确让自己有所收获的内容。
