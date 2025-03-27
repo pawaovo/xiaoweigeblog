@@ -8,9 +8,7 @@ related_cards:
 date: 2025-03-27 11:28:15
 categories: 稻草人周刊
 banner: 
-draft: false
+draft: true
 toc: true
-aliases:
-  - /posts/稻草人周刊-vol-21/
 ---
 
