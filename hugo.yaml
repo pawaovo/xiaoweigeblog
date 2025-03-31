@@ -85,8 +85,8 @@ params:
   extraCSSFiles:
     - /pagefind/pagefind-ui.css
   externalJSFIles:
-    - https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js
-    - https://unpkg.com/littlefoot/dist/littlefoot.js
+    - /js/fancybox.umd.js
+    - /js/littlefoot.js
     - /pagefind/pagefind-ui.js
   footerLinks:
     - name: GitHub
