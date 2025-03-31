@@ -32,20 +32,19 @@
           {{ end }}
         </h1>
         <!-- Post Meta -->
-        <div class="row post-desc">
-          <div class="col-xs-6">
+        <div class="post-meta">
             {{ if .Date }}
             <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
-              {{ .Date.Format "02 Jan 2006" }}
+              {{ .Date.Format "2006-1-2" }}
             </time>
             {{ end }}
+            <span>·</span>
             {{ if .Params.categories }}
-              <span> / </span>
-              <span>
-                <a href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
-              </span>
+            <a class="post-category" href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
             {{ end }}
-          </div>
+            {{ range .Params.tags }}
+            <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
+            {{ end }}
         </div>
         {{ end }}
       </header>
@@ -57,13 +56,6 @@
         {{ end }}
         {{ .Site.Params.postHeaderContent | safeHTML }}
         {{ .Content }}
-      </div>
-
-      <!-- Post Tags -->
-      <div class="post-tags">
-        {{ range .Params.tags }}
-        <a class="taxonomy-tags-item" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
-        {{ end }}
       </div>
 
       {{ if in .Site.Params.mainSections .Type }}
