@@ -1,7 +1,11 @@
-<header>
+<header id="site-header">
   <!-- Header Title -->
   <div class="header-title">
-    <a href="{{ .Site.LanguagePrefix }}/"
+    <img src="/header.png" alt="Logo"
+        class="invert-if-dark title-image"
+        style="view-transition-name: title-image"
+    />
+    <a class="title-link" href="{{ .Site.LanguagePrefix }}/"
       >{{ or .Site.Params.headTitle .Site.Author.name }}</a
     >
   </div>

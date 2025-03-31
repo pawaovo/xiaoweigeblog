@@ -1,13 +1,22 @@
 {{ define "main" }}
+    {{ if eq .Type "posts" }}
+    <header id="post-page-header"
+        {{ with .Params.banner }}class="with-banner"{{ end }}>
+        <a href="{{ .Site.LanguagePrefix }}/"
+            class="title-image-container">
+            <img src="/header.png" alt="Logo"
+                class="invert-if-dark title-image"
+                style="view-transition-name: title-image"
+            />
+        </a>
+    </header>
+    {{ else }}
+        {{ partial "header.html" . }}
+    {{ end }}
     <article
         class="post {{ .Site.Language.LanguageName }}"
         id="article"
     >
-        {{ if eq .Type "posts" }}
-            {{ partial "components/breadcrumbs.html" . }}
-        {{ else }}
-            {{ partial "header.html" . }}
-        {{ end }}
       <!-- Post Header -->
       <header
         style="view-transition-name: post-{{ .File.UniqueID }}"
