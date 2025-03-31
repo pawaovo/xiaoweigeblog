@@ -10,7 +10,18 @@
 
   {{ partial "head/siteinfo" . }}
   {{ partial "head/css" . }}
-  {{ partial "head/headscript" . }}
+
+  <!-- Umami Tracking -->
+  <script>
+    if (window.location.hostname !== 'localhost') {
+      // track traffic
+      const script = document.createElement('script');
+      script.defer = true;
+      script.src = 'https://cloud.umami.is/script.js';
+      script.dataset.websiteId = 'ae8c2619-56eb-4577-ac31-9dc6ea44bda7';
+      document.head.appendChild(script);
+    }
+  </script>
 
   <!-- Extra head -->
   {{ .Site.Params.extraHead | safeHTML }}
