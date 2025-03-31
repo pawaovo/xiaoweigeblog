@@ -1,3 +1,7 @@
 <!-- Pagefind Search -->
-<div id="search"></div>
-<script>window.addEventListener('DOMContentLoaded', () => initPagefind());</script>
+<div id="pagefind"></div>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  new PagefindUI({ element: "#pagefind", showSubResults: true });
+});
+</script>

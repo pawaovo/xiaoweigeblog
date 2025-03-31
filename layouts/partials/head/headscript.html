@@ -11,42 +11,6 @@ if (window.location.hostname !== 'localhost') {
   document.head.appendChild(script);
 }
 
-/* === cal-heatmap Initializing Method */
-
-function initCalHeatmap() {
-  // Initialize CalHeatmap
-  const cal = new CalHeatmap();
-
-  // Calculate the date 6 months ago
-  const startDate = new Date();
-  startDate.setMonth(startDate.getMonth() - 12);
-
-  // Render the heatmap
-  cal.paint({
-    domain: {
-      type: 'month',
-    },
-    subDomain: { type: 'day' },
-    scale: {
-        color: {
-          range: ['#eee', 'black'],
-          type: 'linear',
-          domain: [0, 6000],
-        },
-      },
-    date: {
-      timezone: 'Asia/Shanghai',
-      start: startDate,
-    },
-    data: {
-      source: '/cal-heatmap.json', // 指定数据源
-      x: d => new Date(d.date), // 提取日期字段并转换为 Date 对象
-      y: d => d.value, // 提取数值字段
-      defaultValue: 0, // 缺失数据的默认值
-    },
-  });
-}
-
 /* === giscus === */
 function loadGiscus() {
   const giscusContainer = document.querySelector('.giscus'); // Make sure this matches your Giscus container class
@@ -71,10 +35,5 @@ function loadGiscus() {
 
       document.body.appendChild(script);
   }
-}
-
-/* == Pagefind === */
-function initPagefind() {
-  new PagefindUI({ element: "#search", showSubResults: true });
 }
 </script>
