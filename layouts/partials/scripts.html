@@ -1,84 +1,20 @@
 <!-- third-party libraries -->
-{{ range .Site.Params.externalJSFiles -}}
-<script src="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"></script>
+{{- range .Site.Params.externalJSFiles }}
+  <script src="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"></script>
 {{- end }}
-<script type="module">
-    /* === lazyload === */
-    document.addEventListener("DOMContentLoaded", () => {
-        const allImages = document.querySelectorAll("img");
-        const images = document.querySelectorAll("img[data-src]");
 
-        const loadImage = (image) => {
-            const loadingImage = image.src; // Store current loading image (if any)
-            const realImage = image.dataset.src; // Get the real image URL from data-src
-            image.src = loadingImage; // Optionally, reset the src to the placeholder
-            image.onload = () => {
-                image.classList.add("fade-in"); // Optional: Apply fade-in effect after loading
-            };
-            image.src = realImage; // Now, load the actual image
-            image.removeAttribute("data-src"); // Clean up after lazy loading
-        };
+{{- $lazyload := resources.Get "js/lazyload.js" | minify }}
+{{- if $lazyload }}
+  <script>{{ $lazyload.Content | safeJS }}</script>
+{{- end }}
 
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        loadImage(entry.target);
-                        observer.unobserve(entry.target); // Stop observing once the image has loaded
-                    }
-                });
-            },
-            { threshold: 0.1 },
-        );
+{{- $fancybox := resources.Get "js/fancybox.js" | minify }}
+{{- if $fancybox }}
+  <script>{{ $fancybox.Content | safeJS }}</script>
+{{- end }}
 
-        // initialize native lazyloading
-        allImages.forEach((img) => {
-            img.setAttribute("loading", "lazy");
-        });
-
-        // lazy load
-        images.forEach((image) => {
-            observer.observe(image); // Start observing each image
-        });
-    });
-
-    /* === Fancybox === */
-    document.addEventListener("DOMContentLoaded", function () {
-        document
-            .querySelectorAll(
-                ".markdown-body img:not(figure img, .no-fancybox)",
-            )
-            .forEach((img) => {
-                if (img.closest("figure")) return; // 跳过已经在 <figure> 内的 <img>
-
-                let src = img.getAttribute("src");
-                let alt = img.getAttribute("alt") || ""; // 获取 alt 作为 title
-
-                // 创建 <a> 标签包裹 <img>
-                let link = document.createElement("a");
-                link.setAttribute("href", src);
-                link.setAttribute("data-fancybox", "gallery"); // Fancybox 组
-                link.setAttribute("data-caption", alt); // 设置 title
-                link.setAttribute("aria-label", alt); // 辅助功能优化
-
-                // 创建 <figcaption> 并添加 <h4>
-                let figcaption = document.createElement("figcaption");
-                let captionTitle = document.createElement("h4");
-                captionTitle.textContent = alt;
-                figcaption.appendChild(captionTitle);
-
-                // 创建 <figure> 并包裹 <a> + <figcaption>
-                let figure = document.createElement("figure");
-                figure.appendChild(link);
-                figure.appendChild(figcaption);
-
-                // 替换原始 img
-                img.parentNode.insertBefore(figure, img);
-                link.appendChild(img); // 将 img 插入 <a>
-            });
-    });
-    Fancybox.bind("[data-fancybox]");
-
-    /* === littlefoot === */
-    littlefoot.littlefoot(littlefootOptions);
+<script>
+  littlefoot.littlefoot({
+    dismissOnUnhover: true
+  });
 </script>
