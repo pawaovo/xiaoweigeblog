@@ -75,7 +75,7 @@ markup:
   highlight:
     guessSyntax: true
     noClasses: true
-    style: bw
+    style: catppuccin-macchiato
     tabWidth: 2
 
 params:
