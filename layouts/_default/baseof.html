@@ -6,6 +6,7 @@
       {{ block "main" . }}{{ end }}
   </main>
   {{ partial "scripts.html" . }}
+  {{ partial "components/global-search" . }}
   {{ if .Site.Params.extraBody }}
   {{ .Site.Params.extraBody | safeHTML }}
   {{ end }}
