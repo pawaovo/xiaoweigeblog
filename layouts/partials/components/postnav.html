@@ -1,0 +1,16 @@
+<div id="posts-list-navigation">
+    <ul>
+        <li class="{{ if eq "/" $.Page.RelPermalink }}active{{ end }}">
+            <a href="/">最新</a>
+        </li>
+        <li class="{{ if eq "/categories/" $.Page.RelPermalink }}active{{ end }}">
+            <a href="/categories">分类</a>
+        </li>
+        <li class="search-instruction">
+            <span>{{ T "searchInstruction" }}</span>
+        </li>
+        <li class="list-decoration invert-if-dark">
+            <img src="/img/little-skeleton.svg" />
+        <li>
+    </ul>
+</div>

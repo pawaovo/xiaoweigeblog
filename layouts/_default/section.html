@@ -1,10 +1,8 @@
 {{ define "main" }}
     <article class="posts">
-      {{ partial "components/breadcrumbs.html" . }}
+      {{ partial "header.html" . }}
       <div id="posts-archive" class="posts-list">
-
         {{ partial "components/heatmap.html" . }}
-
         <!-- Post Archive List -->
         {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section class="posts-year-archive">

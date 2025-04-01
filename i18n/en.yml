@@ -9,3 +9,4 @@ postPage:
 footer:
   wordCount: '🪦 {{ . }} words are buried here'
   licenseStatement: 'Licensed under {{ . }}'
+searchInstruction: '⌘+K to search anywhere'

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="taxonomy">
   {{ partial "header.html" . }}
-
+  {{ partial "components/postnav.html" . }}
   <!-- Display Tags -->
   <section class="taxonomy taxonomy-tags">
       {{ range sort .Site.Taxonomies.tags "Count" "desc" }}
@@ -11,10 +11,6 @@
       </a>
       {{ end }}
   </section>
-
-    <hr />
-    {{ partial "components/welcome" . }}
-    <hr />
 
   <!-- Display Categories -->
   <section class="taxonomy taxonomy-categories row">

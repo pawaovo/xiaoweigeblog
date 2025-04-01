@@ -1,0 +1,89 @@
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    .posts-item {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        margin: 0.5rem 0;
+        header {
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .posts-item-meta {
+                time {
+                    color: var(--secondary-text-color);
+                    font-family: var(--mono-font-family);
+                }
+            }
+
+            .posts-item-category {
+                margin: 0.5rem 0;
+                a {
+                    border: 2px solid var(--border-color);
+                    border-radius: 0.2rem;
+                    padding: 0.2rem 0.5rem;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    display: inline-block;
+                }
+            }
+        }
+        .posts-item-summary {
+            h1, h2, h3, h4, h5, h6 {
+                display: none;
+            }
+            font-size: 1em;
+        }
+    }
+}
+
+#posts-list-navigation {
+    ul {
+        position: relative;
+        width: 100%;
+        padding-inline-start: 0;
+        display: flex;
+        list-style: none;
+        gap: 0.2rem;
+        li {
+            flex-shrink: 0;
+            flex-grow: 0;
+            &.active {
+                font-weight: bolder
+            }
+            a {
+                background-color: var(--block-background-color);
+                padding: 0.2rem 0.5rem;
+                text-decoration: none;
+                border-radius: 0.2rem;
+                border: 1px solid var(--background-color);
+                transition: border-color 0.3s ease;
+                &:hover, .active & {
+                    border: 1px solid var(--text-color)
+                }
+            }
+        }
+
+        .search-instruction {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            margin-left: 0.5rem;
+
+        }
+
+        .list-decoration {
+            position: absolute;
+            right: 0;
+            img {
+                opacity: 0.55;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+}

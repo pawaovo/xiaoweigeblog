@@ -50,7 +50,8 @@
       </header>
 
       <!-- Post Content -->
-      <div id="post-content" class="post-content markdown-body">
+      <div id="post-content" class="post-content markdown-body"
+          style="view-transition-name: post-content-{{ .File.UniqueID }}">
         {{ if .Params.toc }}
         <div id="toc-container"><div id="toc"></div></div>
         {{ end }}

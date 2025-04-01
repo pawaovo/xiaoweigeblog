@@ -1,81 +1,3 @@
-/* posts list */
-
-.posts-list {
-    min-height: 600px;
-
-    &
-        > section:nth-child(1)
-        > ul:nth-child(3)
-        > li.first-post
-        > div
-        > div.posts-title.col-xs-9.col-sm-10
-        > div {
-        align-items: flex-start;
-    }
-
-    .posts-year-section {
-        --section-height: 9rem;
-        min-height: var(--section-height);
-        position: relative;
-        margin: 2rem 0;
-
-        .posts-year-title {
-            font-size: 2rem;
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            color: var(--text-color);
-            opacity: 0.25;
-            font-size: calc(var(--section-height) / 2);
-            margin: 0;
-            line-height: 1;
-            z-index: -1;
-        }
-    }
-
-    ul {
-        list-style-type: none;
-        padding-inline-start: 0;
-        padding: 0;
-
-        .posts-line {
-            font-size: 1.2rem;
-            margin: 12px 0;
-
-            &.featured-post a.posts-title-link {
-                font-weight: 800;
-                display: block;
-            }
-
-            .posts-date {
-                font-family: var(--mono-font-family);
-                color: var(--secondary-text-color);
-            }
-
-            .posts-categories {
-                font-size: 0.8rem;
-                text-align: center;
-            }
-
-            .posts-category {
-                padding: 3px 0;
-                border: var(--border-color) 2px solid;
-                border-radius: 5px;
-                background-color: var(--background-color);
-            }
-        }
-    }
-
-    hr {
-        border: 1px solid var(--border-color);
-        margin: 3rem 0;
-    }
-}
-
-.posts-subtitle {
-    color: var(--secondary-text-color);
-}
-
 /* post series */
 
 #post-series-list {
@@ -243,6 +165,7 @@ section.taxonomy {
     }
 
     .posts-year-archive {
+        width: 100%;
         .posts-year-title {
             border-bottom: 2px solid var(--border-color);
             padding: 0.5rem 0;

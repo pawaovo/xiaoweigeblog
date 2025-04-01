@@ -1,72 +1,41 @@
 {{ define "main" }}
     <article class="posts">
       {{ partial "header.html" . }}
-
-      <div id="posts-list" class="posts-list">
-        {{ $currentYear := now.Format "2006" }}  <!-- 获取当前年份 -->
-
-        {{ $isFirstPost := true }} <!-- 用于标记首页的第一篇文章 -->
-
-        {{ $currentYear := now.Format "2006" }}
-        {{ range (where (where site.RegularPages "Type" "in" site.Params.mainSections) "Date.Year" "eq" (int $currentYear)).GroupByDate "2006" -}}
-          <section class="posts-year-section">
-            <h1 class="posts-year-title">{{ .Key }}</h1>
-
-              {{ range .Pages.GroupByDate "January" }}
-                <h2>{{ .Key }}</h2>
-                <ul>
-                  {{ range .Pages }}
-                    <li class="{{ if $isFirstPost }}first-post{{ end }}">
-                      <!-- 首页第一篇文章特殊展示 -->
-                      <div class="row posts-line {{ if $isFirstPost }}featured-post{{ end }}">
-                        <div class="posts-date col-xs-3 col-sm-2">
-                          <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02" }}</time>
-                        </div>
-                        <div class="posts-title col-xs-9 col-sm-10">
-                          <div class="row">
-                            <div class="col-xs-11 col-sm-10">
-                              <a
-                                  style="view-transition-name: post-{{ .File.UniqueID }}"
-                                  class="posts-title-link"
-                                  href="{{ .RelPermalink }}"
-                                  data-umami-event="Click Post Link from Index"
-                              >{{ .Title }}</a>
-                              <div class="posts-excerpt markdown-body">
-                                {{ if $isFirstPost }}
-                                  {{ if .Params.description }}
-                                    <p>{{.Params.description }}</p>
-                                  {{ else }}
-                                    <p>{{ .Summary }}</p>
-                                  {{ end }}
-                                  {{ $isFirstPost = false }}
-                                {{ end }}
-                              </div>
-                            </div>
-                            <div class="col-xs-1 col-sm-2 posts-categories">
-                              {{ with .Params.categories }}
-                              <div class="posts-category">
-                                <a
-                                    href="/categories/{{ . }}/"
-                                ><strong>{{ . }}</strong></a>
-                              </div>
-                              {{ end }}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  {{ end }}
-                </ul>
+      {{ partial "components/postnav.html" . }}
+      <div class="posts-list">
+          {{ $firstPost := true }} <!-- 初始化标记 -->
+          {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+          <div class="posts-item"
+              style="view-transition-name: post-{{ .File.UniqueID }}">
+              <header>
+                  <div class="posts-item-meta">
+                      <time>
+                          {{ .Date.Format "Jan 2" }}
+                      </time>
+                      <h3>
+                          <a href="{{ .Permalink }}">{{ .Title }}</a>
+                      </h3>
+                  </div>
+                  <div class="posts-item-category">
+                      {{ with .Params.categories }}
+                      <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
+                          {{ . }}
+                      </a>
+                      {{ end }}
+                  </div>
+              </header>
+              <!-- 如果是第一篇文章，则显示摘要 -->
+              {{ if $firstPost }}
+                  <div class="markdown-body posts-item-summary"
+                      style="view-transition-name: post-content-{{ .File.UniqueID }}">
+                      {{ .Summary }}
+                  </div>
+                  {{ $firstPost = false }} <!-- 更新为非第一篇 -->
               {{ end }}
-
-          </section>
-        {{ end }}
-        {{ if eq .Site.Language.Lang "en" }}
-        <a href="/en/posts/" class="font-mono" id="previous-post-link">PREVIOUS POSTS</a>
-        {{ else if eq .Site.Language.Lang "zh" }}
-        <a href="/posts/" id="previous-post-link">往年的文章</a>
-        {{ end }}
+          </div>
+          {{ end }}
       </div>
+      <a href="/posts">查看所有</a>
     </article>
 {{ partial "footer.html" . }}
 {{ end }}
