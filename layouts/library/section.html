@@ -9,7 +9,8 @@
               <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
                   <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
                       <img src="{{ .Params.cover }}!thumbnail"
-                          class="lazy" data-src="{{ .Params.cover }}" />
+                          class="lazy" data-src="{{ .Params.cover }}"
+                          style="view-transition-name: book-{{ .File.UniqueID }}" />
                   </a>
               </div>
             {{ end }}

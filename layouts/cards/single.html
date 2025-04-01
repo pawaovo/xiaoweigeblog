@@ -3,9 +3,10 @@
         class="card-page {{ .Site.Language.LanguageName }}"
         id="article"
     >
-        {{ partial "components/breadcrumbs.html" . }}
+        {{ partial "header.html" . }}
         <div id="post-content" class="post-content">
-            <div class="card markdown-body">
+            <div class="card markdown-body"
+                style="view-transition-name: card-{{ .File.UniqueID }}">
                 <a href="{{ .Permalink }}" class="card-corner"></a> <!-- 右上角折角 -->
                 <div class="card-header">
                     <h3 class="card-title">{{ .Title }}</h3>

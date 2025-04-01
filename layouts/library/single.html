@@ -1,8 +1,9 @@
 {{ define "main" }}
     <article id="book-page">
-        {{ partial "components/breadcrumbs.html" . }}
+        {{ partial "header.html" . }}
         <div class="markdown-body book-body">
-            <div class="book-cover">
+            <div class="book-cover"
+                style="view-transition-name: book-{{ .File.UniqueID }}">
                 <img src="{{ .Params.cover }}" />
             </div>
             <h3 class="book-title">{{ .Title }}</h3>
