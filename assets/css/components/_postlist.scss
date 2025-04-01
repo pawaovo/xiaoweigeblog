@@ -87,3 +87,22 @@
         }
     }
 }
+
+.term-list {
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            time {
+                font-size: 0.9rem;
+                font-family: var(--mono-font-family);
+            }
+        }
+    }
+}
