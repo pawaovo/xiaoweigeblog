@@ -76,19 +76,19 @@
 
 <script>
   (() => {
+    const search = document.getElementById("global-search");
+    const overlay = document.getElementById("global-search-overlay");
+
+    const turnOn = () => {
+      search.classList.add("shown");
+      overlay.classList.add("shown");
+    };
+    const turnOff = () => {
+      search.classList.remove("shown");
+      overlay.classList.remove("shown");
+    };
+
     window.addEventListener("keydown", (event) => {
-      const search = document.getElementById("global-search");
-      const overlay = document.getElementById("global-search-overlay");
-
-      const turnOn = () => {
-        search.classList.add("shown");
-        overlay.classList.add("shown");
-      };
-      const turnOff = () => {
-        search.classList.remove("shown");
-        overlay.classList.remove("shown");
-      };
-
       if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         // Open the popup window
         if (search.classList.contains("shown")) {
@@ -104,6 +104,11 @@
       if (event.key === 'Escape') {
         turnOff();
       }
+    });
+
+    const searchInstruction = document.getElementById("search-instruction");
+    window.addEventListener("click", (event) => {
+      turnOn();
     });
   })();
 </script>
