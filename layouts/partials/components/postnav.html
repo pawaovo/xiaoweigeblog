@@ -1,11 +1,13 @@
 <div id="posts-list-navigation">
     <ul>
         <li class="{{ if eq "/" $.Page.RelPermalink }}active{{ end }}">
-            <a href="/">最新</a>
+            <a href="{{ .Site.LanguagePrefix }}/">{{ T "postNav.latest" }}</a>
         </li>
+        {{ if eq .Site.Language.Lang "zh" }}
         <li class="{{ if eq "/categories/" $.Page.RelPermalink }}active{{ end }}">
-            <a href="/categories">分类</a>
+            <a href="{{ .Site.LanguagePrefix }}/categories">{{ T "postNav.categories" }}</a>
         </li>
+        {{ end }}
         <li id="search-instruction">
             <span>{{ T "searchInstruction" }}</span>
         </li>
