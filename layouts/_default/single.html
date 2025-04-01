@@ -1,15 +1,6 @@
 {{ define "main" }}
     {{ if eq .Type "posts" }}
-    <header id="post-page-header"
-        {{ with .Params.banner }}class="with-banner"{{ end }}>
-        <a href="{{ .Site.LanguagePrefix }}/"
-            class="title-image-container">
-            <img src="/header.png" alt="Logo"
-                class="invert-if-dark title-image"
-                style="view-transition-name: title-image"
-            />
-        </a>
-    </header>
+        {{ partial "components/post-page-header.html" . }}
     {{ else }}
         {{ partial "header.html" . }}
     {{ end }}
