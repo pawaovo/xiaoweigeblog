@@ -23,14 +23,6 @@
 
             .posts-item-category {
                 margin: 0.5rem 0;
-                a {
-                    border: 2px solid var(--border-color);
-                    border-radius: 0.2rem;
-                    padding: 0.2rem 0.5rem;
-                    text-decoration: none;
-                    font-size: 0.8rem;
-                    display: inline-block;
-                }
             }
         }
         .posts-item-summary {
@@ -102,7 +94,19 @@
             time {
                 font-size: 0.9rem;
                 font-family: var(--mono-font-family);
+                color: var(--secondary-text-color);
             }
         }
+    }
+}
+
+.posts-item-category {
+    a {
+        border: 2px solid var(--border-color);
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.5rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        display: inline-block;
     }
 }
