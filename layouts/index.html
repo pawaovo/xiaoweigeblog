@@ -12,17 +12,17 @@
                       <time>
                           {{ .Date.Format "Jan 2" }}
                       </time>
-                      <h3>
+                      <h3{{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
                           <a href="{{ .Permalink }}">{{ .Title }}</a>
                       </h3>
                   </div>
+                  {{ with .Params.categories }}
                   <div class="posts-item-category">
-                      {{ with .Params.categories }}
                       <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
                           {{ . }}
                       </a>
-                      {{ end }}
                   </div>
+                  {{ end }}
               </header>
               <!-- 如果是第一篇文章，则显示摘要 -->
               {{ if $firstPost }}
