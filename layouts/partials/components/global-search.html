@@ -106,9 +106,15 @@
       }
     });
 
+    // trigger by clicking instruction text
+    // to allow mobile users to search
     const searchInstruction = document.getElementById("search-instruction");
     if (searchInstruction) {
       searchInstruction.addEventListener("click", turnOn);
     }
+
+    // double-click to turn off search
+    // in case esc and ctrl/cmd+k cannot be used
+    search.addEventListener("dblclick", turnOff);
   })();
 </script>
