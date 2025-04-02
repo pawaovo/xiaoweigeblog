@@ -107,8 +107,8 @@
     });
 
     const searchInstruction = document.getElementById("search-instruction");
-    searchInstruction.addEventListener("click", (event) => {
-      turnOn();
-    });
+    if (searchInstruction) {
+      searchInstruction.addEventListener("click", turnOn);
+    }
   })();
 </script>
