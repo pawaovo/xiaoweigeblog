@@ -1,27 +1,27 @@
 {{ define "main" }}
     <article class="card-list">
-      {{ partial "header.html" . }}
-      <div id="cards-section">
-        {{- range .Pages }}
-        <div class="card"
-            style="view-transition-name: card-{{ .File.UniqueID }}">
-            <div class="card-header">
-                <h3 class="card-title">
-                    <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
-                </h3>
-                {{- if .Params.tags }}
-                    <p class="card-tags markdown-body">
-                        {{- range .Params.tags }}
-                            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
-                        {{- end }}
-                    </p>
-                {{- end }}
-            </div>
+        {{ partial "header.html" . }}
+        <div id="cards-section">
+            {{- range .Pages }}
+            <div class="card"
+                style="view-transition-name: card-{{ .File.UniqueID }}">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
+                    </h3>
+                    {{- if .Params.tags }}
+                        <p class="card-tags markdown-body">
+                            {{- range .Params.tags }}
+                                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
+                            {{- end }}
+                        </p>
+                    {{- end }}
+                </div>
 
-            <div class="card-content markdown-body">
-                {{ .Summary }}
+                <div class="card-content markdown-body">
+                    {{ .Summary }}
+                </div>
             </div>
-        </div>
         {{- end }}
       </div>
     </article>
