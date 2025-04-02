@@ -8,9 +8,12 @@
   <script>{{ $lazyload.Content | safeJS }}</script>
 {{- end }}
 
-{{- $fancybox := resources.Get "js/fancybox.js" | minify }}
-{{- if $fancybox }}
-  <script>{{ $fancybox.Content | safeJS }}</script>
+{{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") }}
+  <script src="/js/fancybox.umd.js"></script>
+  {{- $fancybox := resources.Get "js/fancybox.js" | minify }}
+  {{- if $fancybox }}
+    <script>{{ $fancybox.Content | safeJS }}</script>
+  {{- end }}
 {{- end }}
 
 <script>
