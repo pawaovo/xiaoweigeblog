@@ -85,7 +85,6 @@ params:
   extraCSSFiles:
     - /pagefind/pagefind-ui.css
   externalJSFIles:
-    - /js/fancybox.umd.js
     - /js/littlefoot.js
     - /pagefind/pagefind-ui.js
   footerLinks:
