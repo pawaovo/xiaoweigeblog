@@ -48,6 +48,9 @@
         {{ end }}
         {{ .Site.Params.postHeaderContent | safeHTML }}
         {{ .Content }}
+        {{ if and (eq .Site.Language.Lang "zh") (eq .Section "posts") }}
+            <p style="font-size: 0.9rem">如果你觉得文章对你有帮助，可以考虑<a href="/sponsor">赞助作者</a></p>
+        {{ end }}
       </div>
 
       {{ if in .Site.Params.mainSections .Type }}
