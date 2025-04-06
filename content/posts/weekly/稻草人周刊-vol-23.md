@@ -13,7 +13,9 @@ toc: true
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/good-morning/1770129269?i=1770129274"></iframe>
 
-当我在晚上九点十分离开教室，清楚地知道自己不需要急急忙忙地去到另一个地方、去见什么人、去办什么事，听着欢快的爵士乐，几乎要跳起来的时候，我才真心想喊出一句：Good Morning! 似乎夜晚才是一天的开始。
+当我在晚上九点十分离开教室，清楚地知道自己不需要急急忙忙地去到另一个地方、去见什么人、去办什么事，听着欢快的爵士乐，几乎要跳起来的时候，我才真心想喊出一句：Good Morning!
+
+对我来说，似乎夜晚才是一天的开始。
 
 {{< quotecard >}}
 学校就是这样一种地方：我们在学校里学到的最重要的东西，就是“最重要的东西在学校里学不到”这个真理。
@@ -21,7 +23,35 @@ toc: true
 
 ## 🙋 在做什么
 
+清明假期还得上一天班，下班的第二天就去四川美术学院的美术馆逛了逛，是一位朋友提议的。美术馆离我的学校很近，我之前居然一直没来过。
 
+拍了一些我很喜欢的作品：
+
+{{< gallery >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3227大.jpeg" title="漆画，居然有点像怪核，配色也有点像 Minecraft 的末地" >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3231大.jpeg" title="有种淡淡的激情和淡淡的死意" >}}
+{{</ gallery >}}
+
+{{< gallery >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3244大.jpeg" title="猫猫🐱" >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3256大.jpeg" title="看了半天才看出来画的是手插进牛仔裤的特写" >}}
+{{</ gallery >}}
+
+{{< gallery >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3246大.jpeg" title="很克系的画作" >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3248大.jpeg" title="和上一幅是同一个作者，像是城市里的人都被吸进了一个个黑洞" >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3251大.jpeg" title="喜欢这种风格的漫画" >}}
+{{</ gallery >}}
+
+{{< img src="https://image.guhub.cn//uPic/IMG_3230大.jpeg" title="我当时盯着这个雕塑看了半天，试图分辩这是不是莫比乌斯环，结果不是，有些失望" class="small center" >}}
+
+美术馆的角落还有这样的作品，我大概能体会到作者想要表达死亡、生命之类的话题，机械和植物要素的结合也创造了一些荒诞的感觉（视频里可能听不出来，机器运作的声音还是很有感觉的）。但观感上，怪异和不明所以，要比震撼多一些——线缆没有藏好，布局也让人抓不住重点。特立独行是好的，但总觉得还是不太成熟。
+
+<div>
+    <video controls src="https://image.guhub.cn//uPic/IMG_3259.MOV" style="width: 100%" />
+</div>
+
+哦对，我还去看了 Minecraft 大电影…… 之后再说吧……
 
 ## 📖 本周阅读
 
@@ -64,6 +94,6 @@ toc: true
 
 我个人对这一「变化」的原因有些猜测：1. 上大学的人变多了，整体素质下降；2. 学生对自己学的东西并不感兴趣，也不再「改变命运」的紧迫感；3. 短视频和社交媒体让所有人都变笨了。
 
-
-
 ## 🗣️ 碎碎念
+
+- 其实对 Minecraft 大电影没什么期待，所以看的时候也是抱着「品鉴💩」的心态。期待不高，看完自然没有很失落，反而有些惊喜——女校长和傻子村民谈恋爱最后还结婚的剧情绝对是这部电影在故事上最大的亮点（？）。至于其他的…… 人物塑造不饱满，现实世界情节太拖沓，公式做题的剧情能被猜个八九不离十，最后合家欢大团圆每个人都有了美好的结局…… 不过美术还不错，蜘蛛骑士和末影人很令人惊喜，落地水和岩浆烤鸡的操作很懂玩家，对 Technoblade 的致敬也值得一提。
