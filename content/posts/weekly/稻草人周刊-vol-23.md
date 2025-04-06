@@ -51,7 +51,7 @@ toc: true
     <video controls src="https://image.guhub.cn//uPic/IMG_3259.MOV" style="width: 100%" />
 </div>
 
-哦对，我还去看了 Minecraft 大电影…… 之后再说吧……
+当然，也有可能是我完全不懂艺术啦！
 
 ## 📖 本周阅读
 
