@@ -7,6 +7,9 @@
         <li class="{{ if eq "/categories/" $.Page.RelPermalink }}active{{ end }}">
             <a href="{{ .Site.LanguagePrefix }}/categories">{{ T "postNav.categories" }}</a>
         </li>
+        <li class="{{ if eq "/tags/" $.Page.RelPermalink }}active{{ end }}">
+            <a href="{{ .Site.LanguagePrefix }}/tags">{{ T "postNav.tags" }}</a>
+        </li>
         {{ end }}
         <li id="search-instruction">
             <span>{{ T "searchInstruction" }}</span>

@@ -13,3 +13,4 @@ searchInstruction: '⌘+K to search anywhere'
 postNav:
   latest: 'Latest'
   categories: 'Categories'
+  tags: 'Tags'

@@ -13,3 +13,4 @@ searchInstruction: '⌘+K 在任何地方搜索'
 postNav:
   latest: '最新'
   categories: '分类'
+  tags: '标签'
