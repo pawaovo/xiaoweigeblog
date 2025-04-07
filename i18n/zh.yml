@@ -15,3 +15,6 @@ postNav:
   categories: '分类'
   tags: '标签'
 cards: 最近在学
+moreLinks:
+  posts: '所有文章'
+  cards: '所有卡片'

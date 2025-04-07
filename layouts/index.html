@@ -38,13 +38,14 @@
               </div>
               {{ end }}
           </div>
-          <a href="/posts" class="index-section-morelink">查看所有</a>
+          <a href="/posts" class="index-section-morelink">
+              {{ T "moreLinks.posts" }}
+          </a>
       </section>
 
       {{ if eq .Site.Language.Lang "zh" }}
       <!-- Latest Cards -->
       <section id="latest-cards">
-          <h2 class="index-section-title">{{ T "cards" }}</h2>
           <div class="latest-cards-container">
               {{- $cards := .Site.GetPage "section" "cards" }}  <!-- 获取 "cards" 部分的内容 -->
               {{- $paginator := .Paginate $cards.Pages 4 }}  <!-- 对该部分内容进行分页 -->
@@ -69,6 +70,11 @@
                   </div>
               </div>
               {{- end }}
+          </div>
+          <div style="margin: 1rem 0">
+              <a href="/cards" class="index-section-morelink">
+                  {{ T "moreLinks.cards" }}
+              </a>
           </div>
       </section>
       {{ end }}
