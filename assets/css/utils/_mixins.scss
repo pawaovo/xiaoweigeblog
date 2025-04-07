@@ -6,6 +6,7 @@
     border: 1px solid var(--background-color);
     transition: border-color 0.3s ease;
     &:hover, .active & {
-        border: 1px solid var(--text-color)
+        border: 1px solid var(--text-color);
+        text-decoration: none;
     }
 }
