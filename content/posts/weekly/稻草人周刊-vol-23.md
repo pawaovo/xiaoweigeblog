@@ -13,10 +13,10 @@ related_cards:
   - 感知与判断偏好
   - 主导功能与辅助功能
   - 荣格-心理类型
-date: 2025-04-07 11:47:10
+date: 2025-04-07 11:49:04
 categories: 稻草人周刊
 banner: https://image.guhub.cn/uPic/casey-horner-_wGbMD-Lf0w-unsplash-2-2.jpg
-draft: true
+draft: false
 toc: true
 ---
 
