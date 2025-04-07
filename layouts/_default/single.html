@@ -69,4 +69,7 @@
       </script>
 
     </article>
+    {{ if ne .Type "posts" }}
+        {{ partial "footer.html" . }}
+    {{ end }}
 {{ end }}
