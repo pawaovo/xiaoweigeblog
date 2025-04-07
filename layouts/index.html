@@ -1,41 +1,77 @@
 {{ define "main" }}
-    <article class="posts">
+    <article class="index">
       {{ partial "header.html" . }}
       {{ partial "components/postnav.html" . }}
-      <div class="posts-list">
-          {{ $firstPost := true }} <!-- 初始化标记 -->
-          {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-          <div class="posts-item"
-              style="view-transition-name: post-{{ .File.UniqueID }}">
-              <header>
-                  <div class="posts-item-meta">
-                      <time>
-                          {{ .Date.Format "Jan 2" }}
-                      </time>
-                      <h3{{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
-                          <a href="{{ .Permalink }}">{{ .Title }}</a>
-                      </h3>
-                  </div>
-                  {{ with .Params.categories }}
-                  <div class="posts-item-category">
-                      <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
-                          {{ . }}
-                      </a>
-                  </div>
+
+      <!-- Latest Posts -->
+      <section id="latest-posts">
+          <div class="posts-list">
+              {{ $firstPost := true }} <!-- 初始化标记 -->
+              {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+              <div class="posts-item"
+                  style="view-transition-name: post-{{ .File.UniqueID }}">
+                  <header>
+                      <div class="posts-item-meta">
+                          <time>
+                              {{ .Date.Format "Jan 2" }}
+                          </time>
+                          <h3{{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
+                              <a href="{{ .Permalink }}">{{ .Title }}</a>
+                          </h3>
+                      </div>
+                      {{ with .Params.categories }}
+                      <div class="posts-item-category">
+                          <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
+                              {{ . }}
+                          </a>
+                      </div>
+                      {{ end }}
+                  </header>
+                  <!-- 如果是第一篇文章，则显示摘要 -->
+                  {{ if $firstPost }}
+                      <div class="markdown-body posts-item-summary"
+                          style="view-transition-name: post-content-{{ .File.UniqueID }}">
+                          {{ .Summary }}
+                      </div>
+                      {{ $firstPost = false }} <!-- 更新为非第一篇 -->
                   {{ end }}
-              </header>
-              <!-- 如果是第一篇文章，则显示摘要 -->
-              {{ if $firstPost }}
-                  <div class="markdown-body posts-item-summary"
-                      style="view-transition-name: post-content-{{ .File.UniqueID }}">
-                      {{ .Summary }}
-                  </div>
-                  {{ $firstPost = false }} <!-- 更新为非第一篇 -->
+              </div>
               {{ end }}
           </div>
-          {{ end }}
-      </div>
-      <a href="/posts">查看所有</a>
+          <a href="/posts">查看所有</a>
+      </section>
+
+      {{ if eq .Site.Language.Lang "zh" }}
+      <!-- Latest Cards -->
+      <section id="latest-cards">
+          <h2 class="index-section-title">{{ T "cards" }}</h2>
+          <div class="latest-cards-container">
+              {{- $cards := .Site.GetPage "section" "cards" }}  <!-- 获取 "cards" 部分的内容 -->
+              {{- $paginator := .Paginate $cards.Pages 4 }}  <!-- 对该部分内容进行分页 -->
+              {{- range $paginator.Pages }}
+              <div class="card"
+                  style="view-transition-name: card-{{ .File.UniqueID }}">
+                  <div class="card-header">
+                      <h3 class="card-title">
+                          <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
+                      </h3>
+                      {{- if .Params.tags }}
+                          <p class="card-tags markdown-body">
+                              {{- range .Params.tags }}
+                                  <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
+                              {{- end }}
+                          </p>
+                      {{- end }}
+                  </div>
+
+                  <div class="card-content markdown-body">
+                      {{ .Summary }}
+                  </div>
+              </div>
+              {{- end }}
+          </div>
+      </section>
+      {{ end }}
     </article>
 {{ partial "footer.html" . }}
 {{ end }}

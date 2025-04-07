@@ -82,3 +82,16 @@
         }
     }
 }
+
+#latest-cards {
+    .latest-cards-container {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        gap: 1rem;
+        .card {
+            flex-shrink: 0;
+            width: 50%;
+        }
+    }
+}
