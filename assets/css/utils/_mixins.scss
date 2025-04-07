@@ -1,0 +1,11 @@
+@mixin small-button {
+    background-color: var(--block-background-color);
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    border: 1px solid var(--background-color);
+    transition: border-color 0.3s ease;
+    &:hover, .active & {
+        border: 1px solid var(--text-color)
+    }
+}

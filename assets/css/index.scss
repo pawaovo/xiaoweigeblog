@@ -1,5 +1,8 @@
-@import "components/variables";
-@import "components/reset";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/reset";
+@import "utils/utility";
+
 @import "components/markdown";
 @import "components/header";
 @import "components/pages";
@@ -12,7 +15,6 @@
 @import "components/library";
 @import "components/footer";
 @import "components/animation";
-@import "components/utility";
 
 @import "libraries/littlefoot";
 @import "libraries/fancybox";
