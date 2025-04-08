@@ -16,7 +16,10 @@
                               {{ .Date.Format "Jan 2" }}
                           </time>
                           <h3{{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
-                              <a href="{{ .Permalink }}">{{ .Title }}</a>
+                              <a
+                                  href="{{ .Permalink }}"
+                                  data-umami-event="Click post link from index"
+                              >{{ .Title }}</a>
                           </h3>
                       </div>
                       {{ with .Params.categories }}
@@ -38,7 +41,8 @@
               </div>
               {{ end }}
           </div>
-          <a href="/posts" class="index-section-morelink">
+          <a href="/posts" class="index-section-morelink"
+              data-umami-event="Click more posts link">
               {{ T "moreLinks.posts" }}
           </a>
       </section>
@@ -54,7 +58,10 @@
                   style="view-transition-name: card-{{ .File.UniqueID }}">
                   <div class="card-header">
                       <h3 class="card-title">
-                          <a href="{{ .Permalink }}" class="card-title-link">{{ .Title }}</a>
+                          <a
+                              href="{{ .Permalink }}"
+                              data-umami-event="Click card link from index"
+                              class="card-title-link">{{ .Title }}</a>
                       </h3>
                       {{- if .Params.tags }}
                           <p class="card-tags markdown-body">
@@ -72,7 +79,8 @@
               {{- end }}
           </div>
           <div style="margin: 1rem 0">
-              <a href="/cards" class="index-section-morelink">
+              <a href="/cards" class="index-section-morelink"
+                  data-umami-event="Click more cards link">
                   {{ T "moreLinks.cards" }}
               </a>
           </div>
