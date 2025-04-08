@@ -8,3 +8,4 @@ content/posts/_template.md
 # ignore archetypes since no archetype is used
 /archetypes
 .DS_Store
+/content/.obsidian
