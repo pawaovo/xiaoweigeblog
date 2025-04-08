@@ -83,4 +83,7 @@ related_cards:
 
 ## 其他
 
-网站的图标来源：<a target="_blank" href="https://icons8.com/icon/dFh2MtWbG5FC/skull">Skull</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+网站的图标来源：
+
+- <a target="_blank" href="https://icons8.com/icon/dFh2MtWbG5FC/skull">Skull</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- Skull with flowers, <a href="http://www.freepik.com">designed by Freepik</a>
