@@ -1,9 +1,9 @@
 ---
-categories: 旧博客文章
 date: 2024-03-20
 title: Profitez de votre vie.
 tags:
   - 语言
+  - 旧博客文章
 ---
 
 
