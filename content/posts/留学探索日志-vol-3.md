@@ -4,7 +4,6 @@ tags:
   - 教育
   - 留学
 subtitle: 留学探索日志 Vol.3
-categories: 留学探索
 date: 2025-01-26 17:58:00
 draft: false
 ---
