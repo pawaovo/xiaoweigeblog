@@ -1,27 +1,33 @@
 ---
 title: 稻草人周刊 Vol.24
-subtitle: 
-description: 
+subtitle: 写给独立游戏开发者的爽文
 tags:
   - 编程
   - 写作
   - 游戏开发
   - 认知
-related_cards: 
-date: 2025-04-09 17:22:45
+related_cards:
+  - 原语
+  - 世界语言的分类
+  - 投射
+  - 课题分离
+date: 2025-04-14T13:32:00
 categories: 稻草人周刊
 banner: https://image.guhub.cn//uPic/ritam-baishya-cqcOmID--7Y-unsplash-2.jpg
-draft: true
+draft: false
 toc: true
 ---
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/pink-pony-club/1698723205?i=1698723327"></iframe>
 
-
-
 ## 🙋 在做什么
 
+一时兴起又整理了书桌，丢掉了一些不必要的收纳架，做了些断舍离，现在看起来要舒服不少。还购入了新的盆栽，栀子花和葡萄风信子，但因为还没开花就不发出来了。希望它们能活到开花的那一天吧。
 
+{{< gallery >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3386大-2.jpeg" >}}
+{{< img src="https://image.guhub.cn//uPic/IMG_3387大-2.jpeg" >}}
+{{</ gallery >}}
 
 ## 📖 本周阅读
 
@@ -35,7 +41,7 @@ toc: true
 
 我大概是在一个月前就发现了《小丑牌》作者的博客 LocalThunk，这篇文章在我的阅读列表里躺了大半个月，读这篇文章的时候我恨我没有早点点开读它，读完的时候我大概经历了三次颅内高潮，因为读起来实在是太爽了。
 
-作者花了一年多的时间制作并发布了《小丑牌》（Balatro），当他写道「这个本来只是做给我和我几个朋友的游戏，居然不知怎么地有这么多陌生人想要买它」的时候，我意识到游戏或许就应该是这样的——先娱乐自己，再娱乐身边的人，最后让更多的人感到开心。
+作者花了一年多的时间制作并发布了《小丑牌》（Balatro），当他写道「这个本来只是做给我和我几个朋友的游戏，居然不知怎么地有这么多陌生人想要买它」的时候，我意识到游戏或许就应该是这样的——==先娱乐自己，再娱乐身边的人，最后让更多的人感到开心==。
 
 作者也提到，做这种项目非常重要的一点在于，当自己感受不到驱动力的时候就停下来，这可以帮你：
 
@@ -142,7 +148,10 @@ toc: true
 
 ## 💡 新知复盘
 
-
+{{< card "原语" >}}
+{{< card "世界语言的分类" >}}
+{{< card "投射" >}}
+{{< card "课题分离" >}}
 
 ## 🗣️ 碎碎念
 
