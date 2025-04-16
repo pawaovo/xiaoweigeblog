@@ -15,6 +15,7 @@
                 font-size: 0.9rem
             }
             h3.category-title {
+                margin: 0.25rem 0;
                a:hover {
                    text-decoration: none;
                }
@@ -37,6 +38,9 @@
                        transform: translateY(-5px) rotate(-3deg);
                    }
                }
+            }
+            .category-description {
+                margin-top: 0;
             }
         }
     }
@@ -72,6 +76,6 @@
     }
 
     .taxonomy-description hr {
-        margin: 0.5rem 0;
+
     }
 }

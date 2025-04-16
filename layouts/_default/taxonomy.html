@@ -26,7 +26,7 @@
                     {{ with .Page.Params.icon }}<span>{{ . }}</span>{{ end }} {{ .Page.LinkTitle }}
                 </a>
             </h3>
-            <p>{{ .Page.Params.description }}</p>
+            <p class="category-description">{{ .Page.Params.description | markdownify }}</p>
             <ul class="category-articles">
             {{ range first 6 .Pages }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
