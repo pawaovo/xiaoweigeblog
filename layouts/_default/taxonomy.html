@@ -5,7 +5,7 @@
 
   <!-- Display Tags -->
   {{ if eq .Type "tags" }}
-  <section class="taxonomy taxonomy-tags">
+  <section class="taxonomy-tags">
     {{ range sort .Site.Taxonomies.tags "Count" "desc" }}
     <a href="{{ .Page.RelPermalink }}" class="taxonomy-tags-item">
         <span class="tag-name">#{{ .Page.LinkTitle }}</span>
@@ -18,21 +18,24 @@
   <!-- Display Categories -->
   {{ if eq .Type "categories" }}
   {{ partial "components/welcome.html" . }}
-  <section class="taxonomy taxonomy-categories row">
-    {{ range .Site.Taxonomies.categories.Alphabetical }}
-        <div class="taxonomy-categories-item col-xs-12 col-sm-6">
-            <h3>
+  <section class="taxonomy-categories">
+      {{ range sort .Site.Taxonomies.categories ".Count" "desc" }}
+        <div class="taxonomy-categories-item">
+            <h3 class="category-title">
                 <a href="{{ .Page.RelPermalink }}">
                     {{ with .Page.Params.icon }}<span>{{ . }}</span>{{ end }} {{ .Page.LinkTitle }}
                 </a>
             </h3>
+            <p>{{ .Page.Params.description }}</p>
             <ul class="category-articles">
-            {{ range first 3 .Pages }}
+            {{ range first 6 .Pages }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
             {{ end }}
             </ul>
-            {{ if gt .Count 3 }}
-            <a href="{{ .Page.RelPermalink }}">阅读所有 {{ .Count }} 篇文章</a>
+            {{ if gt .Count 6 }}
+            <a class="category-link"
+                href="{{ .Page.RelPermalink }}"
+            >阅读所有 {{ .Count }} 篇文章</a>
             {{ end }}
         </div>
     {{ end }}

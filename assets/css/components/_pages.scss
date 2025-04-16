@@ -85,46 +85,6 @@
     }
 }
 
-/* category page */
-
-section.taxonomy {
-    margin: 2rem 0;
-}
-
-.taxonomy-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    .taxonomy-tags-item {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-
-        padding: 0.25rem 0.75rem;
-        background-color: var(--block-background-color);
-        transition:
-            color,
-            background 0.3s;
-        border-radius: 0.3rem;
-
-        &:hover {
-            text-decoration: none;
-            background-color: var(--text-color);
-            color: var(--block-background-color);
-        }
-
-        .tag-count {
-            font-size: 0.8rem;
-            color: var(--secondary-text-color);
-        }
-    }
-}
-
-.taxonomy-description hr {
-    margin: 0.5rem 0;
-}
-
 @media screen and (max-width: 600px) {
     .posts-line {
         font-size: 16px;

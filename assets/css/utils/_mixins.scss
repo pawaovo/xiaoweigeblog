@@ -10,3 +10,17 @@
         text-decoration: none;
     }
 }
+
+@mixin card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    padding: 1rem 1.35rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+    @media (prefers-color-scheme: dark) {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: #222;
+        color: #ddd;
+    }
+}
