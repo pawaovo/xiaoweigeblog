@@ -23,7 +23,7 @@
                    display: inline-block;
                }
                &:hover span {
-                   animation: bounce 0.5s ease-in-out;
+                   animation: bounce 1s ease-in-out;
                }
                @keyframes bounce {
                    0%, 20%, 50%, 80%, 100% {
