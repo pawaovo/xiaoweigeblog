@@ -107,7 +107,7 @@ params:
     reactionsEnabled: 0
     emitMetadata: 0
     inputPosition: top
-    theme: noborder_light
+    theme: "https://www.geedea.pro/css/giscus_noborder.css"
 services:
   rss:
     limit: 10

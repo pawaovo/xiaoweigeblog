@@ -20,45 +20,4 @@
   littlefoot.littlefoot({
     dismissOnUnhover: true
   });
-
-  /* == auto-switch giscus theme == */
-
-  // Function to send the theme change to the Giscus iframe
-  function changeGiscusTheme() {
-    const theme = document.documentElement.getAttribute('data-theme') === 'noborder_dark' ? 'noborder_dark' : 'noborder_light';
-
-    function sendMessage(message) {
-      const iframe = document.querySelector('iframe.giscus-frame');
-      if (!iframe) return;
-      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-    }
-
-    // Send the theme change to Giscus iframe
-    sendMessage({
-      setConfig: {
-        theme: theme
-      }
-    });
-  }
-
-  // Detect the system's color scheme (light or dark)
-  function updateTheme() {
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    // Update the theme of the page (this affects your custom styles)
-    if (prefersDarkScheme) {
-      document.documentElement.setAttribute('data-theme', 'noborder_dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'noborder_light');
-    }
-
-    // Change the Giscus iframe theme accordingly
-    changeGiscusTheme();
-  }
-
-  // Run the theme update function on page load
-  window.addEventListener('load', updateTheme);
-
-  // Re-run when the system theme changes
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', updateTheme);
 </script>
