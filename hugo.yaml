@@ -107,7 +107,7 @@ params:
     reactionsEnabled: 0
     emitMetadata: 0
     inputPosition: top
-    theme: preferred_color_scheme
+    theme: noborder_light
 services:
   rss:
     limit: 10

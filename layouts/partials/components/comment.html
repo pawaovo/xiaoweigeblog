@@ -29,7 +29,8 @@
     <p style="text-align:center">你也可以加入本站的 <a href="https://t.me/teaparty418" target="_blank">Telegram 群组</a>参与讨论</p>
     {{ end }}
     <!-- giscus script -->
-    <script src="https://giscus.app/client.js"
+    <script id="giscus-script"
+            src="https://giscus.app/client.js"
             data-repo="{{ .Site.Params.giscus.repo }}"
             data-repo-id="{{ .Site.Params.giscus.repoId }}"
             data-category="{{ .Site.Params.giscus.category }}"
