@@ -75,7 +75,11 @@
         }
     }
 
-    .taxonomy-description hr {
-
+    .uncategorized-link {
+        @include small-button;
+        &::after {
+            content: " →";
+            color: var(--secondary-text-color)
+        }
     }
 }
