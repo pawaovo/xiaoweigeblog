@@ -55,6 +55,14 @@
 
       {{ if in .Site.Params.mainSections .Type }}
         {{ partial "components/comment.html" . }}
+        {{ with site.RegularPages.Related . | first 5 }}
+          <p>{{ T "relatedContent" }}</p>
+          <ul>
+            {{ range . }}
+              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
       {{ end }}
 
       <script src="/js/tocbot.min.js"></script>
