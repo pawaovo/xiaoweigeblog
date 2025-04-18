@@ -82,3 +82,24 @@
         }
     }
 }
+
+/* related posts */
+
+.related-posts {
+    .related-posts-list {
+        padding-inline-start: 0;
+        .related-posts-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .related-post-subtitle {
+                color: var(--secondary-text-color);
+            }
+            .related-post-reading-time {
+                font-family: var(--mono-font-family);
+                color: var(--secondary-text-color);
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

@@ -31,7 +31,7 @@
 
         {{- /* 如果有文章引用这个卡片，就显示它们 */ -}}
         {{ if gt (len $referencedBy) 0 }}
-        <section class="referenced-articles post-content">
+        <section class="related-posts post-content">
             <h2>引用了本卡片的文章</h2>
             <ul>
                 {{- range $referencedBy }}
