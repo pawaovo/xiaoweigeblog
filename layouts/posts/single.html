@@ -47,16 +47,28 @@
         {{ end }}
       </div>
 
-    {{ partial "components/comment.html" . }}
+      <!-- Comment -->
+      {{ partial "components/comment.html" . }}
 
-    {{ with site.RegularPages.Related . | first 5 }}
-        <p>{{ T "relatedContent" }}</p>
-        <ul>
+      <!-- Related Posts -->
+      {{ with site.RegularPages.Related . | first 3 }}
+      <div class="related-posts post-content">
+        <h4>{{ T "relatedContent" }}</h4>
+        <ul class="related-posts-list">
         {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            <li class="related-posts-item">
+                <a href="{{ .RelPermalink }}">
+                    {{ .LinkTitle }}
+                    {{ with .Params.subtitle }}
+                        <span class="related-post-subtitle">：{{ . }}</span>
+                    {{ end }}
+                </a>
+                <span class="related-post-reading-time">⏱️ {{ .ReadingTime }}min </span>
+            </li>
         {{ end }}
         </ul>
-    {{ end }}
+      </div>
+      {{ end }}
 
       <script src="/js/tocbot.min.js"></script>
       <script>
