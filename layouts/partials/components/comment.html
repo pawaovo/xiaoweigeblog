@@ -26,7 +26,12 @@
         </p>
     </div>
     {{ if eq .Site.Language.Lang "zh" }}
-    <p style="text-align:center">你也可以加入本站的 <a href="https://t.me/teaparty418" target="_blank">Telegram 群组</a>参与讨论</p>
+    <p class="telegram-link-container">
+        <a href="https://t.me/teaparty418" target="_blank">
+            <img src="/img/telegram.svg" alt="Telegram Logo" />
+            加入本站的 Telegram 群组参与讨论
+        </a>
+    </p>
     {{ end }}
     <!-- giscus script -->
     <script id="giscus-script"

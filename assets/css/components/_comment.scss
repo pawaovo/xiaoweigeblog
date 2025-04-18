@@ -31,3 +31,19 @@
         margin: 1rem 0
     }
 }
+
+.telegram-link-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    a {
+        @include small-button;
+        font-size: .9rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        img {
+            width: 1rem;
+        }
+    }
+}
