@@ -1,20 +1,20 @@
 {{ define "main" }}
-<article class="taxonomy">
-  {{ partial "components/post-page-header.html" . }}
-  {{ partial "components/breadcrumbs.html" . }}
-  <div class="post-content">
-      <!-- Uncategorized -->
-      {{ $uncategorized := where (where .Site.RegularPages "Section" "posts") "Params.categories" "==" nil }}
-      {{ if $uncategorized }}
-        <section class="uncategorized-posts">
-          <ol>
-            {{ range $uncategorized }}
-              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <article class="posts termlist-page">
+        {{ partial "components/post-page-header.html" . }}
+        {{ partial "components/breadcrumbs.html" . }}
+        <div class="post-content">
+            <!-- Uncategorized -->
+            {{ $uncategorized := where (where .Site.RegularPages "Section" "posts") "Params.categories" "==" nil }}
+            {{ if $uncategorized }}
+                <section class="uncategorized-posts">
+                <ol>
+                    {{ range $uncategorized }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ol>
+                </section>
             {{ end }}
-          </ol>
-        </section>
-      {{ end }}
-  </div>
-</article>
+        </div>
+    </article>
 {{ partial "footer.html" . }}
 {{ end }}
