@@ -2,7 +2,7 @@
     @include small-button;
 
     &::after {
-        content: " »";
+        content: " →";
     }
 }
 
@@ -100,6 +100,10 @@
             }
         }
     }
+}
+
+.taxonomy-description hr {
+    margin: 0.25rem 0;
 }
 
 .posts-item-category {
