@@ -1,46 +1,10 @@
 {{ define "main" }}
-    {{ if eq .Type "posts" }}
-        {{ partial "components/post-page-header.html" . }}
-    {{ else }}
-        {{ partial "header.html" . }}
-    {{ end }}
+    {{ partial "header.html" . }}
     <article
-        class="post {{ .Site.Language.LanguageName }}"
+        class="page {{ .Site.Language.LanguageName }}"
         id="article"
     >
-      <!-- Post Header -->
-      <header
-        style="view-transition-name: post-{{ .File.UniqueID }}"
-        class="post-header"
-      >
-        {{ if in .Site.Params.mainSections .Type }}
-        {{ partial "components/banner.html" . }}
-        <!-- Title and Subtitle -->
-        <h1 class="post-title">
-          {{ .Title }}
-          {{ with .Params.subtitle }}
-            <small class="post-subtitle">{{ . }}</small>
-          {{ end }}
-        </h1>
-        <!-- Post Meta -->
-        <div class="post-meta">
-            {{ if .Date }}
-            <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
-              {{ .Date.Format "2006-1-2" }}
-            </time>
-            {{ end }}
-            <span>·</span>
-            {{ if .Params.categories }}
-            <a class="post-category" href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
-            {{ end }}
-            {{ range .Params.tags }}
-            <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-      </header>
-
-      <!-- Post Content -->
+      <!-- Content -->
       <div id="post-content" class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         {{ if .Params.toc }}
@@ -48,22 +12,7 @@
         {{ end }}
         {{ .Site.Params.postHeaderContent | safeHTML }}
         {{ .Content }}
-        {{ if and (eq .Site.Language.Lang "zh") (eq .Section "posts") }}
-            <p style="font-size: 0.9rem">如果你觉得文章对你有帮助，可以考虑<a href="/sponsor">赞助作者</a></p>
-        {{ end }}
       </div>
-
-      {{ if in .Site.Params.mainSections .Type }}
-        {{ partial "components/comment.html" . }}
-        {{ with site.RegularPages.Related . | first 5 }}
-          <p>{{ T "relatedContent" }}</p>
-          <ul>
-            {{ range . }}
-              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      {{ end }}
 
       <script src="/js/tocbot.min.js"></script>
       <script>
@@ -77,7 +26,5 @@
       </script>
 
     </article>
-    {{ if ne .Type "posts" }}
-        {{ partial "footer.html" . }}
-    {{ end }}
+    {{ partial "footer.html" . }}
 {{ end }}
