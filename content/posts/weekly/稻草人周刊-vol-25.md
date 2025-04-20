@@ -4,7 +4,7 @@ subtitle:
 description: 
 tags: 
 related_cards: 
-date: 
+date: 2025-04-20T22:43:00
 categories: 稻草人周刊
 banner: 
 draft: true
@@ -79,8 +79,7 @@ random shit, maybe music and stuff
 
 ### 如何把小屁孩吵赢
 
-{{< callout "文章链接：[How to win an argument with a toddler - Seth's Blog](https://seths.blog/2025/04/how-to-win-an-argument-with-a-toddler/)
-" "📜" >}}
+{{< callout "文章链接：[How to win an argument with a toddler - Seth's Blog](https://seths.blog/2025/04/how-to-win-an-argument-with-a-toddler/)" "📜" >}}
 
 请注意这里的小屁孩并不是真的小屁孩，而是蛮不讲理的人。
 
