@@ -10,7 +10,7 @@ tags:
   - 人际交往
 related_cards:
   - 向内思考与向外思考
-date: ""
+date: 2025-04-21T11:26:00
 categories: 稻草人周刊
 banner: https://image.guhub.cn/uPic/PixPin_2025-04-21_10-43-33大.jpeg
 draft: false
