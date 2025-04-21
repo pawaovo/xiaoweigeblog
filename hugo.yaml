@@ -15,16 +15,19 @@ languages:
     params:
       headTitle: 極客死亡計劃
       nav:
-        - name: 文章
+        - name: 议叙
           link: /posts/
           target: _self
         - name: 卡片
           link: /cards/
           target: _self
-        - name: 书籍
+        - name: 书目
           link: /library/
           target: _self
-        - name: 关于
+        - name: 假想
+          link: /fictions/
+          target: _self
+        - name: 自述
           link: /about/
           target: _self
       series:
