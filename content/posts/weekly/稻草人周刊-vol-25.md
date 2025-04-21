@@ -1,23 +1,46 @@
 ---
 title: 稻草人周刊 Vol.25
-subtitle: 
-description: 
-tags: 
-related_cards: 
-date: 2025-04-20T22:43:00
+subtitle: 当个互联网房东
+tags:
+  - 游戏开发
+  - 互联网文化
+  - Geek
+  - AI
+  - 艺术
+  - 人际交往
+related_cards:
+  - 向内思考与向外思考
+date: ""
 categories: 稻草人周刊
-banner: 
-draft: true
+banner: https://image.guhub.cn/uPic/PixPin_2025-04-21_10-43-33大.jpeg
+draft: false
 toc: true
 ---
 
-random shit, maybe music and stuff
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/schei%C3%9Fe/1440824019?i=1440824271"></iframe>
+
+以前没有完整听过《Born This Way》这张专辑，看完 Coachella 音乐节上 [Lady Gaga 的表演](https://www.bilibili.com/video/BV1DbdhYSEHY/?spm_id_from=333.337.search-card.all.click&vd_source=55e8dd907e1926518fd35c1ee7bcb4ba)之后，被《Scheiße》的舞台设计震撼到了，*妈的怎么能艺术成这样*，于是就循环了一下午。
 
 ## 🙋 在做什么
 
-- 出去玩了
-- 看了 Lady Gaga 的 Coachella 音乐节现场
-- ……
+周三的时候决定什么也不做，放松一下，于是早上上完课就出门溜达了。先去了一家书店，点了一杯椰奶 Dirty，拿了一本有意思的小书读。下午去中央公园逛了逛，工作日没什么人，很清静。回宿舍之后给自己冲了一杯花魁，然后吃完饭去上班。
+
+{{< gallery >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3404大.jpeg" title="有些猎奇，但很有意思的人类学书籍" >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3402大.jpeg" title="有猫猫陪读" >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3407大.jpeg" title="天气很好" >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3415大.jpeg" title="从这个角度看冲咖啡的过程很惬意" >}}
+{{</ gallery >}}
+
+这周还做了一个卡牌游戏的 prototype，上班的时候摸鱼和学生以及同事玩了玩，得到了不错的评价。玩的过程很欢乐，虽然机制硬核到每个玩家都要拿拿计算器一直算分数，但掷骰子和算倍率挺爽的。
+
+{{< gallery >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3440大.jpeg" >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_3444大.jpeg" >}}
+{{< img src="https://image.guhub.cn/uPic/IMG_0321大.jpeg" >}}
+{{</ gallery >}}
+
+但问题是，我怎么自己一次都没赢过啊！
 
 ## 📖 本周阅读
 
@@ -33,13 +56,13 @@ random shit, maybe music and stuff
 
 > 首先，设计师创建了一些游戏机制。然后，他们把这些游戏机制用一些具有代表性的虚构元素包装起来。在游戏过程中，这些机制之间会产生一系列事件。这些时间会触动玩家潜意识中的触发器，从而激发出情感。最后，这些情感交织到一起，变成了一种综合的体验。
 
-{{< right "——Tynan Sylvester《Designing Games: A Guide to Engineering Experiences》" >}}
+{{< right "——《Designing Games: A Guide to Engineering Experiences》" >}}
 
 我之前对游戏的认知仅限于「一套有限的行动规则，并且有输和赢的条件」，而这样的定义显然没有很好地概括那些令人触动，或是上头到撒不开手的游戏。在游戏的定义中加入「情感」一词，能更好地阐释各种形式的游戏令人着迷的原因。
 
 用「情感」的角度看待游戏，还能借此重新定义其他文化产品。既然==游戏是一种通过工程技术创造的体验，那么小说可以是一种通过文学手段创造的体验，而电影可以是一种通过视觉手段创造的体验==，其目的都是为了激发人类的情感。
 
-此外，游戏还有「虚构层」一说，也就是机制、规则以外的，用于修饰游戏、风格化游戏的层次。比如，如果将《小丑牌》中的卡牌从扑克牌换成塔罗牌，其实也能玩下去，只不过整个游戏的风格就会从「赌场」变成「灵媒小屋」，玩家积累的点数也不会被称作「筹码」和「倍率」了。但虚构层也是能决定游戏受众、整体表现，甚至成败的部分——如果《Minecraft》变成一个外星殖民游戏，你需要避免死于只有在特定时间出现的外星人，然后挖掘异星矿石，创造殖民地，我很怀疑我还会不会喜欢这个游戏。
+此外，游戏还有「虚构层」一说，也就是机制、规则以外的，用于修饰游戏、风格化游戏的层次。比如，如果将《小丑牌》中的卡牌从扑克牌换成塔罗牌，其实也能玩下去，只不过整个游戏的风格就会从「赌场」变成「灵媒小屋」，玩家积累的点数也不会被称作「筹码」和「倍率」了。虚构层能决定游戏受众、整体表现，甚至成败——如果《Minecraft》变成一个外星殖民游戏，你需要避免死于只有在特定时间出现的外星人，然后挖掘异星矿石，建造殖民地，我很怀疑我还会不会喜欢这个游戏。
 
 [#游戏开发](/tags/游戏开发)
 
@@ -59,7 +82,9 @@ random shit, maybe music and stuff
 4. 使用开放的格式（open format），而不是那些自称有导出功能但格式非常诡异的平台；也包括开放的协议（protocol），比如邮件就是通用的格式，换了哪个邮件服务商都一样——你可以迁移你的邮件列表，但没法迁移某个平台上的关注者。
 5. 拥有自己的域名，让别人知道在哪找到你，你永远可以将你的域名指向另一个 IP 地址。
 
-### 为什么机器不可能创造艺术 🌟
+[#互联网文化](/tags/互联网文化/) [#Geek](/tags/geek/)
+
+### 为什么机器不可能创造艺术
 
 {{< callout "文章链接：[Why A.I. Isn’t Going to Make Art - The New Yorker](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)" "📜" >}}
 
@@ -93,10 +118,13 @@ random shit, maybe music and stuff
 
 ## 💡 新知复盘
 
-
+{{< card "向内思考与向外思考" >}}
 
 ## 🗣️ 碎碎念
 
-- 
+- 大概是因为之前用没有腐熟的咖啡渣做了肥料，一直养在桌面上的那盆火焰蕨因为土壤板结，几乎要枯死了。我痛定思痛，立马下单买了三盆新的（？）。
+- 如果一个人只会用华丽的词藻和句式武装自己的表达，那是为了掩盖他思想和学识匮乏的事实。
+- 之前 [www.guhub.cn](https://www.guhub.cn/) 因为 SSL 的问题一直无法正常访问，后来发现是腾讯云 EdgeOne 导致 Caddy 服务器无法自动配置 SSL 证书，可恶的腾讯！（？）
+- 为什么这么多欧美歌迷喜欢把有新意的舞台设计称作「小品」…… 现代人是否因为过度的娱乐失去了欣赏艺术的能力？
 
 [^1]: 以及，很多人似乎不明白，AI 其实是一个**指代非常不明确**的词汇，语言模糊反映了思维的不清晰。AI 可以是游戏中敌人的行动机制，AI 可以是给邮件分类的算法，AI 可以基于神经网络也可以不基于神经网络，AI 可以是大语言模型也可以是文生图模型……
