@@ -57,7 +57,7 @@
         <ul class="related-posts-list">
         {{ range . }}
             <li class="related-posts-item">
-                <a href="{{ .RelPermalink }}">
+                <a href="{{ .RelPermalink }}" data-umami-event="Click Related Post">
                     {{ .LinkTitle }}
                     {{ with .Params.subtitle }}
                         <span class="related-post-subtitle">：{{ . }}</span>
