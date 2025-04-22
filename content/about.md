@@ -10,11 +10,12 @@ related_cards:
 
 ## 博客导读
 
-1. 文章内容==全是观点==；对于事实性论题，我会标注信息来源
-2. 博客内容涉及不少领域，大多并非专业，==如有错误恳请指出==
-3. 博客==每周至少三次更新==，可以通过 [RSS](/cards/my-rss-url/) 订阅
-4. ==网站开源==，你可以在[这里](/categories/)看到所有文章的 Markdown 源代码，也可以在仓库的 [Discussion](https://github.com/BigCoke233/geek-death-project/discussions) 页面看到自 2025 年 1 月 5 日起的所有评论
-5. 除了阅读首页的新文章，也欢迎通过[分类](/categories/)和[标签](/tags/)查找你感兴趣的内容，或者按下 ⌘K（Ctrl+K）搜索文章
+1. 文章内容意在记录思考和传播观点；对于事实性论题，我会标注信息来源。
+2. 博客内容涉及不少领域，大多并非专业，==如有错误恳请指出==。
+3. 博客==每周至少三次更新==，可以通过 [RSS](/cards/my-rss-url/) 订阅。
+4. ==网站开源==，你可以在[这里](/categories/)看到所有文章的 Markdown 源代码，也可以在仓库的 [Discussion](https://github.com/BigCoke233/geek-death-project/discussions) 页面看到自 2025 年 1 月 5 日起的所有评论。
+5. 除了阅读首页的新文章，也欢迎通过[分类](/categories/)和[标签](/tags/)查找你感兴趣的内容，或者按下 ⌘K（Ctrl+K）搜索文章。
+6. 除了一般的非虚构写作文章（议叙），博客还有[卡片](/cards/)、[书评](/library/)、[小说](/fictions/)部分的内容；其中卡片是较为零散的、针对某个概念的非线性输出，定位是「个人词典」。
 
 ## 这是/不是什么样的网站
 
@@ -49,19 +50,17 @@ related_cards:
 
 ### 这个博客是怎么创建的
 
-使用 Hugo 生成静态网站，托管在 Cloudflare Pages 上，外观是用 [yinyang](https://github.com/joway/hugo-theme-yinyang) 主题修改的。
+使用 Hugo 生成静态网站，托管在 Cloudflare Pages 上，外观是用 [yinyang](https://github.com/joway/hugo-theme-yinyang) 主题修改的。博客[开源](https://github.com/BigCoke233/geek-death-project)，代码通过 MIT 协议授权，博客内容通过 [Creative Commons - BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议授权。
 
-博客[开源](https://github.com/BigCoke233/geek-death-project)，代码通过 MIT 协议授权，博客内容通过 [Creative Commons - BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议授权。
-
-我在本地使用 Typora 编写文章，完成后推送到 GitHub 上构建并部署。
+我在本地使用 Typora 和 Obsidian 编写文章，完成后推送到 GitHub 上构建并部署。
 
 评论系统曾经使用 Waline，而后转到 Giscus，和 GitHub 仓库一起管理。以前的评论数据有保留，如果你无法使用 Giscus 评论，请告知，或者使用下文提到的邮件联系我。
 
 ### 除了「极客死亡计划」还有别的吗？
 
-我在 The Backrooms 后室中文维基写了一些东西，这是我的 [作者页](https://backrooms-wiki-cn.wikidot.com/author:eltrac)。
+我在 The Backrooms 后室中文维基写了一些东西，这是我的 [作者页](https://backrooms-wiki-cn.wikidot.com/author:eltrac)。目前我已经不在那里写作了，也辞去了网站的版主职位。
 
-我还有一个用于虚构写作的博客，叫做 [Ultralime](https://www.ultrali.me)
+~~我还有一个用于虚构写作的博客，叫做 [Ultralime](https://www.ultrali.me)~~ 现在已将小说全部迁移至本站，可以在顶部导航栏中找到。
 
 ### 可以交换友情链接吗？
 
