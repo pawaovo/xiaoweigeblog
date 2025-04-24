@@ -56,3 +56,13 @@ html[lang="en-US"] {
     border-radius: 0.5rem;
     border: 1px solid var(--border-color);
 }
+
+@mixin postCategoryPill {
+    background-color: var(--block-background-color);
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    &:hover {
+        text-decoration: none;
+    }
+}

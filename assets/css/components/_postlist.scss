@@ -108,12 +108,7 @@
 
 .posts-item-category {
     a {
-        border: 2px solid var(--border-color);
-        border-radius: 0.2rem;
-        padding: 0.2rem 0.5rem;
-        text-decoration: none;
-        font-size: 0.8rem;
-        display: inline-block;
+        @include postCategoryPill;
     }
 }
 
