@@ -20,7 +20,13 @@
                               <a
                                   href="{{ .Permalink }}"
                                   data-umami-event="Click post link from index"
-                              >{{ .Title }}</a>
+                              >
+                                  {{ if eq .Section "library" }}
+                                      读《{{ .Title }}》
+                                  {{ else }}
+                                      {{ .Title }}
+                                  {{ end }}
+                              </a>
                               {{ if eq .Section "fictions" }}
                               <span class="posts-item-title-pill">小说</span>
                               {{ end }}
@@ -43,9 +49,11 @@
                       {{ $firstPost = false }} <!-- 更新为非第一篇 -->
                   {{ end }}
                   <!-- 如果是小说，则显示图标 -->
-                  {{ if eq .Section "fictions" }}
+                  {{ if or (eq .Section "fictions") (eq .Section "library") }}
                       <div class="posts-item-icon invert-if-dark">
-                          <img src="/img/skull-slices.svg" />
+                          <img src="{{ if eq .Section "fictions" }}
+                              {{ .Site.BaseURL }}img/skull-slices.svg{{ else }}
+                              {{ .Site.BaseURL }}img/book-storm.svg{{ end }}" />
                       </div>
                   {{ end }}
               </div>
