@@ -15,11 +15,15 @@
                           <time>
                               {{ .Date.Format "Jan 2" }}
                           </time>
-                          <h3{{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
+                          <h3 class="posts-item-title"
+                              {{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
                               <a
                                   href="{{ .Permalink }}"
                                   data-umami-event="Click post link from index"
                               >{{ .Title }}</a>
+                              {{ if eq .Section "fictions" }}
+                              <span class="posts-item-title-pill">小说</span>
+                              {{ end }}
                           </h3>
                       </div>
                       {{ with .Params.categories }}
@@ -37,6 +41,12 @@
                           {{ .Summary }}
                       </div>
                       {{ $firstPost = false }} <!-- 更新为非第一篇 -->
+                  {{ end }}
+                  <!-- 如果是小说，则显示图标 -->
+                  {{ if eq .Section "fictions" }}
+                      <div class="posts-item-icon invert-if-dark">
+                          <img src="/img/skull-slices.svg" />
+                      </div>
                   {{ end }}
               </div>
               {{ end }}

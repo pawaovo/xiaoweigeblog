@@ -84,6 +84,7 @@ markup:
 params:
   mainSections:
     - posts
+    - fictions
   favicon: /favicon.png
   extraCSSFiles:
     - /pagefind/pagefind-ui.css
