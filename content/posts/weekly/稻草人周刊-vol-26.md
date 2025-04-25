@@ -13,11 +13,11 @@ toc: true
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/what-was-that/1809638073?i=1809638075"></iframe>
 
-Lady Gaga 的《Mayhem》和 Coachella 音乐节表现之后，Lorde 就发布了新单曲，欧美乐迷今年也吃得太好了吧。[^1]
+Lady Gaga 的《Mayhem》和 Coachella 音乐节表现之后，Lorde 就发布了新单曲，欧美乐迷今年也吃得太好了吧。[^1]<!--more-->
 
 ## 🙋 在做什么
 
-
+最近博客做了不少外观和交互设计上的改动，这里先不一一列举了，看看读者能找出来多少吧。*如果遇到 bug 也请告诉我……*
 
 ## 📖 本周阅读
 
