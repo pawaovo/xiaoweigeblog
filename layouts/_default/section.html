@@ -4,7 +4,7 @@
       <div id="posts-archive" class="posts-list">
         {{ partial "components/heatmap.html" . }}
         <!-- Post Archive List -->
-        {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
+        {{ range (where site.RegularPages "Type" "eq" "posts").GroupByDate "2006" -}}
           <section class="posts-year-archive">
             <h1 class="posts-year-title">
                 {{ .Key }}
