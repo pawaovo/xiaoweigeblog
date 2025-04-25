@@ -57,6 +57,11 @@ html[lang="en-US"] {
     border: 1px solid var(--border-color);
 }
 
+@mixin framed {
+    border: 0.2rem solid #fff;
+    box-shadow: 0 0.1rem 0.75rem rgba(0,0,0,0.2);
+}
+
 @mixin postCategoryPill {
     background-color: var(--block-background-color);
     font-size: 0.9rem;
@@ -65,4 +70,11 @@ html[lang="en-US"] {
     &:hover {
         text-decoration: none;
     }
+}
+
+@mixin roundSticker {
+    background-color: var(--block-background-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,.2);
+    padding: 1rem;
 }

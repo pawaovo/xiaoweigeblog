@@ -53,11 +53,8 @@
 
 #post-page-header.with-banner {
     .title-image-container {
-        background-color: var(--block-background-color);
-        border-radius: 50%;
+        @include roundSticker;
         transform: rotate(7deg);
-        box-shadow: 0 0 0.2rem rgba(0,0,0,.2);
-        padding: 1rem;
 
         position: absolute;
         z-index: 5;

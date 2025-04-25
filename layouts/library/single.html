@@ -1,23 +1,33 @@
 {{ define "main" }}
     <article id="book-page">
-        {{ partial "header.html" . }}
-        <div class="markdown-body book-body">
+        <div class="book-page-header">
             <div class="book-cover"
                 style="view-transition-name: book-{{ .File.UniqueID }}">
                 <img src="{{ .Params.cover }}" />
             </div>
-            <h3 class="book-title">{{ .Title }}</h3>
-
+            <h1 class="book-title">{{ .Title }}</h1>
             {{- $rating := .Params.rating -}}
             {{- $fullStars := math.Floor $rating -}}
-            <div class="book-meta">
+            <p class="book-author">
+                {{ .Params.author }}
+            </p>
+            <p class="book-rating">
                 {{- range seq $fullStars }}
                 <span class="star">⭐</span>
                 {{- end -}}
-                <span> / </span>
-                <span class="author">{{ .Params.author }}</span>
+            </p>
+            <!-- 导航作用的骷髅头图标 -->
+            <div>
+                <a href="{{ .Site.LanguagePrefix }}/library"
+                    class="title-image-container">
+                    <img src="/header.png" alt="Logo"
+                        class="invert-if-dark title-image"
+                        style="view-transition-name: title-image"
+                    />
+                </a>
             </div>
-
+        </div>
+        <div class="markdown-body book-body">
             <div class="book-content">
                 {{ .Content }}
             </div>
