@@ -43,7 +43,7 @@
 }
 
 #post-page-header {
-    margin: var(--page-header-top) auto;
+    margin: 0 auto;
     margin-bottom: 2rem;
     max-width: var(--page-width);
 
@@ -70,7 +70,7 @@
         @media screen and (min-width: 768px) {
             width: 8rem;
             left: calc(50vw + var(--page-width) / 2 - 5rem);
-            top: calc(var(--page-header-top) - 2rem);
+            top: calc(var(--page-margin-y) - 2rem);
         }
     }
 }
