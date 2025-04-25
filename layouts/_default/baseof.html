@@ -2,13 +2,14 @@
 <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
 {{ partial "head.html" . }}
 <body>
-  <main>
+    {{ partial "components/svg-filters.html" . }}
+    <main>
       {{ block "main" . }}{{ end }}
-  </main>
-  {{ partial "scripts.html" . }}
-  {{ partial "components/global-search" . }}
-  {{ if .Site.Params.extraBody }}
-  {{ .Site.Params.extraBody | safeHTML }}
-  {{ end }}
+    </main>
+    {{ partial "scripts.html" . }}
+    {{ partial "components/global-search" . }}
+    {{ if .Site.Params.extraBody }}
+    {{ .Site.Params.extraBody | safeHTML }}
+    {{ end }}
 </body>
 </html>

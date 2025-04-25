@@ -26,6 +26,7 @@
             }
 
             .posts-item-meta {
+                filter: url(#xs);
                 time {
                     color: var(--secondary-text-color);
                     font-family: var(--mono-font-family);
