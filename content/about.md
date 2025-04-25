@@ -88,3 +88,5 @@ related_cards:
 - Skull with flowers, <a href="http://www.freepik.com">designed by Freepik</a>
 - [Halloween Pot Of Horror Food Vector SVG Icon - SVG Repo](https://www.svgrepo.com/svg/11985/halloween-pot-of-horror-food)
 - [Skull Slices SVG Vector](https://www.svgrepo.com/svg/321390/skull-slices)
+
+文章标题中使用的 CSS 扭曲效果来自 [endtimes.dev](https://endtimes.dev)
