@@ -106,11 +106,13 @@
 
 .term-list {
     .term-list-posts {
-        list-style: none;
+        &:not(ol) {
+            list-style: none;
+        }
         padding-inline-start: 0;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         li {
             display: flex;
             justify-content: space-between;
@@ -119,6 +121,7 @@
                 font-size: 0.9rem;
                 font-family: var(--mono-font-family);
                 color: var(--secondary-text-color);
+                flex-shrink: 0;
             }
             .posts-subtitle {
                 color: var(--secondary-text-color);
