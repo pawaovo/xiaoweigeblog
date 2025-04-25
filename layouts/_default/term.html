@@ -11,8 +11,8 @@
         {{ end }}
 
         <div class="term-list">
-            <ul>
-            {{ range .Pages }}
+            <ul class="term-list-posts">
+                {{ range where .Pages "Section" "ne" "cards" }}
                 <li>
                     <a href="{{ .RelPermalink }}" data-umami-event="Click Post Link from Category Page">
                         {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
@@ -22,8 +22,21 @@
                         {{ .Date.Format "2006-1-2" }}
                     </time>
                 </li>
-            {{ end }}
+                {{ end }}
             </ul>
+            <div class="term-list-cards">
+                {{ range where .Pages "Section" "eq" "cards" }}
+                <div class="card">
+                    <h3>
+                        <a href="{{ .RelPermalink }}" data-umami-event="Click Card Link from Category Page">
+                            {{ .Title }}
+                        </a>
+                    </h3>
+                    <p>{{ .Summary }}</p>
+                </div>
+                {{ end }}
+            </div>
         </div>
     </article>
+    {{ partial "footer.html" . }}
 {{ end }}
