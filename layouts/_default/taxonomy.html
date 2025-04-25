@@ -18,7 +18,7 @@
   <!-- Display Categories -->
   {{ if eq .Type "categories" }}
   {{ partial "components/welcome.html" . }}
-      {{ $featured := slice "稻草人周刊" "年终总结" "揽物日志" }}
+      {{ $featured := slice "稻草人周刊" "年终总结" "揽物日志" "极客死亡计划书" }}
       <h2>周期性刊物</h2>
       <section class="taxonomy-categories">
       {{ range sort .Site.Taxonomies.categories ".Count" "desc" }}

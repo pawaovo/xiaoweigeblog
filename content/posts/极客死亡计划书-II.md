@@ -3,6 +3,7 @@ title: 极客死亡计划书 II
 subtitle: 个人博客的新格局
 tags:
   - 写作
+categories: 极客死亡计划书
 related_cards:
   - 全景监狱
   - 耦合-内聚-解耦
