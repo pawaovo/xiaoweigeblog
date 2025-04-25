@@ -1,9 +1,14 @@
 {{ define "main" }}
     <article class="card-page">
-        {{ partial "header.html" . }}
+        <a href="{{ .Site.LanguagePrefix }}/cards"
+            class="title-image-container">
+            <img src="/header.png" alt="Logo"
+                class="invert-if-dark title-image"
+                style="view-transition-name: title-image"
+            />
+        </a>
         <div class="card markdown-body post-content"
             style="view-transition-name: card-{{ .File.UniqueID }}">
-            <a href="{{ .Permalink }}" class="card-corner"></a> <!-- 右上角折角 -->
             <div class="card-header">
                 <h3 class="card-title">{{ .Title }}</h3>
                 {{- if .Params.tags }}
