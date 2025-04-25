@@ -75,7 +75,9 @@
 }
 
 #latest-cards {
+    margin: 1rem 0;
     .latest-cards-container {
+        padding: 0 5px;
         display: flex;
         width: 100%;
         overflow-x: auto;

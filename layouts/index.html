@@ -15,7 +15,7 @@
                           <time>
                               {{ .Date.Format "Jan 2" }}
                           </time>
-                          <h3 class="posts-item-title"
+                          <h2 class="posts-item-title"
                               {{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
                               <a
                                   href="{{ .Permalink }}"
@@ -30,7 +30,7 @@
                               {{ if eq .Section "fictions" }}
                               <span class="posts-item-title-pill">小说</span>
                               {{ end }}
-                          </h3>
+                          </h2>
                       </div>
                       {{ with .Params.categories }}
                       <div class="posts-item-category">

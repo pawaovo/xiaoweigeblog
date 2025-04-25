@@ -15,7 +15,6 @@
     .posts-item {
         overflow: hidden;
         width: 100%;
-        border-bottom: 1px solid var(--border-color);
         margin: 0.5rem 0;
         header {
             width: 100%;
@@ -26,12 +25,12 @@
             }
 
             .posts-item-meta {
-                filter: url(#xs);
                 time {
                     color: var(--secondary-text-color);
                     font-family: var(--mono-font-family);
                 }
                 .posts-item-title {
+                    filter: url(#xs);
                     .posts-item-title-pill {
                         font-size: 1rem;
                         font-weight: normal;
@@ -132,21 +131,5 @@
 .posts-item-category {
     a {
         @include postCategoryPill;
-    }
-}
-
-/* Card List Styles */
-
-#latest-cards {
-    margin: 1rem 0;
-    .latest-cards-container {
-        display: flex;
-        width: 100%;
-        overflow-x: auto;
-        gap: 1rem;
-        .card {
-            flex-shrink: 0;
-            width: 50%;
-        }
     }
 }
