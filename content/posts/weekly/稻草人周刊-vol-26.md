@@ -10,7 +10,7 @@ banner:
 draft: true
 toc: true
 ---
-
+ 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/what-was-that/1809638073?i=1809638075"></iframe>
 
 Lady Gaga 的《Mayhem》和 Coachella 音乐节表现之后，Lorde 就发布了新单曲，欧美乐迷今年也吃得太好了吧。[^1]<!--more-->
