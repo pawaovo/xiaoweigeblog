@@ -7,7 +7,7 @@ tags:
 related_cards:
   - 宏
   - 自我实现的预言
-date: ""
+date: 2025-04-28T11:46:00
 categories: 稻草人周刊
 banner: https://image.guhub.cn//uPic/daisies-outside-the-sports-field.jpeg
 draft: false
