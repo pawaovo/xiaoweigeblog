@@ -1,5 +1,5 @@
 ---
-title: 稻草人周刊 Vol.
+title: 稻草人周刊 Vol.27
 subtitle: 
 tags: 
 related_cards: 
