@@ -70,6 +70,19 @@
       </div>
       {{ end }}
 
+      <!-- Post Bottom Navigation -->
+      <nav class="post-bottom-navigation">
+        <ul>
+            {{ if .NextInSection }}
+                <li><a href="{{ .NextInSection.RelPermalink }}" data-umami-event="Click Next Post">← {{ .NextInSection.Title }}</a></li>
+            {{ else }}<li class="placeholder"></li>{{ end }}
+            <li style="place-self: center;"><a href="{{ .Site.LanguagePrefix }}/">{{ T "backToHome" }}</a></li>
+            {{ if .PrevInSection }}
+                <li><a href="{{ .PrevInSection.RelPermalink }}" data-umami-event="Click Previous Post">{{ .PrevInSection.Title }} →</a></li>
+            {{ else }}<li class="placeholder"></li>{{ end }}
+        </ul>
+      </nav>
+
       <script src="/js/tocbot.min.js"></script>
       <script>
       tocbot.init({
