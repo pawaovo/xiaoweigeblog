@@ -110,20 +110,16 @@ $em-text-color: #889E73;
   }
 
   table {
-      border: 1px solid $border-color;
-      max-width: 100%;
-      overflow-x: auto;
       border-collapse: collapse;
-      th {
-          background-color: $block-background-color
-      }
-      td {
-          padding: .1rem .75rem
-      }
+      border-top: 2px solid var(--border-color);
+      overflow-x: auto;
+      width: 100%;
       tr {
-          & > td:nth-child(even) {
-              background-color: var(--bright-background-color)
-          }
+          border-bottom: 1px solid var(--border-color);
+      }
+      td, th {
+          padding: 0.5rem 1rem;
+          line-height: 1.5;
       }
   }
 
