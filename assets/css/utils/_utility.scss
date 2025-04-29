@@ -33,7 +33,7 @@ figure {
     justify-content: center;
 
     // Default width
-    width: var(--page-width);
+    width: 100%;
 
     // Properly interpolate calc() in media queries
     @media screen and (min-width: 768px) {
