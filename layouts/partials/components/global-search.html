@@ -99,6 +99,7 @@
 
     window.addEventListener("keydown", (event) => {
       if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault();
         // Open the popup window
         if (search.classList.contains("shown")) {
           turnOff()
