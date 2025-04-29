@@ -1,9 +1,17 @@
 {{ define "main" }}
     <article class="card-list">
         {{ partial "header.html" . }}
-        <div id="cards-section">
+        <div class="cards-statistics markdown-body">
+            <table>
+                <tr>
+                    <td>卡片数量</td>
+                    <td><span class="number-pill">{{ len .Pages }}</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="cards-section outbox small">
             {{- $cards := .Site.GetPage "section" "cards" }}  <!-- 获取 "cards" 部分的内容 -->
-            {{- $paginator := .Paginate $cards.Pages 8 }}  <!-- 对该部分内容进行分页 -->
+            {{- $paginator := .Paginate $cards.Pages 10 }}  <!-- 对该部分内容进行分页 -->
             {{- range $paginator.Pages }}
             <div class="card"
                 style="view-transition-name: card-{{ .File.UniqueID }}">

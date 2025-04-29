@@ -74,6 +74,39 @@
     }
 }
 
+.cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card {
+        margin: 0;
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+.cards-statistics {
+    margin: 1rem 0;
+    table tr > td:nth-child(2) {
+        text-align: right;
+    }
+    .number-pill {
+        text-align: center;
+        display: inline-block;
+        width: 1.75rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background-color: var(--block-background-color);
+        font-size: 1rem;
+    }
+}
+
 #latest-cards {
     margin: 1rem 0;
     .latest-cards-container {
