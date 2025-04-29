@@ -131,19 +131,6 @@
             }
         }
     }
-    .term-list-cards {
-        @media screen and (min-width: 768px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        .card {
-            margin: 0;
-            h3 {
-                margin: 0;
-            }
-        }
-    }
 }
 
 .taxonomy-description hr {
