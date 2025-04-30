@@ -3,6 +3,13 @@
         {{ partial "components/post-page-header.html" . }}
         {{ partial "components/breadcrumbs.html" . }}
 
+        {{ with .Params.description }}
+            <div class="taxonomy-description markdown-body">
+                {{ . | markdownify }}
+                <hr />
+            </div>
+        {{ end }}
+
         <div class="term-list">
             <ul class="term-list-posts">
                 {{ range where .Pages "Section" "ne" "cards" }}
@@ -17,18 +24,6 @@
                 </li>
                 {{ end }}
             </ul>
-            <div class="term-list-cards cards-section outbox small">
-                {{ range where .Pages "Section" "eq" "cards" }}
-                <div class="card">
-                    <h3>
-                        <a href="{{ .RelPermalink }}" data-umami-event="Click Card Link from Category Page">
-                            {{ .Title }}
-                        </a>
-                    </h3>
-                    <p>{{ .Summary }}</p>
-                </div>
-                {{ end }}
-            </div>
         </div>
     </article>
     {{ partial "footer.html" . }}
