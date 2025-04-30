@@ -12,8 +12,8 @@ date: 2025-03-24 11:37:57
 
 ![Pinterest 上的 Anthropomorphic Arts](https://image.guhub.cn/uPic/2025/03/image-20250324112319902.png)
 
-词源学上，anthropomorphic 还有几个构词略有差异，但意思相似的兄弟，即 anthropomorphism（名词）和 anthropomorphist（表示人的名词），他们都是 anthropomorphous 的变体。*anthropo-* 表示「人」，同源的词还有 anthropology（人类学）和 anthropophobia（恐人症）；*morphē* 的词源未知，意思是「形式」。[^1]
+词源学上，anthropomorphic 还有几个构词略有差异，但意思相似的兄弟，即 anthropomorphism（名词）和 anthropomorphist（表示人的名词），他们都是 anthropomorphous 的变体。*anthropo-* 表示「人」，同源的词还有 anthropology（人类学）和 anthropophobia（恐人症）；*morphē* 的词源未知，意思是「形式」。
 
 anthropomorphous 表示在**形态**上与人相似的，而衍生而来的 anthropomorphic 表示具有人**行为、情感和语言能力**等。我还想到了 humanoid（类人的）这个词，写怪谈小说时经常用，这个词与 anthropomorphous 很相似，不过 humanoid 常用来指代机器人、外星生物和鬼怪，而 anthropomorphous 其实不常用，因为它有点文绉绉的。
 
-[^1]: https://www.etymonline.com/word/anthropomorphous
+<span style="font-size: 80%">Source: [Etymology of "anthropomorphous" by etymonline](https://www.etymonline.com/word/anthropomorphous)</span>
