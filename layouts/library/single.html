@@ -3,7 +3,11 @@
         <div class="book-page-header">
             <div class="book-cover"
                 style="view-transition-name: book-{{ .File.UniqueID }}">
-                <img src="{{ .Params.cover }}" />
+                <img
+                    class="lazy"
+                    src="{{ .Params.cover }}!thumbnail"
+                    data-src="{{ .Params.cover }}"
+                />
             </div>
             <h1 class="book-title">{{ .Title }}</h1>
             {{- $rating := .Params.rating -}}

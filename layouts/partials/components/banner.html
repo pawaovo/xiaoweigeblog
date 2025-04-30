@@ -1,6 +1,10 @@
 {{ with .Params.banner }}
 <div class="post-banner">
-    <img src="{{ . }}">
+    <img
+        class="lazy"
+        src="{{ . }}!thumbnail"
+        data-src="{{ . }}"
+    >
 </div>
 <style>
 .post-banner img {

@@ -2,7 +2,12 @@
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
 {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
     <a href="{{ .Get "src" }}" data-fancybox {{ if isset .Params "title" }} data-caption="{{.Get "title" }}" {{ end }}>
-        <img class="lazy" data-src="{{ .Get "src" }}" src="{{ .Get "src" }}!thumbnail" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
+        <img
+            class="lazy"
+            data-src="{{ .Get "src" }}"
+            src="{{ .Get "src" }}!thumbnail"
+            {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}
+        />
     </a>
     {{ if .Get "link" }}</a>{{ end }}
     {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
