@@ -22,10 +22,13 @@
         font-family: var(--mono-font-family);
 
         li {
-            &:not(:last-child)::after {
-                content: "/";
-                color: var(--secondary-text-color);
-                margin: 0 0.5rem;
+            &:not(:last-child) a {
+                &:hover { text-decoration: none; }
+                &::after {
+                    content: "/";
+                    color: var(--secondary-text-color);
+                    margin: 0 0.5rem;
+                }
             }
         }
     }
