@@ -109,17 +109,28 @@ $em-text-color: #889E73;
     background-color: rgba(255, 235, 0, .5)
   }
 
-  table {
-      border-collapse: collapse;
-      border-top: 2px solid var(--border-color);
+  .table-container {
       overflow-x: auto;
-      width: 100%;
-      tr {
-          border-bottom: 1px solid var(--border-color);
-      }
-      td, th {
-          padding: 0.5rem 1rem;
-          line-height: 1.5;
+      -webkit-overflow-scrolling: touch;
+
+      table {
+          border-collapse: collapse;
+          table-layout: fixed;
+          min-width: 100%;
+          width: max-content;
+
+          border-top: 2px solid var(--border-color);
+
+          tr {
+              border-bottom: 1px solid var(--border-color);
+          }
+          td, th {
+              max-width: 200px;
+              padding: 0.5rem 1rem;
+              line-height: 1.5;
+              white-space: normal;
+              word-wrap: break-word;
+          }
       }
   }
 
