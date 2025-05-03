@@ -1,0 +1,15 @@
+---
+title: 简单曝光效应
+tags:
+  - 心理学
+date: 2025-05-03 23:02:35
+---
+
+简单曝光效应（Mere-exposure Effect）也叫熟悉感原则，是一种心理现象，指的是个体对某人某物越熟悉、曝光的次数越多，个体就越容易发展对该人该物的喜欢或厌恶。
+
+简单来说，越熟悉的事物越容易产生好感，一开始讨厌的人或事见得越多则越讨厌。
+
+简单曝光效应的适用范围很广，除了人，还包括词、汉字、画、面部图像、几何图形和声音。
+
+<span style="font-size: 80%">[Mere-exposure Effect - Wikipedia](https://en.wikipedia.org/wiki/Mere-exposure_effect)</span>
+
