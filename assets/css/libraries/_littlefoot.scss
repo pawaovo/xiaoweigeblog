@@ -30,7 +30,20 @@
     --popover-scroll-indicator-color:#3f3f3f;
     --popover-tooltip-size:8px;
     --popover-tooltip-size:0.5rem;
-    position:relative
+    position:relative;
+
+    @media (prefers-color-scheme: dark) {
+        --button-background-color: #555;
+        --button-text-color: #fff;
+        --button-active-background-color: #222;
+        --button-active-text-color: #fff;
+
+        --popover-background-color: var(--block-background-color);
+        --popover-text-color: var(--text-color);
+        --popover-border: 1px solid var(--border-color);
+        --popover-shadow: 0 0 0.2rem rgba(100, 100, 100, 0.1);
+        --popover-scroll-indicator-color: #aaa;
+    }
 }
 .littlefoot__button{
     background-color:var(--button-background-color);
