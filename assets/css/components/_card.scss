@@ -91,6 +91,9 @@
 
 .cards-statistics {
     margin: 1rem 0;
+    table {
+        width: 100%;
+    }
     table tr > td:nth-child(2) {
         text-align: right;
     }
