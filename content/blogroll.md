@@ -1,9 +1,12 @@
 ---
-title: 常逛的中文博客
-tags:
-  - 索引
-date: 2025-03-27 14:27:28
+date: 2025-05-06 11:12:12
+title: 博客志
+aliases:
+  - /cards/links/
+  - /links/
 ---
+
+## 我常逛的中文博客
 
 - [Velas 电波站](https://www.velasx.com/)
 - [白洛嘉](https://brocalife.com/)
@@ -22,3 +25,7 @@ date: 2025-03-27 14:27:28
 - [Nelson Boss](https://nelsonboss.ink/)
 - [Randy's Blog](https://lutaonan.com/)
 - [Taxodium](https://taxodium.ink/)
+
+---
+
+Check out some cool English sites [here](/en/blogroll).

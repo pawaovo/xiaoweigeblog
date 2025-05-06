@@ -61,8 +61,8 @@ languages:
         # - name: /categories
         #   link: /en/categories/
         #   target: _self
-        - name: /links
-          link: /en/links/
+        - name: /blogroll
+          link: /en/blogroll/
           target: _self
     title: Geek Death Project
     weight: 2
