@@ -28,11 +28,5 @@
             </a></li>
             {{ end }}
         </ul>
-
-        {{$scratch := newScratch}}
-        {{ range (where .Site.Pages "Kind" "page" )}}
-            {{$scratch.Add "total" .WordCount}}
-        {{ end }}
-        <p class="word-count">{{ T "footer.wordCount" ($scratch.Get "total") }}</p>
     </section>
 </footer>
