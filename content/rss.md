@@ -1,6 +1,8 @@
 ---
 date: 2025-05-06 11:12:12
 title: RSS
+aliases:
+  - /cards/my-rss-url/
 ---
 
 你可以通过 RSS 订阅本博客。用[这个链接](/index.xml)订阅本站的所有更新。
