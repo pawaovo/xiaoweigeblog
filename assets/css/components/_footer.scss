@@ -46,6 +46,12 @@
                     filter: grayscale(1)
                 }
             }
+
+            /* internal links */
+            &.footer-navigation-internal li:not(:last-child)::after {
+                content: '•';
+                margin-left: 0.25rem;
+            }
         }
     }
 }

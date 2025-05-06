@@ -92,7 +92,7 @@ params:
   externalJSFIles:
     - /js/littlefoot.js
     - /pagefind/pagefind-ui.js
-  footerLinks:
+  footerExternalLinks:
     - name: GitHub
       link: https://github.com/BigCoke233/geek-death-project
       icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
@@ -102,6 +102,11 @@ params:
     - name: Travelling
       link: https://www.travellings.cn/go.html
       icon: https://www.travellings.cn/assets/favicon.png
+  footerInternalLinks:
+    - name: blogroll
+      link: /blogroll/
+    - name: about
+      link: /about/
   giscus:
     repo: BigCoke233/geek-death-project
     repoId: R_kgDONPoyVw
