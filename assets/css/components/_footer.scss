@@ -43,7 +43,10 @@
                     width: auto;
                     display: inline-block;
                     border-radius: 100%;
-                    filter: grayscale(1)
+                    filter: grayscale(1);
+                    @media (prefers-color-scheme: dark) {
+                        filter: grayscale(1) invert(1);
+                    }
                 }
             }
 

@@ -24,7 +24,7 @@
         <ul class="footer-navigation">
             {{ range .Site.Params.footerExternalLinks }}
             <li><a href="{{ .link }}" title="{{ .name }}" target="_blank">
-                <img src="{{ .icon }}" class="invert-if-dark" />
+                <img src="{{ .icon }}" />
             </a></li>
             {{ end }}
         </ul>
