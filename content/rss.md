@@ -1,11 +1,9 @@
 ---
-title: 我的 RSS 地址
-tags:
-  - 索引
-date: 2025-03-27 14:40:07
+date: 2025-05-06 11:12:12
+title: RSS
 ---
 
-用[这个链接](/index.xml)订阅本站的所有更新。
+你可以通过 RSS 订阅本博客。用[这个链接](/index.xml)订阅本站的所有更新。
 
 ```
 https://www.geedea.pro/index.xml
