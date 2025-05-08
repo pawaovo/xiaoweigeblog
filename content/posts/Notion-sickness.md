@@ -7,6 +7,8 @@ date: 2024-12-11 22:50:00
 categories: 生产力报告
 tags:
   - Notion
+  - 笔记方法
+  - 效率
 toc: true
 ---
 
