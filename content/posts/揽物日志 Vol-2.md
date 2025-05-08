@@ -6,7 +6,8 @@ draft: false
 title: 揽物日志 Vol.2
 toc: true
 tags:
-  - 每日写作计划 α
+  - 每日写作计划α
+  - Apple
 ---
 
 这是我坚持每日写作的第 8 天。

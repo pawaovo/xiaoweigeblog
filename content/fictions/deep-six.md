@@ -3,6 +3,8 @@ title: 海葬
 date: 2024-03-28
 draft: false
 description: 那林子里一定有人，至于他为什么不跟马特一起走，我想我有答案。
+tags:
+  - Backrooms
 ---
 
 > 这是一篇基于「后室」世界观写作的故事，原本于 2 月 24 日发布于[后室中文维基](https://backrooms-wiki-cn.wikidot.com/deep-six)，系[群岛活动](https://backrooms-wiki-cn.wikidot.com/2024-archipelago-event)的活动作品。

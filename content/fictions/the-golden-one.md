@@ -3,6 +3,8 @@ title: 溶于水的金黄
 date: 2023-01-16
 draft: false
 description: 终于，她单腿立于一块金色的岩石之上，仍保持着她在空中的姿势，右腿抬起，左手前倾。她闭眼享受着空气在她毛孔上微微拂过的感觉。阳光透过她的长裙把水面也染黄了，乳白的世界被涂上了一抹热烈的金黄。
+tags:
+  - Backrooms
 ---
 
 > 本篇小说背景设定基于后室中文原创层级 [Level C-148](http://backrooms-wiki-cn.wikidot.com/level-c-148) 和 [Level C-185](http://backrooms-wiki-cn.wikidot.com/level-c-185)。其中，Level C-148 是一片无尽的水体，任何浸没水中的物体无一例外都会溶解；Level C-185 是一座由人造光源点亮的城市。
