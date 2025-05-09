@@ -1,28 +1,8 @@
 <head>
   <meta charset="utf-8" />
-  {{ hugo.Generator }}
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="{{ .Site.Author.name }}" />
-  <meta property="og:url" content="{{ .Permalink }}" />
-  <link rel="canonical" href="{{ .Permalink }}" />
-
+  {{ hugo.Generator }}
   {{ partial "head/siteinfo" . }}
   {{ partial "head/css" . }}
-
-  <!-- Umami Tracking -->
-  <script>
-    if (window.location.hostname !== 'localhost') {
-      // track traffic
-      const script = document.createElement('script');
-      script.defer = true;
-      script.src = 'https://umami.guhub.cn/script.js';
-      script.dataset.websiteId = 'a84e25a7-ac03-4a1f-94b0-bd1f6ae44869';
-      document.head.appendChild(script);
-    }
-  </script>
-
-  <!-- Extra head -->
-  {{ .Site.Params.extraHead | safeHTML }}
+  {{ partial "head/umami" . }}
 </head>
