@@ -34,7 +34,7 @@ aliases:
 
 {{< img src="https://image.guhub.cn/uPic/2025/02/IMG_0290.PNG" class="center small" title="这是一个苹果，但画完之后我才发现，它长得有点像个番茄" >}}
 
-{{< img src="https://image.guhub.cn/uPic/2025/02/image-20250223101436594.png" >}}
+![](https://image.guhub.cn/uPic/2025/02/image-20250223101436594.png)
 
 ## 📚 这周读了什么？
 
@@ -92,7 +92,7 @@ Dylan Ayrey 在[一篇文章](https://trufflesecurity.com/blog/removing-jeff-bez
 
 本周在 Hacker News 上读到一个更极客的分类方法，叫做 [Johnny·Decimal](https://johnnydecimal.com/10-19-concepts/11-core/11.01-introduction/)，简称 JD。这套分类系统非常简单（甚至原始），也很强大，而且几乎万能，你可以用它来做文件管理、家庭管理，甚至是管理小型企业；这个网站本身就是用这套系统来分类页面的。更酷的是，你的每个文件夹或物品，都会拥有一个独一无二的编号。
 
-{{< img src="https://image.guhub.cn/uPic/2025/02/11.01A-Diagram_1552_NYC--dtop-1_resize-light-cx-1000x609.png" >}}
+![](https://image.guhub.cn/uPic/2025/02/11.01A-Diagram_1552_NYC--dtop-1_resize-light-cx-1000x609.png)
 
 比起随心所欲地创建文件夹，提前选定一个编号会让文件更容易管理。由于大部分操作系统和软件不一定支持手动排序，但一定支持数字的升序或降序排序，数字也能让文件夹位置保持不变，更容易形成肌肉记忆。
 

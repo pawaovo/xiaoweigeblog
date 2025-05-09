@@ -51,7 +51,7 @@ tags:
 
 安装步骤就略去了，如果你感兴趣，可以读读 Spencer Woo 写的《[找不到满意的 RSS 服务？你可以自己搭建一个](https://sspai.com/post/57498)》。
 
-{{<img src="https://image.guhub.cn/picgo/20241107171557.png" title="Tiny Tiny RSS 的界面" >}}
+![Tiny Tiny RSS 的界面](https://image.guhub.cn/picgo/20241107171557.png "Tiny Tiny RSS 的界面")
 
 自建的服务也有不少痛点。虽然不清楚原因，但 Tiny Tiny RSS 跑起来遇到了各种不大不小的 bug，比如我每次进入网页都要重新登陆一遍，而且登录之后还不能直接跳转到仪表盘，尽管的确已经登陆了但还卡在登陆界面，需要自己输入 url 才能跳转到页面。不过这也还好，因为我最需要的只是 Tiny Tiny RSS 提供的 Fever API。
 
@@ -69,9 +69,9 @@ Fever API 是付费 RSS 阅读器 Fever 提供的一种 API 格式，有不少�
 
 最后，我选择在 Windows 上使用 Fluent Reader 作为阅读器，在 iPhone 和 iPad 上使用 Unread。
 
-{{<img src="https://image.guhub.cn/picgo/20241107172518.png" title="Fluent Reader 的界面" >}}
+![Fluent Reader 的界面](https://image.guhub.cn/picgo/20241107172518.png "Fluent Reader 的界面")
 
-{{<img src="https://image.guhub.cn/picgo/95d042abd10307ed195c636de4bbd3c.jpg" title="iPad 上 Unread 的界面" >}}
+![iPad 上 Unread 的界面](https://image.guhub.cn/picgo/95d042abd10307ed195c636de4bbd3c.jpg "iPad 上 Unread 的界面")
 
 这样就完美解决了，市面上大多数 RSS 阅读器对我来说难以做到跨平台的痛点。
 

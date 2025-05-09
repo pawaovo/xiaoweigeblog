@@ -53,9 +53,9 @@ aliases:
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2025/02/image-20250203100142509.png" title="正常的，有 AI 总结的搜索结果" >}}
+![正常的，有 AI 总结的搜索结果](https://image.guhub.cn/uPic/2025/02/image-20250203100142509.png "正常的，有 AI 总结的搜索结果")
 
-{{< img src="https://image.guhub.cn/uPic/2025/02/image-20250203100201511.png" title="加上「他妈的」就没有 AI 总结了" >}}
+![加上「他妈的」就没有 AI 总结了](https://image.guhub.cn/uPic/2025/02/image-20250203100201511.png "加上「他妈的」就没有 AI 总结了")
 
 {{</ gallery >}}
 

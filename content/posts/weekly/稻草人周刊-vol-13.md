@@ -45,7 +45,7 @@ aliases:
 
 在 StackExchange 上有人问为什么 0 是复数（plural，并非 complex number），给出的例子里有「几次方」的英语读法。
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/image-20250122110636973.png" >}}
+![](https://image.guhub.cn/uPic/2025/01/image-20250122110636973.png)
 
 简单讲解一下知识点，这其实都不是数学问题，而是语言问题：
 

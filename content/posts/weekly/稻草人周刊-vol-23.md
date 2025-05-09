@@ -37,19 +37,19 @@ toc: true
 拍了一些我很喜欢的作品：
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3227大.jpeg" title="漆画，居然有点像怪核，配色也有点像 Minecraft 的末地" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3231大.jpeg" title="有种淡淡的激情和淡淡的死意" >}}
+![漆画，居然有点像怪核，配色也有点像 Minecraft 的末地](https://image.guhub.cn//uPic/IMG_3227大.jpeg "漆画，居然有点像怪核，配色也有点像 Minecraft 的末地")
+![有种淡淡的激情和淡淡的死意](https://image.guhub.cn//uPic/IMG_3231大.jpeg "有种淡淡的激情和淡淡的死意")
 {{</ gallery >}}
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3244大.jpeg" title="猫猫🐱" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3256大.jpeg" title="看了半天才看出来画的是手插进牛仔裤的特写" >}}
+![猫猫🐱](https://image.guhub.cn//uPic/IMG_3244大.jpeg "猫猫🐱")
+![看了半天才看出来画的是手插进牛仔裤的特写](https://image.guhub.cn//uPic/IMG_3256大.jpeg "看了半天才看出来画的是手插进牛仔裤的特写")
 {{</ gallery >}}
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3246大.jpeg" title="很克系的画作" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3248大.jpeg" title="和上一幅是同一个作者，像是城市里的人都被吸进了一个个黑洞" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3251大.jpeg" title="喜欢这种风格的漫画" >}}
+![很克系的画作](https://image.guhub.cn//uPic/IMG_3246大.jpeg "很克系的画作")
+![和上一幅是同一个作者，像是城市里的人都被吸进了一个个黑洞](https://image.guhub.cn//uPic/IMG_3248大.jpeg "和上一幅是同一个作者，像是城市里的人都被吸进了一个个黑洞")
+![喜欢这种风格的漫画](https://image.guhub.cn//uPic/IMG_3251大.jpeg "喜欢这种风格的漫画")
 {{</ gallery >}}
 
 {{< img src="https://image.guhub.cn//uPic/IMG_3230大.jpeg" title="我当时盯着这个雕塑看了半天，试图分辩这是不是莫比乌斯环，结果不是，有些失望" class="small center" >}}

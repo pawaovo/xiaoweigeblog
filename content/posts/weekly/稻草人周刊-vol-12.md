@@ -105,6 +105,6 @@ aliases:
 
 最后，猫猫。
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_1385.JPG" >}}
+![](https://image.guhub.cn/uPic/2025/01/IMG_1385.JPG)
 
 [^1]: *很明显有人没有「注意听」*    

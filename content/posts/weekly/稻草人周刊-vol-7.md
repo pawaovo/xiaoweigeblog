@@ -21,9 +21,9 @@ aliases:
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2129%E4%B8%AD.jpeg" title="谁懂这个「本书仅限受赠者本人阅读」的含金量" >}}
+![谁懂这个「本书仅限受赠者本人阅读」的含金量](https://image.guhub.cn/uPic/2024/12/IMG_2129%E4%B8%AD.jpeg "谁懂这个「本书仅限受赠者本人阅读」的含金量")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2130.jpeg" title="书本的封面" >}}
+![书本的封面](https://image.guhub.cn/uPic/2024/12/IMG_2130.jpeg "书本的封面")
 
 {{</ gallery >}}
 
@@ -33,11 +33,11 @@ aliases:
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2133.jpeg" title="IN LIBRIS LIBERTAS，「书中自由」" >}}
+![IN LIBRIS LIBERTAS，「书中自由」](https://image.guhub.cn/uPic/2024/12/IMG_2133.jpeg "IN LIBRIS LIBERTAS，「书中自由」")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2134.jpeg" title="明信片的背景" >}}
+![明信片的背景](https://image.guhub.cn/uPic/2024/12/IMG_2134.jpeg "明信片的背景")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2135.jpeg" title="数字时代纸笔的意义之一，就是承载回忆吧" >}}
+![数字时代纸笔的意义之一，就是承载回忆吧](https://image.guhub.cn/uPic/2024/12/IMG_2135.jpeg "数字时代纸笔的意义之一，就是承载回忆吧")
 
 {{</ gallery >}}
 
@@ -105,7 +105,7 @@ aliases:
 
 其中，「自我/时间轴」大概是这样的。
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/image-20241215161816132.png" title="自我/时间轴" >}}
+![自我/时间轴](https://image.guhub.cn/uPic/2024/12/image-20241215161816132.png "自我/时间轴")
 
 过去留作纪念的，未来可能会用到的，但看不到当下使用的画面感的；别人留下的，对自己没有特殊意义的物品…… 这些都是可以考虑丢掉的物品。
 

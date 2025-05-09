@@ -24,7 +24,7 @@ draft: false
 
 最可怕的是他们的选拔标准（Evaluation Criteria），分为两个阶段，每个阶段考察不同的能力。从另一个方面看，标准写得清晰算好事，至少心里能有个底。
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/image-20250126154128339.png" >}}
+![](https://image.guhub.cn/uPic/2025/01/image-20250126154128339.png)
 
 可以提炼出三个最重要的能力：
 

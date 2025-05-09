@@ -34,7 +34,7 @@ aliases:
 
 出自：[P 人也要时间管理？2024 的实践小结](https://sspai.com/post/95280) @ 鹅小刀
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/image-20250106083817545.png" >}}
+![](https://image.guhub.cn/uPic/2025/01/image-20250106083817545.png)
 
 1. 想象自己有七张三格长的卡，用他们填上日历上的空格，在这些日子里好好工作、生活，余下的部分就好好摆烂
 2. 每年确定三个主题，「好好生活卡」的每一个空格，都对应一个特定的主题，比如今天主要写作、明天陪陪家人等等
@@ -89,14 +89,14 @@ aliases:
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_0450.JPG" >}}
+![](https://image.guhub.cn/uPic/2025/01/IMG_0450.JPG)
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_1164.JPG" >}}
+![](https://image.guhub.cn/uPic/2025/01/IMG_1164.JPG)
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_1387.JPG" >}}
+![](https://image.guhub.cn/uPic/2025/01/IMG_1387.JPG)
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_2159.JPG" >}}
+![](https://image.guhub.cn/uPic/2025/01/IMG_2159.JPG)
 
-{{< img src="https://image.guhub.cn/uPic/2025/01/IMG_1553.JPG" title="最后，猫猫" >}}
+![最后，猫猫](https://image.guhub.cn/uPic/2025/01/IMG_1553.JPG "最后，猫猫")
 
 {{</ gallery >}}

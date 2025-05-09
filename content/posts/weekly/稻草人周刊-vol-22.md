@@ -23,10 +23,10 @@ toc: true
 Mac Mini 到手的第一件事居然是……
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn/uPic/IMAGE%202025-03-31%2013:32:40.jpg" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3134大.jpeg" >}}
-{{< img src="https://image.guhub.cn//uPic/IMAGE%202025-03-31%2013:32:44.jpg" >}}
-{{< img src="https://image.guhub.cn//uPic/IMAGE%202025-03-31%2013:32:46.jpg" >}}
+![](https://image.guhub.cn/uPic/IMAGE%202025-03-31%2013:32:40.jpg)
+![](https://image.guhub.cn//uPic/IMG_3134大.jpeg)
+![](https://image.guhub.cn//uPic/IMAGE%202025-03-31%2013:32:44.jpg)
+![](https://image.guhub.cn//uPic/IMAGE%202025-03-31%2013:32:46.jpg)
 {{</ gallery >}}
 
 在听 Ariana Grande 的新专辑，《eternal sunshine》的豪华版，加曲《dandelion》很对胃口，这几天一直在循环。

@@ -25,8 +25,8 @@ toc: true
 一时兴起又整理了书桌，丢掉了一些不必要的收纳架，做了些断舍离，现在看起来要舒服不少。还购入了新的盆栽，栀子花和葡萄风信子，但因为还没开花就不发出来了。希望它们能活到开花的那一天吧。
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3386大-2.jpeg" >}}
-{{< img src="https://image.guhub.cn//uPic/IMG_3387大-2.jpeg" >}}
+![](https://image.guhub.cn//uPic/IMG_3386大-2.jpeg)
+![](https://image.guhub.cn//uPic/IMG_3387大-2.jpeg)
 {{</ gallery >}}
 
 ## 📖 本周阅读

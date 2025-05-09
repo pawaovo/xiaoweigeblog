@@ -24,9 +24,9 @@ toc: true
 
 之前写的一篇文章被 [Hsins](https://github.com/hsins) 转发到社交媒体了，于是博客一天内访问量激增，还多出好几条评论。~~产生了一种自己居然火了的幻觉。~~
 
-{{< img src="https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_10-17-46.png" >}}
+![](https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_10-17-46.png)
 
-{{< img src="https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_10-18-04.png" title="我还很在意为什么博客会有 107 个访问来自微信公众号" >}}
+![我还很在意为什么博客会有 107 个访问来自微信公众号](https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_10-18-04.png "我还很在意为什么博客会有 107 个访问来自微信公众号")
 
 博客还因此收获了更多的订阅，甚至[赞助](/sponsor/)，感谢。自己的作品能被看到还能收到回应，对创作者而言是最幸福的事情吧。
 
@@ -96,9 +96,9 @@ toc: true
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2025/05/IMG_5D50FC701F1F-1大.jpeg" >}}
+![](https://image.guhub.cn/uPic/2025/05/IMG_5D50FC701F1F-1大.jpeg)
 
-{{< img src="https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_09-49-18大.jpeg" >}}
+![](https://image.guhub.cn/uPic/2025/05/PixPin_2025-05-05_09-49-18大.jpeg)
 
 {{</ gallery >}}
 

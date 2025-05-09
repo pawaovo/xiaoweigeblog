@@ -125,15 +125,15 @@ tags:
 
 {{< gallery >}}
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2193%E4%B8%AD.jpeg" title="戴少女耳环的珍珠" >}}
+![戴少女耳环的珍珠](https://image.guhub.cn/uPic/2024/12/IMG_2193%E4%B8%AD.jpeg "戴少女耳环的珍珠")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2196%E4%B8%AD.jpeg" title="Apple Pencil 的生产过程" >}}
+![Apple Pencil 的生产过程](https://image.guhub.cn/uPic/2024/12/IMG_2196%E4%B8%AD.jpeg "Apple Pencil 的生产过程")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2199%E4%B8%AD.jpeg" title="我同意" >}}
+![我同意](https://image.guhub.cn/uPic/2024/12/IMG_2199%E4%B8%AD.jpeg "我同意")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_1386%E4%B8%AD.jpeg"  title="细节：做饭的是公鸡而不是母鸡" >}}
+![细节：做饭的是公鸡而不是母鸡](https://image.guhub.cn/uPic/2024/12/IMG_1386%E4%B8%AD.jpeg "细节：做饭的是公鸡而不是母鸡")
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_0451%E4%B8%AD.jpeg"  title="这大概就是解构主义吧" >}}
+![这大概就是解构主义吧](https://image.guhub.cn/uPic/2024/12/IMG_0451%E4%B8%AD.jpeg "这大概就是解构主义吧")
 
 {{</ gallery >}}
 

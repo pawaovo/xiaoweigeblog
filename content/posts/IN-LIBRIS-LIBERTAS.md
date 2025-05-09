@@ -12,7 +12,7 @@ toc: true
 
 <!--more-->
 
-{{< img src="https://image.guhub.cn/uPic/2024/12/IMG_2133.jpeg" title="IN LIBRIS LIBERTAS" >}}
+![](https://image.guhub.cn/uPic/2024/12/IMG_2133.jpeg "IN LIBRIS LIBERTAS")
 
 这份礼物来得恰到好处。2024 年，正好是我 19 年来，读书最多的一年。用它作为我今年读书总结的开头，同时也是我第一次年度读书总结的开头，再合适不过了。
 

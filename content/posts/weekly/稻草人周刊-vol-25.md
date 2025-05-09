@@ -26,18 +26,18 @@ toc: true
 周三的时候决定什么也不做，放松一下，于是早上上完课就出门溜达了。先去了一家书店，点了一杯椰奶 Dirty，拿了一本有意思的小书读。下午去中央公园逛了逛，工作日没什么人，很清静。回宿舍之后给自己冲了一杯花魁，然后吃完饭去上班。
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3404大.jpeg" title="有些猎奇，但很有意思的人类学书籍" >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3402大.jpeg" title="有猫猫陪读" >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3407大.jpeg" title="天气很好" >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3415大.jpeg" title="从这个角度看冲咖啡的过程很惬意" >}}
+![有些猎奇，但很有意思的人类学书籍](https://image.guhub.cn/uPic/IMG_3404大.jpeg "有些猎奇，但很有意思的人类学书籍")
+![有猫猫陪读](https://image.guhub.cn/uPic/IMG_3402大.jpeg "有猫猫陪读")
+![天气很好](https://image.guhub.cn/uPic/IMG_3407大.jpeg "天气很好")
+![从这个角度看冲咖啡的过程很惬意](https://image.guhub.cn/uPic/IMG_3415大.jpeg "从这个角度看冲咖啡的过程很惬意")
 {{</ gallery >}}
 
 这周还做了一个卡牌游戏的 prototype，上班的时候摸鱼和学生以及同事玩了玩，得到了不错的评价。玩的过程很欢乐，虽然机制硬核到每个玩家都要拿拿计算器一直算分数，但掷骰子和算倍率挺爽的。
 
 {{< gallery >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3440大.jpeg" >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_3444大.jpeg" >}}
-{{< img src="https://image.guhub.cn/uPic/IMG_0321大.jpeg" >}}
+![](https://image.guhub.cn/uPic/IMG_3440大.jpeg)
+![](https://image.guhub.cn/uPic/IMG_3444大.jpeg)
+![](https://image.guhub.cn/uPic/IMG_0321大.jpeg)
 {{</ gallery >}}
 
 但问题是，我怎么自己一次都没赢过啊！
