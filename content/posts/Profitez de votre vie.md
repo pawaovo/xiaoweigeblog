@@ -4,7 +4,7 @@ title: Profitez de votre vie.
 tags:
   - 语言
   - 旧博客文章
-  - 法语
+  - français
 ---
 
 
