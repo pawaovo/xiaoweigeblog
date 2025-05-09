@@ -38,7 +38,7 @@
         <h2>推荐好书</h2>
         <div class="book-group">
         {{ range where (where .Site.RegularPages "Section" "library") ".Params.rating" "==" 5 }}
-            <div class="book goodbook">
+            <div class="book">
             <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
                 <img
                     class="lazy" src="{{ .Params.cover }}"
