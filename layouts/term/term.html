@@ -4,8 +4,10 @@
         {{ partial "components/breadcrumbs.html" . }}
 
         <div class="term-list">
+
+            <!-- Posts under this Term -->
             <ul class="term-list-posts">
-                {{ range where .Pages "Section" "ne" "cards" }}
+                {{ range where .Pages "Section" "not in" (slice "cards" "library") }}
                 <li>
                     <a href="{{ .RelPermalink }}" data-umami-event="Click Post Link from Category Page">
                         {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
@@ -17,6 +19,9 @@
                 </li>
                 {{ end }}
             </ul>
+
+            <!-- Cards under this Term -->
+            <h2>{{ T "termPage.cards" }}</h2>
             <div class="term-list-cards cards-section outbox small">
                 {{ range where .Pages "Section" "eq" "cards" }}
                 <div class="card">
@@ -28,6 +33,20 @@
                     <p>{{ .Summary }}</p>
                 </div>
                 {{ end }}
+            </div>
+
+            <!-- Books under this Term -->
+            <h2>{{ T "termPage.books" }}</h2>
+            <div class="book-group">
+              {{ range where .Pages "Section" "eq" "library" }}
+                <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
+                    <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                        <img
+                            class="lazy" src="{{ .Params.cover }}"
+                            style="view-transition-name: book-{{ .File.UniqueID }}" />
+                    </a>
+                </div>
+              {{ end }}
             </div>
         </div>
     </article>

@@ -19,3 +19,6 @@ moreLinks:
   cards: 'All Cards'
 relatedContent: 'Related Content'
 backToHome: 'Back To Home'
+termPage:
+  cards: 'Cards about this topic'
+  books: "Books I've read about this topic"
