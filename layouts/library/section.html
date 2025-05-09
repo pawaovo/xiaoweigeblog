@@ -1,23 +1,53 @@
 {{ define "main" }}
-    {{ partial "header.html" . }}
-    <article id="library">
-      <div id="library-content">
-        {{ range .Pages.GroupByDate "2006" }}  <!-- 按年份分组 -->
-          <h2>{{ .Key }}</h2>  <!-- 显示年份 -->
-          <div class="book-group">
-            {{ range .Pages }}
+  {{ partial "header.html" . }}
+  <article id="library">
+    <div id="library-content">
+
+        <h2>{{ now.Year }} 年读的书</h2>
+        <div class="book-group">
+          {{ range where .Site.RegularPages "Section" "library" }}
+            {{ if eq .Date.Year now.Year }}
               <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
-                  <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                      <img src="{{ .Params.cover }}!thumbnail"
-                          class="lazy" data-src="{{ .Params.cover }}"
-                          style="view-transition-name: book-{{ .File.UniqueID }}" />
-                  </a>
+                <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                  <img
+                      class="lazy" src="{{ .Params.cover }}"
+                      style="view-transition-name: book-{{ .File.UniqueID }}" />
+                </a>
               </div>
             {{ end }}
-          </div>
+          {{ end }}
+        </div>
+
+        {{ $years := slice }}
+        {{ range where .Site.RegularPages "Section" "library" }}
+        {{ $year := string .Date.Year }}
+        {{ if not (in $years $year) }}
+            {{ $years = $years | append $year }}
         {{ end }}
-        <p>关于 2024 年的更多书目，请阅读《<a href="/posts/in-libris-libertas/#%E4%BB%8A%E5%B9%B4%E7%9A%84%E4%B9%A6%E5%8D%95">IN LIBRIS LIBERTAS</a>》</p>
-      </div>
-    </article>
-    {{ partial "footer.html" . }}
+        {{ end }}
+
+        <div class="markdown-body">
+            <p>往年书单：
+              {{ $currentYear := printf "%d" now.Year }}
+              {{ range $years }}
+                {{ if ne . $currentYear }}<a href="{{ printf "/library/%s/" . }}">{{ . }} 年</a>{{ end }}
+              {{ end }}
+            </p>
+        </div>
+
+        <h2>推荐好书</h2>
+        <div class="book-group">
+        {{ range where (where .Site.RegularPages "Section" "library") ".Params.rating" "==" 5 }}
+            <div class="book goodbook">
+            <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                <img
+                    class="lazy" src="{{ .Params.cover }}"
+                    style="view-transition-name: book-{{ .File.UniqueID }}" />
+            </a>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+  </article>
+  {{ partial "footer.html" . }}
 {{ end }}

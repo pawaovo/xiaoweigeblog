@@ -1,0 +1,23 @@
+{{ define "main" }}
+    {{ partial "header.html" . }}
+    <article id="library">
+      <div id="library-content">
+          <h2>{{ .Title }}</h2>  <!-- 显示年份 -->
+          <div class="book-group">
+            {{ $year := .Title }}
+            {{ range where .Site.RegularPages "Section" "library" }}
+              {{ if eq (printf "%d" .Date.Year) $year }}
+              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
+                  <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
+                      <img src="{{ .Params.cover }}!thumbnail"
+                          class="lazy" data-src="{{ .Params.cover }}"
+                          style="view-transition-name: book-{{ .File.UniqueID }}" />
+                  </a>
+              </div>
+              {{ end }}
+            {{ end }}
+          </div>
+      </div>
+    </article>
+    {{ partial "footer.html" . }}
+{{ end }}
