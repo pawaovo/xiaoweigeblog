@@ -1,9 +1,10 @@
 ---
-title: "How to Deal With Idiots"
+title: How to Deal With Idiots
 rating: 3
 cover: https://image.guhub.cn/uPic/2024/12/image-20241212221336611.png
-date: 2024-04-01
+date: 2024-10-15T00:00:00
 tags:
+  - 人际交往
 ---
 
 ~~学到了很多 idiots 的同义词~~

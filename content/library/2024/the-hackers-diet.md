@@ -1,9 +1,11 @@
 ---
-title: "The Hacker's Diet"
+title: The Hacker's Diet
 rating: 3
 cover: https://image.guhub.cn/uPic/2024/12/image-20241212160225866.png
-date: 2024-04-01
+date: 2024-08-05T00:00:00
 tags:
+  - 健康
+  - Geek
 ---
 
 没出版的电子书，作者很厉害，是 Autodesk 的创始人。他用计算机和工程学的思想控制自己的体重，这本书讲他使用的系统，这套系统帮他在短时成功脱离肥胖，并且没有反弹过。
