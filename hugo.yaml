@@ -82,6 +82,7 @@ markup:
     tabWidth: 2
 
 params:
+  author: Eltrac
   mainSections:
     - posts
     - fictions
