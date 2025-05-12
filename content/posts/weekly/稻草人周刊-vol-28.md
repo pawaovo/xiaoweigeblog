@@ -1,22 +1,40 @@
 ---
 title: 稻草人周刊 Vol.28
-subtitle: 
-description: 
-tags: 
-related_cards: 
-date: 2025-05-11T22:19:00
+subtitle: 你更有可能死在自己的生日
+tags:
+  - 游戏开发
+  - 叙事
+  - 道德
+  - AI
+  - 设计
+  - 创作
+  - 效率
+  - 写作
+  - 死亡
+date: 2025-05-12T11:17:00
 categories: 稻草人周刊
-banner: 
-draft: true
+banner: https://image.guhub.cn//uPic/202505121117-weekly28-banner.jpeg
+draft: false
 toc: true
 ---
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/naked-in-manhattan/1698723205?i=1698723328"></iframe>
+
 这首歌歌词里的 Constant like cicadas in the summertime（像夏日蝉鸣一样连续不断）被我听成了 Nonsense like gaydars in the summertime（像夏天的 gay 达一样纯属胡扯）——因为这首歌是 Chappell 的所以我一度觉得非常合理。<!--more-->
 
 ## 🙋 在做什么
 
-![](https://image.guhub.cn//uPic/202505112229-my-desk.jpeg)
+到了每周的审问环节才发现自己在这七天里好像什么都没干，就是很平常地生活，甚至带着一些伴随初夏一起出现的烦躁不安（不过实际上还没到夏天吧）。
+
+值得说道的可能是这几天做了些断舍离，该扔的扔了，可以送人的送了（鬼知道我怎么囤这么多咖啡豆罐子、票据，甚至还有衣服吊牌）。买了个桌面增高架，调整了一下布局，也理了线，现在如果不给设备充电的话，几乎是看不到什么线的（留下来的几个咖啡豆罐子也能遮挡一下线缆，原谅自己囤垃圾了）。
+
+{{< gallery >}}
+![](https://image.guhub.cn//uPic/202505112229-my-desk.jpeg "原来我断舍离之后还是有这么多东西")
+
+![](https://image.guhub.cn//uPic/202505121107-enderman-plush.jpeg "看到这个怎么能忍住不买")
+{{</ gallery >}}
+
+另外，我的英文博客时隔一个多月终于更新了，欢迎你来读一读：[Take Ugly Notes and Do Pretty Work](/en/posts/take-ugly-notes-do-pretty-work/)
 
 ## 💬 本期杂谈
 
@@ -29,6 +47,8 @@ toc: true
 作者认为，无论是游戏设计还是一般意义上的叙事，道德本身并不会拉进故事与玩家个人的距离。如果故事总是给出非黑即白的选项，那么玩家的抉择就是一种「伪抉择」，因为大多数人都能分清好与坏，那样的叙事只是让玩家选择要么当个老好人，要么抱着一种猎奇的心理使坏。
 
 想让抉择变得有意义，那就要关注**抉择的结果**，而不是抉择的道德意义，前者才是举足轻重的东西。
+
+[#游戏开发](/tags/游戏开发) [#叙事](/tags/叙事/) [#道德](/tags/道德/) 
 
 ### 不聊天的 AI
 
@@ -59,6 +79,8 @@ toc: true
 
 不得不说，在人们表达能力日益下降的今天，用精心设计的 UI 规避用户不会写提示词的痛点，是一个非常聪明的做法。
 
+[#AI](/tags/AI/) [#设计](/tags/设计/)
+
 ### 创造是不刻意创造的结果
 
 {{< callout "文章链接：[The 80-Hour Myth (Why We’re Addicted To Being Busy)](https://thedankoe.com/letters/the-80-hour-myth-why-were-addicted-to-being-busy/)" "📜" >}}
@@ -78,6 +100,8 @@ toc: true
 
 作者还认为拖延不是懒惰，而是人类的机制（How we are wired）。拖延、分心、放空，让自己从专注状态中脱离一段时间，刻意地休息，能给工作带来更多想法，提升效率和质量。作者提倡「像狮子一样工作」，关注自己的在乎的事情，受到强大的欲望推动，在短时间内高强度地完成工作，然后停下来休息。
 
+[#创作](/tags/创作/) [#效率](/tags/效率/)
+
 ### 我宁愿读提示词
 
 {{< callout "文章链接：[I'd rather read the prompt](https://claytonwramsey.com/blog/prompt/)" "📜" >}}
@@ -92,6 +116,8 @@ toc: true
 
 总的来说，作者认为创作的意义就在于**分享个人体验**——如果没有体验，为什么还要写出来？如果一个东西都不值得人自己写，那也不值得读。
 
+[#AI](/tags/AI/) [#创作](/tags/创作/) [#写作](/tags/写作/)
+
 ### 你更有可能死在自己的生日吗？
 
 {{< callout "文章链接：[Are you more likely to die on your birthday?](https://pudding.cool/2025/04/birthday-effect/)" "📜" >}}
@@ -100,11 +126,10 @@ toc: true
 
 具体的论述可以阅读原文，我的数理统计知识较匮乏，不太能写得明白。
 
-作者用了很多不同的数理统计方法证明这个观点，每次的结果都有些差异，他在最后写道，研究的结果会因为我们采用的不同方法而产生差异。我在《[为何以及如何建立自己的信任链](/posts/为何以及如何建立自己的信任链/)》中写道，普通人在略读参考文献时，应当关注被采用的研究方法。
+作者用了很多不同的数理统计方法证明这个观点，每次的结果都有些差异，他在最后写道，研究的结果会因为我们采用的不同方法而产生差异。我在《[为何以及如何建立自己的信任链](/posts/为何以及如何建立自己的信任链/)》中写道，普通人在阅读参考文献时，应当关注被采用的研究方法。
 
-## 💡 新知复盘
-
+[#死亡](/tags/死亡/) <span style="font-size:80%">想不到这段内容也能归到死亡这个标签下</span>
 
 ## 🗣️ 碎碎念
 
-
+没话写，在思考我究竟还需不需要在周刊设置一个「碎碎念」栏目。
