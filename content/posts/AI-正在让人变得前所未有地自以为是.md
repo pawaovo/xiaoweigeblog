@@ -1,9 +1,10 @@
 ---
 title: AI 正在让人变得前所未有地自以为是
 tags:
-    - AI
-    - 认知
-    - 编程
+  - AI
+  - 认知
+  - 编程
+  - 工程
 date: 2025-04-02 13:33:10
 draft: false
 toc: true
