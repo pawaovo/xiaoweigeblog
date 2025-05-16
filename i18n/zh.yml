@@ -14,6 +14,7 @@ postNav:
   latest: '最新'
   categories: '专栏'
   tags: '标签'
+  featured: '精选'
 cards: 最近在学
 moreLinks:
   posts: '所有文章'

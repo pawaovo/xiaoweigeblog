@@ -14,6 +14,7 @@ postNav:
   latest: 'Latest'
   categories: 'Categories'
   tags: 'Tags'
+  featured: 'Featured'
 moreLinks:
   posts: 'All Posts'
   cards: 'All Cards'

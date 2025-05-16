@@ -1,0 +1,44 @@
+{{ define "main" }}
+    <article class="index">
+      {{ partial "header.html" . }}
+      {{ partial "components/postnav.html" . }}
+
+      <!-- Latest Posts -->
+      <section id="featured-posts">
+          <div class="posts-list">
+              {{ range where site.RegularPages "Params.featured" true }}
+              <div class="posts-item"
+                  style="view-transition-name: post-{{ .File.UniqueID }}">
+                  <header>
+                      <div class="posts-item-meta">
+                          <time>
+                              {{ .Date.Format "Jan 2" }}
+                          </time>
+                          <h2 class="posts-item-title">
+                              <a
+                                  href="{{ .Permalink }}"
+                                  data-umami-event="Click post link from featured"
+                              >
+                                  {{ if eq .Section "library" }}
+                                      读《{{ .Title }}》
+                                  {{ else }}
+                                      {{ .Title }}
+                                  {{ end }}
+                              </a>
+                          </h2>
+                      </div>
+                      {{ with .Params.categories }}
+                      <div class="posts-item-category">
+                          <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
+                              {{ . }}
+                          </a>
+                      </div>
+                      {{ end }}
+                  </header>
+              </div>
+              {{ end }}
+          </div>
+      </section>
+    </article>
+{{ partial "footer.html" . }}
+{{ end }}
