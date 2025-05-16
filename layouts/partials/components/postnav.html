@@ -4,7 +4,7 @@
             <a href="{{ .Site.LanguagePrefix }}/">{{ T "postNav.latest" }}</a>
         </li>
         {{ if eq .Site.Language.Lang "zh" }}
-        <li class="{{ if eq "/featured" $.Page.RelPermalink }}active{{ end }}">
+        <li class="{{ if eq "/featured/" $.Page.RelPermalink }}active{{ end }}">
             <a href="{{ .Site.LanguagePrefix }}/featured">{{ T "postNav.featured" }}</a>
         </li>
         <li class="{{ if eq "/categories/" $.Page.RelPermalink }}active{{ end }}">
