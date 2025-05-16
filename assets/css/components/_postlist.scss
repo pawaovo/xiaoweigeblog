@@ -29,6 +29,10 @@
                     color: var(--secondary-text-color);
                     font-family: var(--mono-font-family);
                 }
+                a.post-tag {
+                    color: var(--secondary-text-color);
+                    font-size: 0.8rem;
+                }
                 .posts-item-title {
                     filter: url(#xs);
                     .posts-item-title-pill {

@@ -3,6 +3,10 @@
       {{ partial "header.html" . }}
       {{ partial "components/postnav.html" . }}
 
+      <div class="post-content markdown-content">
+          {{ .Content }}
+      </div>
+
       <!-- Latest Posts -->
       <section id="featured-posts">
           <div class="posts-list">
@@ -11,9 +15,15 @@
                   style="view-transition-name: post-{{ .File.UniqueID }}">
                   <header>
                       <div class="posts-item-meta">
-                          <time>
-                              {{ .Date.Format "Jan 2" }}
-                          </time>
+                          <p>
+                              <time>
+                                  {{ .Date.Format "Jan 2, 2006" }}
+                              </time>
+                              <span>·</span>
+                              {{ range .Params.tags }}
+                              <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
+                              {{ end }}
+                          </p>
                           <h2 class="posts-item-title">
                               <a
                                   href="{{ .Permalink }}"
