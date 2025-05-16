@@ -17,6 +17,9 @@ markup:
     noClasses: true
     style: catppuccin-macchiato
     tabWidth: 2
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
 
 services:
   rss:
