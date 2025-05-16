@@ -8,10 +8,7 @@
     left: auto;
     height: 100%;
     top: 12rem;
-}
-
-@media screen and (max-width: 1200px) {
-    #toc-container {
+    @media screen and (max-width: 1200px) {
         display: none
     }
 }
@@ -23,70 +20,58 @@
     /* styling */
     font-size: 1rem;
     padding: 0 2rem;
-}
-
-@media screen and (max-width: 1700px) {
-    #toc {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    #toc {
+    @media screen and (max-width: 1500px) {
         font-size: 0.825rem;
     }
-}
 
-#toc ul, #toc ol {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 1rem;
-}
+    ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 1rem;
 
-#toc li {
-    list-style: none;
-}
+        overflow: hidden;
+        position: relative;
+        li {
+            list-style: none;
 
-#toc li > a {
-    color: var(--secondary-text-color);
-    text-decoration: none;
-    transition: color .3s;
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-}
+            & > a {
+                color: var(--secondary-text-color);
+                text-decoration: none;
+                transition: color .3s;
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1rem;
+                    height: .3rem;
+                    background-color: var(--block-background-color);
+                    border-radius: .2rem;
+                    transition: background .3s;
+                }
+            }
 
-#toc li > a::before {
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: .3rem;
-    background-color: var(--block-background-color);
-    border-radius: .2rem;
-    transition: background .3s;
-}
+            /* nested list */
+            ul {
+                max-height: 25rem;
+                overflow-y: auto
+            }
 
-#toc li a:hover,
-#toc li.active > a {
-    color: var(--text-color);
-}
+            /* active styles */
+            &:not(.active) ul {
+                max-height: 0
+            }
+            a:hover,
+            &.active > a {
+                color: var(--text-color);
+            }
 
-#toc li.active > a::before {
-    background-color: var(--secondary-text-color);
-}
-
-#toc ul {
-	overflow: hidden;
-	position: relative;
-}
-
-#toc .toc-list ul {
-    max-height: 25rem;
-	overflow-y: auto
-}
-
-#toc li:not(.active) ul {
-	max-height: 0
+            &.active > a::before {
+                background-color: var(--secondary-text-color);
+            }
+        }
+    }
 }
 </style>
 <script>
