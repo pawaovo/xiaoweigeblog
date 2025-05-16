@@ -9,7 +9,7 @@ postPage:
 footer:
   wordCount: '🪦 {{ . }} 字在这里死去'
   licenseStatement: '以 {{ . }} 协议授权'
-searchInstruction: '⌘+K 在任何地方搜索'
+searchInstruction: '⌘+K 搜索'
 postNav:
   latest: '最新'
   categories: '专栏'
