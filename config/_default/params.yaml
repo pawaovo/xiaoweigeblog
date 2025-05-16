@@ -22,8 +22,8 @@ footerExternalLinks:
 footerInternalLinks:
   - name: blogroll
     link: /blogroll/
-  - name: about
-    link: /about/
+  - name: sponsor
+    link: /sponsor/
 giscus:
   repo: BigCoke233/geek-death-project
   repoId: R_kgDONPoyVw
