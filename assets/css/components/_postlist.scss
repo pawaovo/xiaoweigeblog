@@ -25,13 +25,15 @@
             }
 
             .posts-item-meta {
-                time {
+                p, time {
                     color: var(--secondary-text-color);
+                }
+                time {
                     font-family: var(--mono-font-family);
                 }
                 a.post-tag {
-                    color: var(--secondary-text-color);
                     font-size: 0.8rem;
+                    color: var(--secondary-text-color);
                 }
                 .posts-item-title {
                     filter: url(#xs);
