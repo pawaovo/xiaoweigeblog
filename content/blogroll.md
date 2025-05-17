@@ -26,6 +26,13 @@ aliases:
 - [Randy's Blog](https://lutaonan.com/)
 - [Taxodium](https://taxodium.ink/)
 
+## 我常听的中文播客
+
+- [独树不成林](https://podcasts.apple.com/cn/podcast/%E7%8B%AC%E6%A0%91%E4%B8%8D%E6%88%90%E6%9E%97/id1711052890)
+- [碳基生物生存指南](https://podcasts.apple.com/cn/podcast/%E7%A2%B3%E5%9F%BA%E7%94%9F%E7%89%A9%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/id1707385930)
+- [没理想编辑部](https://podcasts.apple.com/cn/podcast/%E6%B2%A1%E7%90%86%E6%83%B3%E7%BC%96%E8%BE%91%E9%83%A8/id1494093522)
+- [狐说巴道烫](https://podcasts.apple.com/cn/podcast/%E7%8B%90%E8%AF%B4%E5%B7%B4%E9%81%93%E7%83%AB/id1785346634)
+
 ---
 
 Check out some cool English sites [here](/en/blogroll).

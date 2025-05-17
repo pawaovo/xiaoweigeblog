@@ -39,14 +39,14 @@ date: 2024-11-27
 
 ## 其他你或许想要知道的
 
-### 这个博客的内容是怎么划分的
+### 这个博客的内容是怎么划分的?
 
 如果你想要了解博客的设计思想，包括内容划分和表现形式，可以寻找标题中包含「极客死亡计划书」的文章，了解我在开发博客主题和设计内容分区时的所思所想。
 
 - [极客死亡计划书](/posts/极客死亡计划书/)
 - [极客死亡计划书 II](/posts/极客死亡计划书-ii/)
 
-### 这个博客是怎么创建的
+### 这个博客是怎么创建的?
 
 使用 Hugo 生成静态网站，托管在 Cloudflare Pages 上，外观是用 [yinyang](https://github.com/joway/hugo-theme-yinyang) 主题修改的。博客[开源](https://github.com/BigCoke233/geek-death-project)，代码通过 MIT 协议授权，博客内容通过 [Creative Commons - BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议授权。
 
@@ -76,7 +76,7 @@ date: 2024-11-27
 
 ---
 
-## 其他
+## 鸣谢
 
 网站的图标来源：
 
