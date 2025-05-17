@@ -1,6 +1,6 @@
 {{ $url := .Destination | safeURL }}
 {{ if or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}
-  <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .Text | safeHTML }}</a>
+  <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .Text }}<span class="link-icon"><img class="invert-if-dark" src="/img/external-link.svg"></span></a>
 {{ else }}
-  <a href="{{ $url }}">{{ .Text | safeHTML }}</a>
+  <a href="{{ $url }}">{{ .Text }}</a>
 {{ end }}

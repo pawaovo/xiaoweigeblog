@@ -142,3 +142,12 @@ $em-text-color: #889E73;
       max-width: 100%;
   }
 }
+
+/* additional elements */
+
+.link-icon img {
+    width: 0.8em;
+    height: 0.8em;
+    display: inline;
+    opacity: 0.7;
+}
