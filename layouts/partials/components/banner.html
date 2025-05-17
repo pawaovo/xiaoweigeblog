@@ -1,9 +1,8 @@
 {{ with .Params.banner }}
 <div class="post-banner">
     <img
-        class="lazy"
-        src="{{ . }}!thumbnail"
-        data-src="{{ . }}"
+        class="lazy" loading="lazy"
+        src="{{ . }}"
     >
 </div>
 <style>

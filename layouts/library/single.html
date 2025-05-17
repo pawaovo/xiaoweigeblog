@@ -4,9 +4,8 @@
             <div class="book-cover"
                 style="view-transition-name: book-{{ .File.UniqueID }}">
                 <img
-                    class="lazy"
-                    src="{{ .Params.cover }}!thumbnail"
-                    data-src="{{ .Params.cover }}"
+                    class="lazy" loading="lazy"
+                    src="{{ .Params.cover }}"
                 />
             </div>
             <h1 class="book-title">{{ .Title }}</h1>
