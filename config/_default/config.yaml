@@ -15,7 +15,7 @@ markup:
   highlight:
     guessSyntax: true
     noClasses: true
-    style: catppuccin-macchiato
+    style: evergarden
     tabWidth: 2
   tableOfContents:
     startLevel: 2
