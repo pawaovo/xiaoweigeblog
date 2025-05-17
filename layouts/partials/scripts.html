@@ -3,11 +3,6 @@
   <script src="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"></script>
 {{- end }}
 
-{{- $lazyload := resources.Get "js/lazyload.js" | minify }}
-{{- if $lazyload }}
-  <script>{{ $lazyload.Content | safeJS }}</script>
-{{- end }}
-
 {{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") }}
   <script src="/js/fancybox.umd.js"></script>
   <script>Fancybox.bind("[data-fancybox]");</script>
