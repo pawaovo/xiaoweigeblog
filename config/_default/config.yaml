@@ -29,6 +29,7 @@ outputs:
     - HTML
     - calheatmap
     - RSS
+    - Sitemap
 outputFormats:
   calheatmap:
     mediaType: application/json
