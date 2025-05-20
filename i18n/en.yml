@@ -18,7 +18,7 @@ postNav:
 moreLinks:
   posts: 'All Posts'
   cards: 'All Cards'
-relatedContent: 'Related Content'
+nowReadThis: 'Now Read This'
 backToHome: 'Back To Home'
 termPage:
   cards: 'Cards about this topic'

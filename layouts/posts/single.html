@@ -48,23 +48,24 @@
       <!-- Comment -->
       {{ partial "components/comment.html" . }}
 
-      <!-- Related Posts -->
-      {{ with site.RegularPages.Related . | first 3 }}
-      <div class="related-posts post-content">
-        <h4>{{ T "relatedContent" }}</h4>
-        <ul class="related-posts-list">
+      <!-- Now Read This -->
+      {{ with site.RegularPages.Related . | first 1 }}
+      <div class="nrt post-content">
+        <h4 class="nrt-title">{{ T "nowReadThis" }}</h4>
         {{ range . }}
-            <li class="related-posts-item">
-                <a href="{{ .RelPermalink }}" data-umami-event="Click Related Post">
-                    {{ .LinkTitle }}
-                    {{ with .Params.subtitle }}
-                        <span class="related-post-subtitle">：{{ . }}</span>
-                    {{ end }}
-                </a>
-                <span class="related-post-reading-time">⏱️ {{ .ReadingTime }}min </span>
-            </li>
+        <div class="nrt-header">
+            <a class="nrt-link" href="{{ .RelPermalink }}" data-umami-event="Click Related Post">
+                {{ .LinkTitle }}
+                {{ with .Params.subtitle }}
+                    <span class="nrt-subtitle">：{{ . }}</span>
+                {{ end }}
+            </a>
+            <span class="nrt-reading-time">⏱️ {{ .ReadingTime }}min </span>
+        </div>
+        <div class="nrt-summary">
+            <p>{{ .Summary | plainify }}</p>
+        </div>
         {{ end }}
-        </ul>
       </div>
       {{ end }}
     </article>

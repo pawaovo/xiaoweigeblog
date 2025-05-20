@@ -19,7 +19,7 @@ cards: 最近在学
 moreLinks:
   posts: '所有文章'
   cards: '所有卡片'
-relatedContent: '相关文章'
+nowReadThis: '接下来阅读'
 backToHome: '返回首页'
 termPage:
   cards: '相关卡片'

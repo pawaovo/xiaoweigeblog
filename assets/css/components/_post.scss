@@ -96,48 +96,27 @@
 
 /* related posts */
 
-.related-posts {
-    .related-posts-list {
-        padding-inline-start: 0;
-        .related-posts-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .related-post-subtitle {
-                color: var(--secondary-text-color);
-            }
-            .related-post-reading-time {
-                font-family: var(--mono-font-family);
-                color: var(--secondary-text-color);
-                font-size: 0.9rem;
-            }
-        }
-    }
-}
-
-.post-bottom-navigation {
-    ul {
-        list-style: none;
-        padding: 0;
+.nrt {
+    margin-top: 5rem;
+    position: relative;
+    .nrt-title {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        font-size: 2rem;
         margin: 0;
+        opacity: .25;
+        font-style: italic;
+    }
+    .nrt-header {
         display: flex;
-        gap: 0.5rem;
         justify-content: space-between;
-        align-items: center;
-        li {
-            &:not(:nth-child(2)) {
-                width: 37.5%;
-            }
-            &:nth-child(3) {
-                text-align: right;
-            }
-            a {
-                color: var(--secondary-text-color);
-                text-decoration: none;
-                &:hover {
-                    color: var(--primary-color);
-                }
-            }
+        .nrt-link {
+            font-weight: 800;
+        }
+        .nrt-reading-time {
+            color: var(--secondary-text-color)
         }
     }
 }
