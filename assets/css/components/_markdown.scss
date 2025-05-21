@@ -28,6 +28,17 @@ $em-text-color: #889E73;
   a {
     text-decoration: underline;
     color: $link-color;
+    &.external-link::after {
+        content: '';
+        display: inline-block;
+        width: 0.9em;
+        height: 0.9em;
+        background-image: url('/img/external-link.svg');
+        background-size: cover;
+        @media (prefers-color-scheme: dark) {
+            filter: invert(1);
+        }
+    }
   }
 
   blockquote {
