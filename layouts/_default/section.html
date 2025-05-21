@@ -2,7 +2,7 @@
     <article class="posts">
       {{ partial "header.html" . }}
       <div id="posts-archive" class="posts-list">
-        {{ partial "components/heatmap.html" . }}
+        {{ partial "components/wordCountChart.html" . }}
         <!-- Post Archive List -->
         {{ $first := true }}  <!-- 在循环外定义一次 $first 变量 -->
         {{ range (where site.RegularPages "Type" "eq" "posts").GroupByDate "2006" -}}
