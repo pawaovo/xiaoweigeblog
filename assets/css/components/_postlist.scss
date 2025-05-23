@@ -89,7 +89,7 @@
             &.active {
                 font-weight: bolder
             }
-            a {
+            a:not(.no-button) {
                 @include small-button;
             }
         }
