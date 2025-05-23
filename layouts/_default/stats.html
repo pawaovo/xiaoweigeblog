@@ -20,6 +20,7 @@
         margin-bottom: 0.2rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .rank-item-link {
         display: inline-flex;
@@ -29,6 +30,9 @@
     .rank-item-link img {
         width: 1rem;
         height: 1rem;
+    }
+    .rank-item-count {
+        color: var(--secondary-text-color);
     }
     .rank-item-bar {
         background-color: rgba(103,173,91,0.35);
@@ -49,41 +53,49 @@
             {{ .Content }}
         </div>
 
-        <h2>内部链接图谱</h2>
-        <div class="outbox small">
-            <iframe src="https://geedea.pro/graph"
-                style="width:100%;height: 30rem;border-radius:5px;border:none"></iframe>
-        </div>
+        <section>
+            <h2>内部链接图谱</h2>
+            <p>站内各个页面之间通过超链接建立起来的联系，你可以通过视觉化的双向链接逛逛我的博客。图谱可以缩放和拖拽，你也可以<a href="/graph" style="text-decoration: underline;">点击这里</a>全屏浏览。</p>
+            <div class="outbox small">
+                <iframe src="https://geedea.pro/graph"
+                    style="width:100%;height: 30rem;border-radius:5px;border:none"></iframe>
+            </div>
+        </section>
 
-        <h2>外部链接排行</h2>
+        <hr>
 
-        {{/* Find the maximum link count */}}
-        {{ $max := 0 }}
-        {{ range .Site.Data.externallinks }}
-            {{ if gt (index . 1) $max }}
-                {{ $max = index . 1 }}
+        <section>
+            <h2>外部链接排行</h2>
+            <p>我在页面中嵌入的外部链接主要来自以下域名，引用次数少于 3 的已被排除。</p>
+
+            {{/* Find the maximum link count */}}
+            {{ $max := 0 }}
+            {{ range .Site.Data.externallinks }}
+                {{ if gt (index . 1) $max }}
+                    {{ $max = index . 1 }}
+                {{ end }}
             {{ end }}
-        {{ end }}
 
-        <ol id="external-link-rank">
-        {{ range .Site.Data.externallinks }}
-            {{ $label := index . 0 }}
-            {{ $count := index . 1 }}
-            {{ if gt $count 2 }}
-                {{ $percent := div (mul $count 100) $max }}
-                <li class="rank-item">
-                    <div class="rank-item-text">
-                        <a class="rank-item-link" href="https://{{ $label }}/" target="_blank">
-                            <img src="https://favicone.com/{{ $label }}?s=50" />
-                            {{ $label }}
-                        </a>
-                        <span>{{ $count }}</span>
-                    </div>
-                    <div class="rank-item-bar" style="width:{{ $percent }}%"></div>
-                </li>
+            <ol id="external-link-rank">
+            {{ range .Site.Data.externallinks }}
+                {{ $label := index . 0 }}
+                {{ $count := index . 1 }}
+                {{ if gt $count 2 }}
+                    {{ $percent := div (mul $count 100) $max }}
+                    <li class="rank-item">
+                        <div class="rank-item-text">
+                            <a class="rank-item-link" href="https://{{ $label }}/" target="_blank">
+                                <img src="https://favicone.com/{{ $label }}?s=50" />
+                                {{ $label }}
+                            </a>
+                            <span class="rank-item-count font-mono">{{ $count }}</span>
+                        </div>
+                        <div class="rank-item-bar" style="width:{{ $percent }}%"></div>
+                    </li>
+                {{ end }}
             {{ end }}
-        {{ end }}
-        </ol>
+            </ol>
+        </section>
     </article>
     {{ partial "footer.html" . }}
 {{ end }}
