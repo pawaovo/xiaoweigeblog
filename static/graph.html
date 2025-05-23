@@ -72,6 +72,7 @@
             const node = nodes.get(params.nodes[0]);
             if (node.url) {
               window.open(node.url, "_blank");
+              umami.track('Visit page through Graph')
             }
           }
         });
