@@ -1,6 +1,8 @@
 ---
 title: 稻草人周刊 Vol.26
 subtitle: 危险的图书管理员
+endnotes:
+  - 封面图自摄，设备为 iPhone 15 Pro
 tags:
   - 阅读
   - 时间管理
@@ -13,7 +15,7 @@ banner: https://image.guhub.cn//uPic/daisies-outside-the-sports-field.jpeg
 draft: false
 toc: true
 ---
- 
+
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/what-was-that/1809638073?i=1809638075"></iframe>
 
 Lady Gaga 的《Mayhem》和 Coachella 音乐节表现之后，Lorde 就发布了新单曲，欧美乐迷今年也吃得太好了吧。[^1]<!--more-->
@@ -104,10 +106,6 @@ Lady Gaga 的《Mayhem》和 Coachella 音乐节表现之后，Lorde 就发布�
 - 我到底是怎么把「Constant like cicadas in summertime」这句话听成「Nonsense like gaydars in the summertime」还觉得很合理一直没听出问题的 😓（出自歌曲《Pink Pony Club》）
 - 做游戏最害怕的大概就是有人说不好玩了，但想了想，如果朋友表面跟我说好玩，在别人面前说不喜欢，那大概才是最令人伤心的。
 - 看大家都给自己的网站添加了 [Now 页面](https://nownownow.com)，自己也有点馋，但转念一想，发现自己的周刊其实就已经充当了这个功能了。
-
----
-
-封面图自摄，设备为 iPhone 15 Pro
 
 [^1]: 建议 Taylor Swift 立马惊喜释出《reputation》重录版。
 [^2]: 我现在在想自己是不是无意识地在《[Heart Hunter](/posts/为战斗献上心脏/)》里用到了这个设计。

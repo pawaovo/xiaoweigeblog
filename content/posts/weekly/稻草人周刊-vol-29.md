@@ -1,7 +1,9 @@
 ---
 title: 稻草人周刊 Vol.29
 subtitle: 逃离人群
-tags: 
+endnotes:
+  - 封面图来自 [Brian Yurasits](https://unsplash.com/@brian_yuri)，原图链接[在此](https://unsplash.com/photos/brown-and-gray-stone-fragments-fymQDpBfcMo)，图上是一只寄居蟹。
+tags:
   - 自然
   - 健康
   - 心理学
@@ -105,9 +107,5 @@ toc: true
 - 申请退宿时，辅导员得知我的室友这个天气还不开空调，感到震惊，我不语，只是默默回寝室一边流汗一边收拾东西。*然后发现辅导员和我住同一个小区，这算还是好事坏事呢？*
 - 之前花一个平板的价格买了汉王的 N10 Plus，一块跟 iPad Air 差不多大的墨水屏设备，现在已经吃灰快一年了，当泡面盖都觉得笨重。花 168 买的二手 Kindle，因为便携还有触屏，能发光，还可以用 Calibre 直接导入文件，系统也很简洁，完全满足我的需求…… 钱原来是这样被浪费的。
 - ~~这周没读几篇文章所以只能多写点琐事凑数了~~
-
----
-
-封面图来自 [Brian Yurasits](https://unsplash.com/@brian_yuri)，原图链接[在此](https://unsplash.com/photos/brown-and-gray-stone-fragments-fymQDpBfcMo)，图上是一只寄居蟹。
 
 [^1]: 在我设定下的 Backrooms，很少有大型的人类聚落和基地（如果有的话这群人还在里面受什么苦啊！），原因之一就是植殖癌会摧毁大面积的人造建筑，导致人类只能尽可能地在已有的结构中生存。
