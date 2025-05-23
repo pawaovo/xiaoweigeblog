@@ -89,27 +89,6 @@
     }
 }
 
-.cards-statistics {
-    margin: 1rem 0;
-    table {
-        width: 100%;
-    }
-    table tr > td:nth-child(2) {
-        text-align: right;
-    }
-    .number-pill {
-        text-align: center;
-        display: inline-block;
-        width: 1.75rem;
-        height: 1.75rem;
-        line-height: 1.75rem;
-        box-sizing: border-box;
-        border-radius: 50%;
-        background-color: var(--block-background-color);
-        font-size: 1rem;
-    }
-}
-
 #latest-cards {
     margin: 1rem 0;
     .latest-cards-container {
