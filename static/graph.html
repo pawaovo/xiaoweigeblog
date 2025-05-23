@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Link Graph</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+    }
+    #graph {
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <div id="graph"></div>
+  <script>
+    fetch("link-graph.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("graph");
+
+        const nodes = new vis.DataSet(
+          data.nodes.map(node => ({
+            id: node.id,
+            label: node.label,
+            url: node.url,
+            font: { color: "#eee" }
+          }))
+        );
+
+        const edges = new vis.DataSet(data.edges);
+
+        const network = new vis.Network(container, { nodes, edges }, {
+          nodes: {
+            shape: "dot",
+            size: 10,
+            color: {
+              background: "#29c",
+              border: "#fff"
+            },
+            font: {
+              size: 14,
+              color: "#eee"
+            }
+          },
+          edges: {
+            arrows: "to",
+            color: {
+              color: "#888"
+            }
+          },
+          physics: {
+            stabilization: false
+          },
+          interaction: {
+            navigationButtons: true,
+            zoomView: true,
+            dragView: true
+          }
+        });
+
+        network.on("click", function (params) {
+          if (params.nodes.length > 0) {
+            const node = nodes.get(params.nodes[0]);
+            if (node.url) {
+              window.open(node.url, "_blank");
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
