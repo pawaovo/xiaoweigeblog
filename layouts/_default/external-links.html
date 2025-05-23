@@ -1,8 +1,0 @@
-{{ define "main" }}
-    <h2>Top External Links</h2>
-    <ol>
-    {{ range .Site.Data.externallinks }}
-        <li>{{ index . 0 }} — {{ index . 1 }} links</li>
-    {{ end }}
-    </ol>
-{{ end }}

@@ -37,7 +37,7 @@ def extract_links_from_file(path):
     # 提取 Markdown 格式链接
     for match in markdown_link_re.findall(content):
         domain = urlparse(match).netloc
-        if domain:
+        if domain and domain != 'image.guhub.cn' and domain != 'www.geedea.pro':
             external_links[domain] += 1
 
 for root, dirs, files in os.walk(content_dir):
