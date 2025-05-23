@@ -17,8 +17,8 @@
         <li id="search-instruction">
             <span>{{ T "searchInstruction" }}</span>
         </li>
-        <li class="list-decoration invert-if-dark">
-            <a href="/graph" class="no-button" target="_blank"><img src="/img/graph.svg" /></a>
+        <li class="list-decoration invert-if-dark{{ if eq "/stats/" $.Page.RelPermalink }} active{{ end }}">
+            <a href="{{ .Site.LanguagePrefix }}/stats" class="icon-link"><img src="/img/graph.svg" /></a>
         <li>
     </ul>
 </div>

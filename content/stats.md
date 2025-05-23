@@ -1,4 +1,4 @@
 ---
 title: 链接
-layout: links
+layout: stats
 ---

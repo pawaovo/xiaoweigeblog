@@ -21,6 +21,15 @@
         display: flex;
         justify-content: space-between;
     }
+    .rank-item-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .rank-item-link img {
+        width: 1rem;
+        height: 1rem;
+    }
     .rank-item-bar {
         background-color: rgba(103,173,91,0.35);
         position: absolute;
@@ -34,6 +43,7 @@
 
     <article>
         {{ partial "header.html" . }}
+        {{ partial "components/postnav.html" . }}
 
         <div class="markdown-content" style="line-height: 2">
             {{ .Content }}
@@ -63,7 +73,10 @@
                 {{ $percent := div (mul $count 100) $max }}
                 <li class="rank-item">
                     <div class="rank-item-text">
-                        <a href="https://{{ $label }}/" target="_blank">{{ $label }}</a>
+                        <a class="rank-item-link" href="https://{{ $label }}/" target="_blank">
+                            <img src="https://favicone.com/{{ $label }}?s=50" />
+                            {{ $label }}
+                        </a>
                         <span>{{ $count }}</span>
                     </div>
                     <div class="rank-item-bar" style="width:{{ $percent }}%"></div>
@@ -72,4 +85,5 @@
         {{ end }}
         </ol>
     </article>
+    {{ partial "footer.html" . }}
 {{ end }}
