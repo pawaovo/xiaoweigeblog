@@ -23,7 +23,6 @@
       <!-- Post Content -->
       <div id="post-content" class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
-        {{ .Site.Params.postHeaderContent | safeHTML }}
         {{ .Content }}
       </div>
 

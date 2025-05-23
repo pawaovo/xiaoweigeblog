@@ -37,9 +37,13 @@
       <!-- Post Content -->
       <div class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
-        {{ if .Params.toc }}{{ partial "components/toc" . }}{{ end }}
-        {{ .Site.Params.postHeaderContent | safeHTML }}
+        <!-- TOC -->
+        {{ if .Params.toc }}
+        {{ partial "components/toc" . }}
+        {{ end }}
+        <!-- Content -->
         <div id="post-content">{{ .Content }}</div>
+        <!-- Endnotes -->
         {{ if .Params.endnotes }}
         <hr>
         <div id="post-endnotes">
