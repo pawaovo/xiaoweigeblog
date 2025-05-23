@@ -166,11 +166,7 @@ def main():
     collect_urls()
     build_link_graph()
 
-    nodes = [
-        {"id": url, "label": title_map[url], "url": url}
-        for url in link_graph
-    ]
-
+    nodes = [{"id": url, "label": label_map.get(url, url.strip("/").split("/")[-1]), "url": url} for url in link_graph]
     edges = []
     for source, targets in link_graph.items():
         for target in targets:
@@ -178,9 +174,11 @@ def main():
 
     graph = {"nodes": nodes, "edges": edges}
 
-    with open("static/link-graph.json", "w", encoding="utf-8") as f:
+    # ✅ 写入到 public/
+    output_path = os.path.join("public", "link-graph.json")
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(graph, f, indent=2, ensure_ascii=False)
-    print("✅ Link graph generated: link-graph.json")
+    print(f"✅ Link graph generated: {output_path}")
 
 
 if __name__ == "__main__":
