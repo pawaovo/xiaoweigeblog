@@ -11,3 +11,4 @@ content/posts/_template.md
 /content/.obsidian
 /content/templates
 static/link-graph.json
+data/externallinks.json
