@@ -8,6 +8,7 @@ title: 稻草人周刊：发刊词
 toc: true
 aliases:
   - /posts/稻草人周刊-发刊词/
+  - /posts/weekly/稻草人周刊-发刊词/
 ---
 
 正好趁着万圣节，请容许我为你介绍「稻草人周刊」。
