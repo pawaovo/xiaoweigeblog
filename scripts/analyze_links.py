@@ -1,15 +1,18 @@
 import os
 import re
 import json
+from urllib.parse import urlparse
+from collections import Counter
 
 content_dir = "content"
 internal_link_pattern = re.compile(r"\[[^\]]*\]\((/[^)]+)\)")
+markdown_link_re = re.compile(r"\[.*?\]\((http.*?)\)")
 
 url_map = {}       # file path -> canonical url
 alias_map = {}     # alias url -> canonical url
 link_graph = {}    # canonical url -> list of canonical urls
 title_map = {}     # canonical url -> title
-
+external_links = Counter()
 
 def parse_frontmatter(filepath):
     with open(filepath, encoding="utf-8") as f:
@@ -19,12 +22,8 @@ def parse_frontmatter(filepath):
         return {}, 0
 
     frontmatter = {}
-    aliases = []
-    slug = None
-    draft = False
-    title = None
-    related_cards = []
-    mentioned_books = []
+    aliases, related_cards, mentioned_books = [], [], []
+    slug, draft, title = None, False, None
     i = 1
     while i < len(lines):
         line = lines[i].strip()
@@ -39,8 +38,7 @@ def parse_frontmatter(filepath):
                 aliases = []
                 i += 1
                 while i < len(lines) and lines[i].startswith("  - "):
-                    alias = lines[i].strip()[3:].strip()
-                    aliases.append(alias)
+                    aliases.append(lines[i].strip()[3:].strip())
                     i += 1
                 continue
             elif key == "slug":
@@ -74,24 +72,18 @@ def parse_frontmatter(filepath):
         "mentioned_books": mentioned_books
     }, i + 1
 
-
 def get_canonical_url(filepath, frontmatter):
     rel_path = os.path.relpath(filepath, content_dir)
     dirname, filename = os.path.split(rel_path)
     name = os.path.splitext(filename)[0]
     slug = frontmatter.get("slug") or name
     parts = dirname.split(os.sep)
-    if parts == [""]:
-        return f"/{slug}/"
-    return f"/{'/'.join(parts)}/{slug}/"
-
+    return f"/{'/'.join(parts)}/{slug}/" if parts != [""] else f"/{slug}/"
 
 def resolve_url(url):
     return alias_map.get(url, url)
 
-
 def resolve_url_from_dir(link, subdir):
-    """Only search for link in a specific content subdir (like 'cards', 'library')"""
     target_dir = os.path.join(content_dir, subdir)
     for path, canonical in url_map.items():
         if path.startswith(target_dir):
@@ -100,20 +92,13 @@ def resolve_url_from_dir(link, subdir):
                 return canonical
     return None
 
-
 def get_icon(url):
-    if url.startswith("/cards/"):
-        return "📄"
-    elif url.startswith("/posts/"):
-        return "📜"
-    elif url.startswith("/library/"):
-        return "📖"
-    elif url.startswith("/fictions/"):
-        return "🧙‍♀️"
-    elif url.startswith("/en/"):
-        return "🇬🇧"
+    if url.startswith("/cards/"): return "📄"
+    if url.startswith("/posts/"): return "📜"
+    if url.startswith("/library/"): return "📖"
+    if url.startswith("/fictions/"): return "🧙‍♀️"
+    if url.startswith("/en/"): return "🇬🇧"
     return "📁"
-
 
 def collect_urls():
     for root, _, files in os.walk(content_dir):
@@ -134,54 +119,52 @@ def collect_urls():
             for alias in frontmatter.get("aliases", []):
                 alias_map[alias] = canonical_url
 
-
-def build_link_graph():
+def build_link_graph_and_external_links():
     for path, canonical_url in url_map.items():
         with open(path, encoding="utf-8") as f:
             content = f.read()
 
-        # markdown links
+        # 内部链接
         for match in internal_link_pattern.finditer(content):
             link = match.group(1)
             normalized = resolve_url(link)
             if normalized and normalized in link_graph:
                 link_graph[canonical_url].append(normalized)
 
-        frontmatter, _ = parse_frontmatter(path)
+        # 外部链接
+        for match in markdown_link_re.findall(content):
+            domain = urlparse(match).netloc
+            if domain and domain not in {"image.guhub.cn", "www.geedea.pro"}:
+                external_links[domain] += 1
 
-        # related_cards → only from cards
+        # 相关卡片和图书
+        frontmatter, _ = parse_frontmatter(path)
         for card in frontmatter.get("related_cards", []):
             target = resolve_url_from_dir(card, "cards")
             if target and target in link_graph:
                 link_graph[canonical_url].append(target)
-
-        # mentioned_books → only from library
         for book in frontmatter.get("mentioned_books", []):
             target = resolve_url_from_dir(book, "library")
             if target and target in link_graph:
                 link_graph[canonical_url].append(target)
 
-
 def main():
     collect_urls()
-    build_link_graph()
+    build_link_graph_and_external_links()
 
-    nodes = [
-        {"id": url, "label": title_map[url], "url": url}
-        for url in link_graph
-    ]
+    # 写入内部链接图
+    os.makedirs("public", exist_ok=True)
+    nodes = [{"id": url, "label": title_map[url], "url": url} for url in link_graph]
+    edges = [{"from": src, "to": tgt} for src, targets in link_graph.items() for tgt in targets]
+    with open("public/link-graph.json", "w", encoding="utf-8") as f:
+        json.dump({"nodes": nodes, "edges": edges}, f, indent=2, ensure_ascii=False)
+    print("✅ Link graph generated: public/link-graph.json")
 
-    edges = []
-    for source, targets in link_graph.items():
-        for target in targets:
-            edges.append({"from": source, "to": target})
-
-    graph = {"nodes": nodes, "edges": edges}
-
-    output_path = os.path.join("public", "link-graph.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(graph, f, indent=2, ensure_ascii=False)
-    print(f"✅ Link graph generated: {output_path}")
+    # 写入外部链接统计
+    os.makedirs("data", exist_ok=True)
+    with open("data/externallinks.json", "w", encoding="utf-8") as f:
+        json.dump(external_links.most_common(), f, indent=2, ensure_ascii=False)
+    print("✅ External link data written to data/externallinks.json")
 
 if __name__ == "__main__":
     main()
