@@ -98,6 +98,7 @@
 
 .nrt {
     margin-top: 5rem;
+    padding-bottom: 2rem; /* in case nrt-title overlaps */
     position: relative;
     .nrt-title {
         position: absolute;
