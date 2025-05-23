@@ -1,4 +1,4 @@
 ---
-title: 链接
+title: 统计
 layout: stats
 ---
