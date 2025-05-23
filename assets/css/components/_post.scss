@@ -120,3 +120,24 @@
         }
     }
 }
+
+/* endnotes */
+
+#post-endnotes {
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    h3 {
+        font-size: 1rem;
+        width: fit-content;
+        margin: 0;
+    }
+    ul {
+        li {
+            list-style-type: '→';
+            padding-left: 1rem;
+            &::marker {
+                color: var(--secondary-text-color);
+            }
+        }
+    }
+}

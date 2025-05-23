@@ -35,13 +35,20 @@
       </header>
 
       <!-- Post Content -->
-      <div id="post-content" class="post-content markdown-body"
+      <div class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         {{ if .Params.toc }}{{ partial "components/toc" . }}{{ end }}
         {{ .Site.Params.postHeaderContent | safeHTML }}
-        {{ .Content }}
-        {{ if eq .Site.Language.Lang "zh" }}
-            <p style="font-size: 0.9rem">如果你觉得文章对你有帮助，可以考虑<a href="/sponsor">赞助作者</a></p>
+        <div id="post-content">{{ .Content }}</div>
+        {{ if .Params.endnotes }}
+        <hr>
+        <div id="post-endnotes">
+            <ul>
+              {{ range .Params.endnotes }}
+              <li>{{ . | markdownify }}</li>
+              {{ end }}
+            </ul>
+        </div>
         {{ end }}
       </div>
 
