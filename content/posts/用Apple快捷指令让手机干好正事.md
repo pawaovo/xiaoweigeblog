@@ -8,6 +8,9 @@ tags:
 date: 2025-05-24T01:30:00
 draft: false
 toc: true
+aliases:
+  - /posts/用apple快捷指令让手机干好正事/
+slug: shortcuts
 ---
 
 今天写点轻松的话题，谈谈工具使用。从拿到 iPhone 之后，我就喜欢时常折腾「快捷指令」，也就是 Shortcuts（捷径），是 Apple 生态中我认为最好用的原生软件之一，~~如果不谈它反人类的编辑体验的话~~。[^1]
