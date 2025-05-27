@@ -62,15 +62,39 @@ $em-text-color: #889E73;
 
   pre {
     padding: 0.5rem 1rem;
-    overflow: auto;
+    font-size: 1rem;
     border-radius: 5px;
-  }
+    border-top-right-radius: 0;
+    position: relative;
 
-  pre > code {
-    padding: 0;
-    color: unset;
-    background-color: inherit;
-    border: 0;
+    & > code {
+      padding: 0;
+      color: unset;
+      background-color: inherit;
+      border: 0;
+
+      &::before {
+        --width: 1rem;
+        content: attr(data-lang);
+        display: block;
+        box-sizing: border-box;
+        line-height: 1rem;
+
+        position: absolute;
+        top: 0;
+        right: -1rem;
+        width: var(--width);
+        min-height: 2.5rem;
+        writing-mode: vertical-rl;
+        text-align: center;
+
+        font-size: 0.75em;
+        background: #333;
+        color: #fff;
+        padding: 0.5rem 0;
+        border-radius: 0 4px 4px 0;
+      }
+    }
   }
 
   p {
