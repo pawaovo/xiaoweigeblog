@@ -20,11 +20,33 @@
         <!-- Post Meta -->
         <div class="post-meta">
             {{ if .Date }}
-            <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
-              {{ .Date.Format "2006-1-2" }}
-            </time>
+              {{ $hour := .Date.Hour }}
+              {{ $fuzzyTime := "" }}
+              {{ if lt $hour 5 }}
+                {{ $fuzzyTime = "凌晨" }}
+              {{ else if lt $hour 7 }}
+                {{ $fuzzyTime = "清晨" }}
+              {{ else if lt $hour 11 }}
+                {{ $fuzzyTime = "早上" }}
+              {{ else if lt $hour 13 }}
+                {{ $fuzzyTime = "中午" }}
+              {{ else if lt $hour 17 }}
+                {{ $fuzzyTime = "下午" }}
+              {{ else if lt $hour 19 }}
+                {{ $fuzzyTime = "傍晚" }}
+              {{ else if lt $hour 23 }}
+                {{ $fuzzyTime = "晚上" }}
+              {{ else }}
+                {{ $fuzzyTime = "深夜" }}
+              {{ end }}
+
+              <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
+                {{ .Date.Format "2006年1月2日" }} {{ $fuzzyTime }}
+              </time>
             {{ end }}
+            {{ if or .Params.categories .Params.tags }}
             <span>·</span>
+            {{ end }}
             {{ if .Params.categories }}
             <a class="post-category" href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
             {{ end }}
