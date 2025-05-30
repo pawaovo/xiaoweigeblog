@@ -138,20 +138,19 @@ a.blog-link img {
   scroll-behavior: smooth;
   gap: 1rem;
   white-space: nowrap;
+  & > figure {
+    display: inline-block;
+    margin: 0;
+    flex-shrink: 0;
+    img {
+      height: 20rem;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+  }
+  & > p { display: none }
 }
-
-.inline-image > figure {
-  display: inline-block;
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.inline-image > figure img {
-  height: 20rem;
-  object-fit: cover;
-  display: block;
-}
-
 
 /* gallery */
 

@@ -114,18 +114,16 @@ $em-text-color: #889E73;
   img {
     max-width: 100%;
     display: block;
-    margin-right: auto;
-    margin-top: 6px;
+    margin: 1rem auto;
   }
 
   figure {
     margin: 0;
-  }
-
-  figure figcaption h4 {
-    font-size: 0.9rem;
-    color: var(--secondary-text-color);
-    font-weight: 400;
+    figcaption h4 {
+      font-size: 0.9rem;
+      color: var(--secondary-text-color);
+      font-weight: 400;
+    }
   }
 
   ul {
