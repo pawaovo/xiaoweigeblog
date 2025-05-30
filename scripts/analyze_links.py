@@ -75,7 +75,7 @@ def parse_frontmatter(filepath):
 def get_canonical_url(filepath, frontmatter):
     rel_path = os.path.relpath(filepath, content_dir)
     dirname, filename = os.path.split(rel_path)
-    name = os.path.splitext(filename)[0]
+    name = os.path.splitext(filename)[0].lower()
     slug = frontmatter.get("slug") or name
     parts = dirname.split(os.sep)
     return f"/{'/'.join(parts)}/{slug}/" if parts != [""] else f"/{slug}/"
