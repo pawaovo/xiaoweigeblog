@@ -11,19 +11,10 @@
 }
 
 figure {
-    &.small {
-        width: 300px;
-    }
     &.card {
         width: fit-content;
         img {
             height: 18rem;
-        }
-    }
-    &.center {
-        margin: 0 auto;
-        figcaption {
-            text-align: center
         }
     }
 }
