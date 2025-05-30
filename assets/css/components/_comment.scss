@@ -32,10 +32,11 @@
     }
 }
 
-.telegram-link-container {
+.links-container {
     text-align: center;
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
     a {
         @include small-button;
         font-size: .9rem;
