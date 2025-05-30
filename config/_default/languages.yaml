@@ -36,6 +36,11 @@ zh:
         link: /categories/稻草人周刊/
         cover: https://image.guhub.cn/uPic/2025/01/%E7%A8%BB%E8%8D%89%E4%BA%BA%E5%91%A8%E5%88%8A.jpeg
         description: 个人化的信息整合，每周一更新
+    footerInternalLinks:
+      - name: 波卷
+        link: /blogroll/
+      - name: 赞助
+        link: /sponsor/
   title: 極客死亡計劃
   weight: 1
 en:
@@ -56,5 +61,8 @@ en:
       - name: /blogroll
         link: /en/blogroll/
         target: _self
+    footerInternalLinks:
+      - name: blogroll
+        link: /en/blogroll/
   title: Geek Death Project
   weight: 2

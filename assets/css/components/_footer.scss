@@ -51,9 +51,13 @@
             }
 
             /* internal links */
-            &.footer-navigation-internal li:not(:last-child)::after {
-                content: '•';
-                margin-left: 0.5rem;
+            &.footer-navigation-internal {
+                gap: 0.25rem;
+                li:not(:last-child)::after {
+                    color: var(--secondary-text-color);
+                    content: '/';
+                    margin-left: 0.25rem;
+                }
             }
         }
     }

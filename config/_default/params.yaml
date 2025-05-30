@@ -19,11 +19,6 @@ footerExternalLinks:
   - name: Travelling
     link: https://www.travellings.cn/go.html
     icon: https://www.travellings.cn/assets/favicon.png
-footerInternalLinks:
-  - name: blogroll
-    link: /blogroll/
-  - name: sponsor
-    link: /sponsor/
 giscus:
   repo: BigCoke233/geek-death-project
   repoId: R_kgDONPoyVw
