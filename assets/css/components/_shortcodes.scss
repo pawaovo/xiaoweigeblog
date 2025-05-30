@@ -70,14 +70,15 @@
     margin: 0.1rem
 }
 
-/* inline-image shortcode */
+/* gallery shortcode */
 
-.inline-image {
+.gallery {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 1rem;
   white-space: nowrap;
+
   & > figure {
     display: inline-block;
     margin: 0;
@@ -90,6 +91,18 @@
     }
   }
   & > p { display: none }
+
+  &.center {
+      justify-content: center;
+  }
+  &.full-width {
+      & > figure {
+          flex-shrink: unset;
+          img {
+              width: 100%;
+          }
+      }
+  }
 }
 
 /* sidenote shortcode */
