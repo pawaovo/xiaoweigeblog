@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--serif-font-family);
   -webkit-font-smoothing: antialiased;
@@ -56,4 +60,8 @@ button {
 hr {
   margin: 2.5rem auto;
   border: 0.05rem solid var(--border-color);
+}
+
+@view-transition {
+  navigation: auto;
 }

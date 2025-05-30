@@ -1,9 +1,6 @@
 {{ define "main" }}
     {{ partial "components/post-page-header.html" . }}
-    <article
-        class="post {{ .Site.Language.LanguageName }}"
-        id="article"
-    >
+    <article class="post" id="article">
       <!-- Post Header -->
       <header
         style="view-transition-name: post-{{ .File.UniqueID }}"

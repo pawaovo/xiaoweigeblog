@@ -1,15 +1,10 @@
 {{ define "main" }}
     {{ partial "header.html" . }}
-    <article
-        class="page {{ .Site.Language.LanguageName }}"
-        id="article"
-    >
-      <!-- Content -->
+    <article class="page" id="article">
       <div id="post-content" class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         {{ .Content }}
       </div>
-
     </article>
     {{ partial "footer.html" . }}
 {{ end }}
