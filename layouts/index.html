@@ -22,7 +22,7 @@
                               {{ if $firstPost }} style="margin-bottom: 0"{{ end }}>
                               <a
                                   href="{{ .Permalink }}"
-                                  data-umami-event="Click post link from index"
+                                  data-umami-event="🏠 Click post link from index"
                               >
                                   {{ if eq .Section "library" }}
                                       读《{{ .Title }}》
@@ -55,7 +55,7 @@
               {{ end }}
           </div>
           <a href="/posts" class="index-section-morelink"
-              data-umami-event="Click more posts link">
+              data-umami-event="➕ Click more posts link">
               {{ T "moreLinks.posts" }}
           </a>
       </section>
@@ -73,7 +73,7 @@
                       <h3 class="card-title">
                           <a
                               href="{{ .Permalink }}"
-                              data-umami-event="Click card link from index"
+                              data-umami-event="🏠 Click card link from index"
                               class="card-title-link">{{ .Title }}</a>
                       </h3>
                       {{- if .Params.tags }}
@@ -93,7 +93,7 @@
           </div>
           <div style="margin: 1rem 0">
               <a href="/cards" class="index-section-morelink"
-                  data-umami-event="Click more cards link">
+                  data-umami-event=➕ "Click more cards link">
                   {{ T "moreLinks.cards" }}
               </a>
           </div>

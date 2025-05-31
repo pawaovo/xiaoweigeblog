@@ -14,7 +14,7 @@
             <ul class="term-list-posts">
                 {{ range where .Pages "Section" "ne" "cards" }}
                 <li>
-                    <a href="{{ .RelPermalink }}" data-umami-event="Click Post Link from Category Page">
+                    <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Post Link from Category Page">
                         {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
                         {{ end }}
                     </a>

@@ -9,7 +9,7 @@
             <ul class="term-list-posts">
                 {{ range where .Pages "Section" "not in" (slice "cards" "library") }}
                 <li>
-                    <a href="{{ .RelPermalink }}" data-umami-event="Click Post Link from Category Page">
+                    <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Post Link from Category Page">
                         {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
                         {{ end }}
                     </a>
@@ -28,7 +28,7 @@
                 {{ range $cards }}
                 <div class="card">
                     <h3>
-                        <a href="{{ .RelPermalink }}" data-umami-event="Click Card Link from Category Page">
+                        <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Card Link from Category Page">
                             {{ .Title }}
                         </a>
                     </h3>
