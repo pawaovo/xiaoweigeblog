@@ -9,7 +9,7 @@
         {{ partial "components/banner.html" . }}
         <!-- Title and Subtitle -->
         <h1 class="post-title">
-          {{ .Title }}
+          <span data-pagefind-meta="title">{{ .Title }}</span>
           {{ with .Params.subtitle }}
             <small class="post-subtitle">{{ . }}</small>
           {{ end }}
@@ -37,7 +37,10 @@
                 {{ $fuzzyTime = "深夜" }}
               {{ end }}
 
-              <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
+              <time class="post-date"
+                    datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}"
+                    data-pagefind-sort="date[datetime], weight[data-weight]"
+                    data-weight="{{ if .Params.featured }}30{{ else }}20{{ end }}">
                 {{ .Date.Format "2006年1月2日" }} {{ $fuzzyTime }}
               </time>
             {{ end }}
