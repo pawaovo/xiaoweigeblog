@@ -1,0 +1,9 @@
+<div
+  class="lazy-aplayer"
+  data-name="{{ .Get "name" }}"
+  data-artist="{{ .Get "artist" }}"
+  data-url="{{ .Get "url" }}"
+  data-cover="{{ .Get "cover" }}"
+  {{ with .Get "id" }}data-id="{{ . }}"{{ end }}
+  style="margin: 1rem 0;"
+></div>

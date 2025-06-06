@@ -1,0 +1,9 @@
+site: public
+exclude_selectors:
+  - "#footer"
+  - "#site-header"
+  - "#latest-posts"
+  - "#posts-archive"
+  - ".cards-section"
+  - "#fiction-section"
+  - "#library"
