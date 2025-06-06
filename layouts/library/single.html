@@ -22,13 +22,7 @@
             </p>
             <!-- 导航作用的骷髅头图标 -->
             <div>
-                <a href="{{ .Site.LanguagePrefix }}/library"
-                    class="title-image-container">
-                    <img src="{{ .Site.Params.images.header }}" alt="Logo"
-                        class="invert-if-dark title-image"
-                        style="view-transition-name: title-image"
-                    />
-                </a>
+                {{ partial "components/logo" (dict "link" "library") }}
             </div>
         </div>
         <div class="markdown-body book-body">

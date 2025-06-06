@@ -1,12 +1,7 @@
 <header id="site-header">
   <!-- Header Title -->
   <div class="header-title">
-    <a href="{{ .Site.LanguagePrefix }}/">
-        <img src="{{ .Site.Params.images.header }}" alt="Logo"
-            class="invert-if-dark title-image"
-            style="view-transition-name: title-image"
-        />
-    </a>
+    {{ partial "components/logo" }}
     <a class="title-link" href="{{ .Site.LanguagePrefix }}/"
       >{{ .Site.Params.headTitle }}</a
     >

@@ -1,12 +1,6 @@
 {{ define "main" }}
     <article class="card-page">
-        <a href="{{ .Site.LanguagePrefix }}/cards"
-            class="title-image-container">
-            <img src="{{ .Site.Params.images.header }}" alt="Logo"
-                class="invert-if-dark title-image"
-                style="view-transition-name: title-image"
-            />
-        </a>
+        {{ partial "components/logo" (dict "link" "cards") }}
         {{ partial "items/card" (dict "context" .) }}
 
         {{- /* 查询引用了这个卡片的文章 */ -}}

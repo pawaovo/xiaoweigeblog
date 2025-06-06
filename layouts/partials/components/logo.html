@@ -1,0 +1,10 @@
+{{ $default := "https://image.guhub.cn/uPic/2025/05/header.png" }}
+{{ $link := .link | default "" }}
+{{ $src := .src | default $default }}
+
+<a href="{{ .Site.LanguagePrefix }}/{{ $link }}"
+    class="title-image-container">
+    <img src="{{ $src }}" alt="Logo"
+        class="invert-if-dark title-image"
+        style="view-transition-name: title-image" />
+</a>
