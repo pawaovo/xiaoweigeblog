@@ -92,6 +92,8 @@
         const turnOn = () => {
           search.classList.add("shown");
           overlay.classList.add("shown");
+
+          umami.track('🔍 Open search panel')
         };
         const turnOff = () => {
           search.classList.remove("shown");

@@ -16,18 +16,14 @@
                   <header>
                       <div class="posts-item-meta">
                           <p>
-                              <time>
-                                  {{ .Date.Format "Jan 2, 2006" }}
-                              </time>
+                              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
                               <span>·</span>
-                              {{ range .Params.tags }}
-                              <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
-                              {{ end }}
+                              {{ partial "components/tags" .  }}
                           </p>
                           <h2 class="posts-item-title">
                               <a
                                   href="{{ .Permalink }}"
-                                  data-umami-event="Click post link from featured"
+                                  data-umami-event="🪶 Click post link from featured"
                               >
                                   {{ if eq .Section "library" }}
                                       读《{{ .Title }}》

@@ -16,43 +16,10 @@
         </h1>
         <!-- Post Meta -->
         <div class="post-meta">
-            {{ if .Date }}
-              {{ $hour := .Date.Hour }}
-              {{ $fuzzyTime := "" }}
-              {{ if lt $hour 5 }}
-                {{ $fuzzyTime = "凌晨" }}
-              {{ else if lt $hour 7 }}
-                {{ $fuzzyTime = "清晨" }}
-              {{ else if lt $hour 11 }}
-                {{ $fuzzyTime = "早上" }}
-              {{ else if lt $hour 13 }}
-                {{ $fuzzyTime = "中午" }}
-              {{ else if lt $hour 17 }}
-                {{ $fuzzyTime = "下午" }}
-              {{ else if lt $hour 19 }}
-                {{ $fuzzyTime = "傍晚" }}
-              {{ else if lt $hour 23 }}
-                {{ $fuzzyTime = "晚上" }}
-              {{ else }}
-                {{ $fuzzyTime = "深夜" }}
-              {{ end }}
-
-              <time class="post-date"
-                    datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}"
-                    data-pagefind-sort="date[datetime], weight[data-weight]"
-                    data-weight="{{ if .Params.featured }}30{{ else }}20{{ end }}">
-                {{ .Date.Format "2006年1月2日" }} {{ $fuzzyTime }}
-              </time>
-            {{ end }}
-            {{ if or .Params.categories .Params.tags }}
-            <span>·</span>
-            {{ end }}
-            {{ if .Params.categories }}
-            <a class="post-category" href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
-            {{ end }}
-            {{ range .Params.tags }}
-            <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
-            {{ end }}
+            {{ partial "components/date" . }}
+            {{ if or .Params.categories .Params.tags }}<span>·</span>{{ end }}
+            {{ partial "components/category-pill" . }}
+            {{ partial "components/tags" . }}
         </div>
       </header>
 
@@ -60,46 +27,18 @@
       <div class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         <!-- TOC -->
-        {{ if .Params.toc }}
         {{ partial "components/toc" . }}
-        {{ end }}
         <!-- Content -->
-        <div id="post-content">{{ .Content }}</div>
-        <!-- Endnotes -->
-        {{ if .Params.endnotes }}
-        <hr>
-        <div id="post-endnotes">
-            <ul>
-              {{ range .Params.endnotes }}
-              <li>{{ . | markdownify }}</li>
-              {{ end }}
-            </ul>
+        <div id="post-content">
+            {{ .Content }}
         </div>
-        {{ end }}
+        <!-- Endnotes -->
+        {{ partial "components/endnotes" . }}
       </div>
 
       <!-- Comment -->
       {{ partial "components/comment.html" . }}
-
       <!-- Now Read This -->
-      {{ with site.RegularPages.Related . | first 1 }}
-      <div class="nrt post-content">
-        <h4 class="nrt-title">{{ T "nowReadThis" }}</h4>
-        {{ range . }}
-        <div class="nrt-header">
-            <a class="nrt-link" href="{{ .RelPermalink }}" data-umami-event="Click Related Post">
-                {{ .LinkTitle }}
-                {{ with .Params.subtitle }}
-                    <span class="nrt-subtitle">：{{ . }}</span>
-                {{ end }}
-            </a>
-            <span class="nrt-reading-time">⏱️ {{ .ReadingTime }}min </span>
-        </div>
-        <div class="nrt-summary">
-            <p>{{ .Summary | plainify }}</p>
-        </div>
-        {{ end }}
-      </div>
-      {{ end }}
+      {{ partial "components/now-read-this.html" . }}
     </article>
 {{ end }}

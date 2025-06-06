@@ -5,6 +5,7 @@
                 style="view-transition-name: book-{{ .File.UniqueID }}">
                 <img
                     class="lazy" loading="lazy"
+                    data-pagefind-meta="image[src]"
                     src="{{ .Params.cover }}"
                 />
             </div>
@@ -21,24 +22,17 @@
             </p>
             <!-- 导航作用的骷髅头图标 -->
             <div>
-                <a href="{{ .Site.LanguagePrefix }}/library"
-                    class="title-image-container">
-                    <img src="{{ .Site.Params.images.header }}" alt="Logo"
-                        class="invert-if-dark title-image"
-                        style="view-transition-name: title-image"
-                    />
-                </a>
+                {{ partial "components/logo" (dict "link" "library") }}
             </div>
         </div>
         <div class="markdown-body book-body">
             <div class="book-content">
                 {{ .Content }}
             </div>
+            <!-- Endnotes -->
+            {{ partial "components/endnotes" . }}
             <div class="book-footer">
-                <p>于 <time
-                    data-pagefind-sort="date[data-date], weight[data-weight]"
-                    data-date="{{ .Date.Format "2006-01-02" }}"
-                    data-weight="10">{{ .Date.Format "2006-01-02" }}</time> 读完</p>
+                <p>于 {{ partial "components/date" . }} 读完</p>
             </div>
         </div>
         {{ partial "components/comment.html" . }}

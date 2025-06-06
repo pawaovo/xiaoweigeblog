@@ -30,5 +30,3 @@ giscus:
   emitMetadata: 0
   inputPosition: top
   theme: "https://www.geedea.pro/css/giscus_noborder.css"
-images:
-  header: https://image.guhub.cn/uPic/2025/05/header.png

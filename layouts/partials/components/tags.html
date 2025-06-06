@@ -1,0 +1,3 @@
+{{ range .Params.tags }}
+<a class="tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
+{{ end }}

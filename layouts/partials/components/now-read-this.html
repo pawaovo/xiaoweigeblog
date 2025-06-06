@@ -1,0 +1,19 @@
+{{ with site.RegularPages.Related . | first 1 }}
+<div class="nrt post-content">
+  <h4 class="nrt-title">{{ T "nowReadThis" }}</h4>
+  {{ range . }}
+  <div class="nrt-header">
+      <a class="nrt-link" href="{{ .RelPermalink }}" data-umami-event="🤔 Click Related Post">
+          {{ .LinkTitle }}
+          {{ with .Params.subtitle }}
+              <span class="nrt-subtitle">：{{ . }}</span>
+          {{ end }}
+      </a>
+      <span class="nrt-reading-time">⏱️ {{ .ReadingTime }}min </span>
+  </div>
+  <div class="nrt-summary">
+      <p>{{ .Summary | plainify }}</p>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

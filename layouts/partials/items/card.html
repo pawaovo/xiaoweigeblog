@@ -1,0 +1,18 @@
+{{ $ctx := .context }}
+{{ $showSummary := .summary }}
+<div class="card markdown-body post-content"
+    style="view-transition-name: card-{{ $ctx.File.UniqueID }}">
+    <div class="card-header">
+        <h3 class="card-title"
+            data-pagefind-meta="title"
+            data-pagefind-sort="date[data-date], weight[data-weight]"
+            data-date="{{ .Date.Format "2006-01-02" }}"
+            data-weight="5">
+                <a href="{{ $ctx.RelPermalink }}">{{ $ctx.Title }}</a>
+        </h3>
+        <div class="card-tags">{{ partial "components/tags" $ctx }}</div>
+    </div>
+    <div class="card-content">
+        {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
+    </div>
+</div>

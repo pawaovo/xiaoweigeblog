@@ -31,7 +31,7 @@
                 time {
                     font-family: var(--mono-font-family);
                 }
-                a.post-tag {
+                a.tag {
                     font-size: 0.8rem;
                     color: var(--secondary-text-color);
                 }
@@ -101,10 +101,6 @@
             .icon-link:hover,
             &.active .icon-link {
                 opacity: 1;
-            }
-            &.active .icon-link {
-                display: inline-block;
-                transform: scale(1.1) rotate(90deg);
             }
         }
 
