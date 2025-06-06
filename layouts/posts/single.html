@@ -17,25 +17,23 @@
         <!-- Post Meta -->
         <div class="post-meta">
             {{ if .Date }}
-              {{ $hour := .Date.Hour }}
-              {{ $fuzzyTime := "" }}
-              {{ if lt $hour 5 }}
-                {{ $fuzzyTime = "凌晨" }}
-              {{ else if lt $hour 7 }}
-                {{ $fuzzyTime = "清晨" }}
-              {{ else if lt $hour 11 }}
-                {{ $fuzzyTime = "早上" }}
-              {{ else if lt $hour 13 }}
-                {{ $fuzzyTime = "中午" }}
-              {{ else if lt $hour 17 }}
-                {{ $fuzzyTime = "下午" }}
-              {{ else if lt $hour 19 }}
-                {{ $fuzzyTime = "傍晚" }}
-              {{ else if lt $hour 23 }}
-                {{ $fuzzyTime = "晚上" }}
-              {{ else }}
-                {{ $fuzzyTime = "深夜" }}
+            {{ $hour := .Date.Hour }}
+            {{ $fuzzyTimes := slice
+              (dict "limit" 5  "label" "凌晨")
+              (dict "limit" 7  "label" "清晨")
+              (dict "limit" 11 "label" "早上")
+              (dict "limit" 13 "label" "中午")
+              (dict "limit" 17 "label" "下午")
+              (dict "limit" 19 "label" "傍晚")
+              (dict "limit" 22 "label" "晚上")
+            }}
+            {{ $fuzzyTime := "深夜" }} {{/* default */}}
+            {{ range $fuzzyTimes }}
+              {{ if lt $hour .limit }}
+                {{ $fuzzyTime = .label }}
+                {{ break }}
               {{ end }}
+            {{ end }}
 
               <time class="post-date"
                     datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}"
