@@ -13,9 +13,7 @@
                   <header>
                       <div class="posts-item-meta">
                           <p class="font-mono">
-                              <time>
-                                  {{ .Date.Format "Jan 2" }},
-                              </time>
+                              <time>{{ .Date.Format "January 2" }},</time>
                               <span>in <a href="/{{ .Section }}/">{{ .Section }}</a></span>
                           </p>
                           <h2 class="posts-item-title"
@@ -67,28 +65,7 @@
               {{- $cards := .Site.GetPage "section" "cards" }}  <!-- 获取 "cards" 部分的内容 -->
               {{- $paginator := .Paginate $cards.Pages 4 }}  <!-- 对该部分内容进行分页 -->
               {{- range $paginator.Pages }}
-              <div class="card"
-                  style="view-transition-name: card-{{ .File.UniqueID }}">
-                  <div class="card-header">
-                      <h3 class="card-title">
-                          <a
-                              href="{{ .Permalink }}"
-                              data-umami-event="🏠 Click card link from index"
-                              class="card-title-link">{{ .Title }}</a>
-                      </h3>
-                      {{- if .Params.tags }}
-                          <p class="card-tags markdown-body">
-                              {{- range .Params.tags }}
-                                  <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
-                              {{- end }}
-                          </p>
-                      {{- end }}
-                  </div>
-
-                  <div class="card-content markdown-body">
-                      {{ .Summary }}
-                  </div>
-              </div>
+                {{ partial "items/card" (dict "context" . "summary" true) }}
               {{- end }}
           </div>
           <div style="margin: 1rem 0">
