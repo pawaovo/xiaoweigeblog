@@ -19,9 +19,7 @@
             {{ partial "components/date" . }}
             {{ if or .Params.categories .Params.tags }}<span>·</span>{{ end }}
             {{ partial "components/category-pill" . }}
-            {{ range .Params.tags }}
-            <a class="post-tag" href="{{ site.LanguagePrefix }}/tags/{{ lower . | urlize }}/">#{{ . }}</a>
-            {{ end }}
+            {{ partial "components/tags" . }}
         </div>
       </header>
 

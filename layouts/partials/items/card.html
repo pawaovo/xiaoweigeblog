@@ -10,13 +10,7 @@
             data-weight="5">
                 <a href="{{ $ctx.RelPermalink }}">{{ $ctx.Title }}</a>
         </h3>
-        {{- if $ctx.Params.tags }}
-            <p class="card-tags">
-                {{- range $ctx.Params.tags }}
-                    <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="card-tag">#{{ . }}</a>
-                {{- end }}
-            </p>
-        {{- end }}
+        <div class="card-tags">{{ partial "components/tags" $ctx }}</div>
     </div>
     <div class="card-content">
         {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
