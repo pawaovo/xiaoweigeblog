@@ -1,0 +1,10 @@
+{{ if .Params.endnotes }}
+<hr>
+<div id="post-endnotes">
+    <ul>
+      {{ range .Params.endnotes }}
+      <li>{{ . | markdownify }}</li>
+      {{ end }}
+    </ul>
+</div>
+{{ end }}

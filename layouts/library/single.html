@@ -35,11 +35,10 @@
             <div class="book-content">
                 {{ .Content }}
             </div>
+            <!-- Endnotes -->
+            {{ partial "components/endnotes" . }}
             <div class="book-footer">
-                <p>于 <time
-                    data-pagefind-sort="date[data-date], weight[data-weight]"
-                    data-date="{{ .Date.Format "2006-01-02" }}"
-                    data-weight="10">{{ .Date.Format "2006-01-02" }}</time> 读完</p>
+                <p>于 {{ partial "components/date" . }} 读完</p>
             </div>
         </div>
         {{ partial "components/comment.html" . }}

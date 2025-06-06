@@ -1,3 +1,4 @@
+{{ if .Params.toc }}
 <div id="toc-container"><div id="toc">{{ .TableOfContents }}</div></div>
 <style>
 /* toc */
@@ -113,3 +114,4 @@ document.addEventListener('DOMContentLoaded', () => {
   headings.forEach(heading => observer.observe(heading));
 });
 </script>
+{{ end }}

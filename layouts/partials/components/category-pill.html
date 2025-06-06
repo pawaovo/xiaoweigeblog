@@ -1,0 +1,8 @@
+{{ with .GetTerms "categories" }}
+  {{ with index . 0 }}
+    <a class="post-category" href="{{ .RelPermalink }}">
+      {{ .Params.icon }}
+      <span>{{ .LinkTitle }}</span>
+    </a>
+  {{ end }}
+{{ end }}
