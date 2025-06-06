@@ -1,0 +1,14 @@
+<a href="{{.Get "link" }}" target="_blank"
+    class="{{ if (.Get "type") }}{{ .Get "type" }}-link{{ else }}blog-link{{ end }}">
+    {{ if and (isset .Params "image") .Params.image }}
+    <div class="link-image">
+        <img src="{{ .Params.image }}" class="no-fancybox" alt="{{ .Params.title }}" />
+    </div>
+    {{ end }}
+    {{ if ne (.Get "type") "podcast" }}
+    <div class="link-content">
+        <h4>{{.Get "title" }}</h4>
+        <p>{{.Get "description" }}</p>
+    </div>
+    {{ end }}
+</a>
