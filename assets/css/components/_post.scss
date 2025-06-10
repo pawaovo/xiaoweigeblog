@@ -120,6 +120,13 @@
             color: var(--secondary-text-color)
         }
     }
+    .nrt-subtitle {
+        color: var(--secondary-text-color);
+        font-weight: normal;
+    }
+    .nrt-summary {
+        font-weight: light
+    }
 }
 
 /* endnotes */
