@@ -73,7 +73,7 @@ $em-text-color: #889E73;
       background-color: inherit;
       border: 0;
 
-      &::before:not([data-lang="fallback"]) {
+      &:not([data-lang="fallback"])::before {
         --width: 1rem;
         content: attr(data-lang);
         display: block;
