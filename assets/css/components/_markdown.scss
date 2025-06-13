@@ -118,12 +118,17 @@ $em-text-color: #889E73;
   }
 
   figure {
+    display: block;
     margin: 0;
-    figcaption h4 {
-      font-size: 0.9rem;
-      color: var(--secondary-text-color);
-      font-weight: 400;
-      text-align: center;
+    figcaption {
+        max-width: 100%;
+        h4 {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            font-weight: 400;
+            text-align: center;
+            white-space: normal;
+        }
     }
   }
 
