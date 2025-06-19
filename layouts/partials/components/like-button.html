@@ -30,6 +30,11 @@
     
     if (shouldHighlight !== isNearComments) {
       isNearComments = shouldHighlight;
+      // 如果已经点赞，不添加 near-comments 类（避免晃动）
+      if (containerEl.classList.contains('liked')) {
+        return;
+      }
+      
       if (isNearComments) {
         containerEl.classList.add('near-comments');
       } else {
@@ -54,6 +59,8 @@
         if (localStorage.getItem("liked_" + pageId)) {
           btnEl.disabled = true;
           containerEl.classList.add("liked");
+          // 移除可能存在的 near-comments 类
+          containerEl.classList.remove('near-comments');
           updateTooltip();
         }
       })
@@ -65,7 +72,9 @@
   window.sendLike = function(pageId) {
     if (localStorage.getItem("liked_" + pageId)) return;
 
-    umami.track('👍 Hit Like Button');
+    if (window.location.hostname !== 'localhost') {
+      umami.track('👍 Hit Like Button');
+    }
     
     // 添加点击效果
     btnEl.classList.add("clicked");
@@ -80,6 +89,8 @@
         countEl.innerText = data.likes ?? 1;
         btnEl.disabled = true;
         containerEl.classList.add("liked");
+        // 移除 near-comments 类，停止晃动
+        containerEl.classList.remove('near-comments');
         updateTooltip();
       })
       .catch(() => {
@@ -119,6 +130,15 @@
 .floating-like-container.near-comments:hover {
   opacity: 1;
   animation: none;
+}
+
+/* 已点赞状态：保持最高不透明度，不再晃动 */
+.floating-like-container.liked {
+  opacity: 1 !important;
+}
+
+.floating-like-container.liked.near-comments {
+  animation: none !important;
 }
 
 .floating-like-button {
