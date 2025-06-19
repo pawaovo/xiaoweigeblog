@@ -64,6 +64,8 @@
   
   window.sendLike = function(pageId) {
     if (localStorage.getItem("liked_" + pageId)) return;
+
+    umami.track('👍 Hit Like Button');
     
     // 添加点击效果
     btnEl.classList.add("clicked");
