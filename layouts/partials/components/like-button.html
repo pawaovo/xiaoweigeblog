@@ -1,0 +1,241 @@
+<div class="floating-like-container" id="like-container-{{ .File.UniqueID | urlize }}">
+  <div class="floating-like-button" 
+       onclick="sendLike('{{ .File.UniqueID | urlize }}')"
+       id="like-btn-{{ .File.UniqueID | urlize }}"
+       title="为这篇文章献上心脏"
+       data-liked-title="你已经献上心脏了">
+    <img id="like-button-icon" src="/img/heart-organ.svg" alt="点赞" />
+    <div class="like-count-display" id="like-count-{{ .File.UniqueID | urlize }}">...</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const pageId = "{{ .File.UniqueID | urlize }}";
+  const countEl = document.getElementById("like-count-" + pageId);
+  const btnEl = document.getElementById("like-btn-" + pageId);
+  const containerEl = document.getElementById("like-container-" + pageId);
+  
+  let isNearComments = false;
+  
+  function checkScrollPosition() {
+    const commentsSection = document.querySelector('.post-comments');
+    if (!commentsSection) return;
+    
+    const rect = commentsSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // 当评论区进入视窗下半部分时触发
+    const shouldHighlight = rect.top < windowHeight * 0.8;
+    
+    if (shouldHighlight !== isNearComments) {
+      isNearComments = shouldHighlight;
+      if (isNearComments) {
+        containerEl.classList.add('near-comments');
+      } else {
+        containerEl.classList.remove('near-comments');
+      }
+    }
+  }
+  
+  function updateTooltip() {
+    if (containerEl.classList.contains('liked')) {
+      btnEl.setAttribute('title', btnEl.getAttribute('data-liked-title'));
+    } else {
+      btnEl.setAttribute('title', '为这篇文章献上心脏');
+    }
+  }
+  
+  function fetchLikes() {
+    fetch("https://like.guhub.cn/like/" + pageId)
+      .then(resp => resp.json())
+      .then(data => {
+        countEl.innerText = data.likes ?? 0;
+        if (localStorage.getItem("liked_" + pageId)) {
+          btnEl.disabled = true;
+          containerEl.classList.add("liked");
+          updateTooltip();
+        }
+      })
+      .catch(() => {
+        countEl.innerText = "❌";
+      });
+  }
+  
+  window.sendLike = function(pageId) {
+    if (localStorage.getItem("liked_" + pageId)) return;
+    
+    // 添加点击效果
+    btnEl.classList.add("clicked");
+    setTimeout(() => {
+      btnEl.classList.remove("clicked");
+    }, 300);
+    
+    fetch("https://like.guhub.cn/like/" + pageId, { method: "POST" })
+      .then(resp => resp.json())
+      .then(data => {
+        localStorage.setItem("liked_" + pageId, "1");
+        countEl.innerText = data.likes ?? 1;
+        btnEl.disabled = true;
+        containerEl.classList.add("liked");
+        updateTooltip();
+      })
+      .catch(() => {
+        alert("点赞失败，请稍后再试");
+      });
+  };
+  
+  // 监听滚动事件
+  window.addEventListener('scroll', checkScrollPosition);
+  window.addEventListener('resize', checkScrollPosition);
+  
+  // 初始化
+  fetchLikes();
+  checkScrollPosition();
+})();
+</script>
+
+<style>
+.floating-like-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.floating-like-container:hover {
+  opacity: 1;
+}
+
+.floating-like-container.near-comments {
+  opacity: 0.6;
+  animation: gentle-shake 2s ease-in-out infinite;
+}
+
+.floating-like-container.near-comments:hover {
+  opacity: 1;
+  animation: none;
+}
+
+.floating-like-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.floating-like-button:hover {
+  transform: scale(1.1);
+}
+
+/* 已点赞状态下禁用hover放大效果 */
+.liked .floating-like-button:hover {
+  transform: none;
+}
+
+.floating-like-button.clicked {
+  transform: scale(0.9);
+}
+
+.floating-like-button:disabled {
+  cursor: not-allowed;
+}
+
+#like-button-icon {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.liked #like-button-icon {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.like-count-display {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  text-align: center;
+  min-width: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.liked .like-count-display {
+  color: #8B0000;
+}
+
+/* 悬浮提示样式 */
+.floating-like-button::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  margin-bottom: 8px;
+}
+
+.floating-like-button:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 动画定义 */
+@keyframes gentle-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.1); }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .floating-like-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #like-button-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .floating-like-button::before {
+    right: -10px;
+    transform: translateX(50%) translateY(5px);
+  }
+  
+  .floating-like-button:hover::before {
+    transform: translateX(50%) translateY(0);
+  }
+}
+</style>
