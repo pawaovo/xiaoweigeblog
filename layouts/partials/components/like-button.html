@@ -1,10 +1,10 @@
 <div class="floating-like-container" id="like-container-{{ .File.UniqueID | urlize }}">
-  <div class="floating-like-button" 
+  <div class="floating-like-button"
        onclick="sendLike('{{ .File.UniqueID | urlize }}')"
        id="like-btn-{{ .File.UniqueID | urlize }}"
        title="为这篇文章献上心脏"
        data-liked-title="你已经献上心脏了">
-    <img id="like-button-icon" src="/img/heart-organ.svg" alt="点赞" />
+    <img id="like-button-icon" src="/img/heart-organ.svg" class="invert-if-dark" alt="点赞" />
     <div class="like-count-display" id="like-count-{{ .File.UniqueID | urlize }}">...</div>
   </div>
 </div>
