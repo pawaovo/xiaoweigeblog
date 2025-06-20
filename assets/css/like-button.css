@@ -64,11 +64,17 @@
   height: 32px;
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  @media (prefers-color-scheme:dark) {
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)) invert(1);
+  }
 }
 
 .liked #like-button-icon {
   filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   animation: heartbeat 1.5s ease-in-out infinite;
+  @media (prefers-color-scheme:dark) {
+      filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
 }
 
 .like-count-display {
@@ -134,17 +140,17 @@
     bottom: 20px;
     right: 20px;
   }
-  
+
   #like-button-icon {
     width: 28px;
     height: 28px;
   }
-  
+
   .floating-like-button::before {
     right: -10px;
     transform: translateX(50%) translateY(5px);
   }
-  
+
   .floating-like-button:hover::before {
     transform: translateX(50%) translateY(0);
   }
