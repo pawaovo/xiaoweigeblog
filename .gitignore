@@ -10,5 +10,6 @@ content/posts/_template.md
 .DS_Store
 /content/.obsidian
 /content/templates
+/content/ebooks
 static/link-graph.json
 data/externallinks.json
