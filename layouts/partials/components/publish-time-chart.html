@@ -151,7 +151,7 @@
 
 <div class="time-chart-container">
     <div class="time-chart-wrapper">
-        <div class="time-icon">🌙</div>
+        <div class="time-icon">☀️</div>
         <div class="time-chart-bar invert-if-dark">
             {{ range $fuzzyTimes }}
                 {{ $count := index $timeCounts .label }}
@@ -166,7 +166,7 @@
                     {{ end }}
                 {{ end }}
             {{ end }}
-            
+
             {{/* 深夜时间段 */}}
             {{ $lateNightCount := index $timeCounts "深夜" }}
             {{ if gt $total 0 }}
@@ -180,9 +180,9 @@
                 {{ end }}
             {{ end }}
         </div>
-        <div class="time-icon">☀️</div>
+        <div class="time-icon">🌙</div>
     </div>
-    
+
     <div class="time-counts">
         {{ range $fuzzyTimes }}
             {{ $count := index $timeCounts .label }}
@@ -193,7 +193,7 @@
                 </div>
             {{ end }}
         {{ end }}
-        
+
         {{ $lateNightCount := index $timeCounts "深夜" }}
         {{ if gt $lateNightCount 0 }}
             {{ $percentage := div (mul $lateNightCount 100.0) $total }}
