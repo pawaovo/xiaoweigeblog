@@ -25,16 +25,6 @@
             {{ T "postPage.commentNotLoaded" }}
         </p>
     </div>
-    {{ if eq .Site.Language.Lang "zh" }}
-    <p class="links-container">
-        <a href="https://t.me/teaparty418" target="_blank"
-            data-umami-event="✈️ Click Telegram link from comment footer">
-            <img src="/img/telegram.svg" alt="Telegram Logo" />
-            加入 Telegram 群组参与讨论
-        </a>
-        <a href="/sponsor" data-umami-event="💗 Click sponsor button from comment footer"><span>💗</span>赞助作者</a>
-    </p>
-    {{ end }}
     <!-- giscus script -->
     <script id="giscus-script"
             src="https://giscus.app/client.js"
@@ -45,11 +35,10 @@
             data-mapping="{{ .Site.Params.giscus.mapping }}"
             data-strict="{{ .Site.Params.giscus.strict }}"
             data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled }}"
-            data-emit-metadata="{{ .Site.Params.giscus.emitMetadata }}"
+            data-emit-metadata="1"
             data-input-position="{{ .Site.Params.giscus.inputPosition }}"
             data-theme="{{ .Site.Params.giscus.theme }}"
             data-lang="{{ T "lang" }}"
-            crossorigin="anonymous"
-            async>
+            crossorigin="anonymous">
     </script>
 </div>
