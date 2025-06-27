@@ -1,0 +1,205 @@
+<style>
+.time-chart-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem 0;
+}
+
+.time-chart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.time-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.time-chart-bar {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.time-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.time-segment:first-child {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.time-segment:last-child {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.time-segment.dawn {
+  background: linear-gradient(135deg, #3c3c3c 0%, #1a1a1a 100%);
+}
+
+.time-segment.early-morning {
+  background: linear-gradient(135deg, #5a5a5a 0%, #3c3c3c 100%);
+}
+
+.time-segment.morning {
+  background: linear-gradient(135deg, #787878 0%, #5a5a5a 100%);
+}
+
+.time-segment.noon {
+  background: linear-gradient(135deg, #d4d4d4 0%, #b8b8b8 100%);
+}
+
+.time-segment.afternoon {
+  background: linear-gradient(135deg, #b8b8b8 0%, #969696 100%);
+}
+
+.time-segment.evening {
+  background: linear-gradient(135deg, #969696 0%, #787878 100%);
+}
+
+.time-segment.night {
+  background: linear-gradient(135deg, #5a5a5a 0%, #3c3c3c 100%);
+}
+
+.time-segment.late-night {
+  background: linear-gradient(135deg, #3c3c3c 0%, #1a1a1a 100%);
+}
+
+.time-counts {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0 2.5rem;
+}
+
+.count-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--secondary-text-color);
+  font-family: monospace;
+}
+
+.count-number {
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+.count-label {
+  margin-top: 0.25rem;
+  opacity: 0.7;
+}
+</style>
+
+{{/* 定义时间段 */}}
+{{ $fuzzyTimes := slice
+    (dict "limit" 5  "label" "凌晨" "class" "dawn")
+    (dict "limit" 7  "label" "清晨" "class" "early-morning")
+    (dict "limit" 11 "label" "早上" "class" "morning")
+    (dict "limit" 13 "label" "中午" "class" "noon")
+    (dict "limit" 17 "label" "下午" "class" "afternoon")
+    (dict "limit" 19 "label" "傍晚" "class" "evening")
+    (dict "limit" 22 "label" "晚上" "class" "night")
+}}
+
+{{/* 初始化时间段计数 */}}
+{{ $timeCounts := dict
+    "凌晨" 0
+    "清晨" 0
+    "早上" 0
+    "中午" 0
+    "下午" 0
+    "傍晚" 0
+    "晚上" 0
+    "深夜" 0
+}}
+
+{{/* 统计每个时间段的文章数量 */}}
+{{ range .Site.RegularPages }}
+    {{ if .Date }}
+        {{ $hour := .Date.Hour }}
+        {{ $fuzzyTime := "深夜" }}
+        {{ range $fuzzyTimes }}
+            {{ if lt $hour .limit }}
+                {{ $fuzzyTime = .label }}
+                {{ break }}
+            {{ end }}
+        {{ end }}
+        {{ $currentCount := index $timeCounts $fuzzyTime }}
+        {{ $timeCounts = merge $timeCounts (dict $fuzzyTime (add $currentCount 1)) }}
+    {{ end }}
+{{ end }}
+
+{{/* 计算总数 */}}
+{{ $total := 0 }}
+{{ range $timeCounts }}
+    {{ $total = add $total . }}
+{{ end }}
+
+<div class="time-chart-container">
+    <div class="time-chart-wrapper">
+        <div class="time-icon">🌙</div>
+        <div class="time-chart-bar invert-if-dark">
+            {{ range $fuzzyTimes }}
+                {{ $count := index $timeCounts .label }}
+                {{ if gt $total 0 }}
+                    {{ $percentage := div (mul $count 100.0) $total }}
+                    {{ if gt $count 0 }}
+                        <div class="time-segment {{ .class }}"
+                             style="width: {{ printf "%.1f" $percentage }}%;"
+                             title="{{ .label }}: {{ $count }}篇 ({{ printf "%.1f" $percentage }}%)">
+                            {{ if gt $percentage 8 }}{{ .label }}{{ end }}
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            
+            {{/* 深夜时间段 */}}
+            {{ $lateNightCount := index $timeCounts "深夜" }}
+            {{ if gt $total 0 }}
+                {{ $percentage := div (mul $lateNightCount 100.0) $total }}
+                {{ if gt $lateNightCount 0 }}
+                    <div class="time-segment late-night"
+                         style="width: {{ printf "%.1f" $percentage }}%;"
+                         title="深夜: {{ $lateNightCount }}篇 ({{ printf "%.1f" $percentage }}%)">
+                        {{ if gt $percentage 8 }}深夜{{ end }}
+                    </div>
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="time-icon">☀️</div>
+    </div>
+    
+    <div class="time-counts">
+        {{ range $fuzzyTimes }}
+            {{ $count := index $timeCounts .label }}
+            {{ if gt $count 0 }}
+                {{ $percentage := div (mul $count 100.0) $total }}
+                <div class="count-item" style="width: {{ printf "%.1f" $percentage }}%;">
+                    <span class="count-number">{{ $count }}</span>
+                </div>
+            {{ end }}
+        {{ end }}
+        
+        {{ $lateNightCount := index $timeCounts "深夜" }}
+        {{ if gt $lateNightCount 0 }}
+            {{ $percentage := div (mul $lateNightCount 100.0) $total }}
+            <div class="count-item" style="width: {{ printf "%.1f" $percentage }}%;">
+                <span class="count-number">{{ $lateNightCount }}</span>
+            </div>
+        {{ end }}
+    </div>
+</div>

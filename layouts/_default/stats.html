@@ -120,6 +120,9 @@
         <h2>每月文章字数</h2>
         {{ partial "components/word-count-chart" . }}
 
+        <h2>文章发布时间段分布</h2>
+        <div class="outbox">{{ partial "components/publish-time-chart" . }}</div>
+        
         <hr>
 
         <section>
