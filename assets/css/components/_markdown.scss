@@ -72,6 +72,8 @@ $em-text-color: #889E73;
       color: unset;
       background-color: inherit;
       border: 0;
+      overflow: auto;
+      display: block;
 
       &:not([data-lang="fallback"])::before {
         --width: 1rem;
