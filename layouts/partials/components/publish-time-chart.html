@@ -113,6 +113,7 @@
     (dict "limit" 17 "label" "下午" "class" "afternoon")
     (dict "limit" 19 "label" "傍晚" "class" "evening")
     (dict "limit" 22 "label" "晚上" "class" "night")
+    (dict "limit" 24 "label" "深夜" "class" "late-night")
 }}
 
 {{/* 初始化时间段计数 */}}
@@ -128,6 +129,7 @@
 }}
 
 {{/* 统计每个时间段的文章数量 */}}
+{{ $total := 0 }}
 {{ range .Site.RegularPages }}
     {{ if .Date }}
         {{ $hour := .Date.Hour }}
@@ -138,15 +140,10 @@
                 {{ break }}
             {{ end }}
         {{ end }}
+        {{ $total = add $total 1 }}
         {{ $currentCount := index $timeCounts $fuzzyTime }}
         {{ $timeCounts = merge $timeCounts (dict $fuzzyTime (add $currentCount 1)) }}
     {{ end }}
-{{ end }}
-
-{{/* 计算总数 */}}
-{{ $total := 0 }}
-{{ range $timeCounts }}
-    {{ $total = add $total . }}
 {{ end }}
 
 <div class="time-chart-container">
@@ -166,19 +163,6 @@
                     {{ end }}
                 {{ end }}
             {{ end }}
-
-            {{/* 深夜时间段 */}}
-            {{ $lateNightCount := index $timeCounts "深夜" }}
-            {{ if gt $total 0 }}
-                {{ $percentage := div (mul $lateNightCount 100.0) $total }}
-                {{ if gt $lateNightCount 0 }}
-                    <div class="time-segment late-night"
-                         style="width: {{ printf "%.1f" $percentage }}%;"
-                         title="深夜: {{ $lateNightCount }}篇 ({{ printf "%.1f" $percentage }}%)">
-                        {{ if gt $percentage 8 }}深夜{{ end }}
-                    </div>
-                {{ end }}
-            {{ end }}
         </div>
         <div class="time-icon">🌙</div>
     </div>
@@ -192,14 +176,6 @@
                     <span class="count-number">{{ $count }}</span>
                 </div>
             {{ end }}
-        {{ end }}
-
-        {{ $lateNightCount := index $timeCounts "深夜" }}
-        {{ if gt $lateNightCount 0 }}
-            {{ $percentage := div (mul $lateNightCount 100.0) $total }}
-            <div class="count-item" style="width: {{ printf "%.1f" $percentage }}%;">
-                <span class="count-number">{{ $lateNightCount }}</span>
-            </div>
         {{ end }}
     </div>
 </div>
