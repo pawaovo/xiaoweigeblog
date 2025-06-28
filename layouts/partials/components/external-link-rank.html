@@ -1,0 +1,73 @@
+{{/* Find the maximum link count */}}
+{{ $max := 0 }}
+{{ range .Site.Data.externallinks }}
+    {{ if gt (index . 1) $max }}
+        {{ $max = index . 1 }}
+    {{ end }}
+{{ end }}
+
+<ol id="external-link-rank">
+{{ range .Site.Data.externallinks }}
+    {{ $label := index . 0 }}
+    {{ $count := index . 1 }}
+    {{ if gt $count 2 }}
+        {{ $percent := div (mul $count 100) $max }}
+        <li class="rank-item">
+            <div class="rank-item-text">
+                <a class="rank-item-link" href="https://{{ $label }}/" target="_blank">
+                    <img src="https://favicone.com/{{ $label }}?s=50" />
+                    {{ $label }}
+                </a>
+                <span class="rank-item-count font-mono">{{ $count }}</span>
+            </div>
+            <div class="rank-item-bar" style="width:{{ $percent }}%"></div>
+        </li>
+    {{ end }}
+{{ end }}
+</ol>
+
+<style>
+#external-link-rank {
+    padding: 0;
+    margin: 0;
+    max-height: 700px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.rank-item {
+    list-style: none;
+    width: 100%;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    padding: 0.1rem 0.5rem;
+    position: relative;
+}
+.rank-item-text {
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rank-item-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.rank-item-link img {
+    width: 1rem;
+    height: 1rem;
+}
+.rank-item-count {
+    color: var(--secondary-text-color);
+}
+.rank-item-bar {
+    background-color: rgba(103,173,91,0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+</style>

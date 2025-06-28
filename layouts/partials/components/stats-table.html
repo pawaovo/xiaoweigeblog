@@ -1,0 +1,62 @@
+<table class="site-stats-table">
+  <tbody>
+    <tr>
+        <td>页面总数</td>
+        <td><span class="number-pill">{{ len .Site.RegularPages }}</span></td>
+        <td>总字数</td>
+        <td>
+            <span class="number-pill">
+            {{- $words := 0 -}}
+            {{- range .Site.RegularPages -}}
+                {{- $words = add $words .WordCount -}}
+            {{- end -}}
+            {{ $words }}
+            </span>
+        </td>
+    </tr>
+    <tr>
+      <td>标签总数</td>
+      <td><span class="number-pill">{{ len .Site.Taxonomies.tags }}</span></td>
+      <td>专栏数量</td>
+      <td><span class="number-pill">{{ len .Site.Taxonomies.categories }}</span></td>
+    </tr>
+    <tr>
+      <td>卡片数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "cards") }}</span></td>
+      <td>小说数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "fictions") }}</span></td>
+    </tr>
+    <tr>
+      <td>书评数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "library") }}</span></td>
+      <td>精选文章数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages ".Params.featured" true) }}</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+.site-stats-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.site-stats-table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+.site-stats-table td:nth-child(2n) {
+  text-align: right;
+}
+.number-pill {
+    text-align: center;
+    display: inline-block;
+    line-height: 1.75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    background-color: var(--block-background-color);
+    font-size: 1rem;
+}
+</style>
