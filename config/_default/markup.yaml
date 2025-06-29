@@ -1,0 +1,15 @@
+goldmark:
+  renderer:
+    unsafe: true
+  extensions:
+    extras:
+      mark:
+        enable: true
+highlight:
+  guessSyntax: true
+  noClasses: true
+  style: evergarden
+  tabWidth: 2
+tableOfContents:
+  startLevel: 2
+  endLevel: 3
