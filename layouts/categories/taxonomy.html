@@ -7,7 +7,7 @@
   {{ if eq .Site.Language.Lang "zh" }}
     <div id="post-series">
         <div id="post-series-list">
-            {{ range .Site.Params.series }}
+            {{ range .Site.Data.series }}
             <a class="post-series-item"
                 href="{{ .link }}"
                 title="{{ .description }}"
