@@ -2,9 +2,9 @@ nav:
   - name: /about
     link: /en/about/
     target: _self
-  - name: /blogroll
-    link: /en/blogroll/
+  - name: /linkroll
+    link: /en/linkroll/
     target: _self
 footerInternalLinks:
-  - name: blogroll
-    link: /en/blogroll/
+  - name: linkroll
+    link: /en/linkroll/
