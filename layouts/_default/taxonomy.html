@@ -6,8 +6,19 @@
   <!-- Display Tags -->
   <section class="taxonomy-tags">
     {{ range sort .Site.Taxonomies.tags "Count" "desc" }}
-    <a href="{{ .Page.RelPermalink }}" class="taxonomy-tags-item">
-        <span class="tag-name">#{{ .Page.LinkTitle }}</span>
+    <a href="{{ .Page.RelPermalink }}"
+        class="taxonomy-tags-item{{ if lt .Count 4 }} dimmed{{ end }}">
+        {{ if .Page.Params.icon }}
+            {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
+                <span class="tag-icon">
+                    <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
+                        style="height:1em;width:1em">
+                </span>
+            {{ else }}
+                <span class="tag-icon">{{ .Page.Params.icon }}</span>
+            {{ end }}
+        {{ end }}
+        <span class="tag-name">{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
         <span class="tag-count">{{ .Count }}</span>
     </a>
     {{ end }}

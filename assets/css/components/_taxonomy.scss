@@ -55,7 +55,8 @@
             align-items: center;
             gap: 0.3rem;
 
-            padding: 0.25rem 0.75rem;
+            font-size: 0.9rem;
+            padding: 0.2rem 0.6rem;
             background-color: var(--block-background-color);
             transition:
                 color,
@@ -66,6 +67,21 @@
                 text-decoration: none;
                 background-color: var(--text-color);
                 color: var(--block-background-color);
+            }
+
+            &.dimmed {
+                background: none;
+                border: 1px dashed var(--border-color);
+                color: var(--secondary-text-color);
+                &:hover {
+                    color: inherit;
+                    border-style: solid;
+                }
+            }
+
+            .tag-icon {
+                display: inline-flex;
+                align-items: center;
             }
 
             .tag-count {
