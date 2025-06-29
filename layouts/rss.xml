@@ -34,13 +34,9 @@
 {{- printf "<?xml-stylesheet type=\"text/xsl\" href=\"/atom.xsl.xml\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <follow_challenge>
-        <feedId>84863528672351232</feedId>
-        <userId>161735339120354304</userId>
-    </follow_challenge>
     <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} ｜ {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
-    <description>feedId:84863528672351232+userId:161735339120354304</description>
+    <description>{{ .Site.Title }}{{ if ne  .Title  .Site.Title }}{{ with .Title }}：在「{{.}}」分区下的最新内容{{ end }}{{ end }}</description>
     <generator>Hugo</generator>
     <language>{{ site.Language.LanguageCode }}</language>{{ with $authorEmail }}
     <managingEditor>{{.}}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>{{ end }}{{ with $authorEmail }}
