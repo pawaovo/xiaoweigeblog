@@ -33,6 +33,10 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 {{- printf "<?xml-stylesheet type=\"text/xsl\" href=\"/atom.xsl.xml\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <follow_challenge>
+        <feedId>84863528672351232</feedId>
+        <userId>161735339120354304</userId>
+    </follow_challenge>
   <channel>
     <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} ｜ {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
