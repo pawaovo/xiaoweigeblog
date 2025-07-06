@@ -24,7 +24,7 @@ aliases:
 {{< link link="https://skywt.cn/" title="SkyWT" >}}
 {{< link link="https://blog.licaoz.com/" title="LCZBlog" >}}
 {{< link link="https://pathos.page/" title="2750 words" >}}
-{{< link link="https://chlor.me/" title="园子里的日光" >}}
+{{< link link="https://chlo.is" title="Garden of Outlier" >}}
 {{< link link="https://limboy.me/" title="Limboy's HQ" >}}
 {{< link link="https://nelsonboss.ink/" title="Nelson Boss" >}}
 {{< link link="https://lutaonan.com/" title="Randy's Blog" >}}
