@@ -7,18 +7,6 @@ $block-background-color: var(--block-background-color);
 $strong-text-color: #A94A4A;
 $em-text-color: #889E73;
 
-// Mixin for block styles
-@mixin block-style($margin, $padding, $color: null, $border-left: null) {
-  margin: $margin;
-  padding: $padding;
-  @if $color {
-    color: $color;
-  }
-  @if $border-left {
-    border-left: $border-left;
-  }
-}
-
 // Main styles
 .markdown-body {
   font-size: $font-size;
@@ -42,12 +30,15 @@ $em-text-color: #889E73;
   }
 
   blockquote {
-    @include block-style(0, 0 1em, $secondary-text-color, 0.2em solid $border-color);
-    padding-right: 0;
+    color: var(--secondary-text-color);
+    padding: 0;
+    margin: 0;
     &:not(blockquote > blockquote) {
-        @media screen and (min-width: 768px) {
-            margin-left: -1.4rem;
-        }
+        margin-left: 1em;
+    }
+    & > blockquote {
+        border-left: 2px solid $border-color;
+        padding-left: 1em;
     }
   }
 
