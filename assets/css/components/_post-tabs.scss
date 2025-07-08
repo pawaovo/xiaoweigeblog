@@ -1,0 +1,206 @@
+.post-actions-container {
+  margin: 2rem 0 1rem 0;
+}
+
+.post-actions-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.left-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.right-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 48px;
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* 右侧小按钮样式 */
+.small-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 4px;
+}
+
+.small-btn:hover {
+  background: transparent;
+  opacity: 0.7;
+}
+
+/* 图标样式 */
+.icon {
+  filter: invert(0.4);
+  flex-shrink: 0;
+}
+
+/* Tooltip 样式 */
+.action-btn::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  margin-bottom: 8px;
+  z-index: 1000;
+}
+
+.action-btn:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.like-button-container {
+  position: relative;
+}
+
+.like-icon {
+  filter: invert(0.4);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.liked .like-icon {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%);
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.count-badge {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  min-width: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.liked .count-badge {
+  color: #8B0000;
+}
+
+.comments-section {
+  margin-top: 1rem;
+}
+
+/* 心脏搏动动画 */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.1); }
+}
+
+/* 暗色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .action-btn {
+    color: #999;
+  }
+
+  .action-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .small-btn:hover {
+    background: transparent;
+    opacity: 0.7;
+  }
+
+  /* 暗色模式下的图标滤镜 */
+  .icon {
+    filter: invert(0.7) brightness(1.2);
+  }
+
+  .like-icon {
+    filter: invert(0.7) brightness(1.2);
+  }
+
+  .liked .like-icon {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%);
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  .action-btn::before {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+  }
+
+  .count-badge {
+    color: #999;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .post-actions-nav {
+    gap: 0.5rem;
+  }
+
+  .left-actions {
+    gap: 0.5rem;
+  }
+
+  .right-actions {
+    gap: 0.25rem;
+  }
+
+  .action-btn {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 6px;
+  }
+
+  .small-btn {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 2px;
+  }
+
+  .action-btn::before {
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+  }
+
+  .action-btn:hover::before {
+    transform: translateX(-50%) translateY(0);
+  }
+}

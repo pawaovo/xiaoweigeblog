@@ -6,7 +6,7 @@
         <img src="/img/comments.svg" width="20" height="20" alt="评论" class="icon" />
         <span class="count-badge" id="comment-count">...</span>
       </button>
-      
+
       <!-- 点赞按钮 -->
       <div class="like-button-container" id="like-container-{{ .File.UniqueID | urlize }}">
         <button class="action-btn like-btn"
@@ -19,7 +19,7 @@
         </button>
       </div>
     </div>
-    
+
     <div class="right-actions">
       <a href="https://t.me/teaparty418" target="_blank" class="action-btn small-btn" title="Telegram 群组" data-umami-event="✈️ Click Telegram link from post tabs">
         <img src="/img/paper-plane.svg" width="16" height="16" alt="Telegram" class="icon" />
@@ -36,221 +36,12 @@
   </div>
 </div>
 
-<style>
-.post-actions-container {
-  margin: 2rem 0 1rem 0;
-}
-
-.post-actions-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.left-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.right-actions {
-  display: flex;
-  gap: 0.25rem;
-}
-
-.action-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  min-width: 48px;
-  height: 48px;
-  padding: 0 8px;
-  border: none;
-  background: transparent;
-  color: #666;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.2s ease;
-}
-
-.action-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-/* 右侧小按钮样式 */
-.small-btn {
-  min-width: 32px;
-  height: 32px;
-  padding: 0 4px;
-}
-
-.small-btn:hover {
-  background: transparent;
-  opacity: 0.7;
-}
-
-/* 图标样式 */
-.icon {
-  filter: invert(0.4);
-  flex-shrink: 0;
-}
-
-/* Tooltip 样式 */
-.action-btn::before {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  margin-bottom: 8px;
-  z-index: 1000;
-}
-
-.action-btn:hover::before {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-.like-button-container {
-  position: relative;
-}
-
-.like-icon {
-  filter: invert(0.4);
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-}
-
-.liked .like-icon {
-  filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%);
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-.count-badge {
-  font-size: 12px;
-  font-weight: bold;
-  color: #666;
-  min-width: 16px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 2px 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.liked .count-badge {
-  color: #8B0000;
-}
-
-.comments-section {
-  margin-top: 1rem;
-}
-
-/* 心脏搏动动画 */
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  25% { transform: scale(1.1); }
-  50% { transform: scale(1.2); }
-  75% { transform: scale(1.1); }
-}
-
-/* 暗色主题适配 */
-@media (prefers-color-scheme: dark) {
-  .action-btn {
-    color: #999;
-  }
-  
-  .action-btn:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
-  
-  .small-btn:hover {
-    background: transparent;
-    opacity: 0.7;
-  }
-  
-  /* 暗色模式下的图标滤镜 */
-  .icon {
-    filter: invert(0.7) brightness(1.2);
-  }
-  
-  .like-icon {
-    filter: invert(0.7) brightness(1.2);
-  }
-  
-  .liked .like-icon {
-    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(70%) contrast(150%);
-    animation: heartbeat 1.5s ease-in-out infinite;
-  }
-  
-  .action-btn::before {
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
-  }
-  
-  .count-badge {
-    color: #999;
-    background: rgba(0, 0, 0, 0.7);
-  }
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .post-actions-nav {
-    gap: 0.5rem;
-  }
-  
-  .left-actions {
-    gap: 0.5rem;
-  }
-  
-  .right-actions {
-    gap: 0.25rem;
-  }
-  
-  .action-btn {
-    min-width: 44px;
-    height: 44px;
-    padding: 0 6px;
-  }
-  
-  .small-btn {
-    min-width: 28px;
-    height: 28px;
-    padding: 0 2px;
-  }
-  
-  .action-btn::before {
-    left: 50%;
-    transform: translateX(-50%) translateY(5px);
-  }
-  
-  .action-btn:hover::before {
-    transform: translateX(-50%) translateY(0);
-  }
-}
-</style>
-
 <script>
 // 评论展开/收起功能
 document.addEventListener('DOMContentLoaded', function() {
   const commentsToggle = document.getElementById('comments-toggle');
   const commentsSection = document.getElementById('comments-section');
-  
+
   if (commentsToggle && commentsSection) {
     commentsToggle.addEventListener('click', function() {
       if (commentsSection.style.display === 'none') {
@@ -268,20 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
 function fetchGiscusCommentCount() {
   const commentCountEl = document.getElementById('comment-count');
   if (!commentCountEl) return;
-  
+
   // 设置初始值
   commentCountEl.textContent = '0';
-  
+
   // 监听 Giscus 的消息事件
   window.addEventListener('message', function(event) {
     if (event.origin !== 'https://giscus.app') return;
-    
+
     const giscusData = event.data;
-    
+
     // 检查是否为 IMetadataMessage - 数据结构是 {giscus: {discussion: {...}}}
     if (giscusData.giscus && giscusData.giscus.discussion) {
       const discussion = giscusData.giscus.discussion;
-      
+
       // 计算总评论数：主评论数 + 回复数
       const totalComments = (discussion.totalCommentCount || 0) + (discussion.totalReplyCount || 0);
       commentCountEl.textContent = totalComments.toString();
@@ -295,15 +86,15 @@ function fetchGiscusCommentCount() {
   if (!pageId) {
     return;
   }
-  
+
   const countEl = document.getElementById("like-count-" + pageId);
   const btnEl = document.getElementById("like-btn-" + pageId);
   const containerEl = document.getElementById("like-container-" + pageId);
-  
+
   if (!countEl || !btnEl || !containerEl) {
     return;
   }
-  
+
   function updateTooltip() {
     if (containerEl.classList.contains('liked')) {
       btnEl.setAttribute('title', btnEl.getAttribute('data-liked-title'));
@@ -311,7 +102,7 @@ function fetchGiscusCommentCount() {
       btnEl.setAttribute('title', '为这篇文章献上心脏');
     }
   }
-  
+
   function fetchLikes() {
     fetch("https://like.guhub.cn/like/" + pageId)
       .then(resp => resp.json())
@@ -327,7 +118,7 @@ function fetchGiscusCommentCount() {
         countEl.innerText = "❌";
       });
   }
-  
+
   window.sendLike = function(pageId) {
     if (localStorage.getItem("liked_" + pageId)) return;
 
@@ -336,7 +127,7 @@ function fetchGiscusCommentCount() {
         umami.track('👍 Hit Like Button');
       }
     }
-    
+
     fetch("https://like.guhub.cn/like/" + pageId, { method: "POST" })
       .then(resp => resp.json())
       .then(data => {
@@ -350,7 +141,7 @@ function fetchGiscusCommentCount() {
         alert("点赞失败，请稍后再试");
       });
   };
-  
+
   // 初始化
   fetchLikes();
 })();
