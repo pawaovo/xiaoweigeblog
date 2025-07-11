@@ -88,7 +88,7 @@
     transform-origin:var(--popover-transform-origin);
     transition:var(--popover-transition);
     width:var(--popover-width);
-    z-index:1
+    z-index:10
 }
 .littlefoot__popover.is-above{
     bottom:0;
@@ -99,7 +99,7 @@
 }
 .littlefoot__wrapper{
     position:relative;
-    z-index:1
+    z-index:10
 }
 .littlefoot__content,.littlefoot__wrapper{
     border-radius:var(--popover-border-radius)
