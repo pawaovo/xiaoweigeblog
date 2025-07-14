@@ -1,82 +1,16 @@
 {{ define "main" }}
 <article class="taxonomy">
-  {{ partial "header.html" . }}
-  {{ partial "components/postnav.html" . }}
+    {{ partial "header.html" . }}
+    {{ partial "components/postnav.html" . }}
 
-  <!-- Display Tags -->
-  <section class="taxonomy-tags">
-    {{ $categorizedTags := dict }}
-    {{ $uncategorizedTags := slice }}
-    
-    <!-- Group tags by category -->
-    {{ range $tagName, $tagPages := .Site.Taxonomies.tags }}
-      {{ $tagPage := site.GetPage (printf "/tags/%s" $tagName) }}
-      {{ $tagData := dict "Name" $tagName "Count" (len $tagPages) "Page" $tagPage }}
-      {{ if $tagPage.Params.category }}
-        {{ $category := $tagPage.Params.category }}
-        {{ $categoryTags := index $categorizedTags $category | default slice }}
-        {{ $categoryTags = $categoryTags | append $tagData }}
-        {{ $categorizedTags = merge $categorizedTags (dict $category $categoryTags) }}
-      {{ else }}
-        {{ $uncategorizedTags = $uncategorizedTags | append $tagData }}
-      {{ end }}
-    {{ end }}
-    
-    <!-- Sort tags by count -->
-    {{ $uncategorizedTags = sort $uncategorizedTags "Count" "desc" }}
-    {{ range $category, $categoryTags := $categorizedTags }}
-      {{ $categorizedTags = merge $categorizedTags (dict $category (sort $categoryTags "Count" "desc")) }}
-    {{ end }}
-    
-    <!-- Display uncategorized tags first -->
-      {{ if $uncategorizedTags }}
-        <div class="taxonomy-tags">
-          {{ range $uncategorizedTags }}
-          <a href="{{ .Page.RelPermalink }}"
-              class="taxonomy-tags-item{{ if lt .Count 4 }} dimmed{{ end }}">
-              {{ if .Page.Params.icon }}
-                  {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
-                      <span class="tag-icon">
-                          <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
-                              style="height:1em;width:1em">
-                      </span>
-                  {{ else }}
-                      <span class="tag-icon">{{ .Page.Params.icon }}</span>
-                  {{ end }}
-              {{ end }}
-              <span class="tag-name">{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
-              <span class="tag-count">{{ .Count }}</span>
-          </a>
-          {{ end }}
-        </div>
-      {{ end }}
-    
-    <!-- Display categorized tags -->
-      {{ range $category, $categoryTags := $categorizedTags }}
-        <div class="taxonomy-category">
-          <h3 class="taxonomy-category-title">{{ $category }}</h3>
-          <div class="taxonomy-tags">
-            {{ range $categoryTags }}
-            <a href="{{ .Page.RelPermalink }}"
-                class="taxonomy-tags-item{{ if lt .Count 4 }} dimmed{{ end }}">
-                {{ if .Page.Params.icon }}
-                    {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
-                        <span class="tag-icon">
-                            <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
-                                style="height:1em;width:1em">
-                        </span>
-                    {{ else }}
-                        <span class="tag-icon">{{ .Page.Params.icon }}</span>
-                    {{ end }}
-                {{ end }}
-                <span class="tag-name">{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
-                <span class="tag-count">{{ .Count }}</span>
-            </a>
-            {{ end }}
-          </div>
-        </div>
-      {{ end }}
-  </section>
+    <h2>文章系列</h2>
+    {{ partial "taxonomy/all-categories.html" . }}
+    <p class="uncategorized-link-container">
+        <a class="uncategorized-link" href="/categories/uncategorized/">查看随笔</a>
+    </p>
+
+    <h2>标签</h2>
+    {{ partial "taxonomy/all-tags.html" . }}
 </article>
 {{ partial "footer.html" . }}
 {{ end }}

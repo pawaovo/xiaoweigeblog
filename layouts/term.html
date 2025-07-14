@@ -2,7 +2,18 @@
     <article class="posts termlist-page">
         {{ partial "header.html" . }}
         {{ partial "components/postnav.html" . }}
-        <h1 class="term-title">#{{ .Title }}</h1>
+        <div class="term-header">
+            <h1 class="term-title"
+                style="view-transition-name: category-{{ .Title }}">
+                {{ with .Params.icon }}
+                <span class="category-icon">{{ . }}</span>
+                {{ end }}
+                {{ if and (eq .Data.Singular "tag") (not .Params.icon) }}#{{ end }}{{ .Title }}
+            </h1>
+            {{ with .Params.description | markdownify }}
+                <p class="term-description">{{ . }}</p>
+            {{ end }}
+        </div>
         <div class="term-list">
             <!-- Posts under this Term -->
             <ul class="term-list-posts">

@@ -1,0 +1,17 @@
+<!-- Display Categories -->
+<section class="taxonomy-categories">
+{{ range sort .Site.Taxonomies.categories ".Count" "desc" }}
+    <a href="{{ .Page.RelPermalink }}" class="category-link"
+        style="view-transition-name: category-{{ .Page.Title }};">
+        <div class="taxonomy-categories-item">
+            <h3 class="category-title">
+                {{ with .Page.Params.icon }}
+                <span class="category-icon">{{ . }}</span>
+                {{ end }}
+                <span class="category-title-text">{{ .Page.LinkTitle }}</span>
+            </h3>
+            <p class="category-description">{{ .Page.Params.description | markdownify }}</p>
+        </div>
+    </a>
+{{ end }}
+</section>

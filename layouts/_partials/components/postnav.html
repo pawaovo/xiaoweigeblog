@@ -7,11 +7,10 @@
         <li class="{{ if eq "/featured/" $.Page.RelPermalink }}active{{ end }}">
             <a data-umami-event="🧭 Click postnav link" href="{{ .Site.LanguagePrefix }}/featured">{{ T "postNav.featured" }}</a>
         </li>
-        <li class="{{ if eq "/categories/" $.Page.RelPermalink }}active{{ end }}">
+        <li class="{{ if or
+            (strings.HasPrefix $.Page.RelPermalink "/categories/")
+            (strings.HasPrefix $.Page.RelPermalink "/tags/") }}active{{ end }}">
             <a data-umami-event="🧭 Click postnav link" href="{{ .Site.LanguagePrefix }}/categories">{{ T "postNav.categories" }}</a>
-        </li>
-        <li class="{{ if eq "/tags/" $.Page.RelPermalink }}active{{ end }}">
-            <a data-umami-event="🧭 Click postnav link" href="{{ .Site.LanguagePrefix }}/tags">{{ T "postNav.tags" }}</a>
         </li>
         {{ end }}
         <li id="search-instruction">
