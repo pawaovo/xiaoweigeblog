@@ -1,7 +1,8 @@
 {{ define "main" }}
     <article class="posts termlist-page">
-        {{ partial "components/post-page-header.html" . }}
-        {{ partial "components/breadcrumbs.html" . }}
+        {{ partial "header.html" . }}
+        {{ partial "components/postnav.html" . }}
+        <h1 class="term-title">{{ .Title }}</h1>
         <div class="post-content markdown-body">
             <p>{{ .Content }}</p>
         </div>

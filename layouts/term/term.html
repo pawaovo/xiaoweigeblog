@@ -1,10 +1,9 @@
 {{ define "main" }}
     <article class="posts termlist-page">
-        {{ partial "components/post-page-header.html" . }}
-        {{ partial "components/breadcrumbs.html" . }}
-
+        {{ partial "header.html" . }}
+        {{ partial "components/postnav.html" . }}
+        <h1 class="term-title">#{{ .Title }}</h1>
         <div class="term-list">
-
             <!-- Posts under this Term -->
             <ul class="term-list-posts">
                 {{ range where .Pages "Section" "not in" (slice "cards" "library") }}

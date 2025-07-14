@@ -1,12 +1,11 @@
 {{ define "main" }}
     <article class="posts termlist-page">
-        {{ partial "components/post-page-header.html" . }}
-        {{ partial "components/breadcrumbs.html" . }}
-
+        {{ partial "header.html" . }}
+        {{ partial "components/postnav.html" . }}
+        <h1 class="term-title">{{ .Title }}</h1>
         {{ with .Params.description }}
             <div class="taxonomy-description markdown-body">
                 {{ . | markdownify }}
-                <hr />
             </div>
         {{ end }}
 
