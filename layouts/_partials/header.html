@@ -21,7 +21,7 @@
       {{- $entry := index $switch $lang -}}
       <a href="{{ $entry.url }}" data-umami-event="🌍 Switch Language"
           class="no-swup" title="{{ $entry.label }}">
-        {{ partial "icons/globe-icon" . }}
+        <img src="/img/globe.svg" style="display: block; width:1.2em; height: 1.2em">
       </a>
   </div>
 </header>
