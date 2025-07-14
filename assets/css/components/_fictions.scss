@@ -1,33 +1,27 @@
 #fiction-section {
     .fiction-welcome {
         margin: 2rem 0;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        @media screen and (max-width: 768px) {
-            gap: 1rem;
-        }
-
-        .fiction-welcome-image img {
-            width: 10rem;
-            @media screen and (max-width: 768px) {
-                width: 7rem;
-            }
-            opacity: 0.8;
-        }
     }
 
     .fiction-list {
-        margin: 4rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+
         .fiction-item {
             text-align: center;
-            margin: 2rem 0;
+            margin: 0;
+            filter: url(#x);
+            font-size: 1.5rem;
+            font-weight: 900;
 
-            .fiction-item-title {
-                margin: 0;
-            }
-            .fiction-item-meta {
-                color: var(--secondary-text-color);
+            // Apply slight random rotation using nth-child
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}) {
+                transform: rotate(#{random(7) - 4}deg);
+                opacity: #{(random(5) + 5) / 10};
+              }
             }
         }
     }

@@ -7,11 +7,10 @@
         <div class="book-group">
           {{ range where .Site.RegularPages "Section" "library" }}
             {{ if eq .Date.Year now.Year }}
-              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
+              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}"
+                style="view-transition-name: book-{{ .File.UniqueID }}">
                 <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                  <img
-                      class="lazy" src="{{ .Params.cover }}!small"
-                      style="view-transition-name: book-{{ .File.UniqueID }}" />
+                  <img class="lazy" src="{{ .Params.cover }}!small" />
                 </a>
               </div>
             {{ end }}
