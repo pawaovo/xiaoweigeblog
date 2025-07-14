@@ -5,18 +5,18 @@
 
         <section>
             <h2>站点统计</h2>
-            {{ partial "components/stats-table" . }}
+            {{ partial "stats/stats-table" . }}
         </section>
 
         <section>
             <h2>每月文章字数</h2>
-            {{ partial "components/word-count-chart" . }}
+            {{ partial "stats/word-count-chart" . }}
         </section>
 
         <section>
             <h2>文章发布时间段分布</h2>
             <div class="outbox">
-                {{ partial "components/publish-time-chart" . }}
+                {{ partial "stats/publish-time-chart" . }}
             </div>
         </section>
         <hr>
@@ -34,7 +34,7 @@
         <section>
             <h2>外部链接排行</h2>
             <p>我在页面中嵌入的外部链接主要来自以下域名，引用次数少于 3 的已被排除。</p>
-            {{ partial "components/external-link-rank" . }}
+            {{ partial "stats/external-link-rank" . }}
         </section>
     </article>
     {{ partial "footer.html" . }}

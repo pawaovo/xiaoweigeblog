@@ -6,7 +6,7 @@
         style="view-transition-name: post-{{ .File.UniqueID }}"
         class="post-header"
       >
-        {{ partial "components/banner.html" . }}
+        {{ partial "posts/banner" . }}
         <!-- Title and Subtitle -->
         <h1 class="post-title">
           <span data-pagefind-meta="title">{{ .Title }}</span>
@@ -27,16 +27,16 @@
       <div class="post-content markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         <!-- TOC -->
-        {{ partial "components/toc" . }}
+        {{ partial "posts/toc" . }}
         <!-- Content -->
         <div id="post-content">
             {{ .Content }}
         </div>
         <!-- Endnotes -->
-        {{ partial "components/endnotes" . }}
+        {{ partial "posts/endnotes" . }}
       </div>
 
-      {{ partial "components/post-tabs.html" . }}
-      {{ partial "components/now-read-this.html" . }}
+      {{ partial "posts/action-menu.html" . }}
+      {{ partial "posts/now-read-this.html" . }}
     </article>
 {{ end }}

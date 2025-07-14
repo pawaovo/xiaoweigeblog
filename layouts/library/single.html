@@ -30,11 +30,11 @@
                 {{ .Content }}
             </div>
             <!-- Endnotes -->
-            {{ partial "components/endnotes" . }}
+            {{ partial "posts/endnotes" . }}
             <div class="book-footer">
                 <p>于 {{ partial "components/date" . }} 读完</p>
             </div>
         </div>
-        {{ partial "components/comment.html" . }}
+        {{ partial "posts/comment.html" . }}
     </article>
 {{ end }}

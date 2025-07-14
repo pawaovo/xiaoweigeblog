@@ -1,0 +1,18 @@
+{{ if eq .Site.Language.Lang "zh" }}
+<!-- Latest Cards -->
+<section id="latest-cards">
+    <div class="latest-cards-container">
+        {{- $cards := .Site.GetPage "section" "cards" }}  <!-- 获取 "cards" 部分的内容 -->
+        {{- $paginator := .Paginate $cards.Pages 4 }}  <!-- 对该部分内容进行分页 -->
+        {{- range $paginator.Pages }}
+          {{ partial "items/card" (dict "context" . "summary" true) }}
+        {{- end }}
+    </div>
+    <div style="margin: 1rem 0">
+        <a href="/cards" class="index-section-morelink"
+            data-umami-event="➕ Click more cards link">
+            {{ T "moreLinks.cards" }}
+        </a>
+    </div>
+</section>
+{{ end }}

@@ -9,7 +9,7 @@
         style="view-transition-name: post-{{ .File.UniqueID }}"
         class="post-header fiction-header"
       >
-        {{ partial "components/banner.html" . }}
+        {{ partial "posts/banner" . }}
         <h1 class="post-title" data-pagefind-meta="title">{{ .Title }}</h1>
         <div class="post-meta">{{ partial "components/date" . }}</div>
       </header>
@@ -21,6 +21,6 @@
       </div>
 
       <!-- Comment -->
-      {{ partial "components/comment.html" . }}
+      {{ partial "posts/comment.html" . }}
     </article>
 {{ end }}

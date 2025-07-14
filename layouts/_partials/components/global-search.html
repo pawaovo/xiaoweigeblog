@@ -1,7 +1,13 @@
 <div id="global-search-container">
     <div id="global-search">
         <div id="global-search-close">×</div>
-        {{ partial "components/pagefind" . }}
+        <!-- Pagefind Search -->
+        <div id="pagefind"></div>
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            new PagefindUI({ element: "#pagefind", showSubResults: true });
+          });
+        </script>
     </div>
     <div id="global-search-overlay"></div>
 
