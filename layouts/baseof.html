@@ -3,7 +3,7 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "components/svg-filters.html" . }}
-    <main id="page">
+    <main class="my-[var(--page-margin-y)]">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "scripts.html" . }}
