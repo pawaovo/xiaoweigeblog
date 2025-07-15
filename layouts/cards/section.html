@@ -6,13 +6,13 @@
     {{- $pages := $cards.Pages }}
     {{- $featured := first 6 $pages }}
     {{- $rest := after 6 $pages }}
-    <div class="cards-grid outbox small">
+    <div class="grid! md:grid-cols-2 gap-[1rem] outbox small">
         {{- range $featured }}
             {{ partial "items/card" (dict "context" . "summary" true) }}
         {{- end }}
     </div>
 
-    <ul class="cards-list">
+    <ul class="flex gap-[1rem] flex-wrap justify-around list-none text-[1.2rem]">
         {{- range $rest }}
             <li>
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>

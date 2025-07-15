@@ -40,13 +40,16 @@ export default defineConfig({
       'top-[1rem]',
       'md:w-[7rem]',
       'md:h-[7rem]',
-      'md:right-[-5rem]'
+      'md:right-[-5rem]',
+      'top-[-1rem]', 'right-[-1rem]', 'w-[4rem]', 'h-[4rem]', 'z-1', 'rotate-[-5deg]'
     ],
   content: {
     filesystem: ['./**/*.{html,md,js}'],
   },
   presets: [
     presetAttributify(),
-    presetWind3(),
+    presetWind3({
+      dark: 'media'
+    }),
   ],
 })

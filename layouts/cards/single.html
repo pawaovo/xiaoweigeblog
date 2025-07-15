@@ -1,6 +1,10 @@
 {{ define "main" }}
-    <article class="card-page">
-        {{ partial "components/logo" (dict "link" "cards") }}
+    <article class="relative">
+        {{ partial "components/logo" (dict
+            "link" "cards"
+            "class" "round-sticker absolute top-[-1rem] right-[-1rem] w-[4rem] h-[4rem] z-1 rotate-[-5deg]"
+            "imageClass" "w-full"
+        ) }}
         {{ partial "items/card" (dict "context" .) }}
 
         {{- /* 查询引用了这个卡片的文章 */ -}}
@@ -15,9 +19,9 @@
 
         {{- /* 如果有文章引用这个卡片，就显示它们 */ -}}
         {{ if gt (len $referencedBy) 0 }}
-        <section class="related-posts post-content">
-            <h2>引用了本卡片的文章</h2>
-            <ul>
+        <section class="related-posts post-content my-5">
+            <h2 class="text-[1.2rem] font-secondary m-0">引用了本卡片的文章</h2>
+            <ul class="m-0">
                 {{- range $referencedBy }}
                     <li>
                         <a href="{{ .Permalink }}">{{ .Title }}</a>

@@ -1,18 +1,18 @@
 {{ $ctx := .context }}
 {{ $showSummary := .summary }}
-<div class="card markdown-body post-content"
+<div class="relative p-[1.5rem] bg-white dark:bg-neutral-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
     style="view-transition-name: card-{{ $ctx.File.UniqueID }}">
     <div class="card-header">
-        <h3 class="card-title"
+        <h3 class="text-xl font-extrabold m-0 text-gray-900 dark:text-gray-100"
             data-pagefind-meta="title"
             data-pagefind-sort="date[data-date], weight[data-weight]"
             data-date="{{ .Date.Format "2006-01-02" }}"
             data-weight="5">
-                <a href="{{ $ctx.RelPermalink }}">{{ $ctx.Title }}</a>
+                <a href="{{ $ctx.RelPermalink }}" class="no-underline! text-[var(--text-color)]!">{{ $ctx.Title }}</a>
         </h3>
-        <div class="card-tags">{{ partial "components/tags" $ctx }}</div>
+        <div class="text-base m-0">{{ partial "components/tags" $ctx }}</div>
     </div>
-    <div class="card-content">
+    <div class="text-lg mt-2 markdown-body">
         {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
     </div>
 </div>
