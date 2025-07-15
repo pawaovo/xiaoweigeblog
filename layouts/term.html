@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <article class="posts termlist-page">
+    <article>
         {{ partial "header.html" . }}
         {{ partial "components/postnav.html" . }}
         <div class="term-header">
@@ -34,10 +34,12 @@
             {{ $cards := where .Pages "Section" "eq" "cards" }}
             {{ if gt (len $cards) 0 }}
             <h2>{{ T "termPage.cards" }}</h2>
-            <div class="grid grid-cols-2 gap-x-[1rem]">
-                {{ range $cards }}
-                {{ partial "items/card" (dict "context" . "summary" true) }}
-                {{ end }}
+            <div class="outbox small">
+                <div class="grid grid-cols-2 gap-4">
+                    {{ range $cards }}
+                    {{ partial "items/card" (dict "context" . "summary" true) }}
+                    {{ end }}
+                </div>
             </div>
             {{ end }}
 
