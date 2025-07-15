@@ -11,7 +11,8 @@
                 {{ partial "components/logo"
                 (dict
                     "link" "library"
-                    "class" "round-sticker absolute w-[2rem] h-[2rem] md:w-[5rem] md:h-[5rem] top-[2rem] right-[-2rem] md:right-[-3rem]") }}
+                    "class" "round-sticker absolute w-[2rem] h-[2rem] md:w-[5rem] md:h-[5rem] top-[2rem] right-[-2rem] md:right-[-3rem]"
+                    "imageClass" "w-full") }}
             </div>
             <h1 class="xerox" data-pagefind-meta="title">{{ .Title }}</h1>
             {{- $rating := .Params.rating -}}

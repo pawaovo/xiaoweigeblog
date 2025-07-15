@@ -2,10 +2,11 @@
 {{ $link := .link | default "" }}
 {{ $src := .src | default $default }}
 {{ $class := .class | default "" }}
+{{ $imageClass := .imageClass | default "" }}
 
 <a href="{{ .Site.LanguagePrefix }}/{{ $link }}"
     class="title-image-container {{ $class }}">
     <img src="{{ $src }}" alt="Logo"
-        class="invert-if-dark title-image w-full"
+        class="invert-if-dark title-image {{ $imageClass }}"
         style="view-transition-name: title-image" />
 </a>

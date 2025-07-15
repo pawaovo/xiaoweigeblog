@@ -1,8 +1,0 @@
-<header id="post-page-header"
-    class="{{ with .Params.banner }}with-banner{{ end }} {{ if eq .Section "fictions" }} flex justify-center {{ end }}">
-    {{ if eq .Section "fictions" }}
-        {{ partial "components/logo" (dict "src" "/img/potted-skeleton.svg" "link" "fictions") }}
-    {{ else }}
-        {{ partial "components/logo" }}
-    {{ end }}
-</header>

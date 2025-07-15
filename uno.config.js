@@ -28,12 +28,19 @@ export default defineConfig({
       'opacity-[1.0]',
 
       'absolute',
+      'right-0',
       'w-[5rem]',
       'h-[5rem]',
       'top-[2rem]',
       'w-[calc(25%_-_1rem)]',
       'w-[calc(50%_-_2rem)]',
+      'w-[10rem]',
       'sm:w-full',
+      'right-[-3rem]',
+      'top-[1rem]',
+      'md:w-[7rem]',
+      'md:h-[7rem]',
+      'md:right-[-5rem]'
     ],
   content: {
     filesystem: ['./**/*.{html,md,js}'],

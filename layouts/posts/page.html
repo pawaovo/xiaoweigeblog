@@ -1,11 +1,19 @@
 {{ define "main" }}
-    {{ partial "components/post-page-header.html" . }}
     <article class="post" id="article">
       <!-- Post Header -->
       <header
         style="view-transition-name: post-{{ .File.UniqueID }}"
-        class="post-header"
+        class="post-header relative"
       >
+        {{ if .Params.banner }}
+            {{ partial "components/logo" (dict
+                "class" "block round-sticker w-[5rem] h-[5rem] md:w-[7rem] md:h-[7rem] right-[-3rem] md:right-[-5rem] top-[1rem] absolute rotate-[3.0deg]"
+                "imageClass" "block w-full"
+            ) }}
+        {{ else }}
+            {{ partial "components/logo" }}
+        {{ end }}
+
         {{ partial "posts/banner" . }}
         <!-- Title and Subtitle -->
         <h1 class="post-title">

@@ -1,13 +1,17 @@
 {{ define "main" }}
-    {{ partial "components/post-page-header.html" . }}
     <article>
       <!-- Post Header -->
-      <header
-        style="view-transition-name: post-{{ .File.UniqueID }}"
-        class="text-center"
-      >
-        {{ partial "posts/banner" . }}
-        <h1 class="xerox text-4xl font-900" data-pagefind-meta="title">{{ .Title }}</h1>
+      <header class="text-center">
+        {{ partial "components/logo" (dict
+            "link" "fictions/"
+            "src" "/img/potted-skeleton.svg"
+            "imageClass" "block w-[10rem]"
+            "class" "flex justify-center"
+        ) }}
+        <h1
+            class="xerox text-4xl font-900"
+            data-pagefind-meta="title"
+        ><span style="view-transition-name: post-{{ .File.UniqueID }}">{{ .Title }}</span></h1>
         <div class="font-secondary">{{ partial "components/date" . }}</div>
       </header>
 
