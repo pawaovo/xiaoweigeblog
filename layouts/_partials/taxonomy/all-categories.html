@@ -1,16 +1,16 @@
 <!-- Display Categories -->
-<section class="taxonomy-categories">
+<section class="grid grid-cols-2 grid-rows-masonry gap-4">
 {{ range sort .Site.Taxonomies.categories ".Count" "desc" }}
-    <a href="{{ .Page.RelPermalink }}" class="category-link"
+    <a href="{{ .Page.RelPermalink }}" class="hover:no-underline"
         style="view-transition-name: category-{{ .Page.Title }};">
         <div class="taxonomy-categories-item">
-            <h3 class="category-title">
+            <h3 class="category-title my-1">
                 {{ with .Page.Params.icon }}
-                <span class="category-icon">{{ . }}</span>
+                <span class="inline-block">{{ . }}</span>
                 {{ end }}
-                <span class="category-title-text">{{ .Page.LinkTitle }}</span>
+                <span class="xerox">{{ .Page.LinkTitle }}</span>
             </h3>
-            <p class="category-description">{{ .Page.Params.description | markdownify }}</p>
+            <p class="mt-0">{{ .Page.Params.description | markdownify }}</p>
         </div>
     </a>
 {{ end }}

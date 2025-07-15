@@ -1,0 +1,24 @@
+<a href="{{ .Page.RelPermalink }}"
+    class="inline-flex items-center gap-2 text-[0.9rem] px-2 py-1
+    transition-colors duration-300 rounded-md hover:no-underline
+
+    {{ if lt .Count 4 }}
+    bg-none border border-dashed border-[var(--border-color)] text-[var(--secondary-text-color)]
+    hover:text-inherit hover:border-solid
+    {{ else }}
+    bg-[var(--block-background-color)]
+    hover:bg-[var(--text-color)] hover:text-[var(--block-background-color)]
+    {{ end }}">
+    {{ if .Page.Params.icon }}
+        {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
+            <span class="inline-flex items-center">
+                <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
+                    style="height:1em;width:1em">
+            </span>
+        {{ else }}
+            <span class="inline-flex items-center">{{ .Page.Params.icon }}</span>
+        {{ end }}
+    {{ end }}
+    <span>{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
+    <span class="text-[0.8rem] text-[var(--secondary-text-color)]">{{ .Count }}</span>
+</a>

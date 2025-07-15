@@ -1,5 +1,5 @@
 <!-- Display Tags -->
-<section class="taxonomy-tags">
+<section class="flex flex-wrap gap-2">
   {{ $categorizedTags := dict }}
   {{ $uncategorizedTags := slice }}
 
@@ -25,23 +25,9 @@
 
   <!-- Display uncategorized tags first -->
     {{ if $uncategorizedTags }}
-      <div class="taxonomy-tags">
+      <div class="flex flex-wrap gap-2">
         {{ range $uncategorizedTags }}
-        <a href="{{ .Page.RelPermalink }}"
-            class="taxonomy-tags-item{{ if lt .Count 4 }} dimmed{{ end }}">
-            {{ if .Page.Params.icon }}
-                {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
-                    <span class="tag-icon">
-                        <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
-                            style="height:1em;width:1em">
-                    </span>
-                {{ else }}
-                    <span class="tag-icon">{{ .Page.Params.icon }}</span>
-                {{ end }}
-            {{ end }}
-            <span class="tag-name">{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
-            <span class="tag-count">{{ .Count }}</span>
-        </a>
+        {{ partial "taxonomy/tag-pill" . }}
         {{ end }}
       </div>
     {{ end }}
@@ -52,21 +38,7 @@
         <h3 class="taxonomy-category-title">{{ $category }}</h3>
         <div class="taxonomy-tags">
           {{ range $categoryTags }}
-          <a href="{{ .Page.RelPermalink }}"
-              class="taxonomy-tags-item{{ if lt .Count 4 }} dimmed{{ end }}">
-              {{ if .Page.Params.icon }}
-                  {{ if or (hasPrefix .Page.Params.icon "http://") (hasPrefix .Page.Params.icon "https://") }}
-                      <span class="tag-icon">
-                          <img src="{{ .Page.Params.icon }}" alt="{{ .Page.LinkTitle }}"
-                              style="height:1em;width:1em">
-                      </span>
-                  {{ else }}
-                      <span class="tag-icon">{{ .Page.Params.icon }}</span>
-                  {{ end }}
-              {{ end }}
-              <span class="tag-name">{{ if not .Page.Params.icon }}#{{ end }}{{ .Page.LinkTitle }}</span>
-              <span class="tag-count">{{ .Count }}</span>
-          </a>
+          {{ partial "taxonomy/tag-pill" . }}
           {{ end }}
         </div>
       </div>

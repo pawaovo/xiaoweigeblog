@@ -1,3 +1,4 @@
+
 @mixin small-button {
     background-color: var(--block-background-color);
     padding: 0.2rem 0.5rem;
@@ -9,6 +10,10 @@
         border: 1px solid var(--text-color);
         text-decoration: none;
     }
+}
+
+.small-button {
+    @include small-button
 }
 
 @mixin card {
