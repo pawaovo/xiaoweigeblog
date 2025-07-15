@@ -3,7 +3,7 @@
       <!-- Post Header -->
       <header
         style="view-transition-name: post-{{ .File.UniqueID }}"
-        class="post-header relative"
+        class="mb-8 relative"
       >
         {{ if .Params.banner }}
             {{ partial "components/logo" (dict
@@ -19,15 +19,15 @@
 
         {{ partial "posts/banner" . }}
         <!-- Title and Subtitle -->
-        <h1 class="post-title">
+        <h1 class="text-[2rem] font-900 xerox">
           <span data-pagefind-meta="title">{{ .Title }}</span>
           {{ with .Params.subtitle }}
-            <small class="post-subtitle">{{ . }}</small>
+            <small class="block font-secondary font-italic text-[1.2rem]">{{ . }}</small>
           {{ end }}
         </h1>
         <!-- Post Meta -->
-        <div class="post-meta">
-            {{ partial "components/date" . }}
+        <div class="flex flex-wrap items-center gap-2">
+            <span class="font-secondary">{{ partial "components/date" . }}</span>
             {{ if or .Params.categories .Params.tags }}<span>·</span>{{ end }}
             {{ partial "components/category-pill" . }}
             {{ partial "components/tags" . }}
@@ -35,7 +35,7 @@
       </header>
 
       <!-- Post Content -->
-      <div class="post-content markdown-body"
+      <div class="min-h-[60%] leading-[2] mb-8 markdown-body"
           style="view-transition-name: post-content-{{ .File.UniqueID }}">
         <!-- TOC -->
         {{ partial "posts/toc" . }}
