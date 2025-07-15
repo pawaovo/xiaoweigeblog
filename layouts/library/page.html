@@ -1,37 +1,37 @@
 {{ define "main" }}
     <article id="book-page">
-        <div class="book-page-header">
-            <div class="book-cover"
+        <header class="flex flex-col items-center gap-[0.5rem]">
+            <div class="relative border-[0.2rem] border-solid border-white shadow-lg w-[10rem] md:w-[15rem]"
                 style="view-transition-name: book-{{ .File.UniqueID }}">
                 <img
-                    class="lazy" loading="lazy"
+                    class="lazy block w-full h-auto" loading="lazy"
                     data-pagefind-meta="image[src]"
                     src="{{ .Params.cover }}"
                 />
+                {{ partial "components/logo"
+                (dict
+                    "link" "library"
+                    "class" "round-sticker absolute w-[2rem] h-[2rem] md:w-[5rem] md:h-[5rem] top-[2rem] right-[-2rem] md:right-[-3rem]") }}
             </div>
-            <h1 class="book-title" data-pagefind-meta="title">{{ .Title }}</h1>
+            <h1 class="xerox" data-pagefind-meta="title">{{ .Title }}</h1>
             {{- $rating := .Params.rating -}}
             {{- $fullStars := math.Floor $rating -}}
-            <p class="book-author">
+            <p class="m-0">
                 {{ .Params.author }}
             </p>
-            <p class="book-rating">
+            <p class="m-0">
                 {{- range seq $fullStars }}
                 <span class="star">⭐</span>
                 {{- end -}}
             </p>
-            <!-- 导航作用的骷髅头图标 -->
-            <div>
-                {{ partial "components/logo" (dict "link" "library") }}
-            </div>
-        </div>
-        <div class="markdown-body book-body">
+        </header>
+        <div class="markdown-body">
             <div class="book-content">
                 {{ .Content }}
             </div>
             <!-- Endnotes -->
             {{ partial "posts/endnotes" . }}
-            <div class="book-footer">
+            <div class="text-[1rem] font-secondary">
                 <p>于 {{ partial "components/date" . }} 读完</p>
             </div>
         </div>

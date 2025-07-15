@@ -2,17 +2,11 @@
   {{ partial "header.html" . }}
   <article id="library">
     <div id="library-content">
-
         <h2>{{ now.Year }} 年读的书</h2>
-        <div class="book-group">
+        <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
           {{ range where .Site.RegularPages "Section" "library" }}
             {{ if eq .Date.Year now.Year }}
-              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}"
-                style="view-transition-name: book-{{ .File.UniqueID }}">
-                <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                  <img class="lazy" src="{{ .Params.cover }}!small" />
-                </a>
-              </div>
+            {{ partial "items/book" . }}
             {{ end }}
           {{ end }}
         </div>
@@ -35,15 +29,9 @@
         </div>
 
         <h2>推荐好书</h2>
-        <div class="book-group">
+        <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
         {{ range where (where .Site.RegularPages "Section" "library") ".Params.rating" "==" 5 }}
-            <div class="book">
-            <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                <img
-                    class="lazy" src="{{ .Params.cover }}"
-                    style="view-transition-name: book-{{ .File.UniqueID }}" />
-            </a>
-            </div>
+        {{ partial "items/book" . }}
         {{ end }}
         </div>
     </div>

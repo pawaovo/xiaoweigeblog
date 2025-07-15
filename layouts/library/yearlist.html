@@ -3,17 +3,11 @@
     <article id="library">
       <div id="library-content">
           <h2>{{ .Title }}</h2>  <!-- 显示年份 -->
-          <div class="book-group">
+          <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
             {{ $year := .Title }}
             {{ range where .Site.RegularPages "Section" "library" }}
               {{ if eq (printf "%d" .Date.Year) $year }}
-              <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
-                  <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                      <img
-                          class="lazy" src="{{ .Params.cover }}"
-                          style="view-transition-name: book-{{ .File.UniqueID }}" />
-                  </a>
-              </div>
+              {{ partial "items/book" . }}
               {{ end }}
             {{ end }}
           </div>

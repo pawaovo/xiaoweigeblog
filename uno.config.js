@@ -26,6 +26,11 @@ export default defineConfig({
       'opacity-[0.8]',
       'opacity-[0.9]',
       'opacity-[1.0]',
+
+      'absolute',
+      'w-[5rem]',
+      'h-[5rem]',
+      'top-[2rem]'
     ],
   content: {
     filesystem: ['./**/*.{html,md,js}'],

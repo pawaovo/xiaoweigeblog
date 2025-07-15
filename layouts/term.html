@@ -34,16 +34,9 @@
             {{ $cards := where .Pages "Section" "eq" "cards" }}
             {{ if gt (len $cards) 0 }}
             <h2>{{ T "termPage.cards" }}</h2>
-            <div class="term-list-cards cards-section outbox small">
+            <div class="grid grid-cols-2 gap-x-[1rem]">
                 {{ range $cards }}
-                <div class="card">
-                    <h3>
-                        <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Card Link from Category Page">
-                            {{ .Title }}
-                        </a>
-                    </h3>
-                    <p>{{ .Summary }}</p>
-                </div>
+                {{ partial "items/card" (dict "context" . "summary" true) }}
                 {{ end }}
             </div>
             {{ end }}
@@ -52,15 +45,9 @@
             {{ $books := where .Pages "Section" "eq" "library" }}
             {{ if gt (len $books) 0 }}
             <h2>{{ T "termPage.books" }}</h2>
-            <div class="book-group">
+            <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
                 {{ range $books }}
-                <div class="book{{ if eq .Params.rating 1 }} badbook{{ end }}{{ if eq .Params.rating 5 }} goodbook{{ end }}">
-                    <a href="{{ .Permalink }}" class="book-cover" style="view-transition-name: book-{{ .Title }}">
-                        <img
-                            class="lazy" src="{{ .Params.cover }}"
-                            style="view-transition-name: book-{{ .File.UniqueID }}" />
-                    </a>
-                </div>
+                {{ partial "items/book" . }}
                 {{ end }}
             </div>
             {{ end }}

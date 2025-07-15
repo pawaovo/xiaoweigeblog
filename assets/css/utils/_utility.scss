@@ -60,3 +60,7 @@ figure {
 .xerox {
     filter: url(#x);
 }
+
+.round-sticker {
+    @include roundSticker;
+}

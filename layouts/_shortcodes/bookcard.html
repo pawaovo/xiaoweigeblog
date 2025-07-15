@@ -2,9 +2,9 @@
 {{- $book := index (where $books "File.BaseFileName" (.Get 0)) 0 -}}
 
 {{- if $book }}
-    <div class="markdown-body book-body">
-        <div class="book-cover">
-            <img class="no-fancybox" src="{{ $book.Params.cover }}" />
+    <div class="markdown-body">
+        <div class="mx-auto max-w-[50%] ">
+            <img class="no-fancybox block w-full" src="{{ $book.Params.cover }}" />
         </div>
         <h3 class="book-title">
             <a href="{{ $book.Permalink }}">{{ $book.Title }}</a>
