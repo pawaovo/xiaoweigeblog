@@ -6,7 +6,7 @@
             {{ with .Content }}{{ . }}{{ end }}
             </div>
             <div class="fiction-list">
-                {{- $fictions := .Site.GetPage "section" "fictions" }}  <!-- 获取 "cards" 部分的内容 -->
+                {{- $fictions := .Site.GetPage "section" "fictions" }}
                 {{- range $fictions.Pages }}
                 <div class="fiction-item" style="view-transition-name: post-{{ .File.UniqueID }}">
                     <a href="{{ .Permalink }}">《{{ .Title }}》</a>

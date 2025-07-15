@@ -78,7 +78,7 @@
     }
 }
 
-.cards-section {
+.cards-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -86,11 +86,23 @@
         grid-template-columns: 1fr 1fr;
     }
     .card {
+        font-size: 85%;
+        line-height: 1.8;
         margin: 0;
         h3 {
+            font-size: 1.2rem;
             margin: 0;
         }
     }
+}
+
+.cards-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.2rem;
 }
 
 #latest-cards {
