@@ -1,17 +1,18 @@
 <div class="post-comments">
     {{ with .Params.comments }}
-    <div class="static-comments">
-        <p class="static-comments-heading">{{ T "postPage.staticCommentsSectionHeader" }}</p>
+    <!-- Static Comments -->
+    <div class="my-8">
+        <p class="font-secondary">{{ T "postPage.staticCommentsSectionHeader" }}</p>
         {{ range . }}
-            <div class="static-comments-item">
-                <div class="static-comments-item-header">
-                <span class="comment-author">{{ .name }}</span>
-                <span class="comment-date font-mono">{{ .date }}</span>
+            <div class="text-xl border-b border-solid border-[#ccc] py-4 px-1">
+                <div class="mb-4 flex justify-between">
+                    <span class="font-bold">{{ .name }}</span>
+                    <span class="font-secondary">{{ .date }}</span>
                 </div>
-                <div class="static-comments-item-content">
+                <div>
                     {{ .content | safeHTML }}
                 </div>
-                <div class="static-comments-item-footer">
+                <div class="text-[1rem] text-right font-secondary">
                     {{ with .source }}
                     <p class="font-mono">{{ T "postPage.originallyPostedOn" . }}</p>
                     {{ end }}
@@ -20,7 +21,7 @@
         {{ end }}
     </div>
     {{ end }}
-    <div class="giscus">
+    <div class="giscus my-4">
         <p style="text-align:center">
             {{ T "postPage.commentNotLoaded" }}
         </p>
