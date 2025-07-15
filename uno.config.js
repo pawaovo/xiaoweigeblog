@@ -30,7 +30,10 @@ export default defineConfig({
       'absolute',
       'w-[5rem]',
       'h-[5rem]',
-      'top-[2rem]'
+      'top-[2rem]',
+      'w-[calc(25%_-_1rem)]',
+      'w-[calc(50%_-_2rem)]',
+      'sm:w-full',
     ],
   content: {
     filesystem: ['./**/*.{html,md,js}'],

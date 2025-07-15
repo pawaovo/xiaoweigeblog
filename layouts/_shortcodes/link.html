@@ -1,14 +1,15 @@
-<a href="{{.Get "link" }}" target="_blank"
-    class="{{ if (.Get "type") }}{{ .Get "type" }}-link{{ else }}blog-link{{ end }}">
-    {{ if and (isset .Params "image") .Params.image }}
-    <div class="link-image">
-        <img src="{{ .Params.image }}" class="no-fancybox" alt="{{ .Params.title }}" />
-    </div>
-    {{ end }}
-    {{ if ne (.Get "type") "podcast" }}
-    <div class="link-content">
-        <h4>{{.Get "title" }}</h4>
-        <p>{{.Get "description" }}</p>
-    </div>
-    {{ end }}
+{{ if eq (.Get "type") "podcast" }}
+<a href="{{ .Get "link" }}" target="_blank" title="{{ .Get "title" }}"
+    class="block w-[calc(25%_-_1rem)] rounded-md overflow-hidden box-border p-0"
+    style="background-color: var(--block-background-color);
+        color: var(--text-color);text-decoration: none;">
+    <img src="{{ .Get "image" }}" class="block m-0!" alt="{{ .Get "title" }}">
 </a>
+{{ else }}
+<a href="{{ .Get "link" }}" target="_blank"
+    class="block w-[calc(50%_-_1rem)] rounded-[1rem] box-border px-[1.5rem]"
+    style="background-color: var(--block-background-color);
+        color: var(--text-color);text-decoration: none;">
+    <h3>{{ .Get "title" }}</h3>
+</a>
+{{ end }}

@@ -11,7 +11,7 @@ aliases:
 
 ## 我常读的中文博客
 
-<div class="linkroll">
+<div class="flex flex-wrap gap-[1rem]">
 {{< link link="https://www.velasx.com/" title="Velas 电波站" >}}
 {{< link link="https://brocalife.com/" title="白洛嘉" >}}
 {{< link link="https://onojyun.com/" title="莫比乌斯" >}}
@@ -33,7 +33,7 @@ aliases:
 
 ## 我常听的中文播客
 
-<div class="linkroll">
+<div class="flex flex-wrap gap-[1rem]">
 {{< link type="podcast" title="独树不成林" link="https://podcasts.apple.com/cn/podcast/%E7%8B%AC%E6%A0%91%E4%B8%8D%E6%88%90%E6%9E%97/id1711052890" image="https://image.guhub.cn/uPic/2025/06/Fp3PROfjHhWN5OjBQf6Y8lUh3KkB.png@small.png" >}}
 {{< link type="podcast" title="碳基生物生存指南" link="https://podcasts.apple.com/cn/podcast/%E7%A2%B3%E5%9F%BA%E7%94%9F%E7%89%A9%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/id1707385930" image="https://image.guhub.cn/uPic/2025/06/Fj8-4YU1LHRuvPF76MLRlxPjzOON.png@small.png" >}}
 {{< link type="podcast" title="没理想编辑部" link="https://podcasts.apple.com/cn/podcast/%E6%B2%A1%E7%90%86%E6%83%B3%E7%BC%96%E8%BE%91%E9%83%A8/id1494093522" image="https://image.guhub.cn/uPic/2025/06/aHR0cHM6Ly9jZG4udmlzdG9waWEuY29tLmNuL2ltZy9wb2RjYXN0LW1seGZtLXYxLmpwZw==.jpg@small.jpeg" >}}
