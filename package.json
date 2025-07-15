@@ -1,0 +1,18 @@
+{
+  "name": "geek-death-project",
+  "version": "1.0.0",
+  "description": "![](screenshot.png)",
+  "main": "index.js",
+  "devDependencies": {
+    "@unocss/cli": "^66.3.3",
+    "@unocss/preset-wind4": "^66.3.3",
+    "unocss": "^66.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:uno": "unocss \"{layouts,content}/**/*.{html,md}\" -o assets/css/uno.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

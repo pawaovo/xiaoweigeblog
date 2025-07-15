@@ -23,6 +23,10 @@
 {{- end }}
 
 <!-- theme css -->
+{{ with resources.Get "css/uno.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+
 {{ with resources.Get "css/global.scss" | css.Sass | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
