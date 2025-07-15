@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:uno": "unocss \"{layouts,content}/**/*.{html,md}\" -o assets/css/uno.css --watch"
+    "build:uno": "unocss \"{layouts,content}/**/*.{html,md}\" -o assets/css/uno.css --watch",
+    "build:uno:prod": "unocss \"{layouts,content}/**/*.{html,md}\" -o assets/css/uno.css"
   },
   "keywords": [],
   "author": "",
