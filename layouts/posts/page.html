@@ -11,7 +11,10 @@
                 "imageClass" "block w-full"
             ) }}
         {{ else }}
-            {{ partial "components/logo" }}
+            {{ partial "components/logo" (dict
+                "class" "block w-[10rem]"
+                "imageClass" "block w-full"
+            ) }}
         {{ end }}
 
         {{ partial "posts/banner" . }}
