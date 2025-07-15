@@ -1,17 +1,17 @@
 {{ with site.RegularPages.Related . | first 1 }}
-<div class="nrt post-content">
-  <h4 class="nrt-title">{{ T "nowReadThis" }}</h4>
+<div class="mt-8 pb-8 relative leading-[2]">
+  <h4 class="absolute -z-1 bottom-0 right-0 text-[2rem] m-0 opacity-25 font-italic">{{ T "nowReadThis" }}</h4>
   {{ range . }}
-  <div class="nrt-header">
-      <a class="nrt-link" href="{{ .RelPermalink }}" data-umami-event="🤔 Click Related Post">
+  <div class="flex justify-between">
+      <a class="font-800" href="{{ .RelPermalink }}" data-umami-event="🤔 Click Related Post">
           {{ .LinkTitle }}
           {{ with .Params.subtitle }}
-              <span class="nrt-subtitle">：{{ . }}</span>
+              <span class="font-secondary font-normal">：{{ . }}</span>
           {{ end }}
       </a>
-      <span class="nrt-reading-time">⏱️ {{ .ReadingTime }}min </span>
+      <span class="font-secondary">⏱️ {{ .ReadingTime }}min </span>
   </div>
-  <div class="nrt-summary">
+  <div class="font-light">
       <p>{{ .Summary | plainify }}</p>
   </div>
   {{ end }}

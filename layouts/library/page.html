@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <article id="book-page">
+    <article>
         <header class="flex flex-col items-center gap-[0.5rem]">
             <div class="relative border-[0.2rem] border-solid border-white shadow-lg w-[10rem] md:w-[15rem]"
                 style="view-transition-name: book-{{ .File.UniqueID }}">
@@ -27,7 +27,7 @@
             </p>
         </header>
         <div class="markdown-body">
-            <div class="book-content">
+            <div class="leading-[2]">
                 {{ .Content }}
             </div>
             <!-- Endnotes -->

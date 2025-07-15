@@ -1,9 +1,9 @@
 {{ if .Params.endnotes }}
 <hr>
-<div id="post-endnotes">
-    <ul>
+<div id="post-endnotes" class="font-secondary text-[1rem]">
+    <ul class="list-none">
       {{ range .Params.endnotes }}
-      <li>{{ . | markdownify }}</li>
+      <li class="flex gap-4 pl-4"><span>→</span> {{ . | markdownify }}</li>
       {{ end }}
     </ul>
 </div>
