@@ -1,9 +1,9 @@
 {{ define "main" }}
     <article class="index">
-      {{ partial "header.html" . }}
-      {{ partial "components/postnav.html" . }}
-      {{ partial "home/latest-posts.html" . }}
-      {{ partial "home/latest-cards.html" . }}
+      {{ partial "header" . }}
+      {{ partial "home/home-nav" . }}
+      {{ partial "home/latest-posts" . }}
+      {{ partial "home/latest-cards" . }}
     </article>
 {{ partial "footer.html" . }}
 {{ end }}

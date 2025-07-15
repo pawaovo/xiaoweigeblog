@@ -1,41 +1,17 @@
 {{ define "main" }}
     <article class="index">
-      {{ partial "header.html" . }}
-      {{ partial "components/postnav.html" . }}
+      {{ partial "header" . }}
+      {{ partial "home/home-nav" . }}
 
       <div class="markdown-content" style="line-height: 2">
           {{ .Content }}
       </div>
 
-      <!-- Latest Posts -->
       <section id="featured-posts">
           <div class="posts-list">
-              {{ range where site.RegularPages "Params.featured" true }}
-              <div class="posts-item"
-                  style="view-transition-name: post-{{ .File.UniqueID }}">
-                  <header>
-                      <div class="posts-item-meta">
-                          <p>
-                              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                              <span>·</span>
-                              {{ partial "components/tags" .  }}
-                          </p>
-                          <h2 class="posts-item-title">
-                              <a
-                                  href="{{ .Permalink }}"
-                                  data-umami-event="🪶 Click post link from featured"
-                              >
-                                  {{ if eq .Section "library" }}
-                                      读《{{ .Title }}》
-                                  {{ else }}
-                                      {{ .Title }}
-                                  {{ end }}
-                              </a>
-                          </h2>
-                      </div>
-                  </header>
-              </div>
-              {{ end }}
+            {{ range where site.RegularPages "Params.featured" true }}
+            {{ partial "items/post" (dict "ctx" . ) }}
+            {{ end }}
           </div>
       </section>
     </article>

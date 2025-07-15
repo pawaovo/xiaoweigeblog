@@ -1,15 +1,37 @@
+<style>
+#global-search-overlay.shown {
+    z-index: 10!important;
+    opacity: 1!important;
+}
+
+#global-search #pagefind input {
+    outline: none
+}
+
+#global-search.shown {
+    z-index: 15!important;
+    display: flex!important;
+    animation: fade-in 0.3s ease-in-out!important;
+}
+</style>
+
 <div id="global-search-container">
-    <div id="global-search">
-        <div id="global-search-close">×</div>
+    <div id="global-search"
+        class="fixed -z-10 hidden top-0 left-0 right-0 bottom-0 items-center justify-center">
+        <div id="global-search-close" class="absolute top-0 right-0 px-4 text-[3rem] cursor-pointer">×</div>
         <!-- Pagefind Search -->
-        <div id="pagefind"></div>
+        <div id="pagefind" class="max-h-[90vh] overflow-y-auto w-full m-4 md:w-[600px]"></div>
         <script>
           window.addEventListener('DOMContentLoaded', () => {
             new PagefindUI({ element: "#pagefind", showSubResults: true });
           });
         </script>
     </div>
-    <div id="global-search-overlay"></div>
+
+    <div id="global-search-overlay"
+        class="fixed top-0 left-0 w-full h-full bg-[rgba(250,250,250,0.75)] dark:bg-[rgba(30,30,30,0.75)]
+            backdrop-blur-md -z-10 opacity-0 transition-opacity duration-300">
+    </div>
 
     <script>
       (() => {

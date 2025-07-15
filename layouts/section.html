@@ -22,29 +22,11 @@
                         <small class="font-mono font-secondary text-[0.8rem]">{{ T "archivePage.postCountMonthly" (len .Pages) }}</small>
                     </h2>
                 </summary>
-                <div class="term-list">
-                    <ul class="term-list-posts">
-                      {{ range .Pages }}
-                        <li>
-                          <div style="display: flex; gap: 1rem;">
-                              <time class="font-mono">
-                                  {{ .Date.Format "Jan 02" }}
-                              </time>
-                              <a href="{{ .Permalink }}">
-                                  {{ .Title }}
-                              </a>
-                          </div>
-                          <div class="posts-item-category">
-                              {{ with .Params.categories }}
-                                  <a href="/categories/{{ . }}">
-                                      {{ . }}
-                                  </a>
-                              {{ end }}
-                          </div>
-                        </li>
-                      {{ end }}
-                    </ul>
-                </div>
+                <ul class="ps-0 flex flex-col gap-2 list-none leading-relaxed">
+                    {{ range .Pages }}
+                    {{ partial "items/post-small" . }}
+                    {{ end }}
+                </ul>
             </details>
             {{ $remainingMonthsToOpen = sub $remainingMonthsToOpen 1 }}
             {{ end }}

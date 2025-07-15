@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="taxonomy">
-    {{ partial "header.html" . }}
-    {{ partial "components/postnav.html" . }}
+    {{ partial "header" . }}
+    {{ partial "home/home-nav" . }}
 
     <h2>文章系列</h2>
     {{ partial "taxonomy/all-categories.html" . }}

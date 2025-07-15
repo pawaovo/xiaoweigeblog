@@ -1,7 +1,7 @@
 {{ define "main" }}
     <article>
-        {{ partial "header.html" . }}
-        {{ partial "components/postnav.html" . }}
+        {{ partial "header" . }}
+        {{ partial "home/home-nav" . }}
         <div class="term-header">
             <h1 class="term-title"
                 style="view-transition-name: category-{{ .Title }}">
@@ -14,19 +14,11 @@
                 <p class="term-description">{{ . }}</p>
             {{ end }}
         </div>
-        <div class="term-list">
+        <div>
             <!-- Posts under this Term -->
-            <ul class="term-list-posts">
+            <ul class="ps-0 flex flex-col gap-2 list-none leading-relaxed">
                 {{ range where .Pages "Section" "not in" (slice "cards" "library") }}
-                <li>
-                    <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Post Link from Category Page">
-                        {{ .Title }}{{ with .Params.subtitle }}：<span class="posts-subtitle">{{. }}</span>
-                        {{ end }}
-                    </a>
-                    <time>
-                        {{ .Date.Format "2006-1-2" }}
-                    </time>
-                </li>
+                {{ partial "items/post-small" . }}
                 {{ end }}
             </ul>
 
