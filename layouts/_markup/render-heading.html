@@ -1,0 +1,5 @@
+{{ $size := index (dict "1" "text-4xl" "2" "text-2xl" "3" "text-xl" "4" "text-lg" "5" "text-base" "6" "text-sm") (printf "%d" .Level) }}
+<h{{ .Level }} id="{{ .Anchor }}"
+  class="{{ if eq .Level 2 }}font-extrabold{{ else }}font-bold{{ end }} my-5 {{ $size }}{{ with .Attributes.class }} {{ . }}{{ end }}">
+  {{- .Text -}}
+</h{{ .Level }}>

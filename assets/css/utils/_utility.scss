@@ -52,3 +52,11 @@ figure {
 .font-mono {
     font-family: var(--mono-font-family);
 }
+
+.font-secondary {
+    color: var(--secondary-text-color);
+}
+
+.xerox {
+    filter: url(#x);
+}

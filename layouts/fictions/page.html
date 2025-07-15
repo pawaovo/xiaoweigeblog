@@ -1,17 +1,14 @@
 {{ define "main" }}
     {{ partial "components/post-page-header.html" . }}
-    <article
-        class="post fiction-page {{ .Site.Language.LanguageName }}"
-        id="article"
-    >
+    <article>
       <!-- Post Header -->
       <header
         style="view-transition-name: post-{{ .File.UniqueID }}"
-        class="post-header fiction-header"
+        class="text-center"
       >
         {{ partial "posts/banner" . }}
-        <h1 class="post-title" data-pagefind-meta="title">{{ .Title }}</h1>
-        <div class="post-meta">{{ partial "components/date" . }}</div>
+        <h1 class="xerox text-4xl font-900" data-pagefind-meta="title">{{ .Title }}</h1>
+        <div class="font-secondary">{{ partial "components/date" . }}</div>
       </header>
 
       <!-- Post Content -->
