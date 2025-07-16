@@ -1,4 +1,4 @@
-author: Eltrac
+author: xiaoweige
 mainSections:
   - posts
   - fictions
@@ -11,22 +11,17 @@ externalJSFIles:
   - /pagefind/pagefind-ui.js
 footerExternalLinks:
   - name: GitHub
-    link: https://github.com/BigCoke233/geek-death-project
+    link: https://github.com/xiaoweige
     icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
-  - name: BLOGS·CN
-    link: https://blogscn.fun/
-    icon: https://photo.xiangming.site/img/blogscn_icon.png
-  - name: Travelling
-    link: https://www.travellings.cn/go.html
-    icon: https://www.travellings.cn/assets/favicon.png
-giscus:
-  repo: BigCoke233/geek-death-project
-  repoId: R_kgDONPoyVw
-  category: General
-  categoryId: DIC_kwDONPoyV84Clumc
-  mapping: og:title
-  strict: 1
-  reactionsEnabled: 0
-  emitMetadata: 0
-  inputPosition: top
-  theme: "https://www.geedea.pro/css/giscus_noborder.css"
+# giscus 评论系统配置 - 需要您创建自己的 GitHub 仓库后配置
+# giscus:
+#   repo: yourusername/yourblog
+#   repoId: YOUR_REPO_ID
+#   category: General
+#   categoryId: YOUR_CATEGORY_ID
+#   mapping: og:title
+#   strict: 1
+#   reactionsEnabled: 0
+#   emitMetadata: 0
+#   inputPosition: top
+#   theme: "https://yourdomain.xyz/css/giscus_noborder.css"

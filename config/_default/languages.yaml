@@ -2,12 +2,12 @@ zh:
   contentDir: content
   languageCode: zh-CN
   languageName: 简体中文
-  title: 極客死亡計劃
+  title: xiaoweige
   weight: 1
   defaultContentLanguageInSubdir: false
 en:
   contentDir: content/en
   languageCode: en-US
   languageName: English
-  title: Geek Death Project
+  title: xiaoweige
   weight: 2

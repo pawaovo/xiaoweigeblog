@@ -1,16 +1,31 @@
-content/posts/_template.md
-/node_modules
-/public
+# Hugo
+public/
+resources/
+.hugo_build.lock
 
-# ignore since no content is generated here
-/resources
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# ignore archetypes since no archetype is used
-/archetypes
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
-/content/.obsidian
-/content/templates
-/content/ebooks
-static/link-graph.json
-data/externallinks.json
-assets/css/uno.css
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
