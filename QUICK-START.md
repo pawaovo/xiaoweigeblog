@@ -7,13 +7,13 @@
 - 网站标题：xiaoweige
 - 作者：xiaoweige
 - 本地地址：http://localhost:1313
-- 部署地址：https://pawaovo.github.io/xiaoweige-blog/
+- 部署地址：https://pawaovo.github.io/xiaoweigeblog/
 
 ## 🎯 立即开始
 
 ### 1. 本地预览（已可用）
 ```bash
-cd xiaoweige-blog
+cd xiaoweigeblog
 hugo serve
 ```
 访问：http://localhost:1313
@@ -28,8 +28,8 @@ hugo serve
 #### ✅ 已完成部署
 博客已成功部署到 GitHub Pages：
 
-- **仓库地址**: https://github.com/pawaovo/xiaoweige-blog
-- **博客地址**: https://pawaovo.github.io/xiaoweige-blog/
+- **仓库地址**: https://github.com/pawaovo/xiaoweigeblog
+- **博客地址**: https://pawaovo.github.io/xiaoweigeblog/
 - **部署状态**: 自动部署已配置
 
 如需更新内容，只需：

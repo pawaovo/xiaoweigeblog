@@ -9,8 +9,8 @@
 | **技术栈** | Hugo + UnoCSS + GitHub Actions |
 | **主题** | geek-death-project (已定制) |
 | **部署平台** | GitHub Pages |
-| **博客地址** | https://pawaovo.github.io/xiaoweige-blog/ |
-| **仓库地址** | https://github.com/pawaovo/xiaoweige-blog |
+| **博客地址** | https://pawaovo.github.io/xiaoweigeblog/ |
+| **仓库地址** | https://github.com/pawaovo/xiaoweigeblog |
 
 ## 📄 当前内容清单
 
@@ -77,7 +77,7 @@
 ### ✅ 基础配置
 - **网站标题**: xiaoweige ✅
 - **作者信息**: xiaoweige ✅
-- **基础 URL**: https://pawaovo.github.io/xiaoweige-blog/ ✅
+- **基础 URL**: https://pawaovo.github.io/xiaoweigeblog/ ✅
 - **GitHub 链接**: https://github.com/pawaovo ✅
 - **邮箱地址**: xiaoweige@example.com ⚠️ (示例地址)
 

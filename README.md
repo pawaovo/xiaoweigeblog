@@ -2,8 +2,8 @@
 
 基于 Hugo 静态网站生成器搭建的个人博客，使用了 geek-death-project 主题。
 
-**🌐 博客地址**: https://pawaovo.github.io/xiaoweige-blog/
-**📁 GitHub 仓库**: https://github.com/pawaovo/xiaoweige-blog
+**🌐 博客地址**: https://pawaovo.github.io/xiaoweigeblog/
+**📁 GitHub 仓库**: https://github.com/pawaovo/xiaoweigeblog
 
 ## 特色功能
 
@@ -26,8 +26,8 @@
 
 1. 克隆仓库：
 ```bash
-git clone https://github.com/pawaovo/xiaoweige-blog.git
-cd xiaoweige-blog
+git clone https://github.com/pawaovo/xiaoweigeblog.git
+cd xiaoweigeblog
 ```
 
 2. 安装依赖：

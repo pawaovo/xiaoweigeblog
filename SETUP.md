@@ -10,7 +10,7 @@
 
 当前配置 (`config/_default/config.yaml`)：
 ```yaml
-baseURL: https://pawaovo.github.io/xiaoweige-blog/  # ✅ 已配置
+baseURL: https://pawaovo.github.io/xiaoweigeblog/  # ✅ 已配置
 ```
 
 当前配置 (`config/_default/params.yaml`)：

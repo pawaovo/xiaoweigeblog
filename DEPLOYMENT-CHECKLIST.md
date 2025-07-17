@@ -11,7 +11,7 @@
 ### 个人信息配置
 - [x] 网站标题：xiaoweige
 - [x] 作者信息：xiaoweige
-- [x] 基础 URL：https://pawaovo.github.io/xiaoweige-blog/
+- [x] 基础 URL：https://pawaovo.github.io/xiaoweigeblog/
 - [x] GitHub 链接：https://github.com/pawaovo
 - [x] 邮箱：xiaoweige@example.com
 
@@ -43,15 +43,15 @@
 ## ✅ 部署已完成
 
 ### 1. GitHub 仓库 ✅ 已创建
-- 仓库地址：https://github.com/pawaovo/xiaoweige-blog
-- 仓库名：xiaoweige-blog
+- 仓库地址：https://github.com/pawaovo/xiaoweigeblog
+- 仓库名：xiaoweigeblog
 - 设置：Public
 - 状态：已初始化并推送代码
 
 ### 2. 远程仓库连接 ✅ 已完成
 ```bash
 # 已执行的命令：
-git remote add origin https://github.com/pawaovo/xiaoweige-blog.git
+git remote add origin https://github.com/pawaovo/xiaoweigeblog.git
 git branch -M main
 git push -u origin main
 ```
@@ -62,7 +62,7 @@ git push -u origin main
 - 自动部署：已配置并运行
 
 ### 4. 网站访问 ✅ 可用
-- 网址：https://pawaovo.github.io/xiaoweige-blog/
+- 网址：https://pawaovo.github.io/xiaoweigeblog/
 - 状态：已部署并可访问
 - 自动更新：推送代码后自动重新部署
 

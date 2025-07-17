@@ -11,7 +11,7 @@ externalJSFIles:
   - /pagefind/pagefind-ui.js
 footerExternalLinks:
   - name: GitHub
-    link: https://github.com/pawaovo/xiaoweige-blog
+    link: https://github.com/pawaovo/xiaoweigeblog
     icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
 # giscus 评论系统配置 - 需要您创建自己的 GitHub 仓库后配置
 # giscus:
