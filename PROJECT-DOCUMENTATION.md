@@ -8,7 +8,7 @@
 - **博客名称**：xiaoweige
 - **作者**：xiaoweige
 - **技术栈**：Hugo + UnoCSS + GitHub Actions
-- **部署地址**：https://pawaovo.github.io/xiaoweigeblog/
+- **部署地址**：https://blog.xiaoweigezzz.xyz/
 - **仓库地址**：https://github.com/pawaovo/xiaoweigeblog
 
 ## 📁 项目结构
@@ -171,7 +171,7 @@ git push origin main
 #### 3. 自动部署
 - GitHub Actions 自动构建
 - 约 2-5 分钟后生效
-- 访问 https://pawaovo.github.io/xiaoweigeblog/
+- 访问 https://blog.xiaoweigezzz.xyz/
 
 ## 🔧 配置说明
 
@@ -244,6 +244,6 @@ git push origin main
 
 📧 **联系方式**：xiaoweige@example.com  
 🔗 **GitHub**：https://github.com/pawaovo/xiaoweigeblog
-🌐 **博客地址**：https://pawaovo.github.io/xiaoweigeblog/
+🌐 **博客地址**：https://blog.xiaoweigezzz.xyz/
 
 *最后更新：2025-07-16*

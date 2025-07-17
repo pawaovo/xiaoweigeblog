@@ -2,7 +2,7 @@
 
 基于 Hugo 静态网站生成器搭建的个人博客，使用了 geek-death-project 主题。
 
-**🌐 博客地址**: https://pawaovo.github.io/xiaoweigeblog/
+**🌐 博客地址**: https://blog.xiaoweigezzz.xyz/
 **📁 GitHub 仓库**: https://github.com/pawaovo/xiaoweigeblog
 
 ## 特色功能

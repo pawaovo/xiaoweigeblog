@@ -134,7 +134,7 @@ def build_link_graph_and_external_links():
         # 外部链接
         for match in markdown_link_re.findall(content):
             domain = urlparse(match).netloc
-            if domain and domain not in {"image.guhub.cn", "www.geedea.pro"}:
+            if domain and domain not in {"image.guhub.cn", "blog.xiaoweigezzz.xyz"}:
                 external_links[domain] += 1
 
         # 相关卡片和图书
