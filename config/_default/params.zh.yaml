@@ -1,21 +1,21 @@
 nav:
   - name: 议叙
-    link: /posts/
+    link: posts/
     target: _self
   - name: 卡片
-    link: /cards/
+    link: cards/
     target: _self
   - name: 书目
-    link: /library/
+    link: library/
     target: _self
   - name: 假想
-    link: /fictions/
+    link: fictions/
     target: _self
   - name: 自述
-    link: /about/
+    link: about/
     target: _self
 footerInternalLinks:
   - name: 林卷
-    link: /linkroll/
+    link: linkroll/
   - name: 赞助
-    link: /sponsor/
+    link: sponsor/

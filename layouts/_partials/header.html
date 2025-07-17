@@ -24,7 +24,7 @@
       </nav>
 
       {{- $lang := .Site.Language.Lang -}}
-      {{- $switch := dict "en" (dict "url" "/zh/" "label" "切换至中文") "zh" (dict "url" "/en/" "label" "Switch to English") -}}
+      {{- $switch := dict "en" (dict "url" "zh/" "label" "切换至中文") "zh" (dict "url" "en/" "label" "Switch to English") -}}
       {{- $entry := index $switch $lang -}}
       <a href="{{ $entry.url }}" data-umami-event="🌍 Switch Language"
           class="no-swup" title="{{ $entry.label }}">
