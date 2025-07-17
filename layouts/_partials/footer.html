@@ -10,7 +10,7 @@
         <!-- Internal Links -->
         <ul class="list-none flex gap-[0.25rem] ps-0 my-[0.5rem] mx-0 md:justify-end">
             {{ range .Site.Params.footerInternalLinks }}
-            <li><a href="{{ .link }}" title="{{ .name }}">{{ .name }}</a></li>
+            <li><a href="{{ .link | relURL }}" title="{{ .name }}">{{ .name }}</a></li>
             <li class="font-secondary last:hidden ml-[0.25rem]">/</li>
             {{ end }}
             <li class="inline-flex items-center">
