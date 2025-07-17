@@ -63,7 +63,7 @@ date: 2025-07-16
 如果您对博客内容有任何建议或想要交流，欢迎通过以下方式联系我：
 
 - **邮箱**：xiaoweige@example.com
-- **GitHub**：https://github.com/xiaoweige
+- **GitHub**：https://github.com/pawaovo
 - **其他社交媒体**：（根据需要添加）
 
 ---

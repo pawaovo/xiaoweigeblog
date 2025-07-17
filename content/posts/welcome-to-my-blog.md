@@ -48,6 +48,6 @@ draft: false
 如果您对博客内容有任何建议或想要交流，欢迎通过以下方式联系我：
 
 - 邮箱：xiaoweige@example.com
-- GitHub：https://github.com/xiaoweige
+- GitHub：https://github.com/pawaovo
 
 感谢您的访问，希望这里的内容对您有所帮助！
