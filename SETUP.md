@@ -2,40 +2,42 @@
 
 这个文档将指导您完成博客的个性化配置。
 
-## 🎯 必须配置的项目
+**注意**: xiaoweige 博客已经完成基础配置，以下是可选的个性化配置项目。
 
-### 1. 基础信息配置
+## ✅ 已完成的基础配置
 
-编辑 `config/_default/config.yaml`：
+### 1. 基础信息配置 ✅ 已完成
+
+当前配置 (`config/_default/config.yaml`)：
 ```yaml
-baseURL: https://yourdomain.xyz/  # 替换为您的域名
+baseURL: https://pawaovo.github.io/xiaoweige-blog/  # ✅ 已配置
 ```
 
-编辑 `config/_default/params.yaml`：
+当前配置 (`config/_default/params.yaml`)：
 ```yaml
-author: 您的名字  # 替换为您的真实姓名或笔名
+author: xiaoweige  # ✅ 已配置
 ```
 
-编辑 `config/_default/languages.yaml`：
+当前配置 (`config/_default/languages.yaml`)：
 ```yaml
 zh:
-  title: 我的博客  # 替换为您的博客标题
+  title: xiaoweige  # ✅ 已配置
 en:
-  title: My Blog   # 英文标题
+  title: xiaoweige   # ✅ 已配置
 ```
 
-### 2. 联系方式配置
+### 2. 联系方式配置 ✅ 已完成
 
-编辑 `content/about.md`，更新以下信息：
-- 邮箱地址
-- GitHub 链接
-- 其他社交媒体链接
+当前配置 (`content/about.md`)：
+- 邮箱地址：xiaoweige@example.com ⚠️ (建议更新为真实邮箱)
+- GitHub 链接：https://github.com/pawaovo ✅ 已配置
+- 其他社交媒体链接：可根据需要添加
 
-编辑 `config/_default/params.yaml` 中的 `footerExternalLinks`：
+当前配置 (`config/_default/params.yaml`)：
 ```yaml
 footerExternalLinks:
   - name: GitHub
-    link: https://github.com/yourusername/yourblog  # 替换为您的 GitHub 仓库
+    link: https://github.com/pawaovo/xiaoweige-blog  # ✅ 已配置
     icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
 ```
 

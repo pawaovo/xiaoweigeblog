@@ -5,15 +5,15 @@
 ✅ **博客已完全配置完成，所有功能可用！**
 
 - 网站标题：xiaoweige
-- 作者：xiaoweige  
+- 作者：xiaoweige
 - 本地地址：http://localhost:1313
-- 预期部署地址：https://xiaoweige.github.io
+- 部署地址：https://pawaovo.github.io/xiaoweige-blog/
 
 ## 🎯 立即开始
 
 ### 1. 本地预览（已可用）
 ```bash
-cd myblog
+cd xiaoweige-blog
 hugo serve
 ```
 访问：http://localhost:1313
@@ -25,23 +25,19 @@ hugo serve
 
 ### 3. 部署到 GitHub Pages
 
-#### 步骤 A：创建 GitHub 仓库
-1. 访问 https://github.com/new
-2. 仓库名：`xiaoweige.github.io`
-3. 设置为 Public
-4. **不要**勾选任何初始化选项
+#### ✅ 已完成部署
+博客已成功部署到 GitHub Pages：
 
-#### 步骤 B：推送代码
+- **仓库地址**: https://github.com/pawaovo/xiaoweige-blog
+- **博客地址**: https://pawaovo.github.io/xiaoweige-blog/
+- **部署状态**: 自动部署已配置
+
+如需更新内容，只需：
 ```bash
-git remote add origin https://github.com/xiaoweige/xiaoweige.github.io.git
-git branch -M main
-git push -u origin main
+git add .
+git commit -m "更新内容"
+git push origin main
 ```
-
-#### 步骤 C：启用 GitHub Pages
-1. 进入仓库 Settings > Pages
-2. Source 选择 "GitHub Actions"
-3. 等待部署完成（约 2-5 分钟）
 
 ## 📝 日常使用
 
