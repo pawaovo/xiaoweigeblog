@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ partial "header.html" . }}
+  <article id="cards-doing">
+    <div id="cards-content">
+        <h2>做过的事</h2>
+        {{- $cards := .Site.GetPage "section" "cards" }}
+        {{- $doingCards := where $cards.Pages ".Params.tags" "intersect" (slice "做过的事" "项目" "工作" "学习" "技能" "技术" "Hugo" "静态网站") }}
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[1rem] my-[1rem]">
+          {{ range $doingCards }}
+            {{ partial "items/card-small" (dict "context" . "summary" true) }}
+          {{ end }}
+        </div>
+
+        {{ if eq (len $doingCards) 0 }}
+        <div class="markdown-body">
+            <p>暂时还没有相关内容。</p>
+        </div>
+        {{ end }}
+
+        <div class="markdown-body mt-8">
+            <p><a href="/cards/">← 返回一瞬间</a></p>
+        </div>
+    </div>
+  </article>
+  {{ partial "footer.html" . }}
+{{ end }}

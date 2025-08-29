@@ -48,6 +48,7 @@
 .grid{display:grid;}
 .grid\!{display:grid !important;}
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 .grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
 .m-0{margin:0;}
 .m-0\!{margin:0 !important;}
@@ -321,6 +322,9 @@
 .md\:right-\[-3rem\]{right:-3rem;}
 .md\:right-\[-5rem\]{right:-5rem;}
 .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr));}
 .md\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr));}
 .md\:mx-\[3rem\]{margin-left:3rem;margin-right:3rem;}
 .md\:my-\[5rem\]{margin-top:5rem;margin-bottom:5rem;}

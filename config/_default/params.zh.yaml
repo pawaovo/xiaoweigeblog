@@ -1,21 +1,18 @@
 nav:
-  - name: 议叙
+  - name: 时间线
     link: posts/
     target: _self
-  - name: 卡片
+  - name: 一瞬间
     link: cards/
     target: _self
-  - name: 书目
+  - name: 看到的
     link: library/
     target: _self
-  - name: 假想
-    link: fictions/
-    target: _self
-  - name: 自述
+  - name: 关于我
     link: about/
     target: _self
 footerInternalLinks:
-  - name: 林卷
+  - name: 关注
     link: linkroll/
   - name: 赞助
     link: sponsor/

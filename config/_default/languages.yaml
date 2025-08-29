@@ -5,9 +5,3 @@ zh:
   title: xiaoweige
   weight: 1
   defaultContentLanguageInSubdir: false
-en:
-  contentDir: content/en
-  languageCode: en-US
-  languageName: English
-  title: xiaoweige
-  weight: 2

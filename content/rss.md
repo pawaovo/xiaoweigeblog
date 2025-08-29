@@ -26,8 +26,4 @@ https://blog.xiaoweigezzz.xyz/categories/技术/index.xml
 https://blog.xiaoweigezzz.xyz/tags/博客/index.xml
 ```
 
-如果你感兴趣，也可以订阅英文博客（包括在 `/index.xml` 的更新中了）
 
-```
-https://blog.xiaoweigezzz.xyz/en/index.xml
-```

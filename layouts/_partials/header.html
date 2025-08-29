@@ -23,12 +23,6 @@
         {{ end }}
       </nav>
 
-      {{- $lang := .Site.Language.Lang -}}
-      {{- $switch := dict "en" (dict "url" "zh/" "label" "切换至中文") "zh" (dict "url" "en/" "label" "Switch to English") -}}
-      {{- $entry := index $switch $lang -}}
-      <a href="{{ $entry.url | relURL }}" data-umami-event="🌍 Switch Language"
-          class="no-swup" title="{{ $entry.label }}">
-        <img src="/img/globe.svg" class="invert-if-dark block w-[1.2em] h-[1.2em]">
-      </a>
+
   </div>
 </header>

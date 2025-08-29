@@ -96,8 +96,8 @@ def get_icon(url):
     if url.startswith("/cards/"): return "📄"
     if url.startswith("/posts/"): return "📜"
     if url.startswith("/library/"): return "📖"
-    if url.startswith("/fictions/"): return "🧙‍♀️"
-    if url.startswith("/en/"): return "🇬🇧"
+
+
     return "📁"
 
 def collect_urls():

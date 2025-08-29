@@ -2,7 +2,7 @@
   {{ partial "header.html" . }}
   <article id="library">
     <div id="library-content">
-        <h2>{{ now.Year }} 年读的书</h2>
+        <h2>书</h2>
         <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
           {{ range where .Site.RegularPages "Section" "library" }}
             {{ if eq .Date.Year now.Year }}
@@ -20,7 +20,7 @@
         {{ end }}
 
         <div class="markdown-body">
-            <p>往年书单：
+            <p>更多：
               {{ $currentYear := printf "%d" now.Year }}
               {{ range $years }}
                 {{ if ne . $currentYear }}<a href="{{ printf "/library/%s/" . }}">{{ . }} 年</a>{{ end }}
@@ -28,7 +28,7 @@
             </p>
         </div>
 
-        <h2>推荐好书</h2>
+        <h2>影视</h2>
         <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-[1rem] my-[1rem]">
         {{ range where (where .Site.RegularPages "Section" "library") ".Params.rating" "==" 5 }}
         {{ partial "items/book" . }}

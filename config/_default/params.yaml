@@ -1,12 +1,15 @@
 author: xiaoweige
 mainSections:
   - posts
-  - fictions
   - library
 favicon: /favicon.png
+
+# 分类页面布局配置
+categoryLayout:
+  columns: 3  # 每行显示的分类数量 (2, 3, 4)
 extraCSSFiles:
   - /pagefind/pagefind-ui.css
-externalJSFIles:
+externalJSFiles:
   - /js/littlefoot.js
   - /pagefind/pagefind-ui.js
 footerExternalLinks:

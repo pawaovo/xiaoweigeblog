@@ -1,6 +1,19 @@
 <!-- Display Categories -->
-<section class="grid grid-cols-2 grid-rows-masonry gap-4">
-{{ range sort .Site.Taxonomies.categories ".Count" "desc" }}
+{{- $gridCols := .Site.Params.categoryLayout.columns | default 2 -}}
+{{- $gridClass := printf "grid-cols-%d" $gridCols -}}
+{{- $mdGridClass := printf "md:grid-cols-%d" ($gridCols | add 1) -}}
+
+<section class="grid {{ $gridClass }} {{ $mdGridClass }} grid-rows-masonry gap-4">
+{{- $categories := slice -}}
+{{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
+    {{- $page := site.GetPage (printf "/categories/%s" $name) -}}
+    {{- $categories = $categories | append (dict "Name" $name "Count" (len $taxonomy) "Page" $page) -}}
+{{- end -}}
+
+{{- /* Sort by article count (descending) - most articles first */ -}}
+{{- $sortedCategories := sort $categories "Count" "desc" -}}
+
+{{- range $sortedCategories -}}
     <a href="{{ .Page.RelPermalink }}" class="hover:no-underline"
         style="view-transition-name: category-{{ .Page.Title }};">
         <div class="taxonomy-categories-item">
@@ -13,5 +26,5 @@
             <p class="mt-0">{{ .Page.Params.description | markdownify }}</p>
         </div>
     </a>
-{{ end }}
+{{- end -}}
 </section>

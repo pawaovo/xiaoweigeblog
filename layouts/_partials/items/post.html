@@ -20,18 +20,12 @@
                         {{ .ctx.Title }}
                     {{ end }}
                 </a>
-                {{ if eq .ctx.Section "fictions" }}
-                <span class="font-normal text-[1rem] text-[var(--secondary-text-color)]">小说</span>
-                {{ end }}
+
             </h2>
         </div>
-        {{ with .ctx.Params.categories }}
         <div class="my-2">
-            <a href="/categories/{{ . }}" style="padding: 0.1rem 0.3rem;">
-                {{ . }}
-            </a>
+            {{ partial "components/category-pill" .ctx }}
         </div>
-        {{ end }}
     </header>
     {{ if $showSummary }}
         <div class="markdown-body text-[1.1rem]"

@@ -5,5 +5,5 @@ exclude_selectors:
   - "#latest-posts"
   - "#posts-archive"
   - ".cards-section"
-  - "#fiction-section"
+
   - "#library"

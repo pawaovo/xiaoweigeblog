@@ -1,0 +1,49 @@
+{{ $ctx := .context }}
+{{ $showSummary := .summary }}
+<div class="relative p-[1rem] bg-white dark:bg-neutral-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 min-h-[400px] overflow-hidden"
+    style="view-transition-name: card-{{ $ctx.File.UniqueID }}">
+
+    <!-- 如果有特色图片，显示图片 -->
+    {{ if $ctx.Params.image }}
+    <div class="mb-3 -mx-[1rem] -mt-[1rem]">
+        <img src="{{ $ctx.Params.image }}" alt="{{ $ctx.Title }}" class="w-full h-[150px] object-cover rounded-t-lg">
+    </div>
+    {{ end }}
+
+    <div class="card-header">
+        <h3 class="text-lg font-extrabold m-0 text-gray-900 dark:text-gray-100 line-clamp-2"
+            data-pagefind-meta="title"
+            data-pagefind-sort="date[data-date], weight[data-weight]"
+            data-date="{{ .Date.Format "2006-01-02" }}"
+            data-weight="5">
+                <a href="{{ $ctx.RelPermalink }}" class="no-underline! text-[var(--text-color)]!">{{ $ctx.Title }}</a>
+        </h3>
+        <div class="text-sm m-0 mt-1">{{ partial "components/tags" $ctx }}</div>
+    </div>
+    <div class="text-sm mt-2 markdown-body line-clamp-6 overflow-hidden">
+        {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
+    </div>
+</div>
+
+<style>
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+</style>

@@ -1,25 +1,48 @@
 {{ define "main" }}
-<article>
-    {{ partial "header.html" . }}
+  {{ partial "header.html" . }}
+  <article id="cards">
+    <div id="cards-content">
+        <!-- 第一部分：做过的事 -->
+        <h2>做过的事</h2>
+        {{- $cards := .Site.GetPage "section" "cards" }}
+        {{- $doingCards := where $cards.Pages ".Params.tags" "intersect" (slice "做过的事" "项目" "工作" "学习" "技能" "技术" "Hugo" "静态网站") }}
+        {{- $featuredDoing := first 4 $doingCards }}
+        {{- $restDoing := after 4 $doingCards }}
 
-    {{- $cards := .Site.GetPage "section" "cards" }}
-    {{- $pages := $cards.Pages }}
-    {{- $featured := first 6 $pages }}
-    {{- $rest := after 6 $pages }}
-    <div class="grid! md:grid-cols-2 gap-[1rem] outbox small">
-        {{- range $featured }}
-            {{ partial "items/card" (dict "context" . "summary" true) }}
-        {{- end }}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[1rem] my-[1rem]">
+          {{ range $featuredDoing }}
+            {{ partial "items/card-small" (dict "context" . "summary" true) }}
+          {{ end }}
+        </div>
+
+        {{ if gt (len $restDoing) 0 }}
+        <div class="markdown-body">
+            <p>更多内容：
+              <a href="/cards/doing/">查看所有做过的事</a>
+            </p>
+        </div>
+        {{ end }}
+
+        <!-- 第二部分：一些瞬间 -->
+        <h2>一些瞬间</h2>
+        {{- $momentCards := where $cards.Pages ".Params.tags" "intersect" (slice "瞬间" "日常" "摄影" "美好瞬间" "生活") }}
+        {{- $featuredMoments := first 4 $momentCards }}
+        {{- $restMoments := after 4 $momentCards }}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[1rem] my-[1rem]">
+          {{ range $featuredMoments }}
+            {{ partial "items/card-small" (dict "context" . "summary" true) }}
+          {{ end }}
+        </div>
+
+        {{ if gt (len $restMoments) 0 }}
+        <div class="markdown-body">
+            <p>更多内容：
+              <a href="/cards/moments/">查看所有瞬间</a>
+            </p>
+        </div>
+        {{ end }}
     </div>
-
-    <ul class="flex gap-[1rem] flex-wrap justify-around list-none text-[1.2rem]">
-        {{- range $rest }}
-            <li>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-        {{- end }}
-    </ul>
-
-    {{ partial "footer.html" . }}
-</article>
+  </article>
+  {{ partial "footer.html" . }}
 {{ end }}
