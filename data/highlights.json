@@ -1,0 +1,20 @@
+[
+  {
+    "title": "反向链接功能演示",
+    "url": "/posts/backlinks-demo/",
+    "highlights": [
+      {
+        "text": "当页面 A 引用了页面 B 时，页面 B 会显示一个\"反向链接\"，指向页面 A。",
+        "link": "/posts/backlinks-demo/#:~:text=%E5%BD%93%E9%A1%B5%E9%9D%A2%20A%20%E5%BC%95%E7%94%A8%E4%BA%86%E9%A1%B5%E9%9D%A2%20B%20%E6%97%B6%EF%BC%8C%E9%A1%B5%E9%9D%A2%20B%20%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%B8%80%E4%B8%AA%22%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5%22%EF%BC%8C%E6%8C%87%E5%90%91%E9%A1%B5%E9%9D%A2%20A%E3%80%82"
+      },
+      {
+        "text": "构建内容之间的关联网络",
+        "link": "/posts/backlinks-demo/#:~:text=%E6%9E%84%E5%BB%BA%E5%86%85%E5%AE%B9%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E8%81%94%E7%BD%91%E7%BB%9C"
+      },
+      {
+        "text": "帮助作者了解内容的引用情况",
+        "link": "/posts/backlinks-demo/#:~:text=%E5%B8%AE%E5%8A%A9%E4%BD%9C%E8%80%85%E4%BA%86%E8%A7%A3%E5%86%85%E5%AE%B9%E7%9A%84%E5%BC%95%E7%94%A8%E6%83%85%E5%86%B5"
+      }
+    ]
+  }
+]

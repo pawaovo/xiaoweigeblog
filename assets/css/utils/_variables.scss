@@ -6,15 +6,15 @@
     --border-color: #d0d7de;
     --text-color: #1d1d1f;
     --secondary-text-color: #6e6e73;
-    --link-color: #277bd9;
+    --link-color: #313135;
     --bright-background-color: #fafafa;
 
     /* fonts */
-    --mono-font-family:
-        "Courier New", Courier, "Menlo", "Monaco", Consolas, "Liberation Mono",
-        "Lucida Console", monospace;
     --serif-font-family: "Noto Serif", "Noto Serif SC", serif;
-    --content-font-size: 20px;
+    --content-font-size: 16px;
+    @media screen and (min-width: 768px) {
+        --content-font-size: 20px;
+    }
 
     --page-width: 650px;
     --page-margin-y: 5rem;
@@ -31,6 +31,60 @@ html[lang="en-US"] {
     --serif-font-family: "Playfair Display", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    font-family: var(--serif-font-family);
+    -webkit-font-smoothing: antialiased;
+    color: var(--text-color);
+    position: relative;
+
+    /* background */
+    background-color: var(--background-color);
+    background-image: url("/images/head_face_scattered.svg");
+    background-size: 30rem;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+
+article {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-underline-offset: 0.25rem;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--serif-font-family);
+    cursor: pointer
+}
+
+hr {
+    margin: 2.5rem auto;
+    border: 0.05rem solid var(--border-color);
+}
+
 @mixin variablesInDarkMode {
     --background-color: #1d2021;
     --block-background-color: rgb(var(--block-background-color-rgb));
@@ -38,7 +92,7 @@ html[lang="en-US"] {
     --border-color: rgba(255, 255, 255, 0.2);
     --text-color: #d2cec9;
     --secondary-text-color: #a1998d;
-    --link-color: #277bd9;
+    --link-color: #e3dfda;
     --bright-background-color: #666;
 }
 

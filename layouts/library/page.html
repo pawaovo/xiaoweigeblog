@@ -36,6 +36,7 @@
                 <p>于 {{ partial "components/date" . }} 读完</p>
             </div>
         </div>
+        {{ partial "components/backlinks" (dict "filename" .File.BaseFileName "type" "library" "context" .) }}
         {{ partial "posts/comment.html" . }}
     </article>
 {{ end }}

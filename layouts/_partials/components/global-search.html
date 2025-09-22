@@ -4,7 +4,7 @@
     opacity: 1!important;
 }
 
-#global-search #pagefind input {
+#global-search #global-pagefind input {
     outline: none
 }
 
@@ -20,10 +20,10 @@
         class="fixed -z-10 hidden top-0 left-0 right-0 bottom-0 items-center justify-center">
         <div id="global-search-close" class="absolute top-0 right-0 px-4 text-[3rem] cursor-pointer">×</div>
         <!-- Pagefind Search -->
-        <div id="pagefind" class="max-h-[90vh] overflow-y-auto w-full m-4 md:w-[600px]"></div>
+        <div id="global-pagefind" class="max-h-[90vh] overflow-y-auto w-full m-4 md:w-[600px]"></div>
         <script>
           window.addEventListener('DOMContentLoaded', () => {
-            new PagefindUI({ element: "#pagefind", showSubResults: true });
+            new PagefindUI({ element: "#global-pagefind", showSubResults: true });
           });
         </script>
     </div>

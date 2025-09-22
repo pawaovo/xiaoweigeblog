@@ -19,14 +19,22 @@
                     (strings.HasPrefix $.Page.RelPermalink "/tags/"))
             ) }}
         {{ end }}
-        <li id="search-instruction" class="text-[0.9rem] font-secondary ml-2">
-            <span>{{ T "searchInstruction" }}</span>
+
+        <li class="absolute right-10 invert-if-dark">
+            <a href="{{ .Site.LanguagePrefix }}/settings"
+                class="opacity-50 transition-opacity duration-300 hover:opacity-100
+                {{ if eq "/settings/" $.Page.RelPermalink }} opacity-100 font-bolder{{ end }}"
+                data-tooltip="网站设置">
+                    <img src="/img/settings.svg" class="opacity-50 h-8 w-8" />
+                </a>
         </li>
+
         <li class="absolute right-0 invert-if-dark">
             <a href="{{ .Site.LanguagePrefix }}/stats"
                 class="opacity-50 transition-opacity duration-300 hover:opacity-100
                 {{ if eq "/stats/" $.Page.RelPermalink }} opacity-100 font-bolder{{ end }}"
-                data-umami-event="📈 Click stats page link">
+                data-umami-event="📈 Click stats page link"
+                data-tooltip="查看博客统计数据">
                     <img src="/img/graph.svg" class="opacity-50 h-8 w-8" />
                 </a>
         <li>

@@ -1,13 +1,15 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{ if eq .Site.Language.Lang "zh" }}
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{{ else }}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+{{ end }}
 
 <!-- Aplayer -->
-{{ if .Params.aplayer }}
 {{ with resources.Get "css/aplayer.css" }}
 <style>{{ .Content | safeCSS }}</style>
-{{ end }}
 {{ end }}
 
 <!-- Extra -->
@@ -19,16 +21,10 @@
 {{- end }}
 
 <!-- theme css -->
-{{ with resources.Get "css/uno.css" }}
+{{ with resources.Get "css/uno.css" | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
 
-{{ with resources.Get "css/global.scss" | css.Sass }}
+{{ with resources.Get "css/main.scss" | css.Sass | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
-
-{{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") }}
-{{ with resources.Get "css/content.scss" | css.Sass }}
-<style>{{ .Content | safeCSS }}</style>
-{{ end }}
-{{- end }}

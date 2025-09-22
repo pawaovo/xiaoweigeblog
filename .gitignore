@@ -29,3 +29,6 @@ Thumbs.db
 # Build artifacts
 dist/
 build/
+
+# Reference project (exclude from commits)
+reference-project/

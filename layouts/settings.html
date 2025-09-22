@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <article id="settings">
+        {{ partial "header" . }}
+        {{ partial "home/home-nav" . }}
+
+        <div class="text-base">
+            {{ .Content }}
+        </div>
+
+        <h3>字体大小</h3>
+        <section class="shadow">
+            <div id="text-alter-buttons" class="grid grid-cols-3">
+                {{ $buttonClass := "font-extrabold bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 rounded py-5" }}
+                <button data-text-size="small" class="{{ $buttonClass }} text-sm md:text-base" data-tooltip="小字体">示例文字</button>
+                <button data-text-size="medium" class="{{ $buttonClass }} text-base md:text-lg" data-tooltip="中等字体">示例文字</button>
+                <button data-text-size="large" class="{{ $buttonClass }} text-lg md:text-xl" data-tooltip="大字体">示例文字</button>
+            </div>
+            <div class="leading-relaxed bg-neutral-200/50 dark:bg-neutral-700/50 py-1 px-4 rounded
+                h-50 overflow-y-auto">
+                <p class="markdown-body">这是一段示例文字，用来预览不同字体大小的效果。您可以点击上方的按钮来调整字体大小，设置会自动保存到您的浏览器中。这个功能特别适合需要调整阅读体验的用户，比如视力不佳的用户可以选择更大的字体，而喜欢紧凑布局的用户可以选择较小的字体。</p>
+            </div>
+        </section>
+
+        <hr />
+
+        <h3>其他选项</h3>
+        <section id="checkbox-options" class="text-sm"></section>
+    </article>
+    {{ partial "footer.html" . }}
+{{ end }}

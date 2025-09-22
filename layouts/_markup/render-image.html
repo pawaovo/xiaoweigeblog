@@ -1,16 +1,17 @@
 {{- $src := .Destination -}}
 {{- $alt := .Text | default "" -}}
 {{- $caption := .Title | default "" -}}
-<a href="{{ $src }}" data-fancybox data-caption="{{ $caption }}" class="fancybox-link">
-    <figure>
-        <img
-            class="lazy" loading="lazy"
-            src="{{ $src }}" alt="{{ $alt }}"
-        />
-        {{- if $caption }}
-        <figcaption>
-            <h4>{{ $caption | markdownify }}</h4>
-        </figcaption>
-        {{- end }}
-    </figure>
-</a>
+{{- $class := .Attributes.class | default "" -}}
+
+<figure>
+    <img
+        class="lazy {{ $class }}" loading="lazy"
+        src="{{ $src }}" alt="{{ $alt }}"
+        data-libra
+    />
+    {{- if $caption }}
+    <figcaption>
+        <h4>{{ $caption | markdownify }}</h4>
+    </figcaption>
+    {{- end }}
+</figure>

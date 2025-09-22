@@ -5,6 +5,7 @@ date: 2025-08-20T10:56:47+08:00
 tags: ["测试", "脚注", "功能"]
 categories: [""]
 draft: false
+toc: true
 description: "测试博客的脚注功能是否正常工作"
 ---
 

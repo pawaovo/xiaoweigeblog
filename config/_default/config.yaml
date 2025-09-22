@@ -3,6 +3,7 @@ timeZone: Asia/Shanghai
 hasCJKLanguage: true
 defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
+timeout: 300s
 outputs:
   home:
     - HTML

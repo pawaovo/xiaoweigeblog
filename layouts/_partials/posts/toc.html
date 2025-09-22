@@ -5,8 +5,8 @@
 #toc-container {
     position: absolute;
     bottom: 0;
-    right: calc(50% + var(--page-width) / 2);
-    left: auto;
+    left: calc(50% + var(--page-width) / 2);
+    right: auto;
     height: 100%;
     top: 12rem;
     @media screen and (max-width: 1200px) {
@@ -63,55 +63,30 @@
             &:not(.active) ul {
                 max-height: 0
             }
-            a:hover,
+            a:hover {
+                color: var(--text-color);
+            }
+
             &.active > a {
                 color: var(--text-color);
+                background: rgba(0, 122, 204, 0.1);
+                border-radius: 3px;
+                font-weight: 600;
+                transition: all 0.2s ease;
             }
 
             &.active > a::before {
                 background-color: var(--secondary-text-color);
             }
+
+            /* 子级标题的活动状态 */
+            &.active > ul > li.active > a {
+                background: rgba(0, 122, 204, 0.05);
+                font-weight: 500;
+            }
         }
     }
 }
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const toc = document.getElementById('toc');
-  if (!toc) return;
 
-  const headings = document.querySelectorAll('h2, h3');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      const id = entry.target.id;
-      const tocLink = toc.querySelector(`a[href="#${id}"]`);
-      if (!tocLink) return;
-
-      const listItem = tocLink.parentElement;
-      const isH2 = entry.target.tagName === 'H2';
-
-      // Clear all active states when a new H2 is encountered
-      if (isH2) {
-        toc.querySelectorAll('li.active').forEach(el => el.classList.remove('active'));
-      }
-
-      // Set current item as active
-      listItem.classList.add('active');
-
-      // If this is an H3, find and activate its parent H2
-      if (!isH2) {
-        const parentH2Item = listItem.closest('ul').previousElementSibling?.closest('li');
-        if (parentH2Item) parentH2Item.classList.add('active');
-      }
-    });
-  }, {
-    rootMargin: '0px 0px -50% 0px',
-    threshold: 0.5
-  });
-
-  headings.forEach(heading => observer.observe(heading));
-});
-</script>
 {{ end }}

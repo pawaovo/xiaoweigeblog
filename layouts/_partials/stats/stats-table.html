@@ -2,10 +2,10 @@
   <tbody>
     <tr>
         <td>页面总数</td>
-        <td><span class="number-pill">{{ len .Site.RegularPages }}</span></td>
+        <td><span class="number-pill" data-tooltip="包括文章、卡片、书影等所有内容页面">{{ len .Site.RegularPages }}</span></td>
         <td>总字数</td>
         <td>
-            <span class="number-pill">
+            <span class="number-pill" data-tooltip="所有页面的字数统计总和">
             {{- $words := 0 -}}
             {{- range .Site.RegularPages -}}
                 {{- $words = add $words .WordCount -}}
@@ -16,9 +16,9 @@
     </tr>
     <tr>
       <td>标签总数</td>
-      <td><span class="number-pill">{{ len .Site.Taxonomies.tags }}</span></td>
+      <td><span class="number-pill" data-tooltip="所有文章使用的不同标签数量">{{ len .Site.Taxonomies.tags }}</span></td>
       <td>专栏数量</td>
-      <td><span class="number-pill">{{ len .Site.Taxonomies.categories }}</span></td>
+      <td><span class="number-pill" data-tooltip="文章分类的专栏数量">{{ len .Site.Taxonomies.categories }}</span></td>
     </tr>
     <tr>
       <td>卡片数量</td>

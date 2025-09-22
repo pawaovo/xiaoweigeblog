@@ -4,9 +4,23 @@
 {{- end }}
 
 {{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") }}
-  <script src="/js/fancybox.umd.js"></script>
-  <script>Fancybox.bind("[data-fancybox]");</script>
+<script type="module">
+  import LightBox from '/js/libra.min.js';
+  const lightbox = new LightBox({ offset: { x: -8 ,y: -80 } });
+</script>
 {{- end }}
+
+{{ with resources.Get "js/tooltip.js" }}
+<script>{{ .Content | safeJS }}</script>
+{{ end }}
+
+{{ with resources.Get "js/settings.js" }}
+<script>{{ .Content | safeJS }}</script>
+{{ end }}
+
+{{ with resources.Get "js/toc.js" }}
+<script>{{ .Content | safeJS }}</script>
+{{ end }}
 
 {{ if .Params.aplayer }}
 <script>
@@ -60,8 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ end }}
 
 <script>
-  littlefoot.littlefoot({
-    dismissOnUnhover: true,
-    activateOnHover: true
-  });
+  if (typeof littlefoot !== 'undefined') {
+    littlefoot.littlefoot({
+      dismissOnUnhover: true,
+      activateOnHover: true,
+      scope: '.markdown-body'
+    });
+  }
 </script>

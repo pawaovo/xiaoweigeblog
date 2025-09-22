@@ -47,7 +47,9 @@
         {{ partial "posts/endnotes" . }}
       </div>
 
+      {{ partial "components/backlinks" (dict "filename" .File.BaseFileName "type" "posts" "context" .) }}
       {{ partial "posts/action-menu.html" . }}
       {{ partial "posts/now-read-this.html" . }}
+      {{ partial "components/back-to-top.html" . }}
     </article>
 {{ end }}

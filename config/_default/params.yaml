@@ -16,15 +16,15 @@ footerExternalLinks:
   - name: GitHub
     link: https://github.com/pawaovo/xiaoweigeblog
     icon: https://image.guhub.cn/uPic/2025/01/NqL5b5.png
-# giscus 评论系统配置 - 需要您创建自己的 GitHub 仓库后配置
-# giscus:
-#   repo: yourusername/yourblog
-#   repoId: YOUR_REPO_ID
-#   category: General
-#   categoryId: YOUR_CATEGORY_ID
-#   mapping: og:title
-#   strict: 1
-#   reactionsEnabled: 0
-#   emitMetadata: 0
-#   inputPosition: top
-#   theme: "https://blog.xiaoweigezzz.xyz/css/giscus_noborder.css"
+# giscus 评论系统配置 - 请将下面的 YOUR_REPO_ID 和 YOUR_CATEGORY_ID 替换为实际值
+giscus:
+  repo: pawaovo/xiaoweigeblog  # 您的GitHub仓库
+  repoId: R_kgDOPNgxJg  # 从 https://giscus.app 获取，格式如：R_kgDOxxxxxxxx
+  category: General
+  categoryId: DIC_kwDOPNgxJs4Cu_Sh  # 从 https://giscus.app 获取，格式如：DIC_kwDOxxxxxxxx
+  mapping: og:title
+  strict: 0
+  reactionsEnabled: 1
+  emitMetadata: 1
+  inputPosition: top
+  theme: "https://blog.xiaoweigezzz.xyz/css/giscus_noborder.css"

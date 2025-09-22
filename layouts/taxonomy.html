@@ -3,14 +3,26 @@
     {{ partial "header" . }}
     {{ partial "home/home-nav" . }}
 
+    <div id="taxonomy-pagefind" class="py-3"></div>
+
     <h2>文章系列</h2>
     {{ partial "taxonomy/all-categories.html" . }}
     <p>
         <a class="small-button text-[var(--secondary-text-color)]" href="/categories/uncategorized/">查看随笔 →</a>
     </p>
 
-    <h2>标签</h2>
+    <hr />
     {{ partial "taxonomy/all-tags.html" . }}
 </article>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // 只在taxonomy页面初始化专用的搜索框
+    const taxonomyPagefind = document.getElementById('taxonomy-pagefind');
+    if (taxonomyPagefind) {
+      new PagefindUI({ element: "#taxonomy-pagefind", showSubResults: true });
+    }
+  });
+</script>
 {{ partial "footer.html" . }}
 {{ end }}

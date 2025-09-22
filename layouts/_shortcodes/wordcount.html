@@ -1,5 +1,8 @@
 {{ $total := 0 }}
+{{ $currentPage := .Page }}
 {{ range where .Site.RegularPages "Section" "posts" }}
-  {{ $total = add $total .WordCount }}
+  {{ if ne .File.UniqueID $currentPage.File.UniqueID }}
+    {{ $total = add $total .WordCount }}
+  {{ end }}
 {{ end }}
 {{ $total }}

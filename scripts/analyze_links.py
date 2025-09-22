@@ -158,13 +158,13 @@ def main():
     edges = [{"from": src, "to": tgt} for src, targets in link_graph.items() for tgt in targets]
     with open("public/link-graph.json", "w", encoding="utf-8") as f:
         json.dump({"nodes": nodes, "edges": edges}, f, indent=2, ensure_ascii=False)
-    print("✅ Link graph generated: public/link-graph.json")
+    print("[OK] Link graph generated: public/link-graph.json")
 
     # 写入外部链接统计
     os.makedirs("data", exist_ok=True)
     with open("data/externallinks.json", "w", encoding="utf-8") as f:
         json.dump(external_links.most_common(), f, indent=2, ensure_ascii=False)
-    print("✅ External link data written to data/externallinks.json")
+    print("[OK] External link data written to data/externallinks.json")
 
 if __name__ == "__main__":
     main()
