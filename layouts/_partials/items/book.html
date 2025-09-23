@@ -7,7 +7,12 @@
       {{ if eq .Params.rating 1 }} relative
       {{ else if eq .Params.rating 5 }} border-amber-200 shadow-amber-100
       {{ else }} border-white{{ end }}">
-    <img class="lazy w-full block" src="{{ .Params.cover }}!small" />
+    {{ $cover := .Params.cover }}
+    {{ if hasPrefix $cover "/" }}
+      <img class="lazy w-full block" src="{{ $cover }}" />
+    {{ else }}
+      <img class="lazy w-full block" src="{{ $cover }}!small" />
+    {{ end }}
     {{ if eq .Params.rating 1 }}
     <div class="absolute z-1 top-[25%] left-[25%] h-[50%] w-[50%]"
         style="background-image: url('https://image.guhub.cn/uPic/2025/05/thumbs-down.png');

@@ -1,36 +1,39 @@
+/**
+ * ================
+ * Littlefoot CSS
+ * tweaked for xiaoweige blog
+ * ================
+ */
+
 .littlefoot{
+    position:relative;
+
     --button-background-color:#949494;
     --button-text-color:#fff;
     --button-active-background-color:#3f3f3f;
     --button-active-text-color:#fff;
     --button-border-radius:0.25rem;
-    --button-height:16px;
     --button-height:1rem;
-    --button-margin:0 1.6px;
-    --button-margin:0 0.1rem;
+    --button-margin:0 0.025rem;
     --button-padding:0 0.3rem;
     --button-transition:background-color 0.25s ease,color 0.25s ease;
     --popover-background-color:#f5f5f5;
     --popover-text-color:#111;
     --popover-border:1px solid #ddd;
-    --popover-border-radius:8px;
-    --popover-border-radius:0.1rem;
+    --popover-border-radius:0.25rem;
     --popover-max-height:15em;
     --popover-max-width:90%;
-    --popover-horizontal-padding:22.4px;
-    --popover-horizontal-padding:1.4rem;
-    --popover-vertical-padding:9.6px;
-    --popover-vertical-padding:0.6rem;
+    --popover-horizontal-padding:0.8rem;
+    --popover-vertical-padding:0;
     --popover-shadow:0 0 0.2rem rgba(0,0,0,.1);
     --popover-transform-origin:50% 0;
-    --popover-transform:scale(0.1) translateZ(0);
-    --popover-active-transform:scale(1) translateZ(0);
+    --popover-transform:scale(0.1) translateY(calc(var(--button-height) / 2 - var(--popover-tooltip-size))) translateX(0.25rem);
+    --popover-active-transform:scale(1) translateY(calc(var(--button-height) / 2 - var(--popover-tooltip-size))) translateX(0.25rem);
     --popover-transition:opacity 0.25s ease,transform 0.25s ease;
-    --popover-width:22em;
+    --popover-width:15em;
     --popover-scroll-indicator-color:#3f3f3f;
-    --popover-tooltip-size:8px;
     --popover-tooltip-size:0.5rem;
-    position:relative;
+    --popover-z-index: 30;
 
     @media (prefers-color-scheme: dark) {
         --button-background-color: #555;
@@ -45,37 +48,36 @@
         --popover-scroll-indicator-color: #aaa;
     }
 }
+
+/**
+ * Button style
+ */
+
 .littlefoot__button{
     background-color:var(--button-background-color);
-    border:0;
-    border:var(--button-border,0);
     border-radius:var(--button-border-radius);
     color:var(--button-text-color);
     cursor:pointer;
     display:inline-block;
-    font-size:12px;
     font-size:var(--button-font-size,12px);
-    font-size:.75rem;
     font-size:var(--button-font-size,.75rem);
-    font-weight:400;
     font-weight:var(--button-font-weight,initial);
     height:var(--button-height);
     margin:var(--button-margin);
     padding:var(--button-padding);
-    -webkit-text-decoration:none;
     text-decoration:none;
     transition:var(--button-transition);
-    vertical-align:middle
+    vertical-align:top;
+
+    &.is-active, &:active, &:focus, &:hover{
+        background-color:var(--button-active-background-color);
+        color:var(--button-active-text-color)
+    }
 }
-.littlefoot__button.is-active,.littlefoot__button:active,.littlefoot__button:focus,.littlefoot__button:hover{
-    background-color:var(--button-active-background-color);
-    color:var(--button-active-text-color)
-}
-.littlefoot__button svg{
-    float:left;
-    height:4.8px;
-    height:.3rem
-}
+/**
+ * Popover
+ */
+
 .littlefoot__popover{
     border:var(--popover-border);
     border-radius:var(--popover-border-radius);
@@ -88,20 +90,29 @@
     transform-origin:var(--popover-transform-origin);
     transition:var(--popover-transition);
     width:var(--popover-width);
-    z-index:10
+    z-index:var(--popover-z-index);
+
+    &.is-above{
+        bottom:0;
+        top:auto
+    }
+
+    &.is-active{
+        transform:var(--popover-active-transform)
+    }
 }
-.littlefoot__popover.is-above{
-    bottom:0;
-    top:auto
-}
-.littlefoot__popover.is-active{
-    transform:var(--popover-active-transform)
-}
+
+/**
+ * Wrapper and Content
+ */
+
 .littlefoot__wrapper{
     position:relative;
-    z-index:10
+    z-index:var(--popover-z-index);
 }
-.littlefoot__content,.littlefoot__wrapper{
+
+.littlefoot__content,
+.littlefoot__wrapper{
     border-radius:var(--popover-border-radius)
 }
 .littlefoot__content{
@@ -109,27 +120,24 @@
     background-color:var(--popover-background-color);
     box-sizing:border-box;
     color:var(--popover-text-color);
-    font-family:serif;
-    font-family:initial;
     font-family:var(--popover-font-family,initial);
-    font-size:medium;
     font-size:var(--popover-font-size,initial);
-    font-style:normal;
     font-style:var(--popover-font-style,initial);
-    font-weight:400;
     font-weight:var(--popover-font-weight,initial);
-    line-height:normal;
     line-height:var(--popover-line-height,normal);
     max-height:var(--popover-max-height);
     overflow:auto;
     padding:var(--popover-vertical-padding) var(--popover-horizontal-padding);
-    width:100%
-}
-.littlefoot__content img{
-    max-width:100%
-}
-.littlefoot__content:focus{
-    outline:none
+    width:100%;
+    p {
+        margin:0.75rem 0;
+    }
+    img{
+        max-width:100%
+    }
+    &:focus{
+        outline:none
+    }
 }
 .is-scrollable{
     --arrow-x:calc(var(--popover-horizontal-padding)*-1);

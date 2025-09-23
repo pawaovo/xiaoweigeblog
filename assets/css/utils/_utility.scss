@@ -1,3 +1,25 @@
+/* 导航图标按钮通用样式 */
+.nav-icon-btn {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.active {
+        opacity: 1;
+        font-weight: bolder;
+    }
+}
+
+.nav-icon {
+    opacity: 0.5;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* 暗色模式反色 */
 .dark {
     .invert-if-dark {
         filter: invert(1)

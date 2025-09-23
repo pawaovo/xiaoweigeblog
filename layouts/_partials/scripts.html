@@ -73,12 +73,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 {{ end }}
 
-<script>
-  if (typeof littlefoot !== 'undefined') {
-    littlefoot.littlefoot({
-      dismissOnUnhover: true,
-      activateOnHover: true,
-      scope: '.markdown-body'
-    });
-  }
-</script>
+{{ partial "scripts/littlefoot-js" . }}

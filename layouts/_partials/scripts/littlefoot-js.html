@@ -1,0 +1,16 @@
+<script>
+  littlefoot.littlefoot({
+    dismissOnUnhover: true,
+    activateOnHover: true,
+    scope: '.markdown-body',
+    buttonTemplate: `
+      <button
+        aria-label="Footnote <% number %>"
+        class="littlefoot__button"
+        id="<% reference %>"
+      />
+        <% number %>
+      </button>
+    `
+  });
+</script>

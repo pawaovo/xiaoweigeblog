@@ -7,6 +7,8 @@
 
 <title>{{ $title }}</title>
 <link rel="canonical" href="{{ .Permalink }}" />
+<link rel="icon" type="image/svg+xml" href="{{ .Site.Params.favicon }}" />
+<link rel="shortcut icon" href="{{ .Site.Params.favicon }}" />
 <meta name="author" content="{{ .Params.author | default .Site.Params.author }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:title" content="{{ $title }}" />

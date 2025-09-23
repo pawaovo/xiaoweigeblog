@@ -9,10 +9,10 @@
     >
   </div>
   <!-- Navigation -->
-  <div class="flex justify-center items-center gap-[0.75rem] pl-[1rem]">
+  <div class="flex justify-center items-center gap-[1.5rem] pl-[2rem]">
       <nav class="my-[1rem] flex justify-center items-center w-fit rounded-[1rem] overflow-hidden">
         {{ range .Site.Params.nav }}
-        <a class="inline-block py-[0.25rem] px-[0.5rem] first:pl-[0.75rem] last:pr-[0.75rem]
+        <a class="inline-block py-[0.25rem] px-[1rem] first:pl-[1.5rem] last:pr-[1.5rem]
             block hover:no-underline
             {{ if strings.Contains $.Page.RelPermalink .link }}
             text-[var(--text-color)] bg-[var(--block-background-color)]
