@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article id="demos">
+    <!-- 返回按钮 -->
+    {{ partial "components/demos-back-button" (dict
+        "url" (printf "%s/" .Site.LanguagePrefix)
+        "title" "返回首页"
+        "event" "🔙 Click back to home from demos"
+    ) }}
+
+    <!-- 页面标题 -->
+    <div class="text-center mb-[3rem]">
+        <h1 class="text-[2.5rem] font-900 xerox mb-[1rem]">{{ .Title }}</h1>
+        <p class="text-[1.1rem] opacity-80 max-w-[600px] mx-auto">{{ .Description }}</p>
+    </div>
+
+    <!-- Demo网格容器 -->
+    <div id="demos-grid" class="grid gap-[1rem] max-w-[1400px] mx-auto">
+        {{ $demos := where .Site.RegularPages "Section" "demos" }}
+        {{ $demoCount := len $demos }}
+
+        <!-- 渲染已有的demo项目 -->
+        {{ range $index, $demo := $demos }}
+            {{ if lt $index 99 }}
+                <div class="demo-item">
+                    {{ partial "items/demo" $demo }}
+                </div>
+            {{ end }}
+        {{ end }}
+
+        <!-- 填充剩余的占位符 -->
+        {{ range seq (add $demoCount 1) 99 }}
+            <div class="demo-placeholder">
+                {{ partial "items/demo-placeholder" . }}
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- 页面说明 -->
+    <div class="text-center mt-[3rem] text-[0.9rem] opacity-60">
+        <p>共 99 个展示位，按上传时间顺序排列</p>
+        <p>点击任意demo查看详细介绍</p>
+    </div>
+</article>
+{{ partial "footer.html" . }}
+{{ end }}

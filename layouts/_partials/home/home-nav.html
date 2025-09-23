@@ -20,6 +20,16 @@
             ) }}
         {{ end }}
 
+        <li class="absolute invert-if-dark" style="right: 80px;">
+            <a href="{{ .Site.LanguagePrefix }}/demos"
+                class="opacity-50 transition-opacity duration-300 hover:opacity-100
+                {{ if eq "/demos/" $.Page.RelPermalink }} opacity-100 font-bolder{{ end }}"
+                data-tooltip="项目演示"
+                data-umami-event="🎯 Click demos page link">
+                    <img src="/img/demos.svg" class="opacity-50 h-8 w-8" />
+                </a>
+        </li>
+
         <li class="absolute right-10 invert-if-dark">
             <a href="{{ .Site.LanguagePrefix }}/settings"
                 class="opacity-50 transition-opacity duration-300 hover:opacity-100
@@ -37,6 +47,6 @@
                 data-tooltip="查看博客统计数据">
                     <img src="/img/graph.svg" class="opacity-50 h-8 w-8" />
                 </a>
-        <li>
+        </li>
     </ul>
 </div>

@@ -75,7 +75,11 @@ export default defineConfig({
       'posts-item', 'xerox', 'leading-relaxed',
 
       // pagefind search related classes
-      'py-3', 'hr', 'pagefind-exclude'
+      'py-3', 'hr', 'pagefind-exclude',
+
+      // demos page related classes
+      'demo-item', 'demo-card', 'demo-info', 'demo-preview',
+      'demo-placeholder', 'demo-placeholder-card'
     ],
   content: {
     filesystem: ['./**/*.{html,md,js}'],

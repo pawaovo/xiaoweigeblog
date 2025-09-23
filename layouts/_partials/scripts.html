@@ -3,7 +3,7 @@
   <script src="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"></script>
 {{- end }}
 
-{{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") }}
+{{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (in .Section "demos") (eq .Type "single") }}
 <script type="module">
   import LightBox from '/js/libra.min.js';
   const lightbox = new LightBox({ offset: { x: -8 ,y: -80 } });
