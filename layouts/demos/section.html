@@ -8,9 +8,8 @@
     ) }}
 
     <!-- 页面标题 -->
-    <div class="text-center mb-[3rem]">
+    <div class="text-center mb-[3rem] mt-[1.5rem]">
         <h1 class="text-[2.5rem] font-900 xerox mb-[1rem]">{{ .Title }}</h1>
-        <p class="text-[1.1rem] opacity-80 max-w-[600px] mx-auto">{{ .Description }}</p>
     </div>
 
     <!-- Demo网格容器 -->
@@ -33,12 +32,6 @@
                 {{ partial "items/demo-placeholder" . }}
             </div>
         {{ end }}
-    </div>
-
-    <!-- 页面说明 -->
-    <div class="text-center mt-[3rem] text-[0.9rem] opacity-60">
-        <p>共 99 个展示位，按上传时间顺序排列</p>
-        <p>点击任意demo查看详细介绍</p>
     </div>
 </article>
 {{ partial "footer.html" . }}

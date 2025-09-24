@@ -1,0 +1,31 @@
+{{/*
+  图标链接组件
+  参数：
+  - .url: 链接URL (如果为空则显示禁用状态)
+  - .icon: 图标名称 (demo, github, calendar)
+  - .title: 工具提示文本
+  - .event: 统计事件名称
+  - .text: 显示的文本 (可选，用于日期等)
+*/}}
+{{ $hasUrl := .url }}
+{{ $iconName := .icon }}
+{{ $title := .title }}
+{{ $event := .event }}
+{{ $text := .text }}
+
+{{ if $hasUrl }}
+    <a href="{{ .url }}"
+       target="_blank"
+       class="flex items-center gap-[0.25rem] opacity-70 hover:opacity-100 transition-opacity"
+       data-umami-event="{{ $event }}"
+       title="{{ $title }}">
+        {{ partial "components/svg-icons" (dict "icon" $iconName) }}
+        {{ if $text }}{{ $text }}{{ end }}
+    </a>
+{{ else }}
+    <span class="flex items-center gap-[0.25rem] opacity-30 cursor-not-allowed"
+          title="{{ $title }}">
+        {{ partial "components/svg-icons" (dict "icon" $iconName) }}
+        {{ if $text }}{{ $text }}{{ end }}
+    </span>
+{{ end }}
