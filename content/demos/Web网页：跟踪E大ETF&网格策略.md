@@ -7,6 +7,7 @@ demo_url: "https://etftool.vercel.app/"
 github_url: "https://github.com/pawaovo/etftool"
 tags: ["Web网页", "爬虫", "投资策略"]
 tech_stack: ["", "", ""]
+toc: true
 ---
 
 ## 项目介绍

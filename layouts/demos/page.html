@@ -62,7 +62,12 @@
     <!-- 项目详细内容 -->
     <div class="demo-content max-w-[800px] mx-auto">
         <div class="markdown-body">
-            {{ .Content }}
+            <!-- TOC -->
+            {{ partial "posts/toc" . }}
+            <!-- Content -->
+            <div id="demo-content">
+                {{ .Content }}
+            </div>
         </div>
     </div>
 
