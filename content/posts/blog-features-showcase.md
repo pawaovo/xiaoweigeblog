@@ -3,8 +3,8 @@ title: "博客功能全面展示"
 subtitle: "体验所有已启用的博客功能"
 date: 2025-09-22T12:00:00+08:00
 tags: ["功能展示", "博客特性", "使用指南"]
-categories: ["技术分享"]
-draft: false
+categories: ["留下痕迹"]
+draft: true
 toc: true
 description: "全面展示博客的各种功能，包括TOC导航、Shortcodes、评论系统等"
 ---

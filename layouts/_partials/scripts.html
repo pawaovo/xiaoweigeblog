@@ -74,3 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ end }}
 
 {{ partial "scripts/littlefoot-js" . }}
+
+<!-- 私密文章功能 - 只在需要的页面加载 -->
+{{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") (eq .Kind "home") }}
+<script src="/js/private-posts.js"></script>
+{{- end }}

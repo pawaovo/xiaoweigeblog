@@ -1,0 +1,188 @@
+// 私密内容统一样式 - 使用BEM命名规范
+.private-content {
+    position: relative;
+
+    // 通用标题样式
+    &__title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-color);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        // 模糊效果
+        &--blur {
+            filter: blur(1.5px);
+            transition: filter 0.3s ease;
+
+            &:hover {
+                filter: blur(1px);
+            }
+        }
+    }
+
+    // 通用图标样式
+    &__icon {
+        opacity: 0.6;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+
+        // 首页文章的小图标
+        &--small {
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    // 链接样式（首页文章专用）
+    &__link {
+        color: var(--text-color);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // 卡片标题样式（不可点击）
+    &__card-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+// 私密卡片特有样式
+.private-card {
+    position: relative;
+
+    &__placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        margin-top: 1rem;
+        padding: 2rem 1rem;
+        background: rgba(var(--text-color-rgb), 0.02);
+        border-radius: 0.75rem;
+
+        &-icon {
+            margin-bottom: 1rem;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                filter: grayscale(100%);
+                opacity: 0.4;
+            }
+        }
+
+        &-text {
+            color: var(--text-color);
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.6;
+            text-align: center;
+        }
+    }
+}
+
+// 私密内容弹窗样式
+.private-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+
+        .modal-content {
+            transform: scale(1);
+        }
+    }
+
+    &__content {
+        background: var(--background-color);
+        border: 2px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 1rem;
+        opacity: 0.6;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--text-color);
+        }
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin: 0;
+    }
+}
+
+// 支持backdrop-filter的浏览器使用更好的效果
+@supports (backdrop-filter: blur(4px)) {
+    .private-modal {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+    }
+}
+
+// 暗色模式适配
+@media (prefers-color-scheme: dark) {
+    .private-modal__content {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// 移动端优化
+@media (max-width: 768px) {
+    .private-modal {
+        &__content {
+            padding: 1.5rem;
+            margin: 1rem;
+        }
+
+        &__icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}

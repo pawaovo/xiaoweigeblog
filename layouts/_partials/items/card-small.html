@@ -1,13 +1,15 @@
 {{ $ctx := .context }}
 {{ $showSummary := .summary }}
-<div class="relative p-[1rem] bg-white dark:bg-neutral-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 min-h-[400px] overflow-hidden"
+<div class="relative p-[1rem] bg-white dark:bg-neutral-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 min-h-[400px] overflow-hidden {{ if $ctx.Params.private }}private-card{{ end }}"
     style="view-transition-name: card-{{ $ctx.File.UniqueID }}">
 
-    <!-- 如果有特色图片，显示图片 -->
+    {{ if not $ctx.Params.private }}
+    <!-- 普通卡片：如果有特色图片，显示图片 -->
     {{ if $ctx.Params.image }}
     <div class="mb-3 -mx-[1rem] -mt-[1rem]">
         <img src="{{ $ctx.Params.image }}" alt="{{ $ctx.Title }}" class="w-full h-[150px] object-cover rounded-t-lg">
     </div>
+    {{ end }}
     {{ end }}
 
     <div class="card-header">
@@ -16,34 +18,27 @@
             data-pagefind-sort="date[data-date], weight[data-weight]"
             data-date="{{ .Date.Format "2006-01-02" }}"
             data-weight="5">
-                <a href="{{ $ctx.RelPermalink }}" class="no-underline! text-[var(--text-color)]!">{{ $ctx.Title }}</a>
+            {{ partial "components/private-title" (dict "ctx" $ctx "type" "card") }}
         </h3>
+        {{ if not $ctx.Params.private }}
+        <!-- 普通卡片：显示标签 -->
         <div class="text-sm m-0 mt-1">{{ partial "components/tags" $ctx }}</div>
+        {{ end }}
     </div>
+    {{ if $ctx.Params.private }}
+    <!-- 私密卡片：显示占位内容 -->
+    <div class="private-card__placeholder">
+        <div class="private-card__placeholder-icon">
+            <img src="/hand-svgrepo-com.svg" alt="手势图标">
+        </div>
+        <div class="private-card__placeholder-text">
+            暂不可见
+        </div>
+    </div>
+    {{ else }}
+    <!-- 普通卡片：显示正常内容 -->
     <div class="text-sm mt-2 markdown-body line-clamp-6 overflow-hidden">
         {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
     </div>
+    {{ end }}
 </div>
-
-<style>
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.line-clamp-4 {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.line-clamp-6 {
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-</style>

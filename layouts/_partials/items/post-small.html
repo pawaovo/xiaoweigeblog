@@ -1,8 +1,7 @@
 <li class="flex justify-between text-[1.1rem]">
-    <a href="{{ .RelPermalink }}" data-umami-event="🗃️ Click Post Link from Category Page">
-        {{ .Title }}{{ with .Params.subtitle }}：<span class="font-secondary">{{. }}</span>
-        {{ end }}
-    </a>
+    <span class="cursor-pointer">
+        {{ partial "components/private-title" (dict "ctx" . "type" "post-list") }}
+    </span>
     <time class="text-[0.9rem] font-mono font-secondary flex-shrink-0">
         {{ .Date.Format "2006-1-2" }}
     </time>

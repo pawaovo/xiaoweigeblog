@@ -1,0 +1,57 @@
+{{/*
+  私密内容标题组件
+  参数：
+  - .ctx: 内容上下文
+  - .type: 类型 ("post-home", "post-list", "card")
+  - .showLibraryPrefix: 是否显示"读《》"前缀（仅用于library）
+*/}}
+
+{{ $ctx := .ctx }}
+{{ $type := .type }}
+{{ $showLibraryPrefix := .showLibraryPrefix }}
+{{ $isPrivate := $ctx.Params.private }}
+
+{{ if $isPrivate }}
+  <!-- 私密内容标题 -->
+  {{ if eq $type "post-home" }}
+    <!-- 首页文章样式 -->
+    <span class="private-content__link" data-private-title="{{ $ctx.Title }}" data-umami-event="🔒 Click private post">
+      {{ if and $showLibraryPrefix (eq $ctx.Section "library") }}
+        读《{{ $ctx.Title }}》
+      {{ else }}
+        {{ $ctx.Title }}
+      {{ end }}
+    </span>
+  {{ else if eq $type "post-list" }}
+    <!-- Posts页面列表样式 -->
+    <span class="private-content__title" data-private-title="{{ $ctx.Title }}{{ with $ctx.Params.subtitle }}：{{ . }}{{ end }}">
+      <span class="private-content__title--blur">
+        {{ $ctx.Title }}{{ with $ctx.Params.subtitle }}：<span class="font-secondary">{{ . }}</span>{{ end }}
+      </span>
+      <span class="private-content__icon">🔒</span>
+    </span>
+  {{ else if eq $type "card" }}
+    <!-- Cards页面卡片样式 - 不可点击 -->
+    <span class="private-content__card-title">
+      <span class="private-content__title--blur">{{ $ctx.Title }}</span>
+      <span class="private-content__icon">🔒</span>
+    </span>
+  {{ end }}
+{{ else }}
+  <!-- 普通内容标题 -->
+  {{ if eq $type "post-home" }}
+    <a href="{{ $ctx.Permalink }}" data-umami-event="🏠 Click post link from index">
+      {{ if and $showLibraryPrefix (eq $ctx.Section "library") }}
+        读《{{ $ctx.Title }}》
+      {{ else }}
+        {{ $ctx.Title }}
+      {{ end }}
+    </a>
+  {{ else if eq $type "post-list" }}
+    <a href="{{ $ctx.RelPermalink }}" data-umami-event="🗃️ Click Post Link from Category Page">
+      {{ $ctx.Title }}{{ with $ctx.Params.subtitle }}：<span class="font-secondary">{{ . }}</span>{{ end }}
+    </a>
+  {{ else if eq $type "card" }}
+    <a href="{{ $ctx.RelPermalink }}" class="no-underline! text-[var(--text-color)]!">{{ $ctx.Title }}</a>
+  {{ end }}
+{{ end }}
