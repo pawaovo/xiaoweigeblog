@@ -2,7 +2,7 @@
 title: "MCP：interactive feedback Ai编程交互对话"
 date: 2025-06-12T10:00:10+08:00
 description: "基于MCP协议的AI编程交互反馈工具，提升AI编程对话体验"
-preview: "https://i.postimg.cc/h411Pssf/68747470733a2f2f692e706f7374696d672e63632f464b5178727248382f332e706e67.png"
+preview: "https://i.postimg.cc/Bv7GdtBw/feedback.png"
 demo_url: ""
 github_url: "https://github.com/pawaovo/interactive-feedback-mcp"
 tags: ["MCP", "AI编程", "交互工具"]
