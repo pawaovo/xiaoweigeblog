@@ -28,7 +28,7 @@ function initializeComments() {
     const exitAnimation = 'animate-slide-out-up';
 
     if (isHidden) {
-      // switch on
+      // swtich on
       commentsSection.classList.remove('hidden', exitAnimation);
       commentsSection.classList.add(entranceAnimation);
     } else {
@@ -52,24 +52,29 @@ function initializeCommentCount() {
   const commentCountEl = document.getElementById('comment-count');
   if (!commentCountEl) return;
 
-  // 设置初始值
-  commentCountEl.textContent = '0';
+  const observer = new MutationObserver(() => {
+    // check if giscus is loaded
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    if (!giscusIframe) return;
 
-  // 监听 Giscus 的消息事件
-  window.addEventListener('message', function(event) {
-    if (event.origin !== 'https://giscus.app') return;
+    giscusIframe.addEventListener('load', () => {
+      // receive message from giscus iframe
+      window.addEventListener('message', function(event) {
+        if (event.origin !== 'https://giscus.app') return;
+        const giscusData = event.data;
+        if (giscusData.giscus?.discussion) {
+          const discussion = giscusData.giscus.discussion;
+          const totalComments = (discussion.totalCommentCount || 0) + (discussion.totalReplyCount || 0);
+          // set comment count
+          commentCountEl.textContent = totalComments.toString();
+        // if no discussion found, set to 0
+        } else commentCountEl.textContent = '0';
+      });
+    });
 
-    const giscusData = event.data;
-
-    // 检查是否为 IMetadataMessage - 数据结构是 {giscus: {discussion: {...}}}
-    if (giscusData.giscus && giscusData.giscus.discussion) {
-      const discussion = giscusData.giscus.discussion;
-
-      // 计算总评论数：主评论数 + 回复数
-      const totalComments = (discussion.totalCommentCount || 0) + (discussion.totalReplyCount || 0);
-      commentCountEl.textContent = totalComments.toString();
-    }
+    observer.disconnect();
   });
+  observer.observe(document.body, { childList: true, subtree: true });
 }
 
 /**
@@ -79,6 +84,15 @@ function initializeCommentCount() {
  */
 
 function initializeLikes(pageId) {
+  // 允许在我们的域名和localhost下工作
+  const allowedHosts = ['blog.xiaoweigezzz.xyz', 'xiaoweigezzz.xyz', 'localhost'];
+  const currentHost = window.location.hostname;
+  
+  if (!allowedHosts.some(host => currentHost.includes(host))) {
+    console.log('点赞功能仅在指定域名下可用');
+    return;
+  }
+
   const elements = {
     count: document.getElementById("like-count-" + pageId),
     btn: document.getElementById("like-btn-" + pageId),
@@ -88,24 +102,19 @@ function initializeLikes(pageId) {
 
   if (!elements.count || !elements.btn || !elements.container) return;
 
-  function updateTooltip() {
-    if (elements.container.classList.contains('liked')) {
-      elements.btn.setAttribute('title', elements.btn.getAttribute('data-liked-title'));
-    } else {
-      elements.btn.setAttribute('title', '为这篇文章献上心脏');
-    }
-  }
-
   function setLikedState() {
-    if (elements.icon) {
-      elements.icon.classList.add('liked-heart', 'heartbeat');
-    }
-    if (elements.count) {
-      elements.count.classList.add('liked-count');
-    }
+    // update classes
+    elements.icon?.classList.add('liked-heart');
+    elements.icon?.classList.add('heartbeat');
+    elements.count?.classList.add('liked-count');
     elements.btn.disabled = true;
     elements.container.classList.add('liked');
-    updateTooltip();
+    // update tooltip
+    elements.btn.setAttribute('title',
+      elements.container.classList.contains('liked')
+        ? elements.btn.getAttribute('data-liked-title')
+        : '为这篇文章献上心脏'
+    );
   }
 
   async function fetchLikes() {
@@ -117,7 +126,7 @@ function initializeLikes(pageId) {
         setLikedState();
       }
     } catch(e) {
-      console.log('Failed to fetch likes:', e);
+      console.log('获取点赞数失败:', e);
       elements.count.innerText = "❌";
     }
   }
@@ -136,13 +145,25 @@ function initializeLikes(pageId) {
       elements.count.innerText = data.likes ?? 1;
       setLikedState();
     } catch(e) {
-      console.log('Failed to send like:', e);
+      console.log('点赞失败:', e);
       alert("点赞失败，请稍后再试");
     }
   };
 
-  // 初始化获取点赞数
-  fetchLikes();
+  // fetch likes when action menu is visible
+  const actionMenu = document.getElementById("action-menu");
+  if (actionMenu) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        fetchLikes();
+        obs.disconnect();
+      }
+    });
+    observer.observe(actionMenu);
+  } else {
+    // fallback: fetch immediately if action menu not found
+    fetchLikes();
+  }
 }
 
 /**

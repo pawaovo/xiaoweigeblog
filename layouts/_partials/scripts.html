@@ -22,10 +22,6 @@
 <script>{{ .Content | safeJS }}</script>
 {{ end }}
 
-{{ if .File }}
-    {{ partial "scripts/action-menu-js" (.File.UniqueID | urlize) }}
-{{ end }}
-
 {{ if .Params.aplayer }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,6 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ end }}
 
 {{ partial "scripts/littlefoot-js" . }}
+
+<!-- Action Menu 功能 - 只在文章页面加载 -->
+{{ if .File }}
+    {{ partial "scripts/action-menu-js" (.File.UniqueID | urlize) }}
+{{ end }}
 
 <!-- 私密文章功能 - 只在需要的页面加载 -->
 {{- if or (in .Section "posts") (in .Section "cards") (in .Section "library") (eq .Type "single") (eq .Kind "home") }}
