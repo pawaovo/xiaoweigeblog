@@ -1,23 +1,22 @@
-<div class="my-8 mb-4">
+<div id="action-menu" class="my-8 mb-4">
   <!-- 操作按钮组 -->
   <div class="flex justify-between items-center mb-6">
     <div class="flex gap-2">
-      <button class="invert-if-dark flex items-center justify-center gap-1.5 min-w-12 h-12 px-2 border-none bg-transparent text-gray-600 cursor-pointer relative transition-all duration-200 hover:bg-black/5 hover:rounded-lg group" id="comments-toggle" title="评论">
+      <button class="dark:invert flex items-center justify-center gap-1.5 min-w-12 h-12 px-2 border-none bg-transparent text-gray-600 cursor-pointer relative transition-all duration-200 hover:bg-black/5 hover:rounded-lg group" id="comments-toggle" title="评论" data-tooltip>
         <img src="/img/comments.svg" width="20" height="20" alt="评论" class="brightness-40 flex-shrink-0 dark:brightness-70 dark:contrast-120" />
         <span class="text-xs font-bold text-gray-600 min-w-4 text-center bg-white/90 rounded-xl px-1.5 py-0.5 shadow-sm dark:text-gray-400 dark:bg-black/70" id="comment-count">...</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1 bg-black/80 text-white px-2.5 py-1.5 rounded text-xs whitespace-nowrap opacity-0 invisible transition-all duration-300 pointer-events-none mb-2 z-1000 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 dark:bg-white/90 dark:text-black">评论</div>
       </button>
 
       <!-- 点赞按钮 -->
       <div class="relative" id="like-container-{{ .File.UniqueID | urlize }}">
-        <button class="invert-if-dark flex items-center justify-center gap-1.5 min-w-12 h-12 px-2 border-none bg-transparent text-gray-600 cursor-pointer relative transition-all duration-200 hover:bg-black/5 hover:rounded-lg group"
+        <button class="dark:invert flex items-center justify-center gap-1.5 min-w-12 h-12 px-2 border-none bg-transparent text-gray-600 cursor-pointer relative transition-all duration-200 hover:bg-black/5 hover:rounded-lg group animate-count-infinite"
                 onclick="sendLike('{{ .File.UniqueID | urlize }}')"
                 id="like-btn-{{ .File.UniqueID | urlize }}"
                 title="为这篇文章献上心脏"
-                data-liked-title="你已经献上心脏了">
+                data-liked-title="你已经献上心脏了"
+                data-tooltip>
           <img src="/img/heart-organ.svg" width="20" height="20" alt="点赞" class="brightness-40 flex-shrink-0 transition-all duration-300 dark:brightness-70 dark:contrast-120" id="like-icon-{{ .File.UniqueID | urlize }}" />
           <span class="text-xs font-bold text-gray-600 min-w-4 text-center bg-white/90 rounded-xl px-1.5 py-0.5 shadow-sm dark:text-gray-400 dark:bg-black/70" id="like-count-{{ .File.UniqueID | urlize }}">...</span>
-          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1 bg-black/80 text-white px-2.5 py-1.5 rounded text-xs whitespace-nowrap opacity-0 invisible transition-all duration-300 pointer-events-none mb-2 z-1000 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 dark:bg-white/90 dark:text-black">为这篇文章献上心脏</div>
         </button>
       </div>
     </div>
@@ -61,128 +60,4 @@
 }
 </style>
 
-<script>
-// 评论展开/收起功能
-document.addEventListener('DOMContentLoaded', function() {
-  const commentsToggle = document.getElementById('comments-toggle');
-  const commentsSection = document.getElementById('comments-section');
 
-  if (commentsToggle && commentsSection) {
-    commentsToggle.addEventListener('click', function() {
-      if (commentsSection.style.display === 'none') {
-        commentsSection.style.display = 'block';
-        this.style.background = 'rgba(0, 0, 0, 0.1)';
-      } else {
-        commentsSection.style.display = 'none';
-        this.style.background = 'transparent';
-      }
-    });
-  }
-});
-
-// 获取 Giscus 评论数量
-function fetchGiscusCommentCount() {
-  const commentCountEl = document.getElementById('comment-count');
-  if (!commentCountEl) return;
-
-  // 设置初始值
-  commentCountEl.textContent = '0';
-
-  // 监听 Giscus 的消息事件
-  window.addEventListener('message', function(event) {
-    if (event.origin !== 'https://giscus.app') return;
-
-    const giscusData = event.data;
-
-    // 检查是否为 IMetadataMessage - 数据结构是 {giscus: {discussion: {...}}}
-    if (giscusData.giscus && giscusData.giscus.discussion) {
-      const discussion = giscusData.giscus.discussion;
-
-      // 计算总评论数：主评论数 + 回复数
-      const totalComments = (discussion.totalCommentCount || 0) + (discussion.totalReplyCount || 0);
-      commentCountEl.textContent = totalComments.toString();
-    }
-  });
-}
-
-// 点赞功能
-(function() {
-  const pageId = "{{ .File.UniqueID | urlize }}";
-  if (!pageId) {
-    return;
-  }
-
-  const countEl = document.getElementById("like-count-" + pageId);
-  const btnEl = document.getElementById("like-btn-" + pageId);
-  const containerEl = document.getElementById("like-container-" + pageId);
-
-  if (!countEl || !btnEl || !containerEl) {
-    return;
-  }
-
-  const likeIconEl = document.getElementById("like-icon-" + pageId);
-
-  function updateTooltip() {
-    if (containerEl.classList.contains('liked')) {
-      btnEl.setAttribute('title', btnEl.getAttribute('data-liked-title'));
-    } else {
-      btnEl.setAttribute('title', '为这篇文章献上心脏');
-    }
-  }
-
-  function setLikedState() {
-    if (likeIconEl) {
-      likeIconEl.classList.add('liked-heart', 'heartbeat');
-    }
-    if (countEl) {
-      countEl.classList.add('liked-count');
-    }
-    btnEl.disabled = true;
-    containerEl.classList.add('liked');
-    updateTooltip();
-  }
-
-  function fetchLikes() {
-    fetch("https://like.guhub.cn/like/" + pageId)
-      .then(resp => resp.json())
-      .then(data => {
-        countEl.innerText = data.likes ?? 0;
-        if (localStorage.getItem("liked_" + pageId)) {
-          setLikedState();
-        }
-      })
-      .catch(() => {
-        countEl.innerText = "❌";
-      });
-  }
-
-  window.sendLike = function(pageId) {
-    if (localStorage.getItem("liked_" + pageId)) return;
-
-    if (window.location.hostname !== 'localhost') {
-      if (typeof umami !== 'undefined') {
-        umami.track('👍 Hit Like Button');
-      }
-    }
-
-    fetch("https://like.guhub.cn/like/" + pageId, { method: "POST" })
-      .then(resp => resp.json())
-      .then(data => {
-        localStorage.setItem("liked_" + pageId, "1");
-        countEl.innerText = data.likes ?? 1;
-        setLikedState();
-      })
-      .catch(() => {
-        alert("点赞失败，请稍后再试");
-      });
-  };
-
-  // 初始化
-  fetchLikes();
-})();
-
-// 初始化评论数量获取
-document.addEventListener('DOMContentLoaded', function() {
-  fetchGiscusCommentCount();
-});
-</script>

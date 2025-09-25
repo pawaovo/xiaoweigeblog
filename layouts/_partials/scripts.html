@@ -22,6 +22,10 @@
 <script>{{ .Content | safeJS }}</script>
 {{ end }}
 
+{{ if .File }}
+    {{ partial "scripts/action-menu-js" (.File.UniqueID | urlize) }}
+{{ end }}
+
 {{ if .Params.aplayer }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
