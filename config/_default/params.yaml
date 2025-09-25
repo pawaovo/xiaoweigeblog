@@ -15,7 +15,7 @@ externalJSFiles:
 footerExternalLinks:
   - name: GitHub
     link: https://github.com/pawaovo/xiaoweigeblog
-    icon: /img/github.svg
+    icon: /img/github.png
 # giscus 评论系统配置 - 请将下面的 YOUR_REPO_ID 和 YOUR_CATEGORY_ID 替换为实际值
 giscus:
   repo: pawaovo/xiaoweigeblog  # 您的GitHub仓库
