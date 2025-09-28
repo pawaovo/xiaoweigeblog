@@ -1,0 +1,21 @@
+{{/*
+  简单返回按钮组件
+  参数：
+  - .url: 返回链接URL
+  - .title: 按钮标题
+  - .event: 统计事件名称
+*/}}
+{{ $url := .url | default "/" }}
+{{ $title := .title | default "返回" }}
+{{ $event := .event | default "🔙 Click back button" }}
+
+<div class="demos-back-button">
+    <a href="{{ $url }}"
+       class="demos-back-btn"
+       data-umami-event="{{ $event }}"
+       title="{{ $title }}">
+        <svg width="36" height="36" fill="currentColor" viewBox="0 0 32 32" style="transform: rotate(90deg);">
+            <path d="M1.219 7.649c6.641 0 6.91 0.090 6.91 0.090 8.565-13.92 15.346 5.020 16.225 11.872l-2.509 0.011 4.908 8.568 4.713-8.542-2.441-0.101c-5.631-19.647-20.723-20.513-27.806-11.898v0z"/>
+        </svg>
+    </a>
+</div>

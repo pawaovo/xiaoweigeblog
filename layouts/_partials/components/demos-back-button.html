@@ -1,21 +1,67 @@
-{{/* 
-  Demos页面返回按钮组件
+{{/*
+  Demos页面智能返回按钮组件
   参数：
-  - .url: 返回链接URL
-  - .title: 按钮标题
-  - .event: 统计事件名称
+  - .url: 默认返回链接URL（可选，用于回退）
+  - .title: 默认按钮标题（可选）
+  - .event: 统计事件名称（可选）
 */}}
-{{ $url := .url | default "/" }}
-{{ $title := .title | default "返回" }}
-{{ $event := .event | default "🔙 Click back button" }}
+{{ $defaultUrl := .url | default "/demos/" }}
+{{ $defaultTitle := .title | default "返回" }}
+{{ $defaultEvent := .event | default "🔙 Click back button" }}
 
 <div class="demos-back-button">
-    <a href="{{ $url }}"
+    <a href="{{ $defaultUrl }}"
+       id="smart-back-btn"
        class="demos-back-btn"
-       data-umami-event="{{ $event }}"
-       title="{{ $title }}">
+       data-umami-event="{{ $defaultEvent }}"
+       title="{{ $defaultTitle }}">
         <svg width="36" height="36" fill="currentColor" viewBox="0 0 32 32" style="transform: rotate(90deg);">
             <path d="M1.219 7.649c6.641 0 6.91 0.090 6.91 0.090 8.565-13.92 15.346 5.020 16.225 11.872l-2.509 0.011 4.908 8.568 4.713-8.542-2.441-0.101c-5.631-19.647-20.723-20.513-27.806-11.898v0z"/>
         </svg>
     </a>
 </div>
+
+<script>
+(function() {
+    'use strict';
+
+    function setupSmartBackButton() {
+        const backBtn = document.getElementById('smart-back-btn');
+        if (!backBtn) return;
+
+        const referrer = document.referrer;
+        if (!referrer || !referrer.includes(window.location.host)) return;
+
+        // 路由映射表 - 更高效的匹配逻辑
+        const routes = [
+            { pattern: '/posts', url: '/posts/', title: '返回文章', event: '🔙 Click back to posts from demo detail' },
+            { pattern: '/demos', url: '/demos/', title: '返回Demos', event: '🔙 Click back to demos from detail' }
+        ];
+
+        // 检查特定路由
+        for (const route of routes) {
+            if (referrer.includes(route.pattern)) {
+                backBtn.href = route.url;
+                backBtn.title = route.title;
+                backBtn.setAttribute('data-umami-event', route.event);
+                return;
+            }
+        }
+
+        // 检查是否来自主页（精确匹配）
+        const siteBase = `${window.location.protocol}//${window.location.host}`;
+        if (referrer === siteBase + '/' ||
+            referrer === siteBase + '/zh/' ||
+            referrer.includes('/#')) {
+            backBtn.href = '/';
+            backBtn.title = '返回首页';
+            backBtn.setAttribute('data-umami-event', '🔙 Click back to home from demo detail');
+        }
+    }
+
+    // 页面加载完成后执行
+    document.readyState === 'loading'
+        ? document.addEventListener('DOMContentLoaded', setupSmartBackButton)
+        : setupSmartBackButton();
+})();
+</script>

@@ -1,8 +1,8 @@
 {{ define "main" }}
 <article id="demos">
     <!-- 返回按钮 -->
-    {{ partial "components/demos-back-button" (dict
-        "url" (printf "%s/" .Site.LanguagePrefix)
+    {{ partial "components/simple-back-button" (dict
+        "url" "/"
         "title" "返回首页"
         "event" "🔙 Click back to home from demos"
     ) }}

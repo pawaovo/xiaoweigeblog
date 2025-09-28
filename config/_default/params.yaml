@@ -2,6 +2,7 @@ author: xiaoweige
 mainSections:
   - posts
   - library
+  - demos
 favicon: /head_face_cropped.svg
 
 # 分类页面布局配置
