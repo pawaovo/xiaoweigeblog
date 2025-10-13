@@ -3,8 +3,8 @@ title: "Web扩展程序：内容创作多平台发布 MomentDots"
 date: 2025-09-22T23:23:00+08:00
 description: "一键多平台内容发布工具，AI智能优化适配不同平台特点"
 preview: "https://i.postimg.cc/52LwTmX4/Quicker-20250921-171658.png"
-demo_url: ""
-github_url: ""
+demo_url: "https://chromewebstore.google.com/detail/momentdots/ogchcimonfilgachbmfkhbglomikbcfe?hl=zh-CN"
+github_url: "https://github.com/pawaovo/Moment-Dots"
 tags: ["浏览器扩展", "内容创作", "多平台发布"]
 tech_stack: ["JavaScript", "AI API", "Chrome Extension"]
 toc: true

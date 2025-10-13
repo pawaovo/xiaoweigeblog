@@ -3,8 +3,8 @@ title: "Web网页：送朋友的小网页gift"
 date: 2025-08-23T22:00:00+08:00
 description: "个性化生日祝福网页，支持图片、音乐、文字自定义"
 preview: "https://i.postimg.cc/wBb4TVQC/20250924221823.png"
-demo_url: ""
-github_url: ""
+demo_url: "https://lw.xiaoweigezzz.xyz/"
+github_url: "https://github.com/pawaovo/gift-website"
 tags: ["Web网页", "生日祝福", "个性化"]
 tech_stack: ["HTML5", "CSS3", "JavaScript"]
 toc: true
