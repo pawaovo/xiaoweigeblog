@@ -4,7 +4,7 @@
     <div id="cards-content">
         <h2>一些瞬间</h2>
         {{- $cards := .Site.GetPage "section" "cards" }}
-        {{- $momentCards := where $cards.Pages ".Params.tags" "intersect" (slice "瞬间" "日常" "摄影" "美好瞬间" "生活") }}
+        {{- $momentCards := $cards.Pages }}
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-[1rem] my-[1rem]">
           {{ range $momentCards }}

@@ -21,8 +21,10 @@
             {{ partial "components/private-title" (dict "ctx" $ctx "type" "card") }}
         </h3>
         {{ if not $ctx.Params.private }}
-        <!-- 普通卡片：显示标签 -->
-        <div class="text-sm m-0 mt-1">{{ partial "components/tags" $ctx }}</div>
+        <!-- 普通卡片：显示日期和标签 -->
+        <div class="text-sm m-0 mt-1">
+            {{ partial "components/date" $ctx }}{{ if $ctx.Params.tags }} {{ partial "components/tags" $ctx }}{{ end }}
+        </div>
         {{ end }}
     </div>
     {{ if $ctx.Params.private }}

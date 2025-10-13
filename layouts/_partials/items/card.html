@@ -10,7 +10,9 @@
             data-weight="5">
                 <a href="{{ $ctx.RelPermalink }}" class="no-underline! text-[var(--text-color)]!">{{ $ctx.Title }}</a>
         </h3>
-        <div class="text-base m-0">{{ partial "components/tags" $ctx }}</div>
+        <div class="text-base m-0">
+            {{ partial "components/date" $ctx }}{{ if $ctx.Params.tags }} {{ partial "components/tags" $ctx }}{{ end }}
+        </div>
     </div>
     <div class="text-lg mt-2 markdown-body">
         {{ if $showSummary }}{{ $ctx.Summary }}{{ else }}{{ $ctx.Content }}{{ end }}
