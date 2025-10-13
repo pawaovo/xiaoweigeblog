@@ -3,9 +3,11 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "components/svg-filters.html" . }}
+    {{ partial "components/shade-mask.html" . }}
     <main class="my-[var(--page-margin-y)]">
       {{ block "main" . }}{{ end }}
     </main>
+    {{ partial "components/back-to-top.html" . }}
     {{ partial "scripts.html" . }}
     {{ partial "components/global-search" . }}
 </body>

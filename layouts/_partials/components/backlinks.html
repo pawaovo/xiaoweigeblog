@@ -19,14 +19,16 @@
 <section class="related-posts post-content my-5">
     <h2 class="text-base m-0 flex items-center gap-2">
         <span>反向链接</span>
-        <span class="inline-block bg-neutral-200 dark:bg-neutral-700 rounded-full px-1 text-secondary cursor-help text-sm"
-            data-tooltip="这里列出了引用了该页面的其他文章">?</span>
+        <span class="inline-block bg-blockBg rounded-full px-1 text-secondary cursor-help text-sm group relative">
+            ?
+            <span class="tooltip-base">这里列出了引用了该页面的其他文章</span>
+        </span>
     </h2>
     <ul class="my-4 list-none ps-4">
         {{- range $referencedBy }}
         <li class="flex gap-4">
             <span class="text-secondary">→</span>
-            <a href="{{ .Permalink }}" data-tooltip="查看文章：{{ .Title }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="hover:no-underline">{{ .Title }}</a>
         </li>
         {{- end }}
     </ul>

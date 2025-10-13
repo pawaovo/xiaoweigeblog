@@ -1,15 +1,14 @@
 <div id="back2top" class="fixed -top-25 left-0 right-0 z-30
     flex justify-center items-center transition-all animate-head-shake
-    bg-linear-to-t  bg-gradient-from-transparent bg-gradient-to-zinc">
+    bg-gradient-to-t from-transparent to-bg">
     <button id="back2top-button"
-        class="block bg-transparent mt-5 flex flex-col items-center"
-        data-tooltip="点击返回顶部">
-        <img src="/img/bat.svg"
+        class="block bg-transparent mt-5 flex flex-col items-center group">
+        <img src="/character.svg"
             class="block w-8 h-8 dark:invert-100 drop-shadow-xl hover:scale-110 transition-transform"
         />
         <p id="back2top-instruction"
-            class="text-xs bg-black/80 text-white px-2 py-1 border rounded">
-                返回顶部
+            class="text-size-xs bg-black/80 text-white px-2 py-1 border rounded">
+                我带你上去！
         </p>
     </button>
 </div>
@@ -25,7 +24,9 @@ if (localStorage.getItem('xiaoweigeblog.ui.hideBatrick')) {
   const seenAndUsedBat = localStorage.getItem("xiaoweigeblog.ui.seenAndUsedBat")
 
 function hideInstruction() {
-  backToTopInstruction.remove()
+  if (backToTopInstruction) {
+    backToTopInstruction.remove()
+  }
 }
 if (seenAndUsedBat) hideInstruction()
 
